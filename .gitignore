@@ -1,0 +1,20 @@
+# 排除開發工具腳本
+scrape.js
+get_services.js
+download_images.js
+
+# 排除暫存檔與備份
+temp.html
+*.bak
+*.tmp
+.DS_Store
+Thumbs.db
+
+# 排除 Gemini AI 相關暫存
+.gemini/
+implementation_plan.md
+task.md
+walkthrough.md
+
+# 日誌檔
+*.log

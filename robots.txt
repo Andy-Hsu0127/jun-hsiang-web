@@ -1,0 +1,11 @@
+# robots.txt - 鈞翔實業有限公司
+# https://www.jun-hsiangs.com
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.jun-hsiangs.com/sitemap.xml
+
+# 禁止爬蟲存取的路徑
+Disallow: /photos/
