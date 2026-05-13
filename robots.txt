@@ -5,7 +5,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://andy-hsu0127.github.io/jun-hsiang-web/mysitemap.xml
+Sitemap: https://andy-hsu0127.github.io/jun-hsiang-web/sitemap.xml
 
 # 禁止爬蟲存取的路徑
 Disallow: /photos/
