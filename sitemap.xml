@@ -2,11 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
    <url>
       <loc>https://andy-hsu0127.github.io/jun-hsiang-web/</loc>
-   </url>
-   <url>
-      <loc>https://andy-hsu0127.github.io/jun-hsiang-web/products_list</loc>
-   </url>
-   <url>
-      <loc>https://andy-hsu0127.github.io/jun-hsiang-web/service</loc>
+      <changefreq>monthly</changefreq>
+      <priority>1.0</priority>
    </url>
 </urlset>
