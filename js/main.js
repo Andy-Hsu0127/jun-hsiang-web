@@ -291,20 +291,59 @@ function handleSubmit(e) {
     e.preventDefault();
     const form = e.target;
     const submitBtn = form.querySelector('.btn-submit');
-
-    // Simple animation
-    submitBtn.innerHTML = '<span style="display:inline-flex;align-items:center;gap:8px;">✓ 已送出</span>';
-    submitBtn.style.background = 'linear-gradient(135deg, #2ECC71, #27AE60)';
+    
+    // Disable button and show sending state
+    const originalContent = submitBtn.innerHTML;
+    submitBtn.innerHTML = '<span style="display:inline-flex;align-items:center;gap:8px;">傳送中...</span>';
     submitBtn.disabled = true;
 
-    // Reset after 3 seconds
-    setTimeout(() => {
-        form.reset();
-        submitBtn.innerHTML = '<i data-lucide="send" style="width:18px;height:18px;"></i> 送出詢問';
-        submitBtn.style.background = '';
-        submitBtn.disabled = false;
-        if (typeof lucide !== 'undefined') {
-            lucide.createIcons();
+    // FormSubmit AJAX submission to jojo.li888@msa.hinet.net
+    fetch("https://formsubmit.co/ajax/jojo.li888@msa.hinet.net", {
+        method: "POST",
+        headers: { 
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+            "公司名稱": form.elements["company"] ? form.elements["company"].value : "",
+            "聯絡人": form.elements["contact-name"] ? form.elements["contact-name"].value : "",
+            "電話": form.elements["phone"] ? form.elements["phone"].value : "",
+            "E-mail": form.elements["email"] ? form.elements["email"].value : "",
+            "產品需求": form.elements["product-need"] ? form.elements["product-need"].value : "",
+            "留言內容": form.elements["message"] ? form.elements["message"].value : ""
+        })
+    })
+    .then(response => {
+        if (response.ok) {
+            // Success animation
+            submitBtn.innerHTML = '<span style="display:inline-flex;align-items:center;gap:8px;">✓ 已送出</span>';
+            submitBtn.style.background = 'linear-gradient(135deg, #2ECC71, #27AE60)';
+            
+            setTimeout(() => {
+                form.reset();
+                submitBtn.innerHTML = originalContent;
+                submitBtn.style.background = '';
+                submitBtn.disabled = false;
+                if (typeof lucide !== 'undefined') {
+                    lucide.createIcons();
+                }
+            }, 3000);
+        } else {
+            throw new Error("Form submission failed");
         }
-    }, 3000);
+    })
+    .catch(error => {
+        console.error(error);
+        submitBtn.innerHTML = '<span style="display:inline-flex;align-items:center;gap:8px;">❌ 傳送失敗</span>';
+        submitBtn.style.background = 'linear-gradient(135deg, #E74C3C, #C0392B)';
+        
+        setTimeout(() => {
+            submitBtn.innerHTML = originalContent;
+            submitBtn.style.background = '';
+            submitBtn.disabled = false;
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+        }, 3000);
+    });
 }
