@@ -29,9 +29,26 @@ class ParticleSystem {
             this.mouse.y = null;
         });
         
+        this.isAnimating = false;
         this.resize();
         this.createParticles();
-        this.animate();
+        this.setupObserver();
+    }
+
+    setupObserver() {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    if (!this.isAnimating) {
+                        this.isAnimating = true;
+                        this.animate();
+                    }
+                } else {
+                    this.isAnimating = false;
+                }
+            });
+        }, { threshold: 0.02 });
+        observer.observe(this.canvas);
     }
     
     resize() {
@@ -106,6 +123,7 @@ class ParticleSystem {
     }
     
     animate() {
+        if (!this.isAnimating) return;
         this.draw();
         requestAnimationFrame(() => this.animate());
     }
