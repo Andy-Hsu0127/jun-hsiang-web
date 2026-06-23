@@ -114,8 +114,5 @@ class ParticleSystem {
 // Global initialization
 window.initHeroParticles = (id) => new ParticleSystem(id);
 
-document.addEventListener('DOMContentLoaded', () => {
-    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-        window.initHeroParticles('hero-canvas');
-    }
-});
+// Particles initialization is handled inside js/main.js to avoid duplicate loops.
+

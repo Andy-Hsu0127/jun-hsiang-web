@@ -5,42 +5,41 @@
    ============================================================ */
 
 /* ---- Google Fonts ---- */
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Noto+Sans+TC:wght@300;400;500;700;900&family=Outfit:wght@300;400;500;600;700;800;900&family=Instrument+Serif:italic@0;1&display=swap');
-
 /* ============================================================
-   1. CSS Custom Properties (Design Tokens)
+   1. CSS Custom Properties (Design Tokens) - Option A: Hybrid Theme
    ============================================================ */
 :root {
-    /* ---- Primary Colors ---- */
-    --color-primary:        #0E1A2F;    /* Deep Navy */
-    --color-primary-light:  #1D3354;    /* Navy Gray Accent */
-    --color-primary-dark:   #060B14;    /* Ultra Deep Dark */
+    /* ---- Primary Colors (Clean Slate/Navy) ---- */
+    --color-primary:        #0F172A;    /* Slate Dark */
+    --color-primary-light:  #334155;    /* Slate Medium */
+    --color-primary-dark:   #020617;    /* Slate Black */
 
-    /* ---- Accent Colors (Industrial Gold) ---- */
-    --color-accent:         #D4A843;    /* Gold */
-    --color-accent-light:   #E8C86A;    /* Light Gold */
-    --color-accent-dark:    #B08A2E;    /* Dark Gold */
+    /* ---- Accent Colors (Precision Teal & Slate Blue) ---- */
+    --color-accent:         #0D9488;    /* Precision Teal */
+    --color-accent-light:   #0EA5E9;    /* Light Cyan/Blue */
+    --color-accent-dark:    #0F766E;    /* Dark Teal */
 
-    /* ---- Backgrounds (Premium Deep Navy Tech - Darker & Modern) ---- */
-    --color-bg-primary:     #080C14;    /* Pure Deep Dark */
-    --color-bg-secondary:   #0E1422;    /* Dark Secondary */
-    --color-bg-card:        rgba(14, 20, 34, 0.65); /* Semitransparent Glass */
-    --color-bg-elevated:    #151F32;    /* Elevated Surface */
+    /* ---- Backgrounds (Clean, Professional Off-white) ---- */
+    --color-bg-primary:     #FFFFFF;    /* Pure White */
+    --color-bg-secondary:   #F8FAFC;    /* Soft Gray */
+    --color-bg-card:        rgba(255, 255, 255, 0.9); /* Card Background */
+    --color-bg-elevated:    #FFFFFF;    /* Elevated surface */
+    --color-bg-input:       #F1F5F9;    /* Light Input Background */
 
     /* ---- Text ---- */
-    --color-text-primary:   #F8FAFC;    /* Off-White */
-    --color-text-secondary: #CBD5E1;    /* Light Gray */
-    --color-text-muted:     #64748B;    /* Muted Slate Gray */
+    --color-text-primary:   #0F172A;    /* Dark Slate Text */
+    --color-text-secondary: #475569;    /* Medium Slate Text */
+    --color-text-muted:     #64748B;    /* Muted Slate Text */
 
     /* ---- Borders ---- */
-    --color-border:         rgba(255, 255, 255, 0.07);
-    --color-border-hover:   rgba(212, 168, 67, 0.35);
+    --color-border:         rgba(15, 23, 42, 0.08);
+    --color-border-hover:   rgba(13, 148, 136, 0.35);
 
     /* ---- Gradients ---- */
-    --gradient-hero:        radial-gradient(circle at top, #121E33 0%, #080C14 100%);
-    --gradient-accent:      linear-gradient(135deg, #E8C86A 0%, #D4A843 50%, #B08A2E 100%);
-    --gradient-card:        linear-gradient(145deg, rgba(21, 31, 50, 0.7), rgba(8, 12, 20, 0.3));
-    --gradient-glass:       linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.01));
+    --gradient-hero:        radial-gradient(circle at top, #1E293B 0%, #0F172A 100%);
+    --gradient-accent:      linear-gradient(135deg, #0D9488 0%, #0EA5E9 50%, #0F766E 100%);
+    --gradient-card:        linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(248, 250, 252, 0.95));
+    --gradient-glass:       linear-gradient(135deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
 
     /* ---- Typography ---- */
     --font-heading:    'Outfit', 'Noto Sans TC', sans-serif;
@@ -84,13 +83,14 @@
     --radius-xl:   1.5rem;
     --radius-full: 9999px;
 
-    /* ---- Shadows ---- */
-    --shadow-sm:       0 2px 8px rgba(0,0,0,0.25);
-    --shadow-md:       0 4px 16px rgba(0,0,0,0.35);
-    --shadow-lg:       0 8px 32px rgba(0,0,0,0.5);
-    --shadow-xl:       0 16px 48px rgba(0,0,0,0.6);
-    --shadow-glow:     0 0 30px rgba(212, 168, 67, 0.1);
-    --shadow-glow-lg:  0 0 60px rgba(212, 168, 67, 0.2);
+    /* ---- Shadows (Softer for Light Mode) ---- */
+    --shadow-sm:       0 1px 3px rgba(0,0,0,0.05);
+    --shadow-md:       0 4px 12px rgba(15,23,42,0.05);
+    --shadow-lg:       0 12px 24px -4px rgba(15,23,42,0.08);
+    --shadow-xl:       0 20px 40px -8px rgba(15,23,42,0.12);
+    --shadow-glow:     0 0 20px rgba(13, 148, 136, 0.15);
+    --shadow-glow-lg:  0 0 40px rgba(13, 148, 136, 0.25);
+    --shadow-focus:    0 0 0 3px rgba(13, 148, 136, 0.15);
 
     /* ---- Transitions ---- */
     --transition-fast:    150ms ease;
@@ -103,6 +103,36 @@
     /* ---- Nav ---- */
     --nav-height: 80px;
     --announcement-height: 40px;
+}
+
+/* ============================================================
+   Scoped Dark Theme (For Hero, Footer, Navbar, Mobile Menu, Announcement Bar)
+   ============================================================ */
+.announcement-bar,
+.navbar,
+.mobile-menu,
+.hero,
+.footer {
+    --color-bg-primary:     #080C14;    /* Pure Deep Dark */
+    --color-bg-secondary:   #0E1422;    /* Dark Secondary */
+    --color-bg-card:        rgba(14, 20, 34, 0.65); /* Semitransparent Glass */
+    --color-bg-elevated:    #151F32;    /* Elevated Surface */
+    --color-bg-input:       rgba(255, 255, 255, 0.03); /* Input Background */
+    --color-text-primary:   #F8FAFC;    /* Off-White */
+    --color-text-secondary: #CBD5E1;    /* Light Gray */
+    --color-text-muted:     #64748B;    /* Muted Slate Gray */
+    --color-border:         rgba(255, 255, 255, 0.07);
+    --color-border-hover:   rgba(212, 168, 67, 0.35);
+    --color-accent:         #D4A843;    /* Gold Accent in dark elements */
+    --color-accent-light:   #E8C86A;
+    --color-accent-dark:    #B08A2E;
+    --gradient-accent:      linear-gradient(135deg, #E8C86A 0%, #D4A843 50%, #B08A2E 100%);
+    --gradient-hero:        radial-gradient(circle at top, #121E33 0%, #080C14 100%);
+    --gradient-card:        linear-gradient(145deg, rgba(21, 31, 50, 0.7), rgba(8, 12, 20, 0.3));
+    --gradient-glass:       linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.01));
+    --shadow-glow:          0 0 30px rgba(212, 168, 67, 0.1);
+    --shadow-glow-lg:       0 0 60px rgba(212, 168, 67, 0.2);
+    --shadow-focus:         0 0 0 3px rgba(212, 168, 67, 0.15);
 }
 
 
@@ -1429,7 +1459,7 @@ button {
 .form-group textarea {
     width: 100%;
     padding: var(--space-3) var(--space-4);
-    background: rgba(255, 255, 255, 0.03);
+    background: var(--color-bg-input);
     border: 1px solid var(--color-border);
     border-radius: var(--radius-md);
     color: var(--color-text-primary);
@@ -1441,8 +1471,8 @@ button {
 .form-group select:focus,
 .form-group textarea:focus {
     border-color: var(--color-accent);
-    box-shadow: 0 0 0 3px rgba(212, 168, 67, 0.1);
-    background: rgba(255, 255, 255, 0.05);
+    box-shadow: var(--shadow-focus);
+    background: var(--color-bg-primary);
 }
 
 .form-group textarea {
