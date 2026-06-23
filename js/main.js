@@ -297,8 +297,8 @@ function handleSubmit(e) {
     submitBtn.innerHTML = '<span style="display:inline-flex;align-items:center;gap:8px;">傳送中...</span>';
     submitBtn.disabled = true;
 
-    // FormSubmit AJAX submission to jojo.li888@msa.hinet.net
-    fetch("https://formsubmit.co/ajax/jojo.li888@msa.hinet.net", {
+    // FormSubmit AJAX submission using secure masked email token
+    fetch("https://formsubmit.co/ajax/18913f82f856f8ea938feb005a6e3e10", {
         method: "POST",
         headers: { 
             'Content-Type': 'application/json',
