@@ -9,7 +9,7 @@ class ParticleSystem {
         
         this.ctx = this.canvas.getContext('2d');
         this.particles = [];
-        this.particleCount = window.innerWidth < 768 ? 40 : 80;
+        this.particleCount = window.innerWidth < 768 ? 15 : 80;
         this.mouse = { x: null, y: null, radius: 150 };
         
         this.config = {

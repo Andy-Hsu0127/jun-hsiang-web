@@ -263,6 +263,27 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Export closeModal to window for inline onclick usage if any
     window.closeModal = closeModal;
+
+    // ---- FAQ Accordion Toggle ----
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        if (question) {
+            question.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                
+                // Close other items
+                faqItems.forEach(otherItem => {
+                    otherItem.classList.remove('active');
+                });
+                
+                // Toggle current item
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        }
+    });
 });
 
 // ---- Contact Form Handler (Global) ----
