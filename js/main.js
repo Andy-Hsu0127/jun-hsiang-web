@@ -441,7 +441,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Use FormData to allow file uploads
             const formData = new FormData(rfpForm);
-            const actionUrl = rfpForm.getAttribute('action') || "https://formsubmit.co/ajax/jojo.li888@msa.hinet.net";
+            const actionUrl = rfpForm.getAttribute('action') || "https://formsubmit.co/jojo.li888@msa.hinet.net";
 
             fetch(actionUrl, {
                 method: "POST",
@@ -589,7 +589,7 @@ document.addEventListener('DOMContentLoaded', () => {
             generalSubmitBtn.disabled = true;
 
             const formData = new FormData(generalForm);
-            const actionUrl = generalForm.getAttribute('action') || "https://formsubmit.co/ajax/jojo.li888@msa.hinet.net";
+            const actionUrl = generalForm.getAttribute('action') || "https://formsubmit.co/jojo.li888@msa.hinet.net";
 
             fetch(actionUrl, {
                 method: "POST",
