@@ -1325,6 +1325,8 @@ button {
     border-color: #FFD700;
     box-shadow: var(--shadow-glow-lg);
 }
+
+.iso-badge {
     font-weight: 800;
     font-size: 1rem;
     color: var(--color-accent);
