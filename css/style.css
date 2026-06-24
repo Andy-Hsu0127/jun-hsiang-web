@@ -2489,3 +2489,434 @@ button {
 }
 
 
+/* ============================================================
+   22. Tech Grid Background & Glow Effects
+   ============================================================ */
+.tech-grid-bg {
+    position: relative;
+}
+.tech-grid-bg::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+    background-size: 50px 50px;
+    background-position: center center;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Glow Border Effect for Cards */
+.glow-card {
+    position: relative;
+    overflow: hidden;
+}
+.glow-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1.5px;
+    background: radial-gradient(
+        350px circle at var(--mouse-x, 0px) var(--mouse-y, 0px),
+        rgba(214, 168, 67, 0.35),
+        transparent 80%
+    );
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    z-index: 5;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+.glow-card:hover::before {
+    opacity: 1;
+}
+
+/* ============================================================
+   23. Interactive RFP Wizard Form
+   ============================================================ */
+.rfp-container {
+    max-width: 850px;
+    margin: 0 auto;
+    background: var(--gradient-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    padding: clamp(2rem, 5vw, 3.5rem);
+    box-shadow: var(--shadow-xl);
+    position: relative;
+    z-index: 5;
+    backdrop-filter: blur(10px);
+}
+
+.rfp-progress-bar-container {
+    width: 100%;
+    height: 6px;
+    background: var(--color-bg-secondary);
+    border-radius: var(--radius-full);
+    margin-bottom: var(--space-8);
+    overflow: hidden;
+    position: relative;
+}
+
+.rfp-progress-bar {
+    height: 100%;
+    width: 25%;
+    background: var(--gradient-accent);
+    transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.rfp-steps-indicator {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--space-10);
+}
+
+.rfp-step-dot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-2);
+    flex: 1;
+    position: relative;
+}
+
+.rfp-step-dot::after {
+    content: "";
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--color-bg-secondary);
+    border: 2px solid var(--color-border);
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.rfp-step-dot.active::after {
+    background: var(--color-accent);
+    border-color: var(--color-accent-light);
+    box-shadow: 0 0 12px var(--color-accent);
+}
+
+.rfp-step-dot.completed::after {
+    background: var(--color-success);
+    border-color: var(--color-success);
+}
+
+.rfp-step-label {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--color-text-muted);
+    transition: color 0.3s ease;
+}
+
+.rfp-step-dot.active .rfp-step-label {
+    color: var(--color-accent-light);
+    font-weight: 600;
+}
+
+.rfp-step-dot.completed .rfp-step-label {
+    color: var(--color-text-secondary);
+}
+
+.rfp-step {
+    display: none;
+}
+
+.rfp-step.active {
+    display: block;
+    animation: fadeIn 0.4s ease-out;
+}
+
+.rfp-step-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    margin-bottom: var(--space-6);
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.rfp-options-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: var(--space-4);
+}
+
+.rfp-option-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-6);
+    text-align: center;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-3);
+    user-select: none;
+}
+
+.rfp-option-card:hover {
+    border-color: rgba(214, 168, 67, 0.4);
+    background: rgba(255, 255, 255, 0.04);
+    transform: translateY(-2px);
+}
+
+.rfp-option-card.selected {
+    background: rgba(214, 168, 67, 0.08);
+    border-color: var(--color-accent);
+    box-shadow: var(--shadow-glow);
+}
+
+.rfp-option-icon {
+    width: 28px;
+    height: 28px;
+    color: var(--color-text-muted);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.rfp-option-card:hover .rfp-option-icon {
+    transform: scale(1.1);
+}
+
+.rfp-option-card.selected .rfp-option-icon {
+    color: var(--color-accent);
+}
+
+.rfp-option-title {
+    font-size: var(--text-small);
+    font-weight: 600;
+    color: var(--color-text-primary);
+}
+
+.rfp-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: var(--space-10);
+    gap: var(--space-4);
+    border-top: 1px solid var(--color-border);
+    padding-top: var(--space-6);
+}
+
+/* ============================================================
+   24. Factory Equipment Gallery Section
+   ============================================================ */
+.equipment-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-6);
+    margin-top: var(--space-8);
+}
+
+.equipment-card {
+    background: var(--gradient-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: all var(--transition-normal);
+}
+
+.equipment-card:hover {
+    border-color: var(--color-border-hover);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.equipment-img-container {
+    width: 100%;
+    height: 190px;
+    overflow: hidden;
+    position: relative;
+    background: var(--color-bg-secondary);
+}
+
+.equipment-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-slow);
+}
+
+.equipment-card:hover .equipment-img-container img {
+    transform: scale(1.05);
+}
+
+.equipment-info {
+    padding: var(--space-5);
+}
+
+.equipment-name {
+    font-weight: 700;
+    color: var(--color-text-primary);
+    font-size: 1.1rem;
+    margin-bottom: var(--space-2);
+}
+
+.equipment-desc {
+    font-size: 0.85rem;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+}
+
+/* ============================================================
+   25. Dynamic Material Selector Helper
+   ============================================================ */
+.material-helper {
+    background: var(--gradient-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    padding: clamp(1.5rem, 4vw, 2.5rem);
+    margin-top: var(--space-12);
+}
+
+.material-helper-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: var(--space-8);
+}
+
+@media (max-width: 768px) {
+    .material-helper-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.material-checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.material-checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    background: rgba(255,255,255,0.02);
+    border: 1px solid var(--color-border);
+    padding: var(--space-4);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    user-select: none;
+}
+
+.material-checkbox-label:hover {
+    border-color: rgba(214, 168, 67, 0.4);
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.material-checkbox-label.checked {
+    background: rgba(214, 168, 67, 0.08);
+    border-color: var(--color-accent);
+}
+
+.material-checkbox-input {
+    display: none;
+}
+
+.material-checkbox-custom {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--color-text-muted);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.material-checkbox-label.checked .material-checkbox-custom {
+    border-color: var(--color-accent);
+    background: var(--color-accent);
+}
+
+.material-checkbox-custom svg {
+    width: 12px;
+    height: 12px;
+    color: var(--color-bg-primary);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.material-checkbox-label.checked .material-checkbox-custom svg {
+    opacity: 1;
+}
+
+.material-checkbox-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+}
+
+.material-results-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    max-height: 440px;
+    overflow-y: auto;
+    padding-right: var(--space-2);
+}
+
+.material-result-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-5);
+    transition: all var(--transition-normal);
+}
+
+.material-result-card.hidden {
+    display: none;
+}
+
+.material-result-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-2);
+}
+
+.material-result-name {
+    font-weight: 700;
+    color: var(--color-accent-light);
+    font-size: 1.05rem;
+}
+
+.material-result-tags {
+    display: flex;
+    gap: var(--space-2);
+    flex-wrap: wrap;
+}
+
+.material-result-tag {
+    font-size: 0.65rem;
+    background: rgba(255, 255, 255, 0.06);
+    color: var(--color-text-secondary);
+    padding: 2px 8px;
+    border-radius: var(--radius-full);
+}
+
+.material-result-desc {
+    font-size: 0.85rem;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+}
+
+.material-helper-empty {
+    text-align: center;
+    color: var(--color-text-muted);
+    padding: var(--space-12) 0;
+    font-size: 0.9rem;
+}
+
+.material-helper-empty.hidden {
+    display: none;
+}
+
+
+

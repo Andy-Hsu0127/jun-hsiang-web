@@ -315,66 +315,260 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     });
-});
-
-// ---- Contact Form Handler (Global) ----
-function handleSubmit(e) {
-    e.preventDefault();
-    const form = e.target;
-    const submitBtn = form.querySelector('.btn-submit');
-    
-    // Disable button and show sending state
-    const originalContent = submitBtn.innerHTML;
-    submitBtn.innerHTML = '<span style="display:inline-flex;align-items:center;gap:8px;">傳送中...</span>';
-    submitBtn.disabled = true;
-
-    // FormSubmit AJAX submission using secure masked email token
-    fetch("https://formsubmit.co/ajax/18913f82f856f8ea938feb005a6e3e10", {
-        method: "POST",
-        headers: { 
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-        },
-        body: JSON.stringify({
-            "公司名稱": form.elements["company"] ? form.elements["company"].value : "",
-            "聯絡人": form.elements["contact-name"] ? form.elements["contact-name"].value : "",
-            "電話": form.elements["phone"] ? form.elements["phone"].value : "",
-            "E-mail": form.elements["email"] ? form.elements["email"].value : "",
-            "產品需求": form.elements["product-need"] ? form.elements["product-need"].value : "",
-            "留言內容": form.elements["message"] ? form.elements["message"].value : ""
-        })
-    })
-    .then(response => {
-        if (response.ok) {
-            // Success animation
-            submitBtn.innerHTML = '<span style="display:inline-flex;align-items:center;gap:8px;">✓ 已送出</span>';
-            submitBtn.style.background = 'linear-gradient(135deg, #2ECC71, #27AE60)';
-            
-            setTimeout(() => {
-                form.reset();
-                submitBtn.innerHTML = originalContent;
-                submitBtn.style.background = '';
-                submitBtn.disabled = false;
-                if (typeof lucide !== 'undefined') {
-                    lucide.createIcons();
-                }
-            }, 3000);
-        } else {
-            throw new Error("Form submission failed");
-        }
-    })
-    .catch(error => {
-        console.error(error);
-        submitBtn.innerHTML = '<span style="display:inline-flex;align-items:center;gap:8px;">❌ 傳送失敗</span>';
-        submitBtn.style.background = 'linear-gradient(135deg, #E74C3C, #C0392B)';
-        
-        setTimeout(() => {
-            submitBtn.innerHTML = originalContent;
-            submitBtn.style.background = '';
-            submitBtn.disabled = false;
-            if (typeof lucide !== 'undefined') {
-                lucide.createIcons();
-            }
-        }, 3000);
+    // ---- Glow Card Mouse Effects ----
+    const glowCards = document.querySelectorAll('.glow-card');
+    glowCards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            card.style.setProperty('--mouse-x', `${x}px`);
+            card.style.setProperty('--mouse-y', `${y}px`);
+        });
     });
-}
+
+    // ---- RFP Option Cards Selection ----
+    const optionCards = document.querySelectorAll('.rfp-option-card');
+    optionCards.forEach(card => {
+        card.addEventListener('click', () => {
+            const grid = card.closest('.rfp-options-grid');
+            if (!grid) return;
+            const inputId = grid.dataset.inputId;
+            const input = document.getElementById(inputId);
+            if (input) {
+                input.value = card.dataset.value;
+            }
+            
+            // Toggle selection class
+            grid.querySelectorAll('.rfp-option-card').forEach(c => c.classList.remove('selected'));
+            card.classList.add('selected');
+        });
+    });
+
+    // ---- RFP Wizard Navigation ----
+    let rfpCurrentStep = 1;
+    const rfpTotalSteps = 4;
+    const rfpPrevBtn = document.getElementById('rfp-prev-btn');
+    const rfpNextBtn = document.getElementById('rfp-next-btn');
+    const rfpSubmitBtn = document.getElementById('rfp-submit-btn');
+    const rfpProgressBar = document.getElementById('rfp-progress');
+    const rfpStepDots = document.querySelectorAll('.rfp-step-dot');
+    const rfpSteps = document.querySelectorAll('.rfp-step');
+
+    function updateRFPWizard() {
+        // Show/hide steps
+        rfpSteps.forEach(step => {
+            if (parseInt(step.dataset.step) === rfpCurrentStep) {
+                step.classList.add('active');
+            } else {
+                step.classList.remove('active');
+            }
+        });
+
+        // Update step dots
+        rfpStepDots.forEach(dot => {
+            const stepNum = parseInt(dot.dataset.step);
+            if (stepNum === rfpCurrentStep) {
+                dot.classList.add('active');
+                dot.classList.remove('completed');
+            } else if (stepNum < rfpCurrentStep) {
+                dot.classList.remove('active');
+                dot.classList.add('completed');
+            } else {
+                dot.classList.remove('active');
+                dot.classList.remove('completed');
+            }
+        });
+
+        // Update Progress Bar
+        const progressPercent = ((rfpCurrentStep - 1) / (rfpTotalSteps - 1)) * 100;
+        if (rfpProgressBar) {
+            rfpProgressBar.style.width = `${25 + progressPercent * 0.75}%`; // start at 25%, end at 100%
+        }
+
+        // Show/hide buttons
+        if (rfpPrevBtn) {
+            rfpPrevBtn.style.display = rfpCurrentStep > 1 ? 'block' : 'none';
+        }
+        if (rfpNextBtn) {
+            rfpNextBtn.style.display = rfpCurrentStep < rfpTotalSteps ? 'block' : 'none';
+        }
+        if (rfpSubmitBtn) {
+            rfpSubmitBtn.style.display = rfpCurrentStep === rfpTotalSteps ? 'block' : 'none';
+        }
+    }
+
+    function validateRFPStep(step) {
+        if (step === 1) {
+            const val = document.getElementById('rfp-application').value;
+            if (!val) {
+                alert('請選擇一個產品應用領域！');
+                return false;
+            }
+        } else if (step === 2) {
+            const val = document.getElementById('rfp-process').value;
+            if (!val) {
+                alert('請選擇一個加工製程！');
+                return false;
+            }
+        } else if (step === 3) {
+            const qty = document.getElementById('rfp-quantity');
+            const hardness = document.getElementById('rfp-hardness');
+            if (!qty || !qty.value.trim()) {
+                if (qty) qty.focus();
+                alert('請填寫預估年產量！');
+                return false;
+            }
+            if (!hardness || !hardness.value.trim()) {
+                if (hardness) hardness.focus();
+                alert('請填寫矽膠硬度要求！');
+                return false;
+            }
+        }
+        return true;
+    }
+
+    if (rfpNextBtn) {
+        rfpNextBtn.addEventListener('click', () => {
+            if (validateRFPStep(rfpCurrentStep)) {
+                rfpCurrentStep++;
+                updateRFPWizard();
+            }
+        });
+    }
+
+    if (rfpPrevBtn) {
+        rfpPrevBtn.addEventListener('click', () => {
+            rfpCurrentStep--;
+            updateRFPWizard();
+        });
+    }
+
+    // ---- RFP Form Submit Handler ----
+    const rfpForm = document.getElementById('contact-form');
+    if (rfpForm) {
+        rfpForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Validate step 4 inputs
+            const company = document.getElementById('rfp-company');
+            const name = document.getElementById('rfp-name');
+            const phone = document.getElementById('rfp-phone');
+            const email = document.getElementById('rfp-email');
+
+            if (!company.value.trim()) { company.focus(); alert('請填寫公司名稱！'); return; }
+            if (!name.value.trim()) { name.focus(); alert('請填寫聯絡人姓名！'); return; }
+            if (!phone.value.trim()) { phone.focus(); alert('請填寫電話號碼！'); return; }
+            if (!email.value.trim()) { email.focus(); alert('請填寫E-mail信箱！'); return; }
+
+            // Disable button and show sending state
+            const originalContent = rfpSubmitBtn.innerHTML;
+            rfpSubmitBtn.innerHTML = '<span style="display:inline-flex;align-items:center;gap:8px;">傳送中...</span>';
+            rfpSubmitBtn.disabled = true;
+
+            // Use FormData to allow file uploads
+            const formData = new FormData(rfpForm);
+
+            fetch("https://formsubmit.co/ajax/18913f82f856f8ea938feb005a6e3e10", {
+                method: "POST",
+                body: formData
+            })
+            .then(response => {
+                if (response.ok) {
+                    // Success animation
+                    rfpSubmitBtn.innerHTML = '<span style="display:inline-flex;align-items:center;gap:8px;">✓ 詢價單已成功送出</span>';
+                    rfpSubmitBtn.style.background = 'linear-gradient(135deg, #2ECC71, #27AE60)';
+                    
+                    setTimeout(() => {
+                        rfpForm.reset();
+                        // Reset option cards selection
+                        document.querySelectorAll('.rfp-option-card').forEach(c => c.classList.remove('selected'));
+                        // Go back to step 1
+                        rfpCurrentStep = 1;
+                        updateRFPWizard();
+                        
+                        rfpSubmitBtn.innerHTML = originalContent;
+                        rfpSubmitBtn.style.background = '';
+                        rfpSubmitBtn.disabled = false;
+                        if (typeof lucide !== 'undefined') {
+                            lucide.createIcons();
+                        }
+                    }, 3000);
+                } else {
+                    throw new Error("Form submission failed");
+                }
+            })
+            .catch(error => {
+                console.error(error);
+                rfpSubmitBtn.innerHTML = '<span style="display:inline-flex;align-items:center;gap:8px;">❌ 傳送失敗，請重試</span>';
+                rfpSubmitBtn.style.background = 'linear-gradient(135deg, #E74C3C, #C0392B)';
+                
+                setTimeout(() => {
+                    rfpSubmitBtn.innerHTML = originalContent;
+                    rfpSubmitBtn.style.background = '';
+                    rfpSubmitBtn.disabled = false;
+                    if (typeof lucide !== 'undefined') {
+                        lucide.createIcons();
+                    }
+                }, 3000);
+            });
+        });
+    }
+
+    // ---- Material Selection Helper Interaction ----
+    const materialHelper = document.getElementById('material-results');
+    if (materialHelper) {
+        const checkboxes = document.querySelectorAll('.material-checkbox-input');
+        const cards = document.querySelectorAll('.material-result-card');
+        const emptyState = document.getElementById('material-helper-empty');
+
+        function filterMaterials() {
+            // Get all checked values
+            const activeProps = [];
+            checkboxes.forEach(cb => {
+                const label = cb.closest('.material-checkbox-label');
+                if (cb.checked) {
+                    activeProps.push(cb.value);
+                    if (label) label.classList.add('checked');
+                } else {
+                    if (label) label.classList.remove('checked');
+                }
+            });
+
+            let visibleCount = 0;
+
+            cards.forEach(card => {
+                const cardTags = card.dataset.tags ? card.dataset.tags.split(',') : [];
+                
+                if (activeProps.length === 0) {
+                    // Show all cards when no checkbox is checked
+                    card.classList.remove('hidden');
+                    visibleCount++;
+                } else {
+                    // Check if card matches AT LEAST ONE selected property (OR match)
+                    const isMatch = activeProps.some(prop => cardTags.includes(prop));
+                    if (isMatch) {
+                        card.classList.remove('hidden');
+                        visibleCount++;
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                }
+            });
+
+            // Show empty state if no matches
+            if (visibleCount === 0 && emptyState) {
+                emptyState.classList.remove('hidden');
+            } else if (emptyState) {
+                emptyState.classList.add('hidden');
+            }
+        }
+
+        checkboxes.forEach(cb => {
+            cb.addEventListener('change', filterMaterials);
+        });
+
+        // Initial run to format correctly
+        filterMaterials();
+    }
+});

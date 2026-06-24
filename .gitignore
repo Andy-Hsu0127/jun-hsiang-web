@@ -18,3 +18,8 @@ walkthrough.md
 
 # 日誌檔
 *.log
+
+# 簡報與效能評測檔案
+*.pptm
+lighthouse_report.json
+

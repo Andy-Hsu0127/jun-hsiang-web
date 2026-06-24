@@ -294,6 +294,15 @@
         <div class="knowledge-layout">
             <!-- Sidebar Navigation -->
             <aside class="knowledge-sidebar reveal-left">
+                <!-- Search Input Box -->
+                <div class="knowledge-search-wrapper" style="margin-bottom: var(--space-6);">
+                    <h3 class="knowledge-nav-title" style="margin-bottom: var(--space-3);">搜尋文章</h3>
+                    <div style="position: relative;">
+                        <input type="text" id="article-search" placeholder="輸入關鍵字搜尋..." style="width: 100%; padding: 10px 12px 10px 36px; border: 1px solid var(--color-border); background: rgba(255,255,255,0.02); border-radius: var(--radius-md); color: var(--color-text-primary); font-size: 0.9rem; transition: all 0.3s;" />
+                        <svg class="lucide" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="position: absolute; left: 12px; top: 50%; transform: translateY(-50%); width: 16px; height: 16px; color: var(--color-text-muted);" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="11" cy="11" r="8"/><line x1="21" x2="16.65" y1="21" y2="16.65"/></svg>
+                    </div>
+                </div>
+
                 <div class="knowledge-nav">
                     <h3 class="knowledge-nav-title">欄目分類</h3>
                     <ul class="knowledge-nav-list">
@@ -302,6 +311,20 @@
                         <li class="knowledge-nav-item" data-type="case">客戶案例分享</li>
                     </ul>
                 </div>
+
+                <!-- Hot Tags Wrapper -->
+                <div class="knowledge-tags-wrapper" style="margin-top: var(--space-6);">
+                    <h3 class="knowledge-nav-title" style="margin-bottom: var(--space-3);">熱門標籤</h3>
+                    <div class="knowledge-hot-tags" style="display: flex; flex-wrap: wrap; gap: 8px;">
+                        <button class="tag-btn active" data-tag="all" style="font-size: 0.75rem; background: rgba(214, 168, 67, 0.1); color: var(--color-accent); border: 1px solid var(--color-accent); padding: 4px 10px; border-radius: var(--radius-full); cursor: pointer; transition: all 0.3s; border-radius: 9999px;">#全部</button>
+                        <button class="tag-btn" data-tag="LSR射出" style="font-size: 0.75rem; background: rgba(255,255,255,0.03); color: var(--color-text-secondary); border: 1px solid var(--color-border); padding: 4px 10px; border-radius: var(--radius-full); cursor: pointer; transition: all 0.3s; border-radius: 9999px;">#LSR射出</button>
+                        <button class="tag-btn" data-tag="設計指南" style="font-size: 0.75rem; background: rgba(255,255,255,0.03); color: var(--color-text-secondary); border: 1px solid var(--color-border); padding: 4px 10px; border-radius: var(--radius-full); cursor: pointer; transition: all 0.3s; border-radius: 9999px;">#設計指南</button>
+                        <button class="tag-btn" data-tag="異材結合" style="font-size: 0.75rem; background: rgba(255,255,255,0.03); color: var(--color-text-secondary); border: 1px solid var(--color-border); padding: 4px 10px; border-radius: var(--radius-full); cursor: pointer; transition: all 0.3s; border-radius: 9999px;">#異材結合</button>
+                        <button class="tag-btn" data-tag="材料知識" style="font-size: 0.75rem; background: rgba(255,255,255,0.03); color: var(--color-text-secondary); border: 1px solid var(--color-border); padding: 4px 10px; border-radius: var(--radius-full); cursor: pointer; transition: all 0.3s; border-radius: 9999px;">#材料知識</button>
+                        <button class="tag-btn" data-tag="醫療級" style="font-size: 0.75rem; background: rgba(255,255,255,0.03); color: var(--color-text-secondary); border: 1px solid var(--color-border); padding: 4px 10px; border-radius: var(--radius-full); cursor: pointer; transition: all 0.3s; border-radius: 9999px;">#醫療級</button>
+                        <button class="tag-btn" data-tag="防水密封" style="font-size: 0.75rem; background: rgba(255,255,255,0.03); color: var(--color-text-secondary); border: 1px solid var(--color-border); padding: 4px 10px; border-radius: var(--radius-full); cursor: pointer; transition: all 0.3s; border-radius: 9999px;">#防水密封</button>
+                    </div>
+                </div>
             </aside>
             
             <!-- Articles Content Area -->
@@ -309,7 +332,7 @@
                 <div class="article-list" id="article-list">
                     
                     <!-- Article 1 -->
-                    <article class="article-card" data-category="tech">
+                    <article class="article-card" data-category="tech" data-tags="LSR射出,材料知識,設計指南">
                         <div class="article-header">
                             <div>
                                 <span class="article-tag">技術專欄</span>
@@ -384,7 +407,7 @@
                     </article>
                     
                     <!-- Article 2 -->
-                    <article class="article-card" data-category="tech">
+                    <article class="article-card" data-category="tech" data-tags="設計指南,異材結合">
                         <div class="article-header">
                             <div>
                                 <span class="article-tag">技術專欄</span>
@@ -424,7 +447,7 @@
                     </article>
                     
                     <!-- Article 3 -->
-                    <article class="article-card" data-category="tech">
+                    <article class="article-card" data-category="tech" data-tags="設計指南,材料知識">
                         <div class="article-header">
                             <div>
                                 <span class="article-tag">技術專欄</span>
@@ -469,7 +492,7 @@
                     </article>
                     
                     <!-- Article 4 (Case Study 1) -->
-                    <article class="article-card" data-category="case">
+                    <article class="article-card" data-category="case" data-tags="醫療級,LSR射出">
                         <div class="article-header">
                             <div>
                                 <span class="article-tag">客戶案例分享</span>
@@ -506,7 +529,7 @@
                     </article>
                     
                     <!-- Article 5 (Case Study 2) -->
-                    <article class="article-card" data-category="case">
+                    <article class="article-card" data-category="case" data-tags="LSR射出,異材結合,防水密封">
                         <div class="article-header">
                             <div>
                                 <span class="article-tag">客戶案例分享</span>
@@ -543,7 +566,7 @@
                     </article>
                     
                     <!-- Article 6 (Case Study 3) -->
-                    <article class="article-card" data-category="case">
+                    <article class="article-card" data-category="case" data-tags="異材結合,材料知識">
                         <div class="article-header">
                             <div>
                                 <span class="article-tag">客戶案例分享</span>
@@ -693,30 +716,87 @@
             });
         });
         
-        // Article Category Filter (Sidebar)
+        // Combined Filter Function
+        const searchInput = document.getElementById('article-search');
+        const tagButtons = document.querySelectorAll('.tag-btn');
         const navItems = document.querySelectorAll('.knowledge-nav-item');
         
+        let activeCategory = 'all';
+        let activeTag = 'all';
+        let searchQuery = '';
+
+        function filterArticles() {
+            articleCards.forEach(card => {
+                const category = card.dataset.category || '';
+                const tags = card.dataset.tags ? card.dataset.tags.split(',') : [];
+                
+                // Match Category
+                const matchCategory = (activeCategory === 'all' || category === activeCategory);
+                
+                // Match Tag
+                const matchTag = (activeTag === 'all' || tags.includes(activeTag));
+                
+                // Match Search Query (Title + Summary + Body)
+                const cardTitle = card.querySelector('.article-title') ? card.querySelector('.article-title').textContent.toLowerCase() : '';
+                const cardSummary = card.querySelector('.article-summary') ? card.querySelector('.article-summary').textContent.toLowerCase() : '';
+                const cardBody = card.querySelector('.article-body') ? card.querySelector('.article-body').textContent.toLowerCase() : '';
+                
+                const matchSearch = (!searchQuery || 
+                                     cardTitle.includes(searchQuery) || 
+                                     cardSummary.includes(searchQuery) ||
+                                     cardBody.includes(searchQuery));
+                                     
+                if (matchCategory && matchTag && matchSearch) {
+                    card.style.display = 'block';
+                    card.style.opacity = '1';
+                } else {
+                    card.style.display = 'none';
+                    // If active card was expanded, collapse it to keep layout clean
+                    if (card.classList.contains('expanded')) {
+                        card.classList.remove('expanded');
+                        const btnText = card.querySelector('.article-toggle-btn span');
+                        if (btnText) btnText.textContent = '閱讀全文';
+                    }
+                }
+            });
+        }
+
+        // Category Filter Event
         navItems.forEach(item => {
             item.addEventListener('click', () => {
                 navItems.forEach(i => i.classList.remove('active'));
                 item.classList.add('active');
-                
-                const type = item.dataset.type;
-                
-                articleCards.forEach(card => {
-                    if (type === 'all' || card.dataset.category === type) {
-                        card.style.display = 'block';
-                        card.style.opacity = '0';
-                        requestAnimationFrame(() => {
-                            card.style.transition = 'opacity 0.4s ease';
-                            card.style.opacity = '1';
-                        });
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
+                activeCategory = item.dataset.type;
+                filterArticles();
             });
         });
+
+        // Tag Filter Event
+        tagButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                tagButtons.forEach(b => {
+                    b.classList.remove('active');
+                    b.style.background = 'rgba(255,255,255,0.03)';
+                    b.style.color = 'var(--color-text-secondary)';
+                    b.style.borderColor = 'var(--color-border)';
+                });
+                btn.classList.add('active');
+                btn.style.background = 'rgba(214, 168, 67, 0.1)';
+                btn.style.color = 'var(--color-accent)';
+                btn.style.borderColor = 'var(--color-accent)';
+                
+                activeTag = btn.dataset.tag;
+                filterArticles();
+            });
+        });
+
+        // Search Input Event
+        if (searchInput) {
+            searchInput.addEventListener('input', (e) => {
+                searchQuery = e.target.value.trim().toLowerCase();
+                filterArticles();
+            });
+        }
     });
 </script>
 </body>
