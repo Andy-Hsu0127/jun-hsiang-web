@@ -114,6 +114,13 @@ document.addEventListener('DOMContentLoaded', () => {
             slides[currentSlide].classList.remove('active');
             dots[currentSlide].classList.remove('active');
             currentSlide = (index + slides.length) % slides.length;
+            
+            // Lazy load target slide background
+            const slide = slides[currentSlide];
+            if (slide.dataset.bg && !slide.style.backgroundImage) {
+                slide.style.backgroundImage = `url('${slide.dataset.bg}')`;
+            }
+
             slides[currentSlide].classList.add('active');
             dots[currentSlide].classList.add('active');
             resetInterval();
@@ -128,6 +135,17 @@ document.addEventListener('DOMContentLoaded', () => {
             slideInterval = setInterval(nextSlide, 5000);
         }
         resetInterval();
+
+        // Lazy load all remaining slides after page load (delay 2.5 seconds) to protect PageSpeed
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                slides.forEach(slide => {
+                    if (slide.dataset.bg && !slide.style.backgroundImage) {
+                        slide.style.backgroundImage = `url('${slide.dataset.bg}')`;
+                    }
+                });
+            }, 2500);
+        });
     }
 
     // ---- Product Filter (Sidebar) ----
