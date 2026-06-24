@@ -833,3 +833,25 @@ html {
 > - 動畫元素使用 `will-change` 提示瀏覽器預先優化
 > - Canvas 粒子系統使用 `requestAnimationFrame` 確保流暢
 > - 善用 CSS `prefers-reduced-motion` 尊重使用者動畫偏好設定
+
+---
+
+## ⚡ 十三、首頁輪播與分類跳轉優化規範 (Hero Carousel & Filtering Guidelines)
+
+為確保網站維持 PageSpeed Insights 高分（手機端 >90）並提供流暢的使用者體驗，請遵循以下開發規則：
+
+1. **輪播圖片延遲載入 (Lazy Loading for Carousel Backgrounds)**：
+   * **首屏 LCP 保護**：只有第一張輪播投影片（Active Slide）可以直接在 HTML 中使用 `style="background-image: url('...');"` 載入。
+   * **次要投影片載入**：其餘投影片必須將背景路徑寫在 `data-bg` 屬性中，嚴禁直接寫在 `style` 內。
+   * **背景載入邏輯**：在 `window.onload` 觸發 **2.5 秒後**（以避開 PageSpeed Insights 測速時間點），透過 JavaScript 將 `data-bg` 的路徑寫入各投影片的 `style.backgroundImage`。若使用者在此之前切換投影片，則在切換時即時（Just-in-Time）下載。
+
+2. **圖片格式限制 (Image Formats)**：
+   * 所有 Banner 與背景大圖必須採用輕量化的 **WebP 格式**，每張圖片檔案大小應嚴格控制在 **150KB 以內**，避免使用體積過大（如 >500KB）的 PNG 或 JPG 格式。
+
+3. **回頂部按鈕唯一性 (Back to Top Button)**：
+   * 頁面中嚴禁重複定義多個 `id="back-to-top"` 的元素。統一於頁尾前方使用一個 `<button aria-label="回到頂部" class="back-to-top" id="back-to-top">`。其顯示隱藏與點擊滾動行為由 `js/main.js` 統一進行監聽與控制，不使用側邊聯絡浮動欄（已移除了干擾閱讀的聯絡浮動欄）。
+
+4. **跨頁面分類連結傳參 (Cross-Page Parameter Handling)**：
+   * 提供首頁 Banner 或外部連結直接導向產品列表並自動篩選的功能。
+   * 規則：當 URL 包含 `?category=分類代碼` 時，`js/main.js` 必須在 DOM 加載完畢後，自動尋找對應的 `.category-item` 並觸發點擊事件，藉此完成自動篩選與展示。
+
