@@ -399,32 +399,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function validateRFPStep(step) {
-        if (step === 1) {
-            const val = document.getElementById('rfp-application').value;
-            if (!val) {
-                alert('請選擇一個產品應用領域！');
-                return false;
-            }
-        } else if (step === 2) {
-            const val = document.getElementById('rfp-process').value;
-            if (!val) {
-                alert('請選擇一個加工製程！');
-                return false;
-            }
-        } else if (step === 3) {
-            const qty = document.getElementById('rfp-quantity');
-            const hardness = document.getElementById('rfp-hardness');
-            if (!qty || !qty.value.trim()) {
-                if (qty) qty.focus();
-                alert('請填寫預估年產量！');
-                return false;
-            }
-            if (!hardness || !hardness.value.trim()) {
-                if (hardness) hardness.focus();
-                alert('請填寫矽膠硬度要求！');
-                return false;
-            }
-        }
         return true;
     }
 
@@ -451,15 +425,14 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             
             // Validate step 4 inputs
-            const company = document.getElementById('rfp-company');
             const name = document.getElementById('rfp-name');
             const phone = document.getElementById('rfp-phone');
             const email = document.getElementById('rfp-email');
 
-            if (!company.value.trim()) { company.focus(); alert('請填寫公司名稱！'); return; }
-            if (!name.value.trim()) { name.focus(); alert('請填寫聯絡人姓名！'); return; }
-            if (!phone.value.trim()) { phone.focus(); alert('請填寫電話號碼！'); return; }
-            if (!email.value.trim()) { email.focus(); alert('請填寫E-mail信箱！'); return; }
+            if (!name.value.trim() && !phone.value.trim() && !email.value.trim()) {
+                alert('請至少填寫聯絡人姓名、電話或 E-mail 其中一項，以便我們回覆您！');
+                return;
+            }
 
             // Disable button and show sending state
             const originalContent = rfpSubmitBtn.innerHTML;
@@ -570,5 +543,88 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Initial run to format correctly
         filterMaterials();
+    }
+    // ---- Contact Tabs Switcher ----
+    const contactTabButtons = document.querySelectorAll('.contact-tabs .tab-btn');
+    const contactTabContents = document.querySelectorAll('.contact-form-tab-content');
+
+    contactTabButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            contactTabButtons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            contactTabContents.forEach(content => {
+                content.style.display = 'none';
+                content.classList.remove('active');
+            });
+
+            const tabId = btn.dataset.tab;
+            const targetContent = document.getElementById(`${tabId}-contact-content`);
+            if (targetContent) {
+                targetContent.style.display = 'block';
+                targetContent.classList.add('active');
+            }
+        });
+    });
+
+    // ---- General Contact Form Submit Handler ----
+    const generalForm = document.getElementById('general-contact-form');
+    const generalSubmitBtn = document.getElementById('general-submit-btn');
+    if (generalForm && generalSubmitBtn) {
+        generalForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const name = document.getElementById('general-name');
+            const phone = document.getElementById('general-phone');
+            const email = document.getElementById('general-email');
+            
+            if (!name.value.trim() && !phone.value.trim() && !email.value.trim()) {
+                alert('請至少填寫聯絡人姓名、電話或 E-mail 其中一項，以便我們回覆您！');
+                return;
+            }
+
+            const originalContent = generalSubmitBtn.innerHTML;
+            generalSubmitBtn.innerHTML = '<span style="display:inline-flex;align-items:center;gap:8px;">傳送中...</span>';
+            generalSubmitBtn.disabled = true;
+
+            const formData = new FormData(generalForm);
+
+            fetch("https://formsubmit.co/ajax/18913f82f856f8ea938feb005a6e3e10", {
+                method: "POST",
+                body: formData
+            })
+            .then(response => {
+                if (response.ok) {
+                    generalSubmitBtn.innerHTML = '<span style="display:inline-flex;align-items:center;gap:8px;">✓ 訊息已成功送出</span>';
+                    generalSubmitBtn.style.background = 'linear-gradient(135deg, #2ECC71, #27AE60)';
+                    
+                    setTimeout(() => {
+                        generalForm.reset();
+                        generalSubmitBtn.innerHTML = originalContent;
+                        generalSubmitBtn.style.background = '';
+                        generalSubmitBtn.disabled = false;
+                        if (typeof lucide !== 'undefined') {
+                            lucide.createIcons();
+                        }
+                    }, 3000);
+                } else {
+                    throw new Error("Form submission failed");
+                }
+            })
+            .catch(error => {
+                console.error(error);
+                generalSubmitBtn.innerHTML = '<span style="display:inline-flex;align-items:center;gap:8px;">❌ 傳送失敗，請重試</span>';
+                generalSubmitBtn.style.background = 'linear-gradient(135deg, #E74C3C, #C0392B)';
+                
+                setTimeout(() => {
+                    generalSubmitBtn.innerHTML = originalContent;
+                    generalSubmitBtn.style.background = '';
+                    generalSubmitBtn.disabled = false;
+                    if (typeof lucide !== 'undefined') {
+                        lucide.createIcons();
+                    }
+                }, 3000);
+            });
+        });
     }
 });

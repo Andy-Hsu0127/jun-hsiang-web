@@ -2918,5 +2918,41 @@ button {
     display: none;
 }
 
+/* Contact Tab Switcher */
+.contact-tabs {
+    display: flex;
+    gap: var(--space-3);
+    margin-bottom: var(--space-6);
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: var(--space-4);
+}
+
+.contact-tabs .tab-btn {
+    flex: 1;
+    padding: var(--space-3) var(--space-4);
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    color: var(--color-text-secondary);
+    cursor: pointer;
+    font-weight: 600;
+    transition: all var(--transition-normal);
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.contact-tabs .tab-btn:hover {
+    border-color: rgba(214, 168, 67, 0.4);
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.contact-tabs .tab-btn.active {
+    background: rgba(214, 168, 67, 0.1);
+    border-color: var(--color-accent);
+    color: var(--color-accent-light);
+    box-shadow: 0 0 10px rgba(214, 168, 67, 0.1);
+}
+
+
 
 
