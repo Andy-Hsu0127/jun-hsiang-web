@@ -162,6 +162,19 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Check URL query parameter for category
+    const urlParams = new URLSearchParams(window.location.search);
+    const catParam = urlParams.get('category');
+    if (catParam) {
+        const targetItem = Array.from(categoryItems).find(item => item.dataset.filter === catParam);
+        if (targetItem) {
+            // Wait slightly for DOM and reveal animations to settle
+            setTimeout(() => {
+                targetItem.click();
+            }, 100);
+        }
+    }
+
     // ---- Back to Top Button ----
     const backToTop = document.getElementById('back-to-top');
     if (backToTop) {
