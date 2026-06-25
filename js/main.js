@@ -426,6 +426,7 @@ document.addEventListener('DOMContentLoaded', () => {
             nameRequired: '請輸入聯絡人姓名',
             contactRequired: '請提供電話或 E-mail，以便我們回覆您',
             emailInvalid: '請輸入正確的 E-mail 格式',
+            phoneInvalid: '請輸入有效的電話號碼格式',
             submitting: '傳送中...',
             submitSuccessTitle: '訊息已成功送出！',
             submitSuccessDesc: '感謝您的來信，我們將盡速安排專人與您聯絡。',
@@ -437,6 +438,7 @@ document.addEventListener('DOMContentLoaded', () => {
             nameRequired: 'Please enter your name',
             contactRequired: 'Please provide either a phone number or email',
             emailInvalid: 'Please enter a valid email address',
+            phoneInvalid: 'Please enter a valid phone number',
             submitting: 'Sending...',
             submitSuccessTitle: 'Message Sent Successfully!',
             submitSuccessDesc: 'Thank you for your message. Our representative will contact you as soon as possible.',
@@ -448,6 +450,7 @@ document.addEventListener('DOMContentLoaded', () => {
             nameRequired: 'お名前をご入力ください',
             contactRequired: 'ご連絡先（電話番号またはメール）をご入力ください',
             emailInvalid: '正しいメールアドレスの形式でご入力ください',
+            phoneInvalid: '正しい電話番号の形式でご入力ください',
             submitting: '送信中...',
             submitSuccessTitle: '送信が完了しました！',
             submitSuccessDesc: 'お問い合わせいただきありがとうございます。担当者より折り返しご連絡いたします。',
@@ -462,6 +465,13 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!emailVal) return true;
         const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return re.test(emailVal.trim());
+    }
+
+    function validatePhone(phoneVal) {
+        if (!phoneVal) return true;
+        // Allow digits, spaces, dashes, parentheses, plus sign. Length >= 6
+        const re = /^[\d\s()+\-]+$/;
+        return re.test(phoneVal.trim()) && phoneVal.trim().replace(/[^\d]/g, '').length >= 6;
     }
 
     function setError(inputEl, msg) {
@@ -485,14 +495,85 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Clear error on input typing
+    // Interactive Field Validation
+    function validateField(inputEl) {
+        clearError(inputEl);
+        const id = inputEl.id;
+        const val = inputEl.value.trim();
+
+        if (id === 'general-name' || id === 'rfp-name') {
+            if (!val) {
+                setError(inputEl, t.nameRequired);
+                return false;
+            }
+        }
+
+        if (id === 'general-email' || id === 'rfp-email') {
+            if (val && !validateEmail(val)) {
+                setError(inputEl, t.emailInvalid);
+                return false;
+            }
+        }
+
+        if (id === 'general-phone' || id === 'rfp-phone') {
+            if (val && !validatePhone(val)) {
+                setError(inputEl, t.phoneInvalid);
+                return false;
+            }
+        }
+
+        // Check if both are empty (either general or rfp)
+        const isGeneral = id.startsWith('general-');
+        const phoneId = isGeneral ? 'general-phone' : 'rfp-phone';
+        const emailId = isGeneral ? 'general-email' : 'rfp-email';
+        const phoneEl = document.getElementById(phoneId);
+        const emailEl = document.getElementById(emailId);
+
+        if (phoneEl && emailEl && (id === phoneId || id === emailId)) {
+            const phoneVal = phoneEl.value.trim();
+            const emailVal = emailEl.value.trim();
+
+            if (!phoneVal && !emailVal) {
+                setError(phoneEl, t.contactRequired);
+                setError(emailEl, t.contactRequired);
+                return false;
+            } else {
+                // Clear the generic contactRequired error if at least one is filled,
+                // but preserve specific format error if invalid.
+                if (id === phoneId) {
+                    clearError(emailEl);
+                    if (emailVal && !validateEmail(emailVal)) {
+                        setError(emailEl, t.emailInvalid);
+                    }
+                } else if (id === emailId) {
+                    clearError(phoneEl);
+                    if (phoneVal && !validatePhone(phoneVal)) {
+                        setError(phoneEl, t.phoneInvalid);
+                    }
+                }
+            }
+        }
+
+        return true;
+    }
+
+    // Attach real-time validation listeners
     const formInputs = document.querySelectorAll('.form-group input, .form-group select, .form-group textarea');
     formInputs.forEach(input => {
+        input.addEventListener('blur', () => {
+            validateField(input);
+        });
         input.addEventListener('input', () => {
-            clearError(input);
+            const group = input.closest('.form-group');
+            if (group && group.classList.contains('error')) {
+                validateField(input);
+            }
         });
         input.addEventListener('change', () => {
-            clearError(input);
+            const group = input.closest('.form-group');
+            if (group && group.classList.contains('error')) {
+                validateField(input);
+            }
         });
     });
 
@@ -558,28 +639,13 @@ document.addEventListener('DOMContentLoaded', () => {
             const phone = document.getElementById('rfp-phone');
             const email = document.getElementById('rfp-email');
             
-            let hasError = false;
+            const isNameValid = validateField(name);
+            const isPhoneValid = validateField(phone);
+            const isEmailValid = validateField(email);
             
-            // Clear errors
-            clearError(name);
-            clearError(phone);
-            clearError(email);
-            
-            if (!name.value.trim()) {
-                setError(name, t.nameRequired);
-                hasError = true;
+            if (!isNameValid || !isPhoneValid || !isEmailValid) {
+                return;
             }
-            
-            if (!phone.value.trim() && !email.value.trim()) {
-                setError(phone, t.contactRequired);
-                setError(email, t.contactRequired);
-                hasError = true;
-            } else if (email.value.trim() && !validateEmail(email.value)) {
-                setError(email, t.emailInvalid);
-                hasError = true;
-            }
-            
-            if (hasError) return;
 
             // Disable button and show sending state
             const originalContent = rfpSubmitBtn.innerHTML;
@@ -716,28 +782,13 @@ document.addEventListener('DOMContentLoaded', () => {
             const phone = document.getElementById('general-phone');
             const email = document.getElementById('general-email');
             
-            let hasError = false;
+            const isNameValid = validateField(name);
+            const isPhoneValid = validateField(phone);
+            const isEmailValid = validateField(email);
             
-            // Clear errors
-            clearError(name);
-            clearError(phone);
-            clearError(email);
-            
-            if (!name.value.trim()) {
-                setError(name, t.nameRequired);
-                hasError = true;
+            if (!isNameValid || !isPhoneValid || !isEmailValid) {
+                return;
             }
-            
-            if (!phone.value.trim() && !email.value.trim()) {
-                setError(phone, t.contactRequired);
-                setError(email, t.contactRequired);
-                hasError = true;
-            } else if (email.value.trim() && !validateEmail(email.value)) {
-                setError(email, t.emailInvalid);
-                hasError = true;
-            }
-            
-            if (hasError) return;
 
             const originalContent = generalSubmitBtn.innerHTML;
             generalSubmitBtn.innerHTML = `<span style="display:inline-flex;align-items:center;gap:8px;">${t.submitting}</span>`;
