@@ -557,6 +557,18 @@ document.addEventListener('DOMContentLoaded', () => {
         return true;
     }
 
+    // Restrict Phone Number inputs to valid characters only (numbers, spaces, dashes, parentheses, plus sign)
+    // This physically prevents typing or pasting non-phone characters like Chinese characters, providing ultimate error-proofing
+    const phoneInputs = document.querySelectorAll('#general-phone, #rfp-phone');
+    phoneInputs.forEach(input => {
+        input.addEventListener('input', () => {
+            const cleaned = input.value.replace(/[^\d\s()+\-]/g, '');
+            if (input.value !== cleaned) {
+                input.value = cleaned;
+            }
+        });
+    });
+
     // Attach real-time validation listeners
     const formInputs = document.querySelectorAll('.form-group input, .form-group select, .form-group textarea');
     formInputs.forEach(input => {
@@ -570,10 +582,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
         input.addEventListener('change', () => {
-            const group = input.closest('.form-group');
-            if (group && group.classList.contains('error')) {
-                validateField(input);
-            }
+            // Always run validation on change (such as autocomplete filling)
+            validateField(input);
         });
     });
 
