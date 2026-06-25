@@ -418,6 +418,135 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // ---- Form Validation & Translation Dictionary ----
+    const lang = window.location.pathname.includes('/en/') ? 'en' : (window.location.pathname.includes('/ja/') ? 'ja' : 'zh');
+
+    const translations = {
+        zh: {
+            nameRequired: '請輸入聯絡人姓名',
+            contactRequired: '請提供電話或 E-mail，以便我們回覆您',
+            emailInvalid: '請輸入正確的 E-mail 格式',
+            submitting: '傳送中...',
+            submitSuccessTitle: '訊息已成功送出！',
+            submitSuccessDesc: '感謝您的來信，我們將盡速安排專人與您聯絡。',
+            submitFailTitle: '傳送失敗',
+            submitFailDesc: '抱歉，系統目前無法處理您的請求，請直接來電或稍後重試。',
+            close: '關閉'
+        },
+        en: {
+            nameRequired: 'Please enter your name',
+            contactRequired: 'Please provide either a phone number or email',
+            emailInvalid: 'Please enter a valid email address',
+            submitting: 'Sending...',
+            submitSuccessTitle: 'Message Sent Successfully!',
+            submitSuccessDesc: 'Thank you for your message. Our representative will contact you as soon as possible.',
+            submitFailTitle: 'Submission Failed',
+            submitFailDesc: 'Sorry, we are unable to process your request at this time. Please call us directly or try again later.',
+            close: 'Close'
+        },
+        ja: {
+            nameRequired: 'お名前をご入力ください',
+            contactRequired: 'ご連絡先（電話番号またはメール）をご入力ください',
+            emailInvalid: '正しいメールアドレスの形式でご入力ください',
+            submitting: '送信中...',
+            submitSuccessTitle: '送信が完了しました！',
+            submitSuccessDesc: 'お問い合わせいただきありがとうございます。担当者より折り返しご連絡いたします。',
+            submitFailTitle: '送信失敗',
+            submitFailDesc: '申し訳ありませんが、現在リクエストを処理できません。お電話いただくか、時間をおいて再度お試しください。',
+            close: '閉じる'
+        }
+    };
+    const t = translations[lang];
+
+    function validateEmail(emailVal) {
+        if (!emailVal) return true;
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(emailVal.trim());
+    }
+
+    function setError(inputEl, msg) {
+        const group = inputEl.closest('.form-group');
+        if (group) {
+            group.classList.add('error');
+            let errorMsg = group.querySelector('.error-message');
+            if (!errorMsg) {
+                errorMsg = document.createElement('div');
+                errorMsg.className = 'error-message';
+                group.appendChild(errorMsg);
+            }
+            errorMsg.textContent = msg;
+        }
+    }
+
+    function clearError(inputEl) {
+        const group = inputEl.closest('.form-group');
+        if (group) {
+            group.classList.remove('error');
+        }
+    }
+
+    // Clear error on input typing
+    const formInputs = document.querySelectorAll('.form-group input, .form-group select, .form-group textarea');
+    formInputs.forEach(input => {
+        input.addEventListener('input', () => {
+            clearError(input);
+        });
+        input.addEventListener('change', () => {
+            clearError(input);
+        });
+    });
+
+    function showStatusModal(isSuccess) {
+        const title = isSuccess ? t.submitSuccessTitle : t.submitFailTitle;
+        const desc = isSuccess ? t.submitSuccessDesc : t.submitFailDesc;
+        
+        let overlay = document.querySelector('.success-modal-overlay');
+        if (!overlay) {
+            overlay = document.createElement('div');
+            overlay.className = 'success-modal-overlay';
+            overlay.innerHTML = `
+                <div class="success-modal-content">
+                    <div class="success-modal-icon"></div>
+                    <h3 class="success-modal-title"></h3>
+                    <p class="success-modal-message"></p>
+                    <button class="success-modal-btn"></button>
+                </div>
+            `;
+            document.body.appendChild(overlay);
+            
+            overlay.querySelector('.success-modal-btn').addEventListener('click', () => {
+                overlay.classList.remove('active');
+            });
+            
+            overlay.addEventListener('click', (e) => {
+                if (e.target === overlay) {
+                    overlay.classList.remove('active');
+                }
+            });
+        }
+        
+        const iconContainer = overlay.querySelector('.success-modal-icon');
+        if (isSuccess) {
+            iconContainer.style.color = 'var(--color-accent)';
+            iconContainer.style.borderColor = 'var(--color-accent)';
+            iconContainer.style.boxShadow = '0 0 20px rgba(13, 148, 136, 0.3)';
+            iconContainer.innerHTML = `<svg class="lucide lucide-check" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><polyline points="20 6 9 17 4 12"></polyline></svg>`;
+        } else {
+            iconContainer.style.color = '#ef4444';
+            iconContainer.style.borderColor = '#ef4444';
+            iconContainer.style.boxShadow = '0 0 20px rgba(239, 68, 68, 0.3)';
+            iconContainer.innerHTML = `<svg class="lucide lucide-alert-triangle" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" x2="12" y1="9" y2="13"/><line x1="12" x2="12.01" y1="17" y2="17"/></svg>`;
+        }
+        
+        overlay.querySelector('.success-modal-title').textContent = title;
+        overlay.querySelector('.success-modal-message').textContent = desc;
+        overlay.querySelector('.success-modal-btn').textContent = t.close;
+        
+        requestAnimationFrame(() => {
+            overlay.classList.add('active');
+        });
+    }
+
     // ---- RFP Form Submit Handler ----
     const rfpForm = document.getElementById('contact-form');
     if (rfpForm) {
@@ -428,15 +557,33 @@ document.addEventListener('DOMContentLoaded', () => {
             const name = document.getElementById('rfp-name');
             const phone = document.getElementById('rfp-phone');
             const email = document.getElementById('rfp-email');
-
-            if (!name.value.trim() && !phone.value.trim() && !email.value.trim()) {
-                alert('請至少填寫聯絡人姓名、電話或 E-mail 其中一項，以便我們回覆您！');
-                return;
+            
+            let hasError = false;
+            
+            // Clear errors
+            clearError(name);
+            clearError(phone);
+            clearError(email);
+            
+            if (!name.value.trim()) {
+                setError(name, t.nameRequired);
+                hasError = true;
             }
+            
+            if (!phone.value.trim() && !email.value.trim()) {
+                setError(phone, t.contactRequired);
+                setError(email, t.contactRequired);
+                hasError = true;
+            } else if (email.value.trim() && !validateEmail(email.value)) {
+                setError(email, t.emailInvalid);
+                hasError = true;
+            }
+            
+            if (hasError) return;
 
             // Disable button and show sending state
             const originalContent = rfpSubmitBtn.innerHTML;
-            rfpSubmitBtn.innerHTML = '<span style="display:inline-flex;align-items:center;gap:8px;">傳送中...</span>';
+            rfpSubmitBtn.innerHTML = `<span style="display:inline-flex;align-items:center;gap:8px;">${t.submitting}</span>`;
             rfpSubmitBtn.disabled = true;
 
             // Use FormData to allow file uploads
@@ -449,42 +596,32 @@ document.addEventListener('DOMContentLoaded', () => {
             })
             .then(response => {
                 if (response.ok) {
-                    // Success animation
-                    rfpSubmitBtn.innerHTML = '<span style="display:inline-flex;align-items:center;gap:8px;">✓ 詢價單已成功送出</span>';
-                    rfpSubmitBtn.style.background = 'linear-gradient(135deg, #2ECC71, #27AE60)';
+                    showStatusModal(true);
                     
-                    setTimeout(() => {
-                        rfpForm.reset();
-                        // Reset option cards selection
-                        document.querySelectorAll('.rfp-option-card').forEach(c => c.classList.remove('selected'));
-                        // Go back to step 1
-                        rfpCurrentStep = 1;
-                        updateRFPWizard();
-                        
-                        rfpSubmitBtn.innerHTML = originalContent;
-                        rfpSubmitBtn.style.background = '';
-                        rfpSubmitBtn.disabled = false;
-                        if (typeof lucide !== 'undefined') {
-                            lucide.createIcons();
-                        }
-                    }, 3000);
+                    rfpForm.reset();
+                    // Reset option cards selection
+                    document.querySelectorAll('.rfp-option-card').forEach(c => c.classList.remove('selected'));
+                    // Go back to step 1
+                    rfpCurrentStep = 1;
+                    updateRFPWizard();
+                    
+                    rfpSubmitBtn.innerHTML = originalContent;
+                    rfpSubmitBtn.disabled = false;
+                    if (typeof lucide !== 'undefined') {
+                        lucide.createIcons();
+                    }
                 } else {
                     throw new Error("Form submission failed");
                 }
             })
             .catch(error => {
                 console.error(error);
-                rfpSubmitBtn.innerHTML = '<span style="display:inline-flex;align-items:center;gap:8px;">❌ 傳送失敗，請重試</span>';
-                rfpSubmitBtn.style.background = 'linear-gradient(135deg, #E74C3C, #C0392B)';
-                
-                setTimeout(() => {
-                    rfpSubmitBtn.innerHTML = originalContent;
-                    rfpSubmitBtn.style.background = '';
-                    rfpSubmitBtn.disabled = false;
-                    if (typeof lucide !== 'undefined') {
-                        lucide.createIcons();
-                    }
-                }, 3000);
+                showStatusModal(false);
+                rfpSubmitBtn.innerHTML = originalContent;
+                rfpSubmitBtn.disabled = false;
+                if (typeof lucide !== 'undefined') {
+                    lucide.createIcons();
+                }
             });
         });
     }
@@ -579,13 +716,31 @@ document.addEventListener('DOMContentLoaded', () => {
             const phone = document.getElementById('general-phone');
             const email = document.getElementById('general-email');
             
-            if (!name.value.trim() && !phone.value.trim() && !email.value.trim()) {
-                alert('請至少填寫聯絡人姓名、電話或 E-mail 其中一項，以便我們回覆您！');
-                return;
+            let hasError = false;
+            
+            // Clear errors
+            clearError(name);
+            clearError(phone);
+            clearError(email);
+            
+            if (!name.value.trim()) {
+                setError(name, t.nameRequired);
+                hasError = true;
             }
+            
+            if (!phone.value.trim() && !email.value.trim()) {
+                setError(phone, t.contactRequired);
+                setError(email, t.contactRequired);
+                hasError = true;
+            } else if (email.value.trim() && !validateEmail(email.value)) {
+                setError(email, t.emailInvalid);
+                hasError = true;
+            }
+            
+            if (hasError) return;
 
             const originalContent = generalSubmitBtn.innerHTML;
-            generalSubmitBtn.innerHTML = '<span style="display:inline-flex;align-items:center;gap:8px;">傳送中...</span>';
+            generalSubmitBtn.innerHTML = `<span style="display:inline-flex;align-items:center;gap:8px;">${t.submitting}</span>`;
             generalSubmitBtn.disabled = true;
 
             const formData = new FormData(generalForm);
@@ -597,35 +752,26 @@ document.addEventListener('DOMContentLoaded', () => {
             })
             .then(response => {
                 if (response.ok) {
-                    generalSubmitBtn.innerHTML = '<span style="display:inline-flex;align-items:center;gap:8px;">✓ 訊息已成功送出</span>';
-                    generalSubmitBtn.style.background = 'linear-gradient(135deg, #2ECC71, #27AE60)';
+                    showStatusModal(true);
                     
-                    setTimeout(() => {
-                        generalForm.reset();
-                        generalSubmitBtn.innerHTML = originalContent;
-                        generalSubmitBtn.style.background = '';
-                        generalSubmitBtn.disabled = false;
-                        if (typeof lucide !== 'undefined') {
-                            lucide.createIcons();
-                        }
-                    }, 3000);
+                    generalForm.reset();
+                    generalSubmitBtn.innerHTML = originalContent;
+                    generalSubmitBtn.disabled = false;
+                    if (typeof lucide !== 'undefined') {
+                        lucide.createIcons();
+                    }
                 } else {
                     throw new Error("Form submission failed");
                 }
             })
             .catch(error => {
                 console.error(error);
-                generalSubmitBtn.innerHTML = '<span style="display:inline-flex;align-items:center;gap:8px;">❌ 傳送失敗，請重試</span>';
-                generalSubmitBtn.style.background = 'linear-gradient(135deg, #E74C3C, #C0392B)';
-                
-                setTimeout(() => {
-                    generalSubmitBtn.innerHTML = originalContent;
-                    generalSubmitBtn.style.background = '';
-                    generalSubmitBtn.disabled = false;
-                    if (typeof lucide !== 'undefined') {
-                        lucide.createIcons();
-                    }
-                }, 3000);
+                showStatusModal(false);
+                generalSubmitBtn.innerHTML = originalContent;
+                generalSubmitBtn.disabled = false;
+                if (typeof lucide !== 'undefined') {
+                    lucide.createIcons();
+                }
             });
         });
     }

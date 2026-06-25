@@ -1,62 +1,42 @@
 <!DOCTYPE html>
 
-<html lang="zh-TW">
+<html lang="en">
 <head>
-<script>
-(function() {
-    var preferredLang = localStorage.getItem('jun_hsiang_lang_pref');
-    if (!preferredLang) {
-        var userLang = navigator.language || navigator.userLanguage;
-        if (userLang) {
-            userLang = userLang.toLowerCase();
-            if (userLang.startsWith('en')) {
-                localStorage.setItem('jun_hsiang_lang_pref', 'en');
-                window.location.href = 'en/index.html';
-            } else if (userLang.startsWith('ja')) {
-                localStorage.setItem('jun_hsiang_lang_pref', 'ja');
-                window.location.href = 'ja/index.html';
-            } else {
-                localStorage.setItem('jun_hsiang_lang_pref', 'zh-TW');
-            }
-        }
-    }
-})();
-</script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>新北新莊矽橡膠製品代工廠 | LSR 液態矽膠射出成型 · 異材結合 | 鈞翔實業</title>
-<meta content="新北新莊 30 年 ISO 9001 認證矽膠橡膠製品客製化代工廠。專營固態矽膠熱壓成型、LSR液態矽膠射出、矽橡膠包塑膠/金屬異材結合（矽膠包鐵）、防震避震腳墊與防水圈生產，提供模具研發一站式代工製造服務。" name="description"/>
-<meta content="新北矽膠工廠, 新莊橡膠代工, 液態矽膠射出, 矽橡膠知識, 異材結合, 矽膠包鐵, 台北橡膠代工, 矽膠製品客製, 橡膠製品" name="keywords"/>
-<meta content="鈞翔實業有限公司" name="author"/>
+<title>New Taipei City Custom Silicone &amp; Rubber Molding Factory | LSR Liquid Silicone Rubber Injection Molding · Overmolding | Jun-Hsiang Enterprise</title>
+<meta content="A 30-year ISO 9001 certified custom silicone &amp; rubber molding factory in Xinzhuang, New Taipei City. Specializing in solid silicone Compression Molding, LSR liquid silicone injection, overmolding / silicone-to-metal (iron/plastic) bonding, anti-vibration rubber pads/feet, and waterproof seals. We offer one-stop mold development and manufacturing services." name="description"/>
+<meta content="silicone factory, rubber OEM, liquid silicone rubber, silicone products, rubber products, seals, silicone metal bonding, silicone plastic overmolding, LSR, liquid silicone injection, overmolding, Jun-Hsiang Enterprise" name="keywords"/>
+<meta content="Jun-Hsiang Enterprise Co., Ltd." name="author"/>
 <meta content="index, follow, max-image-preview:large, max-snippet:-1" name="robots"/>
-<link href="https://andy-hsu0127.github.io/jun-hsiang-web/" rel="canonical"/>
+<link href="https://andy-hsu0127.github.io/jun-hsiang-web/en/index.html" rel="canonical"/>
 <link rel="alternate" hreflang="zh-TW" href="https://andy-hsu0127.github.io/jun-hsiang-web/index.html" />
 <link rel="alternate" hreflang="en" href="https://andy-hsu0127.github.io/jun-hsiang-web/en/index.html" />
 <link rel="alternate" hreflang="ja" href="https://andy-hsu0127.github.io/jun-hsiang-web/ja/index.html" />
 <link rel="alternate" hreflang="x-default" href="https://andy-hsu0127.github.io/jun-hsiang-web/index.html" />
-<meta content="鈞翔實業有限公司 | 專業矽膠橡膠製造" property="og:title"/>
-<meta content="30年矽膠橡膠專業代工經驗，ISO 9001認證，提供LSR液態矽膠射出、固態矽膠壓出等技術服務" property="og:description"/>
+<meta content="Jun-Hsiang Enterprise Co., Ltd. | Professional Silicone &amp; Rubber Manufacturing" property="og:title"/>
+<meta content="30 years of professional silicone &amp; rubber OEM experience, ISO 9001 certified. We provide LSR liquid silicone injection molding, compression molding, and other technical services." property="og:description"/>
 <meta content="website" property="og:type"/>
-<meta content="zh_TW" property="og:locale"/>
-<meta content="https://andy-hsu0127.github.io/jun-hsiang-web/" property="og:url"/>
-<meta content="鈞翔實業有限公司" property="og:site_name"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="https://andy-hsu0127.github.io/jun-hsiang-web/en/index.html" property="og:url"/>
+<meta content="Jun-Hsiang Enterprise Co., Ltd." property="og:site_name"/>
 <meta content="https://andy-hsu0127.github.io/jun-hsiang-web/images/og-image.png" property="og:image"/>
 <meta content="1200" property="og:image:width"/>
 <meta content="630" property="og:image:height"/>
-<meta content="鈞翔實業 - 專業矽膠橡膠製品代工廠" property="og:image:alt"/>
+<meta content="Jun-Hsiang Enterprise - Professional Silicone &amp; Rubber Molding Factory" property="og:image:alt"/>
 <meta content="summary_large_image" name="twitter:card"/>
-<meta content="鈞翔實業有限公司 | LSR 液態矽膠射出 · 矽膠橡膠專業代工" name="twitter:title"/>
-<meta content="ISO 9001認證，30年矽膠橡膠代工經驗。液態矽膠射出、固態矽膠壓出、異材結合一站式服務。" name="twitter:description"/>
+<meta content="Jun-Hsiang Enterprise Co., Ltd. | LSR Liquid Silicone Injection · Custom Silicone &amp; Rubber Molding" name="twitter:title"/>
+<meta content="ISO 9001 certified, 30 years of silicone &amp; rubber OEM experience. LSR liquid silicone injection molding, solid compression molding, and overmolding one-stop services." name="twitter:description"/>
 <meta content="https://andy-hsu0127.github.io/jun-hsiang-web/images/og-image.png" name="twitter:image"/>
 <meta content="#0A0F1C" name="theme-color"/>
 <meta content="#0A0F1C" name="msapplication-TileColor"/>
 <meta content="yes" name="apple-mobile-web-app-capable"/>
 <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"/>
-<meta content="鈞翔實業" name="apple-mobile-web-app-title"/>
-<link href="favicon.ico" rel="icon" type="image/x-icon"/>
-<link href="images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
-<link href="images/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
-<link href="css/style.css" rel="stylesheet"/>
+<meta content="Jun-Hsiang Enterprise" name="apple-mobile-web-app-title"/>
+<link href="../favicon.ico" rel="icon" type="image/x-icon"/>
+<link href="../images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="../images/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="../css/style.css" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 
@@ -64,17 +44,17 @@
     {
         "@context": "https://schema.org",
         "@type": "Organization",
-        "name": "鈞翔實業有限公司",
+        "name": "Jun-Hsiang Enterprise Co., Ltd.",
         "alternateName": "Jun-Hsiang Enterprise Co., Ltd.",
-        "url": "https://andy-hsu0127.github.io/jun-hsiang-web/",
+        "url": "https://andy-hsu0127.github.io/jun-hsiang-web/en/",
         "logo": "https://andy-hsu0127.github.io/jun-hsiang-web/images/logo.png",
         "foundingDate": "1991-08-01",
-        "description": "專營矽膠、橡膠製品成型代工，提供真空熱壓、固態矽膠射出、LSR液態矽膠射出等技術服務。",
+        "description": "Specializing in custom molding services for silicone and rubber products, offering compression molding, solid silicone injection, and LSR liquid silicone injection molding.",
         "address": {
             "@type": "PostalAddress",
-            "streetAddress": "新樹路345巷3號",
-            "addressLocality": "新莊區",
-            "addressRegion": "新北市",
+            "streetAddress": "No. 3, Lane 345, Xinshu Rd.",
+            "addressLocality": "Xinzhuang Dist.",
+            "addressRegion": "New Taipei City",
             "postalCode": "242",
             "addressCountry": "TW"
         },
@@ -89,22 +69,22 @@
         "sameAs": [],
         "hasOfferCatalog": {
             "@type": "OfferCatalog",
-            "name": "矽膠橡膠製品",
+            "name": "Silicone & Rubber Products",
             "itemListElement": [
                 {
                     "@type": "Offer",
                     "itemOffered": {
                         "@type": "Service",
-                        "name": "固態矽膠壓出技術",
-                        "description": "透過真空熱壓方式將固態矽膠原料在模具中加熱硫化成型"
+                        "name": "Solid Silicone Compression Molding Technology",
+                        "description": "Curing and vulcanizing solid silicone raw materials in a mold under heat and pressure using a vacuum press."
                     }
                 },
                 {
                     "@type": "Offer",
                     "itemOffered": {
                         "@type": "Service",
-                        "name": "液態矽膠射出技術 (LSR)",
-                        "description": "高精密度自動化液態矽膠射出成型技術"
+                        "name": "LSR Liquid Silicone Rubber Injection Molding Technology",
+                        "description": "High-precision, automated liquid silicone rubber injection molding technology."
                     }
                 }
             ]
@@ -115,17 +95,17 @@
     {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
-        "name": "鈞翔實業有限公司",
+        "name": "Jun-Hsiang Enterprise Co., Ltd.",
         "image": "https://andy-hsu0127.github.io/jun-hsiang-web/images/hero-bg.png",
-        "url": "https://andy-hsu0127.github.io/jun-hsiang-web/",
+        "url": "https://andy-hsu0127.github.io/jun-hsiang-web/en/",
         "telephone": "(02)2203-9918",
         "email": "jojo.li888@msa.hinet.net",
         "priceRange": "$$",
         "address": {
             "@type": "PostalAddress",
-            "streetAddress": "新樹路345巷3號",
-            "addressLocality": "新莊區",
-            "addressRegion": "新北市",
+            "streetAddress": "No. 3, Lane 345, Xinshu Rd.",
+            "addressLocality": "Xinzhuang Dist.",
+            "addressRegion": "New Taipei City",
             "postalCode": "242",
             "addressCountry": "TW"
         },
@@ -143,27 +123,27 @@
     }
     </script>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;family=Noto+Sans+TC:wght@300;400;500;700;900&amp;family=Outfit:wght@300;400;500;600;700;800;900&amp;family=Instrument+Serif:italic@0;1&amp;display=swap" media="print" onload="this.media='all'" rel="stylesheet"/>
-<link as="image" href="images/hero-premium-mold.webp" rel="preload" type="image/webp"/>
+<link as="image" href="../images/hero-premium-mold.webp" rel="preload" type="image/webp"/>
 </head>
 <body>
 <div class="loading-screen" id="loading-screen">
-<div class="loading-logo">鈞翔<span class="accent">實業</span></div>
+<div class="loading-logo">Jun-Hsiang<span class="accent"> Enterprise</span></div>
 <div class="loading-bar"></div>
 </div>
 <div class="announcement-bar" id="announcement-bar">
 <div class="marquee-track">
 <div class="marquee-content">
-<span class="marquee-item"><svg class="lucide lucide-award" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="8" r="6"></circle><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path></svg> ISO 9001 專業認證</span>
+<span class="marquee-item"><svg class="lucide lucide-award" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="8" r="6"></circle><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path></svg> ISO 9001 Certified Factory</span>
 <span class="marquee-dot">·</span>
-<span class="marquee-item">專營熱固壓模成形 &amp; LSR 液態矽膠射出成型</span>
+<span class="marquee-item">Specializing in Compression Molding &amp; LSR Liquid Silicone Rubber Injection Molding</span>
 <span class="marquee-dot">·</span>
-<span class="marquee-item">各類矽膠製品 &amp; 特殊矽膠橡膠材料製品 &amp; 防水制震止滑矽膠</span>
+<span class="marquee-item">Silicone Products &amp; Special Rubber/Silicone Materials &amp; Waterproof Seals/Anti-Vibration Pads</span>
 <span class="marquee-dot">·</span>
-<span class="marquee-item"><svg class="lucide lucide-award" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="8" r="6"></circle><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path></svg> ISO 9001 專業認證</span>
+<span class="marquee-item"><svg class="lucide lucide-award" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="8" r="6"></circle><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path></svg> ISO 9001 Certified Factory</span>
 <span class="marquee-dot">·</span>
-<span class="marquee-item">專營熱固壓模成形 &amp; LSR 液態矽膠射出成型</span>
+<span class="marquee-item">Specializing in Compression Molding &amp; LSR Liquid Silicone Rubber Injection Molding</span>
 <span class="marquee-dot">·</span>
-<span class="marquee-item">各類矽膠製品 &amp; 特殊矽膠橡膠材料製品 &amp; 防水制震止滑矽膠</span>
+<span class="marquee-item">Silicone Products &amp; Special Rubber/Silicone Materials &amp; Waterproof Seals/Anti-Vibration Pads</span>
 <span class="marquee-dot">·</span>
 </div>
 </div>
@@ -171,30 +151,30 @@
 <nav class="navbar" id="navbar">
 <div class="container">
 <a class="nav-logo" href="#hero" id="nav-logo">
-<div class="logo-icon">鈞</div>
-<span>鈞翔實業</span>
+<div class="logo-icon">J</div>
+<span>Jun-Hsiang Enterprise</span>
 </a>
 <div class="nav-links" id="nav-links">
-<a class="nav-link" data-section="about" href="#about">關於鈞翔</a>
-<a class="nav-link" data-section="services" href="#services">服務技術</a>
-<a class="nav-link" data-section="products" href="#products">產品實現</a>
-<a class="nav-link" href="knowledge.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'zh-TW')">技術知識</a>
-<a class="nav-link" data-section="quality" href="#quality">品質認證</a>
-<a class="nav-link" data-section="contact" href="#contact">聯絡我們</a>
+<a class="nav-link" data-section="about" href="#about">About Us</a>
+<a class="nav-link" data-section="services" href="#services">Services &amp; Tech</a>
+<a class="nav-link" data-section="products" href="#products">Products</a>
+<a class="nav-link" href="knowledge.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'zh-TW')">Knowledge Base</a>
+<a class="nav-link" data-section="quality" href="#quality">Quality Certification</a>
+<a class="nav-link" data-section="contact" href="#contact">Contact Us</a>
 <div class="lang-selector">
 <button class="lang-selector-btn" aria-label="Select Language">
 <svg class="lucide lucide-globe" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:16px;height:16px;margin-right:4px;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
-<span>繁中</span>
+<span>EN</span>
 <svg class="lucide lucide-chevron-down" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:12px;height:12px;margin-left:2px;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m6 9 6 6 6-6"></path></svg>
 </button>
 <div class="lang-dropdown">
-<a href="index.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'zh-TW')" class="active">繁中</a>
-<a href="en/index.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'en')">EN</a>
-<a href="ja/index.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'ja')">日本語</a>
+<a href="../index.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'zh-TW')">繁中</a>
+<a href="index.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'zh-TW')" class="active">EN</a>
+<a href="../ja/index.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'ja')">日本語</a>
 </div>
 </div>
 </div>
-<div aria-label="開啟選單" class="hamburger" id="hamburger" role="button" tabindex="0">
+<div aria-label="Open Menu" class="hamburger" id="hamburger" role="button" tabindex="0">
 <span></span>
 <span></span>
 <span></span>
@@ -202,150 +182,150 @@
 </div>
 </nav>
 <div class="mobile-menu" id="mobile-menu">
-<a class="nav-link" data-section="about" href="#about">關於鈞翔</a>
-<a class="nav-link" data-section="services" href="#services">服務技術</a>
-<a class="nav-link" data-section="products" href="#products">產品實現</a>
-<a class="nav-link" href="knowledge.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'zh-TW')">技術知識</a>
-<a class="nav-link" data-section="quality" href="#quality">品質認證</a>
-<a class="nav-link" data-section="contact" href="#contact">聯絡我們</a>
+<a class="nav-link" data-section="about" href="#about">About Us</a>
+<a class="nav-link" data-section="services" href="#services">Services &amp; Tech</a>
+<a class="nav-link" data-section="products" href="#products">Products</a>
+<a class="nav-link" href="knowledge.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'zh-TW')">Knowledge Base</a>
+<a class="nav-link" data-section="quality" href="#quality">Quality Certification</a>
+<a class="nav-link" data-section="contact" href="#contact">Contact Us</a>
 <div class="mobile-lang-links">
-<a href="index.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'zh-TW')" class="mobile-lang-link active">繁中</a>
+<a href="../index.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'zh-TW')" class="mobile-lang-link">繁中</a>
 <span style="color: rgba(255,255,255,0.2);">|</span>
-<a href="en/index.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'en')" class="mobile-lang-link">EN</a>
+<a href="index.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'zh-TW')" class="mobile-lang-link active">EN</a>
 <span style="color: rgba(255,255,255,0.2);">|</span>
-<a href="ja/index.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'ja')" class="mobile-lang-link">日本語</a>
+<a href="../ja/index.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'ja')" class="mobile-lang-link">日本語</a>
 </div>
 </div>
 <section class="hero" id="hero">
 <canvas class="hero-canvas" id="hero-canvas"></canvas>
 <div class="hero-carousel" id="hero-carousel">
-<div class="hero-slide active" style="background-image: url('images/hero-premium-mold.webp');">
+<div class="hero-slide active" style="background-image: url('../images/hero-premium-mold.webp');">
 <div class="hero-overlay"></div>
 <div class="hero-content">
 <span class="hero-label">Jun-Hsiang Enterprise Co., Ltd.</span>
 <h1 class="hero-title" style="font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 800; line-height: 1.2; margin-bottom: 1.5rem; letter-spacing: 2px;">
-<span class="mask-slide"><span class="mask-slide-inner">鈞翔實業 | LSR<span class="accent">液態射出專家</span></span></span>
+<span class="mask-slide"><span class="mask-slide-inner">Jun-Hsiang Enterprise | LSR<span class="accent"> Injection Experts</span></span></span>
 </h1>
 <p class="hero-subtitle">
-                        專業矽膠 ‧ 橡膠製品 ‧ 30 年工藝傳承<br/>
-                        ISO 9001 認證 ─ 液態矽膠射出 ‧ 固態矽膠壓出 ‧ 異材結合
+                        Professional Silicone &amp; Rubber Products • 30 Years of Craftsmanship<br/>
+                        ISO 9001 Certified — LSR Liquid Silicone Injection • Compression Molding • Overmolding
                     </p>
 <div class="hero-cta">
 <a class="btn btn-primary" href="#about" id="cta-learn">
 <svg class="lucide lucide-arrow-down-circle" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:18px;height:18px;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"></circle><path d="M12 8v8"></path><path d="m8 12 4 4 4-4"></path></svg>
-                            了解更多
+                            Learn More
                         </a>
 <a class="btn btn-outline" href="#contact" id="cta-contact">
 <svg class="lucide lucide-mail" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:18px;height:18px;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect height="16" rx="2" width="20" x="2" y="4"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
-                            聯絡我們
+                            Contact Us
                         </a>
 </div>
 </div>
 </div>
-<div class="hero-slide" data-bg="images/hero-premium-factory.webp">
+<div class="hero-slide" data-bg="../images/hero-premium-factory.webp">
 <div class="hero-overlay"></div>
 <div class="hero-content">
 <span class="hero-label">Customization Experts</span>
 <h2 class="hero-title" style="font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 800; line-height: 1.2; margin-bottom: 1.5rem; letter-spacing: 2px;">
-<span class="mask-slide"><span class="mask-slide-inner">矽橡膠<span class="accent">客製化專家</span></span></span>
+<span class="mask-slide"><span class="mask-slide-inner">Silicone &amp; Rubber<span class="accent"> Customization Experts</span></span></span>
 </h2>
-<p class="hero-subtitle">具有多元化製程能力，專營客製生產矽膠按鍵、特殊矽橡膠與異材結合零件</p>
+<p class="hero-subtitle">Diverse processing capabilities, specializing in custom production of silicone keypads, specialty rubber/silicone, and overmolded parts.</p>
 <div class="hero-cta">
 <a class="btn btn-primary" href="#products">
 <svg class="lucide lucide-layers" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:18px;height:18px;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m12 3-10 9 10 9 10-9-10-9Z"></path><path d="m2 17 10 9 10-9"></path><path d="m2 12 10 9 10-9"></path></svg>
-                            查看產品
+                            View Products
                         </a>
 </div>
 </div>
 </div>
-<div class="hero-slide" data-bg="images/hero-3.webp">
+<div class="hero-slide" data-bg="../images/hero-3.webp">
 <div class="hero-overlay"></div>
 <div class="hero-content">
 <span class="hero-label">High Precision Manufacturing</span>
 <h2 class="hero-title" style="font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 800; line-height: 1.2; margin-bottom: 1.5rem; letter-spacing: 2px;">
-<span class="mask-slide"><span class="mask-slide-inner">LSR液態<span class="accent">矽膠射出</span></span></span>
+<span class="mask-slide"><span class="mask-slide-inner">LSR Liquid<span class="accent"> Silicone Injection</span></span></span>
 </h2>
-<p class="hero-subtitle">引進高精密度自動化生產，滿足醫療器材、電子零件及車用相關的精密需求</p>
+<p class="hero-subtitle">Introducing high-precision automated production to meet the exacting demands of medical devices, electronic parts, and automotive applications.</p>
 <div class="hero-cta">
 <a class="btn btn-primary" href="#services">
 <svg class="lucide lucide-cpu" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:18px;height:18px;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect height="16" rx="2" width="16" x="4" y="4"></rect><rect height="6" rx="1" width="6" x="9" y="9"></rect><path d="M9 1v3"></path><path d="M15 1v3"></path><path d="M9 20v3"></path><path d="M15 20v3"></path><path d="M20 9h3"></path><path d="M20 15h3"></path><path d="M1 9h3"></path><path d="M1 15h3"></path></svg>
-                            核心技術
+                            Core Technology
                         </a>
 </div>
 </div>
 </div>
-<div class="hero-slide" data-bg="images/hero-silicone.webp">
+<div class="hero-slide" data-bg="../images/hero-silicone.webp">
 <div class="hero-overlay"></div>
 <div class="hero-content">
-<span class="hero-label">Product Category - 矽膠製品</span>
+<span class="hero-label">Product Category - Silicone Products</span>
 <h2 class="hero-title" style="font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 800; line-height: 1.2; margin-bottom: 1.5rem; letter-spacing: 2px;">
-<span class="mask-slide"><span class="mask-slide-inner">專業矽膠<span class="accent">客製製造</span></span></span>
+<span class="mask-slide"><span class="mask-slide-inner">Professional Custom<span class="accent"> Silicone Manufacturing</span></span></span>
 </h2>
-<p class="hero-subtitle">包含導電矽膠按鍵、矽膠保護套、生活用品等，提供全方位客製量產服務</p>
+<p class="hero-subtitle">Including conductive silicone keypads, protective cases, and consumer goods, offering comprehensive custom manufacturing.</p>
 <div class="hero-cta">
 <a class="btn btn-primary" href="products_list.html?category=silicone">
 <svg class="lucide lucide-layers" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:18px;height:18px;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m12 3-10 9 10 9 10-9-10-9Z"></path><path d="m2 17 10 9 10-9"></path><path d="m2 12 10 9 10-9"></path></svg>
-                            探索矽膠產品
+                            Explore Silicone Products
                         </a>
 </div>
 </div>
 </div>
-<div class="hero-slide" data-bg="images/hero-seals.webp">
+<div class="hero-slide" data-bg="../images/hero-seals.webp">
 <div class="hero-overlay"></div>
 <div class="hero-content">
-<span class="hero-label">Product Category - 油封防水</span>
+<span class="hero-label">Product Category - Waterproof Seals</span>
 <h2 class="hero-title" style="font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 800; line-height: 1.2; margin-bottom: 1.5rem; letter-spacing: 2px;">
-<span class="mask-slide"><span class="mask-slide-inner">精密油封<span class="accent">防水密封</span></span></span>
+<span class="mask-slide"><span class="mask-slide-inner">Precision Seals &amp;<span class="accent"> Waterproof Sealing</span></span></span>
 </h2>
-<p class="hero-subtitle">專營高精密 O型環、防水圈、氣密墊片，具備極佳耐候性與密封效能</p>
+<p class="hero-subtitle">Specializing in high-precision O-rings, waterproof gaskets, and airtight seals, offering excellent weather resistance and sealing performance.</p>
 <div class="hero-cta">
 <a class="btn btn-primary" href="products_list.html?category=seal">
 <svg class="lucide lucide-shield" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:18px;height:18px;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-                            探索密封防水
+                            Explore Waterproof Seals
                         </a>
 </div>
 </div>
 </div>
-<div class="hero-slide" data-bg="images/hero-special.webp">
+<div class="hero-slide" data-bg="../images/hero-special.webp">
 <div class="hero-overlay"></div>
 <div class="hero-content">
-<span class="hero-label">Product Category - 特殊橡/矽膠</span>
+<span class="hero-label">Product Category - Special Rubber &amp; Silicone</span>
 <h2 class="hero-title" style="font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 800; line-height: 1.2; margin-bottom: 1.5rem; letter-spacing: 2px;">
-<span class="mask-slide"><span class="mask-slide-inner">特殊材料<span class="accent">功能矽膠</span></span></span>
+<span class="mask-slide"><span class="mask-slide-inner">Specialty &amp;<span class="accent"> Functional Materials</span></span></span>
 </h2>
-<p class="hero-subtitle">研發耐極溫、防震避震、耐油、阻燃等特殊橡矽膠製品，滿足工業級需求</p>
+<p class="hero-subtitle">R&amp;D in extreme-temperature resistant, anti-vibration, oil-resistant, and flame-retardant silicone &amp; rubber products to meet industrial needs.</p>
 <div class="hero-cta">
 <a class="btn btn-primary" href="products_list.html?category=special">
 <svg class="lucide lucide-activity" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:18px;height:18px;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
-                            探索特殊材料
+                            Explore Specialty Materials
                         </a>
 </div>
 </div>
 </div>
-<div class="hero-slide" data-bg="images/hero-bonding.webp">
+<div class="hero-slide" data-bg="../images/hero-bonding.webp">
 <div class="hero-overlay"></div>
 <div class="hero-content">
-<span class="hero-label">Product Category - 異材結合</span>
+<span class="hero-label">Product Category - Overmolding</span>
 <h2 class="hero-title" style="font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 800; line-height: 1.2; margin-bottom: 1.5rem; letter-spacing: 2px;">
-<span class="mask-slide"><span class="mask-slide-inner">異材結合<span class="accent">包膠一體成型</span></span></span>
+<span class="mask-slide"><span class="mask-slide-inner">Integrated Overmolding<span class="accent"> &amp; Bonding</span></span></span>
 </h2>
-<p class="hero-subtitle">獨家模具技術將矽膠與鋁合金、鐵、銅、塑膠緊密包覆，高結合強度不脫膠</p>
+<p class="hero-subtitle">Proprietary tooling technology to tightly overmold silicone onto aluminum, iron, copper, or plastics, ensuring high bond strength and no delamination.</p>
 <div class="hero-cta">
 <a class="btn btn-primary" href="products_list.html?category=multi">
 <svg class="lucide lucide-link-2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:18px;height:18px;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 17H7A5 5 0 0 1 7 7h2"></path><path d="M15 7h2a5 5 0 0 1 0 10h-2"></path><line x1="8" x2="16" y1="12" y2="12"></line></svg>
-                            探索異材結合
+                            Explore Overmolding
                         </a>
 </div>
 </div>
 </div>
 </div>
-<button aria-label="上一張" class="carousel-btn prev" id="hero-prev"><svg class="lucide lucide-chevron-left" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:32px;height:32px;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m15 18-6-6 6-6"></path></svg></button>
-<button aria-label="下一張" class="carousel-btn next" id="hero-next"><svg class="lucide lucide-chevron-right" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:32px;height:32px;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m9 18 6-6-6-6"></path></svg></button>
+<button aria-label="Previous Slide" class="carousel-btn prev" id="hero-prev"><svg class="lucide lucide-chevron-left" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:32px;height:32px;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m15 18-6-6 6-6"></path></svg></button>
+<button aria-label="Next Slide" class="carousel-btn next" id="hero-next"><svg class="lucide lucide-chevron-right" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:32px;height:32px;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m9 18 6-6-6-6"></path></svg></button>
 <div class="carousel-dots" id="hero-dots">
 </div>
 <div class="scroll-indicator">
 <div class="mouse"></div>
-<span>向下探索</span>
+<span>Scroll Down</span>
 </div>
 </section>
 <section class="section" style="position: relative; overflow: hidden;" id="about">
@@ -354,157 +334,157 @@
 <div class="container" style="position: relative; z-index: 1;">
 <div class="section-header reveal">
 <span class="section-label">About Us</span>
-<h2 class="section-title">關於<span class="accent">鈞翔</span></h2>
-<p class="section-subtitle">成立於 1991 年，鈞翔為國內專營矽膠、橡膠製品成型代工廠，擁有 30 年以上開模經驗與技術。</p>
+<h2 class="section-title">About <span class="accent">Jun-Hsiang</span></h2>
+<p class="section-subtitle">Founded in 1991, Jun-Hsiang is a premier custom silicone and rubber molding manufacturer in Taiwan, with over 30 years of tooling experience and expertise.</p>
 </div>
 <div class="about-intro">
 <div class="about-text reveal-left">
-<p>鈞翔實業創立於1991年8月1日，為國內專營矽膠、橡膠製品成型代工廠。舉凡真空熱壓技術、固態矽膠射出技術、液態矽膠射出，均是主要的服務項目。</p>
-<p>代工產品涵蓋矽膠按鍵、防水圈、O型環、異材結合、矽膠包鐵、背膠腳墊、矽橡膠平板、汽車零件、電子零件、醫用矽膠、壁震橡膠、特殊原料等製品。秉持專業及迅速報價，優良的品質，是對客戶的保證！</p>
+<p>Jun-Hsiang Enterprise Co., Ltd. was established on August 1, 1991, as a domestic factory specialized in silicone and rubber custom molding. Our main services include Compression Molding, solid silicone molding, and LSR Liquid Silicone Rubber injection molding.</p>
+<p>Our molded products span silicone keypads, waterproof seals, O-rings, overmolding, silicone-to-metal bonding, adhesive rubber pads/feet, silicone sheets, automotive parts, electronic components, medical silicone, shock-absorbing rubber, and specialty rubber formulations. Upholding professionalism, prompt quoting, and outstanding quality is our promise to clients!</p>
 </div>
 <div class="about-stats-grid reveal-right">
 <div class="stat-card">
 <span class="stat-num">1991</span>
-<span class="stat-label">創立年份 (Established)</span>
+<span class="stat-label">Established Year</span>
 </div>
 <div class="stat-card">
 <span class="stat-num">30+</span>
-<span class="stat-label">年開模與代工經驗</span>
+<span class="stat-label">Years of Tooling & OEM Experience</span>
 </div>
 <div class="stat-card">
 <span class="stat-num">ISO 9001</span>
-<span class="stat-label">國際品質認證</span>
+<span class="stat-label">Quality Certification</span>
 </div>
 <div class="stat-card">
 <span class="stat-num">100%</span>
-<span class="stat-label">客戶滿意與品質保證</span>
+<span class="stat-label">Quality & Satisfaction Guarantee</span>
 </div>
 </div>
 </div>
 <div class="feature-cards stagger-children">
 <div class="feature-card reveal">
 <div class="card-icon">🔧</div>
-<h3>專業技術</h3>
-<p>30 年以上開模經驗，真空熱壓、固態射出、液態射出全方位技術能力，滿足各類精密需求。</p>
+<h3>Expertise</h3>
+<p>Over 30 years of tooling experience, with comprehensive capabilities in compression molding, solid molding, and LSR injection to satisfy diverse precision demands.</p>
 </div>
 <div class="feature-card reveal">
 <div class="card-icon">🏭</div>
-<h3>完整產線</h3>
-<p>從模具設計到成品交付，提供真空熱壓、固態矽膠射出、LSR 液態矽膠射出一站式製造服務。</p>
+<h3>Complete Production Lines</h3>
+<p>From mold design to finished product delivery, we offer one-stop manufacturing services in compression molding, solid silicone molding, and LSR injection molding.</p>
 </div>
 <div class="feature-card reveal">
 <div class="card-icon">✅</div>
-<h3>品質保證</h3>
-<p>通過 ISO 9001 國際品質認證，秉持三不原則 ─ 不製造、不接受、不流出不良品。</p>
+<h3>Quality Assurance</h3>
+<p>ISO 9001 certified. We adhere to the "Three No's" principle: Do not produce, do not accept, and do not release defective products.</p>
 </div>
 </div>
 <div class="section-header reveal">
 <span class="section-label">History</span>
-<h2 class="section-title">公司<span class="accent">沿革</span></h2>
+<h2 class="section-title">Company <span class="accent">History</span></h2>
 </div>
                 <div class="timeline">
                     <div class="timeline-item reveal">
                         <div class="timeline-content">
                             <div class="timeline-year">1991</div>
-                            <p class="timeline-desc">董事長許祺隴先生於新莊創立「鈞翔實業」，專營橡膠製品客製製造。</p>
+                            <p class="timeline-desc">Chairman Mr. Qi-Long Xu founded Jun-Hsiang Enterprise in Xinzhuang, specializing in custom rubber manufacturing.</p>
                         </div>
                         <div class="timeline-dot"></div>
                     </div>
                     <div class="timeline-item reveal">
                         <div class="timeline-content">
                             <div class="timeline-year">1993</div>
-                            <p class="timeline-desc">增設真空熱壓成型機，主要生產各類按鍵與密封墊圈製品。</p>
+                            <p class="timeline-desc">Added vacuum compression molding machines, primarily producing various keypads and sealing gaskets.</p>
                         </div>
                         <div class="timeline-dot"></div>
                     </div>
                     <div class="timeline-item reveal">
                         <div class="timeline-content">
                             <div class="timeline-year">1999</div>
-                            <p class="timeline-desc">業務快速增長，廠房不敷使用，遷廠至新莊區新樹路，擴建生產線。</p>
+                            <p class="timeline-desc">Due to rapid business growth, the factory was relocated to Xinshu Road, Xinzhuang District to expand production lines.</p>
                         </div>
                         <div class="timeline-dot"></div>
                     </div>
                     <div class="timeline-item reveal">
                         <div class="timeline-content">
                             <div class="timeline-year">2001</div>
-                            <p class="timeline-desc">跨足運動用品領域，大量生產高品質泳鏡、泳帶及相關矽膠防護配件。</p>
+                            <p class="timeline-desc">Entered the sporting goods sector, mass-producing high-quality swim goggles, straps, and protective silicone gear.</p>
                         </div>
                         <div class="timeline-dot"></div>
                     </div>
                     <div class="timeline-item reveal">
                         <div class="timeline-content">
                             <div class="timeline-year">2010</div>
-                            <p class="timeline-desc">成功量產醫療級矽膠鍵盤，產品外銷歐美，打入國際醫療設備鏈。</p>
+                            <p class="timeline-desc">Successfully mass-produced medical-grade silicone keyboards, exporting to Europe and North America, entering international medical device supply chains.</p>
                         </div>
                         <div class="timeline-dot"></div>
                     </div>
                     <div class="timeline-item reveal">
                         <div class="timeline-content">
                             <div class="timeline-year">2012</div>
-                            <p class="timeline-desc">因應智慧型手機風潮，大量量產精密手機矽橡膠零組件與防塵件。</p>
+                            <p class="timeline-desc">To meet the smartphone boom, we mass-produced precision mobile silicone/rubber components and dust-proof parts.</p>
                         </div>
                         <div class="timeline-dot"></div>
                     </div>
                     <div class="timeline-item reveal">
                         <div class="timeline-content">
                             <div class="timeline-year">2016</div>
-                            <p class="timeline-desc">投入電動機車關鍵矽膠與橡膠密封配件研發與量產，開拓新能源市場。</p>
+                            <p class="timeline-desc">Invested in R&amp;D and mass production of key silicone and rubber seals for electric scooters, expanding into the new energy market.</p>
                         </div>
                         <div class="timeline-dot"></div>
                     </div>
                     <div class="timeline-item reveal">
                         <div class="timeline-content">
                             <div class="timeline-year">2017</div>
-                            <p class="timeline-desc">通過 ISO 9001:2015 國際品質管理系統認證，落實高標準品質管控。</p>
+                            <p class="timeline-desc">Obtained ISO 9001:2015 Quality Management System certification, implementing high-standard quality control.</p>
                         </div>
                         <div class="timeline-dot"></div>
                     </div>
                     <div class="timeline-item reveal">
                         <div class="timeline-content">
                             <div class="timeline-year">2018</div>
-                            <p class="timeline-desc">新廠擴建，引進精密液態矽膠射出成型技術 (LSR)，並增設 2.5D 量測儀、荷重曲線量測與壽命測試機等智慧品管設備。</p>
+                            <p class="timeline-desc">Expanded the factory, introduced LSR liquid silicone injection molding technology, and added smart QC equipment such as a 2.5D projector, force-displacement tester, and life tester.</p>
                         </div>
                         <div class="timeline-dot"></div>
                     </div>
                     <div class="timeline-item reveal">
                         <div class="timeline-content">
                             <div class="timeline-year">2020</div>
-                            <p class="timeline-desc">擴廠升級，導入自動化製程與智慧品管系統，持續提升競爭力。</p>
+                            <p class="timeline-desc">Upgraded and expanded the factory, implementing automated processes and smart QC systems to continually boost competitiveness.</p>
                         </div>
                         <div class="timeline-dot"></div>
                     </div>
                     <div class="timeline-item reveal">
                         <div class="timeline-content">
                             <div class="timeline-year">2024</div>
-                            <p class="timeline-desc">持續精進技術，累積超過 1000+ 客製化專案，服務國內外知名企業。</p>
+                            <p class="timeline-desc">Continued refining technology, accumulating over 1,000+ custom projects, serving renowned domestic and international corporations.</p>
                         </div>
                         <div class="timeline-dot"></div>
                     </div>
                 </div>
 <div class="section-header reveal">
 <span class="section-label">Philosophy</span>
-<h2 class="section-title">經營<span class="accent">理念</span></h2>
+<h2 class="section-title">Business <span class="accent">Philosophy</span></h2>
 </div>
 <div class="philosophy-grid stagger-children">
 <div class="philosophy-card reveal">
 <span class="card-label">Friend</span>
-<h3>客戶是我們的夥伴</h3>
-<p>本公司自始就將每位客戶定位為合作夥伴，透過工程與設計的先期討論，提供迅速與有競爭力的報價，試模與生產之及時，相信我們可以成為您最可靠的夥伴。</p>
+<h3>Clients as Partners</h3>
+<p>We have positioned every client as a partner since day one. By engaging in upfront engineering and design discussions, providing prompt and competitive quotes, and delivering on-time trials and production, we strive to be your most reliable partner.</p>
 </div>
 <div class="philosophy-card reveal">
 <span class="card-label">Honest</span>
-<h3>堅持誠信</h3>
-<p>這個理念代表公司的品格，也是執行業務時必須遵守的法則。對客戶我們不輕易承諾，一旦做出承諾，定會不計代價，全力以赴。</p>
+<h3>Unwavering Integrity</h3>
+<p>This represents the character of our company and is the rule we live by. We do not make promises lightly, but once made, we spare no effort and cost to fulfill them.</p>
 </div>
 <div class="philosophy-card reveal">
 <span class="card-label">Profession</span>
-<h3>矽、橡膠專業製造</h3>
-<p>我們的本業是「矽、橡膠製造服務」，專注於矽橡膠、橡膠、矽膠（油壓/射出）技術，帶給客戶多元化專業的服務，未來更提升技術完成客戶的需求。</p>
+<h3>Silicone &amp; Rubber Expertise</h3>
+<p>Our core business is silicone and rubber manufacturing. We focus on compression molding and LSR injection technologies, bringing professional services to our clients while continually upgrading our capabilities.</p>
 </div>
 <div class="philosophy-card reveal">
 <span class="card-label">Quality</span>
-<h3>品質保證</h3>
-<p>秉持著不良品不製造、不接受、不流出之原則，品質至善、以和為貴、極高效率、精益求精，以達到最高的品質保障。</p>
+<h3>Quality Assurance</h3>
+<p>We adhere to the principle of not producing, not accepting, and not releasing defective products, aiming for ultimate quality, extreme efficiency, and continuous improvement.</p>
 </div>
 </div>
 </section>
@@ -513,34 +493,34 @@
     <div class="container">
         <div class="section-header reveal">
             <span class="section-label">Equipment</span>
-            <h2 class="section-title">先進生產與<span class="accent">品管設備</span></h2>
-            <p class="section-subtitle">引進川連機械精密 LSR 射出成型機與 2.5D 投影量測儀，為產能與品質保駕護航。</p>
+            <h2 class="section-title">Advanced Production &amp; <span class="accent">QC Equipment</span></h2>
+            <p class="section-subtitle">Equipped with Chuan-Lien precision LSR injection machines and 2.5D measurement projectors to safeguard capacity and quality.</p>
         </div>
         <div class="equipment-grid stagger-children">
             <!-- Card 1: LSR -->
             <div class="equipment-card glow-card reveal">
                 <div class="equipment-img-container">
-                    <img alt="川連機械液態矽膠射出成型機" height="190" width="340" loading="lazy" src="images/tech/equip-lsr.webp"/>
+                    <img alt="Chuan-Lien LSR Liquid Silicone Rubber Injection Molding Machine" height="190" width="340" loading="lazy" src="../images/tech/equip-lsr.webp"/>
                 </div>
                 <div class="equipment-info">
-                    <h3 class="equipment-name">川連機械液態矽膠射出成型機 (LSR)</h3>
-                    <p class="equipment-desc">採用國內大廠川連機械之精密全自動射出控制系統，適合各類精密矽膠製品生產，品質穩定且效率高。</p>
+                    <h3 class="equipment-name">Chuan-Lien LSR Liquid Silicone Rubber Injection Molding Machine</h3>
+                    <p class="equipment-desc">Utilizing a fully automated precision injection control system from domestic manufacturer Chuan-Lien, suitable for high-precision silicone parts with stable quality and high efficiency.</p>
                 </div>
             </div>
             <!-- Card 2: QC -->
             <div class="equipment-card glow-card reveal">
                 <div class="equipment-img-container">
-                    <img alt="2.5D 投影量測儀" height="190" width="340" loading="lazy" src="images/tech/equip-qc.webp"/>
+                    <img alt="2.5D Optical Measuring Projector" height="190" width="340" loading="lazy" src="../images/tech/equip-qc.webp"/>
                 </div>
                 <div class="equipment-info">
-                    <h3 class="equipment-name">2.5D 投影量測儀</h3>
-                    <p class="equipment-desc">高精度二次元投影量測，確保產品尺寸公差嚴格控制在客戶要求範圍內，出廠零缺陷。</p>
+                    <h3 class="equipment-name">2.5D Optical Measuring Projector</h3>
+                    <p class="equipment-desc">Non-contact, high-precision 2D measurement to ensure dimensional tolerances are strictly controlled within customer specifications, guaranteeing zero defects.</p>
                 </div>
             </div>
         </div>
         <div style="margin-top: var(--space-8); text-align: center;" class="reveal">
             <a href="service.html#equipment" class="btn btn-primary">
-                查看完整廠房設備
+                View Full Equipment List
                 <svg class="lucide lucide-arrow-right" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:16px;height:16px;margin-left:8px;vertical-align:middle;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><line x1="5" x2="19" y1="12" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
             </a>
         </div>
@@ -551,39 +531,39 @@
 <div class="container">
 <div class="section-header reveal">
 <span class="section-label">Our Process</span>
-<h2 class="section-title">專業<span class="accent">製造流程</span></h2>
-<p class="section-subtitle">從模具開發到成品量產，一站式的專業服務確保每一件產品的極致品質。</p>
+<h2 class="section-title">Professional <span class="accent">Manufacturing Process</span></h2>
+<p class="section-subtitle">From mold development to mass production, our one-stop professional services ensure the ultimate quality for every single part.</p>
 </div>
 <div class="flow-grid stagger-children">
 <div class="flow-step reveal">
 <div class="step-icon">🔬</div>
-<h4>模組研發</h4>
-<p>專業材料分析與模具結構設計</p>
+<h4>R&amp;D &amp; Engineering</h4>
+<p>Material analysis &amp; mold structure design</p>
 </div>
 <div class="flow-step reveal">
 <div class="step-icon">⚙️</div>
-<h4>精密開模</h4>
-<p>高精度 CNC 設備進行模具製作</p>
+<h4>Precision Tooling</h4>
+<p>Tool fabrication using high-precision CNC machinery</p>
 </div>
 <div class="flow-step reveal">
 <div class="step-icon">🧪</div>
-<h4>配料試模</h4>
-<p>嚴選材料配方，進行初樣生產</p>
+<h4>Material Trial</h4>
+<p>Formulating material recipes and molding initial samples</p>
 </div>
 <div class="flow-step reveal">
 <div class="step-icon">🏭</div>
-<h4>正式量產</h4>
-<p>LSR 射出或固態油壓自動化生產</p>
+<h4>Mass Production</h4>
+<p>Automated LSR injection or solid compression molding</p>
 </div>
 <div class="flow-step reveal">
 <div class="step-icon">🛡️</div>
-<h4>嚴格品檢</h4>
-<p>百分之百目視及儀器尺寸檢驗</p>
+<h4>Quality Control</h4>
+<p>100% visual inspection and dimensional verification</p>
 </div>
 <div class="flow-step reveal">
 <div class="step-icon">📦</div>
-<h4>打包交付</h4>
-<p>專業包裝防護，準時物流送達</p>
+<h4>Packaging &amp; Delivery</h4>
+<p>Professional protective packaging and punctual delivery</p>
 </div>
 </div>
 </div>
@@ -597,48 +577,48 @@
 <div class="container">
 <div class="section-header reveal">
 <span class="section-label">Services</span>
-<h2 class="section-title">服務<span class="accent">技術</span></h2>
-<p class="section-subtitle">從固態矽膠壓出到液態矽膠射出，提供全方位的矽膠橡膠成型技術服務。</p>
+<h2 class="section-title">Services &amp; <span class="accent">Technology</span></h2>
+<p class="section-subtitle">From compression molding to LSR injection, we provide a full range of silicone and rubber molding technical services.</p>
 </div>
 <div class="service-block">
 <div class="service-image reveal-left">
-<img alt="固態矽膠壓出技術" height="250" loading="lazy" src="images/tech/service-pressing.webp" width="370"/>
+<img alt="Solid Silicone Compression Molding Technology" height="250" loading="lazy" src="../images/tech/service-pressing.webp" width="370"/>
 </div>
 <div class="service-info reveal-right">
-<h3>固態矽膠壓出技術</h3>
-<p>傳統且成熟的矽膠成型技術，透過真空熱壓方式將固態矽膠原料在模具中加热硫化成型。適合大批量生產，模具成本相對較低，是矽膠製品量產的首選方案。</p>
-<p>本公司主要技術致力於純矽/橡膠製品、矽膠與異料做結合，塑膠加矽膠結合件、金屬加矽膠結合件等多元化製程。我們的工廠位在新北市新莊區，為大台北地區及全台客戶提供最專業的一站式代工製造服務。</p>
+<h3>Solid Silicone Compression Molding Technology</h3>
+<p style="color: var(--color-text-secondary); margin-bottom: 1rem; line-height: var(--leading-relaxed);">A traditional and mature silicone molding technology, where solid silicone raw materials are heated and vulcanized in a mold using vacuum hot pressing. It is suitable for large-volume production and offers relatively low tooling costs, making it the preferred choice for mass production.</p>
+<p style="color: var(--color-text-secondary); margin-bottom: 2rem; line-height: var(--leading-relaxed);">Our core capabilities focus on pure silicone/rubber products, overmolding, plastic-to-silicone bonding, metal-to-silicone bonding, and other diverse processes. Located in Xinzhuang District, New Taipei City, our factory offers professional, one-stop OEM/ODM manufacturing services for clients throughout Taiwan.</p>
 <div class="service-tags">
-<span class="service-tag">真空熱壓</span>
-<span class="service-tag">大量生產</span>
-<span class="service-tag">模具成本低</span>
-<span class="service-tag">矽膠按鍵</span>
-<span class="service-tag">防水圈</span>
+<span class="service-tag">Compression Molding</span>
+<span class="service-tag">Mass Production</span>
+<span class="service-tag">Low Tooling Cost</span>
+<span class="service-tag">Silicone Keypads</span>
+<span class="service-tag">Waterproof Seals</span>
 </div>
 </div>
 </div>
 <div class="service-block reverse">
 <div class="service-image reveal-right">
-<img alt="液態矽膠射出技術 LSR" height="250" loading="lazy" src="images/tech/service-injection.webp" width="370"/>
+<img alt="LSR Liquid Silicone Rubber Injection Molding Technology" height="250" loading="lazy" src="../images/tech/service-injection.webp" width="370"/>
 </div>
 <div class="service-info reveal-left">
-<h3>液態矽膠射出技術 (LSR)</h3>
-<p>因應市場對於產品的精密需求與品質要求，為力求精益求精，鈞翔導入液態矽膠射出技術。LSR 技術具有高精密度、自動化程度高、生產效率優異等特點。</p>
-<p>此技術大大實現客戶的精密需求，適用於醫療器材、電子零件、汽車配件等高精度要求的產品製造。</p>
+<h3>LSR Liquid Silicone Rubber Injection Molding Technology</h3>
+<p style="color: var(--color-text-secondary); margin-bottom: 1rem; line-height: var(--leading-relaxed);">To meet the market's high precision and quality requirements, Jun-Hsiang has introduced LSR Liquid Silicone Rubber injection molding technology. LSR technology is characterized by high precision, high automation, and excellent production efficiency.</p>
+<p style="color: var(--color-text-secondary); margin-bottom: 2rem; line-height: var(--leading-relaxed);">This technology effectively addresses our clients' demands for high precision and is widely applicable to medical devices, electronic components, automotive parts, and other high-accuracy applications.</p>
 <div class="service-tags">
-<span class="service-tag">LSR 液態矽膠</span>
-<span class="service-tag">高精密</span>
-<span class="service-tag">自動化</span>
-<span class="service-tag">醫療級</span>
-<span class="service-tag">電子零件</span>
+<span class="service-tag">LSR Liquid Silicone</span>
+<span class="service-tag">High Precision</span>
+<span class="service-tag">High Automation</span>
+<span class="service-tag">Medical Grade</span>
+<span class="service-tag">Electronic Components</span>
 </div>
 <div class="service-details" style="margin-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1rem;">
-<h4 style="font-size: 1rem; color: var(--color-text-primary); margin-bottom: 0.5rem; font-weight: 600;">精密液態射出 (LSR) 技術特色：</h4>
+<h4 style="font-size: 1rem; color: var(--color-text-primary); margin-bottom: 0.5rem; font-weight: 600;">LSR Technology Highlights:</h4>
 <ul style="color: var(--color-text-secondary); font-size: 0.9rem; line-height: 1.6; padding-left: 1.2rem; list-style: disc;">
-<li><strong>核心製程：</strong>雙組份自動計量混料射出。</li>
-<li><strong>高精密度：</strong>微米級精密模具排氣與射出，公差控制可達 ±0.02mm。</li>
-<li><strong>材料優勢：</strong>無毒耐高低溫、符合醫療級 (USP Class VI) 與食品級 (FDA) 規範。</li>
-<li><strong>異材包膠：</strong>專業矽膠包膠 (Overmolding) 結合塑膠、金屬、銅件一體成型。</li>
+<li><strong>Core Process:</strong> Dual-component automated metering and mixing injection.</li>
+<li><strong>High Precision:</strong> Micron-level precision mold venting and injection, with tolerances controlled within ±0.02mm.</li>
+<li><strong>Material Advantages:</strong> Non-toxic, resistant to extreme temperatures, complying with medical-grade (USP Class VI) and food-grade (FDA) standards.</li>
+<li><strong>Overmolding:</strong> Professional overmolding / silicone-to-metal bonding with plastics, metals, and copper parts.</li>
 </ul>
 </div>
 </div>
@@ -654,118 +634,118 @@
 <div class="container">
 <div class="section-header reveal">
 <p style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--color-accent); letter-spacing: 4px; margin-bottom: 0.5rem;">PRODUCTS</p>
-<h2 class="section-title">產品<span class="accent">實現</span></h2>
-<p class="section-subtitle">從矽膠按鍵到異材結合，多樣化的客製化產品滿足各行各業的需求。</p>
+<h2 class="section-title">Products<span class="accent"> Realization</span></h2>
+<p class="section-subtitle">From silicone keypads to overmolded parts, our diverse range of custom products satisfies various industries.</p>
 </div>
 <div class="products-layout">
 <aside class="products-sidebar reveal-left">
-<h3 class="sidebar-title">產品目錄</h3>
+<h3 class="sidebar-title">Product Categories</h3>
 <ul class="category-list">
-<li class="category-item active" data-filter="all">全部產品</li>
-<li class="category-item" data-filter="silicone">矽膠製品</li>
-<li class="category-item" data-filter="seal">油封防水</li>
-<li class="category-item" data-filter="special">特殊橡/矽膠</li>
-<li class="category-item" data-filter="multi">異材結合</li>
+<li class="category-item active" data-filter="all">All Products</li>
+<li class="category-item" data-filter="silicone">Silicone Products</li>
+<li class="category-item" data-filter="seal">Waterproof Seals</li>
+<li class="category-item" data-filter="special">Special Rubber &amp; Silicone</li>
+<li class="category-item" data-filter="multi">Overmolding</li>
 </ul>
 </aside>
 <div class="product-grid stagger-children" id="product-grid">
-<div class="product-card reveal" data-category="multi" data-desc="專業異材結合技術，可將矽膠直接成型於鋁合金表面。大幅提升零件之組裝精度與使用壽命。" data-img="images/products/PIC_0508337a0d5d67562240.png" data-title="矽膠結合鋁合金" data-type="異材結合">
+<div class="product-card reveal" data-category="multi" data-desc="Professional overmolding technology to direct-mold silicone onto aluminum alloy surfaces, significantly improving assembly precision and part lifespan." data-img="../images/products/PIC_0508337a0d5d67562240.png" data-title="Silicone to Aluminum Bonding" data-type="Overmolding">
 <div class="card-image">
-<img alt="矽膠結合鋁合金" height="800" loading="lazy" src="images/products/PIC_0508337a0d5d67562240.webp" width="800"/>
+<img alt="Silicone to Aluminum Bonding" height="800" loading="lazy" src="../images/products/PIC_0508337a0d5d67562240.webp" width="800"/>
 </div>
 <div class="card-content">
-<h4>矽膠結合鋁合金</h4>
-<span style="font-size: 0.8rem; color: var(--color-accent); margin-top: 8px; display: block; font-weight: 500;">異材結合</span>
+<h4>Silicone to Aluminum Bonding</h4>
+<span style="font-size: 0.8rem; color: var(--color-accent); margin-top: 8px; display: block; font-weight: 500;">Overmolding</span>
 </div>
 </div>
-<div class="product-card reveal" data-category="multi" data-desc="專業異材結合技術，可將矽膠直接成型於鐵材表面。具備優良的結合強度與密封性能。" data-img="images/products/PIC_0533e8072a6316da2471.png" data-title="矽膠結合鐵" data-type="異材結合">
+<div class="product-card reveal" data-category="multi" data-desc="Professional overmolding technology to direct-mold silicone onto iron surfaces, offering excellent bonding strength and sealing performance." data-img="../images/products/PIC_0533e8072a6316da2471.png" data-title="Silicone to Iron Bonding" data-type="Overmolding">
 <div class="card-image">
-<img alt="矽膠結合鐵" height="800" loading="lazy" src="images/products/PIC_0533e8072a6316da2471.webp" width="800"/>
+<img alt="Silicone to Iron Bonding" height="800" loading="lazy" src="../images/products/PIC_0533e8072a6316da2471.webp" width="800"/>
 </div>
 <div class="card-content">
-<h4>矽膠結合鐵</h4>
-<span style="font-size: 0.8rem; color: var(--color-accent); margin-top: 8px; display: block; font-weight: 500;">異材結合</span>
+<h4>Silicone to Iron Bonding</h4>
+<span style="font-size: 0.8rem; color: var(--color-accent); margin-top: 8px; display: block; font-weight: 500;">Overmolding</span>
 </div>
 </div>
-<div class="product-card reveal" data-category="multi" data-desc="專業異材結合技術，可將矽膠直接成型於銅材表面。適用於各種導電或散熱需求之電子零件。" data-img="images/products/PIC_0550e626e6b267bf1137.png" data-title="矽膠結合銅" data-type="異材結合">
+<div class="product-card reveal" data-category="multi" data-desc="Professional overmolding technology to direct-mold silicone onto copper surfaces, suitable for electronic components requiring electrical conductivity or heat dissipation." data-img="../images/products/PIC_0550e626e6b267bf1137.png" data-title="Silicone to Copper Bonding" data-type="Overmolding">
 <div class="card-image">
-<img alt="矽膠結合銅" height="800" loading="lazy" src="images/products/PIC_0550e626e6b267bf1137.webp" width="800"/>
+<img alt="Silicone to Copper Bonding" height="800" loading="lazy" src="../images/products/PIC_0550e626e6b267bf1137.webp" width="800"/>
 </div>
 <div class="card-content">
-<h4>矽膠結合銅</h4>
-<span style="font-size: 0.8rem; color: var(--color-accent); margin-top: 8px; display: block; font-weight: 500;">異材結合</span>
+<h4>Silicone to Copper Bonding</h4>
+<span style="font-size: 0.8rem; color: var(--color-accent); margin-top: 8px; display: block; font-weight: 500;">Overmolding</span>
 </div>
 </div>
-<div class="product-card reveal" data-category="multi" data-desc="專業異材結合技術，可讓矽膠與塑膠件直接結合，節省組裝工序並提高產品密封性。" data-img="images/products/PIC_054050f4f080fbd74331.png" data-title="矽膠結合塑膠" data-type="異材結合">
+<div class="product-card reveal" data-category="multi" data-desc="Professional overmolding technology to directly bond silicone with plastic components, eliminating manual assembly steps and enhancing sealing performance." data-img="../images/products/PIC_054050f4f080fbd74331.png" data-title="Silicone to Plastic Overmolding" data-type="Overmolding">
 <div class="card-image">
-<img alt="矽膠結合塑膠" height="800" loading="lazy" src="images/products/PIC_054050f4f080fbd74331.webp" width="800"/>
+<img alt="Silicone to Plastic Overmolding" height="800" loading="lazy" src="../images/products/PIC_054050f4f080fbd74331.webp" width="800"/>
 </div>
 <div class="card-content">
-<h4>矽膠結合塑膠</h4>
-<span style="font-size: 0.8rem; color: var(--color-accent); margin-top: 8px; display: block; font-weight: 500;">異材結合</span>
+<h4>Silicone to Plastic Overmolding</h4>
+<span style="font-size: 0.8rem; color: var(--color-accent); margin-top: 8px; display: block; font-weight: 500;">Overmolding</span>
 </div>
 </div>
-<div class="product-card reveal" data-category="multi" data-desc="專業異材結合技術，實現矽膠與玻璃的完美接合，提供優異的防護與密封效果。" data-img="images/products/PIC_05477f332c0b8dd21236.png" data-title="矽膠結合玻璃" data-type="異材結合">
+<div class="product-card reveal" data-category="multi" data-desc="Professional overmolding technology to achieve seamless bonding between silicone and glass, providing superior protection and sealing effects." data-img="../images/products/PIC_05477f332c0b8dd21236.png" data-title="Silicone to Glass Bonding" data-type="Overmolding">
 <div class="card-image">
-<img alt="矽膠結合玻璃" height="800" loading="lazy" src="images/products/PIC_05477f332c0b8dd21236.webp" width="800"/>
+<img alt="Silicone to Glass Bonding" height="800" loading="lazy" src="../images/products/PIC_05477f332c0b8dd21236.webp" width="800"/>
 </div>
 <div class="card-content">
-<h4>矽膠結合玻璃</h4>
-<span style="font-size: 0.8rem; color: var(--color-accent); margin-top: 8px; display: block; font-weight: 500;">異材結合</span>
+<h4>Silicone to Glass Bonding</h4>
+<span style="font-size: 0.8rem; color: var(--color-accent); margin-top: 8px; display: block; font-weight: 500;">Overmolding</span>
 </div>
 </div>
-<div class="product-card reveal" data-category="seal" data-desc="各式油封、防水墊圈及 O-Ring。採用高品質彈性體，具備極佳封閉性能與耐磨耗特性。" data-img="images/products/PIC_0530bcfce5f4db9f1444.png" data-title="固態墊圈、O型環" data-type="油封防水">
+<div class="product-card reveal" data-category="seal" data-desc="Various oil seals, waterproof gaskets, and O-rings. Made from high-quality elastomers, offering excellent sealing performance and wear resistance." data-img="../images/products/PIC_0530bcfce5f4db9f1444.png" data-title="Solid Gaskets &amp; O-Rings" data-type="Waterproof Seals">
 <div class="card-image">
-<img alt="固態墊圈、O型環" height="800" loading="lazy" src="images/products/PIC_0530bcfce5f4db9f1444.webp" width="800"/>
+<img alt="Solid Gaskets &amp; O-Rings" height="800" loading="lazy" src="../images/products/PIC_0530bcfce5f4db9f1444.webp" width="800"/>
 </div>
 <div class="card-content">
-<h4>固態墊圈、O型環</h4>
-<span style="font-size: 0.8rem; color: var(--color-accent); margin-top: 8px; display: block; font-weight: 500;">油封防水</span>
+<h4>Solid Gaskets &amp; O-Rings</h4>
+<span style="font-size: 0.8rem; color: var(--color-accent); margin-top: 8px; display: block; font-weight: 500;">Waterproof Seals</span>
 </div>
 </div>
-<div class="product-card reveal" data-category="seal" data-desc="採用 LSR 液態矽膠射出技術生產之墊圈，尺寸精密度高、毛邊少，適用於高精密醫療及電子器材。" data-img="images/products/PIC_042094b042338564298.jpg" data-title="液態矽膠墊圈、O型環" data-type="油封防水">
+<div class="product-card reveal" data-category="seal" data-desc="Gaskets manufactured via LSR liquid silicone injection molding, featuring high dimensional accuracy and minimal flash, ideal for high-precision medical and electronic devices." data-img="../images/products/PIC_042094b042338564298.jpg" data-title="LSR Gaskets &amp; O-Rings" data-type="Waterproof Seals">
 <div class="card-image">
-<img alt="液態矽膠墊圈、O型環" height="800" loading="lazy" src="images/products/PIC_042094b042338564298.webp" width="800"/>
+<img alt="LSR Gaskets &amp; O-Rings" height="800" loading="lazy" src="../images/products/PIC_042094b042338564298.webp" width="800"/>
 </div>
 <div class="card-content">
-<h4>液態矽膠墊圈、O型環</h4>
-<span style="font-size: 0.8rem; color: var(--color-accent); margin-top: 8px; display: block; font-weight: 500;">油封防水</span>
+<h4>LSR Gaskets &amp; O-Rings</h4>
+<span style="font-size: 0.8rem; color: var(--color-accent); margin-top: 8px; display: block; font-weight: 500;">Waterproof Seals</span>
 </div>
 </div>
-<div class="product-card reveal" data-category="silicone" data-desc="專業客製化矽膠按鍵，提供各種色彩、硬度及觸感設計，廣泛應用於遙控器及各類電子產品。" data-img="images/products/PIC_05268fe7870c5fc23826.png" data-title="矽橡膠按鍵" data-type="矽膠製品">
+<div class="product-card reveal" data-category="silicone" data-desc="Professional custom silicone keypads with various colors, hardness, and tactile designs, widely used in remote controls and electronic devices." data-img="../images/products/PIC_05268fe7870c5fc23826.png" data-title="Conductive Silicone Keypads" data-type="Silicone Products">
 <div class="card-image">
-<img alt="矽橡膠按鍵" height="800" loading="lazy" src="images/products/PIC_05268fe7870c5fc23826.webp" width="800"/>
+<img alt="Conductive Silicone Keypads" height="800" loading="lazy" src="../images/products/PIC_05268fe7870c5fc23826.webp" width="800"/>
 </div>
 <div class="card-content">
-<h4>矽橡膠按鍵</h4>
-<span style="font-size: 0.8rem; color: var(--color-accent); margin-top: 8px; display: block; font-weight: 500;">矽膠製品</span>
+<h4>Conductive Silicone Keypads</h4>
+<span style="font-size: 0.8rem; color: var(--color-accent); margin-top: 8px; display: block; font-weight: 500;">Silicone Products</span>
 </div>
 </div>
-<div class="product-card reveal" data-category="silicone" data-desc="專業生產矽膠泳鏡帶、耳塞、鼻夾等運動器材。採用食品級矽膠，安全無毒且親膚。" data-img="images/products/PIC_05467435bea6b15c2644.png" data-title="游泳器材製品" data-type="矽膠製品">
+<div class="product-card reveal" data-category="silicone" data-desc="Professional production of silicone swim goggle straps, earplugs, nose clips, and other athletic gear. Made from food-grade silicone, safe, non-toxic, and skin-friendly." data-img="../images/products/PIC_05467435bea6b15c2644.png" data-title="Silicone Swimming Gear" data-type="Silicone Products">
 <div class="card-image">
-<img alt="游泳器材製品" height="800" loading="lazy" src="images/products/PIC_05467435bea6b15c2644.webp" width="800"/>
+<img alt="Silicone Swimming Gear" height="800" loading="lazy" src="../images/products/PIC_05467435bea6b15c2644.webp" width="800"/>
 </div>
 <div class="card-content">
-<h4>游泳器材製品</h4>
-<span style="font-size: 0.8rem; color: var(--color-accent); margin-top: 8px; display: block; font-weight: 500;">矽膠製品</span>
+<h4>Silicone Swimming Gear</h4>
+<span style="font-size: 0.8rem; color: var(--color-accent); margin-top: 8px; display: block; font-weight: 500;">Silicone Products</span>
 </div>
 </div>
-<div class="product-card reveal" data-category="silicone" data-desc="防跌、防塵、質地柔軟、花色美觀、防滑。適用於各式手持裝置之保護套開發。" data-img="images/products/PIC_05587c3a6cb14a266016.png" data-title="3C果凍套" data-type="矽膠製品">
+<div class="product-card reveal" data-category="silicone" data-desc="Drop-proof, dust-proof, soft-textured, aesthetically appealing, and anti-slip. Suitable for protective cases of various handheld devices." data-img="../images/products/PIC_05587c3a6cb14a266016.png" data-title="Silicone Cases for 3C Devices" data-type="Silicone Products">
 <div class="card-image">
-<img alt="3C果凍套" height="640" loading="lazy" src="images/products/PIC_05587c3a6cb14a266016.webp" width="578"/>
+<img alt="Silicone Cases for 3C Devices" height="640" loading="lazy" src="../images/products/PIC_05587c3a6cb14a266016.webp" width="578"/>
 </div>
 <div class="card-content">
-<h4>3C果凍套</h4>
-<span style="font-size: 0.8rem; color: var(--color-accent); margin-top: 8px; display: block; font-weight: 500;">矽膠製品</span>
+<h4>Silicone Cases for 3C Devices</h4>
+<span style="font-size: 0.8rem; color: var(--color-accent); margin-top: 8px; display: block; font-weight: 500;">Silicone Products</span>
 </div>
 </div>
-<div class="product-card reveal" data-category="silicone" data-desc="具有防滑、防撞、防震、耐溫、降噪等作用。自帶背膠，黏貼方便牢固。" data-img="images/products/PIC_05416c1ac3b18f8f9921.png" data-title="背膠腳墊" data-type="矽膠製品">
+<div class="product-card reveal" data-category="silicone" data-desc="Provides anti-slip, collision prevention, shock absorption, temperature resistance, and noise reduction. Comes self-adhesive for quick and secure mounting." data-img="../images/products/PIC_05416c1ac3b18f8f9921.png" data-title="Adhesive Anti-Vibration Rubber Pads" data-type="Silicone Products">
 <div class="card-image">
-<img alt="背膠腳墊" height="395" loading="lazy" src="images/products/PIC_05416c1ac3b18f8f9921.webp" width="640"/>
+<img alt="Adhesive Anti-Vibration Rubber Pads" height="395" loading="lazy" src="../images/products/PIC_05416c1ac3b18f8f9921.webp" width="640"/>
 </div>
 <div class="card-content">
-<h4>背膠腳墊</h4>
-<span style="font-size: 0.8rem; color: var(--color-accent); margin-top: 8px; display: block; font-weight: 500;">矽膠製品</span>
+<h4>Adhesive Anti-Vibration Rubber Pads</h4>
+<span style="font-size: 0.8rem; color: var(--color-accent); margin-top: 8px; display: block; font-weight: 500;">Silicone Products</span>
 </div>
 </div>
 </div>
@@ -781,8 +761,8 @@
 <div class="container">
 <div class="section-header reveal">
 <span class="section-label">Quality</span>
-<h2 class="section-title">品質<span class="accent">認證</span></h2>
-<p class="section-subtitle">以最嚴格的品質標準，為客戶提供最穩定可靠的產品。</p>
+<h2 class="section-title">Quality <span class="accent">Certification</span></h2>
+<p class="section-subtitle">Adhering to the strictest standards to provide clients with the most stable and reliable products.</p>
 </div>
 <div class="quality-content">
 <div class="iso-badge reveal-scale">
@@ -793,33 +773,33 @@
 <div class="stats-grid stagger-children">
 <div class="stat-card reveal">
 <span class="stat-number"><span class="counter" data-target="30">0</span><span class="stat-suffix">+</span></span>
-<span class="stat-label">年業界經驗</span>
+<span class="stat-label">Years of Experience</span>
 </div>
 <div class="stat-card reveal">
 <span class="stat-number"><span class="counter" data-target="99.8">0</span><span class="stat-suffix">%</span></span>
-<span class="stat-label">產品良品率</span>
+<span class="stat-label">Product Yield Rate</span>
 </div>
 <div class="stat-card reveal">
 <span class="stat-number"><span class="counter" data-target="1000">0</span><span class="stat-suffix">+</span></span>
-<span class="stat-label">客製化專案</span>
+<span class="stat-label">Customized Projects</span>
 </div>
 <div class="stat-card reveal">
 <span class="stat-number"><span class="counter" data-target="50">0</span><span class="stat-suffix">+</span></span>
-<span class="stat-label">合作客戶</span>
+<span class="stat-label">Valued Clients</span>
 </div>
 </div>
 <div class="quality-principles stagger-children">
 <div class="principle-item reveal">
 <span class="principle-icon">🚫</span>
-<span>不製造不良品 ─ 源頭管控，精進生產製程</span>
+<span>Do not produce defective parts ─ Source control &amp; optimized manufacturing processes</span>
 </div>
 <div class="principle-item reveal">
 <span class="principle-icon">🚫</span>
-<span>不接受不良品 ─ 嚴格進料檢驗，保障原料品質</span>
+<span>Do not accept defective materials ─ Strict incoming inspection to safeguard material quality</span>
 </div>
 <div class="principle-item reveal">
 <span class="principle-icon">🚫</span>
-<span>不流出不良品 ─ 出貨前全面品檢，確保零缺陷</span>
+<span>Do not release defective products ─ Comprehensive pre-shipment inspection for zero defects</span>
 </div>
 </div>
 </div>
@@ -834,58 +814,58 @@
 <div class="container">
 <div class="section-header reveal">
 <span class="section-label">Contact</span>
-<h2 class="section-title">聯絡<span class="accent">我們</span></h2>
-<p class="section-subtitle">歡迎來電洽詢或填寫表單，我們將盡速為您服務。</p>
+<h2 class="section-title">Contact <span class="accent">Us</span></h2>
+<p class="section-subtitle">Please feel free to call us or fill out the form, and we will get back to you as soon as possible.</p>
 </div>
 <div class="contact-grid">
 <div class="contact-form glow-card reveal-left" style="position: relative; z-index: 5;">
                 <!-- Tab Toggle -->
                 <div class="contact-tabs">
-                    <button type="button" class="tab-btn active" data-tab="general">一般快速聯絡</button>
-                    <button type="button" class="tab-btn" data-tab="rfp">詳細客製詢價 (RFP)</button>
+                    <button type="button" class="tab-btn active" data-tab="general">Quick Inquiry</button>
+                    <button type="button" class="tab-btn" data-tab="rfp">Request for Proposal (RFP)</button>
                 </div>
 
                 <!-- Form 1: General Contact Form -->
                 <div class="contact-form-tab-content active" id="general-contact-content">
                     <form id="general-contact-form" action="https://formsubmit.co/jojo.li888@msa.hinet.net" method="POST">
-                        <input type="hidden" name="_subject" value="【鈞翔實業】一般快速聯絡需求通知">
+                        <input type="hidden" name="_subject" value="[Jun-Hsiang Enterprise] General Inquiry Notification">
                         <input type="hidden" name="_captcha" value="false">
                         <div class="form-group">
-                            <label for="general-company">公司名稱</label>
-                            <input id="general-company" name="company" placeholder="請輸入公司名稱" type="text"/>
+                            <label for="general-company">Company Name</label>
+                            <input id="general-company" name="company" placeholder="Enter your company name" type="text"/>
                         </div>
                         <div class="form-row">
                             <div class="form-group">
-                                <label for="general-name">聯絡人姓名</label>
-                                <input id="general-name" name="name" placeholder="您的姓名" type="text"/>
+                                <label for="general-name">Contact Person</label>
+                                <input id="general-name" name="name" placeholder="Your Name" type="text"/>
                             </div>
                             <div class="form-group">
-                                <label for="general-phone">電話號碼</label>
-                                <input id="general-phone" name="phone" placeholder="聯絡電話" type="tel"/>
+                                <label for="general-phone">Phone Number</label>
+                                <input id="general-phone" name="phone" placeholder="Contact Phone" type="tel"/>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="general-email">E-mail 信箱</label>
+                            <label for="general-email">Email Address</label>
                             <input id="general-email" name="email" placeholder="your@email.com" type="email"/>
                         </div>
                         <div class="form-group">
-                            <label for="general-product-need">產品需求</label>
+                            <label for="general-product-need">Product Category</label>
                             <select id="general-product-need" name="product_need">
-                                <option value="">請選擇產品類別</option>
-                                <option value="矽膠製品">矽膠製品</option>
-                                <option value="油封防水">油封防水</option>
-                                <option value="特殊橡/矽膠">特殊橡/矽膠</option>
-                                <option value="異材結合">異材結合</option>
-                                <option value="其他">其他</option>
+                                <option value="">Select Product Category</option>
+                                <option value="Silicone Products">Silicone Products</option>
+                                <option value="Waterproof Seals">Waterproof Seals</option>
+                                <option value="Special Rubber &amp; Silicone">Special Rubber &amp; Silicone</option>
+                                <option value="Overmolding">Overmolding</option>
+                                <option value="Other">Other</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="general-message">留言內容</label>
-                            <textarea id="general-message" name="message" placeholder="請描述您的需求..." rows="5"></textarea>
+                            <label for="general-message">Message</label>
+                            <textarea id="general-message" name="message" placeholder="Please describe your requirements..." rows="5"></textarea>
                         </div>
                         <button class="btn btn-primary btn-submit" id="general-submit-btn" type="submit" style="width: 100%; justify-content: center;">
                             <svg class="lucide" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:18px;height:18px;margin-right:8px;vertical-align:middle;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><line x1="22" x2="11" y1="2" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
-                            送出聯絡訊息
+                            Submit Message
                         </button>
                     </form>
                 </div>
@@ -898,145 +878,145 @@
                         </div>
                         <div class="rfp-steps-indicator">
                             <div class="rfp-step-dot active" data-step="1">
-                                <span class="rfp-step-label">1. 應用領域</span>
+                                <span class="rfp-step-label">1. Application</span>
                             </div>
                             <div class="rfp-step-dot" data-step="2">
-                                <span class="rfp-step-label">2. 加工製程</span>
+                                <span class="rfp-step-label">2. Process</span>
                             </div>
                             <div class="rfp-step-dot" data-step="3">
-                                <span class="rfp-step-label">3. 規格需求</span>
+                                <span class="rfp-step-label">3. Specifications</span>
                             </div>
                             <div class="rfp-step-dot" data-step="4">
-                                <span class="rfp-step-label">4. 聯絡送出</span>
+                                <span class="rfp-step-label">4. Submit</span>
                             </div>
                         </div>
 
                         <form id="contact-form" action="https://formsubmit.co/jojo.li888@msa.hinet.net" method="POST" enctype="multipart/form-data">
-                            <!-- Step 1: 產品應用選擇 -->
+                            <!-- Step 1: Product Application Select -->
                             <div class="rfp-step active" data-step="1">
                                 <div class="rfp-step-title">
                                     <svg class="lucide" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:20px;height:20px;margin-right:8px;vertical-align:middle;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 6h16M4 12h16M4 18h7"/></svg>
-                                    選擇產品應用領域 (非必選)
+                                    Select Product Application Field (Optional)
                                 </div>
                                 <div class="rfp-options-grid" data-input-id="rfp-application">
-                                    <div class="rfp-option-card" data-value="醫療與生醫器材">
+                                    <div class="rfp-option-card" data-value="Medical &amp; Biomedical">
                                         <svg class="rfp-option-icon lucide" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
-                                        <div class="rfp-option-title">醫療與生醫器材</div>
+                                        <div class="rfp-option-title">Medical &amp; Biomedical</div>
                                     </div>
-                                    <div class="rfp-option-card" data-value="電子與半導體">
+                                    <div class="rfp-option-card" data-value="Electronics &amp; Semiconductor">
                                         <svg class="rfp-option-icon lucide" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect width="20" height="15" x="2" y="3" rx="2"/><path d="M6 21h12M12 18v3"/></svg>
-                                        <div class="rfp-option-title">電子與半導體</div>
+                                        <div class="rfp-option-title">Electronics &amp; Semiconductor</div>
                                     </div>
-                                    <div class="rfp-option-card" data-value="汽機車與零組件">
+                                    <div class="rfp-option-card" data-value="Automotive &amp; Components">
                                         <svg class="rfp-option-icon lucide" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9C2 11.1 2 11.3 2 11.5V16c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg>
-                                        <div class="rfp-option-title">汽機車與零組件</div>
+                                        <div class="rfp-option-title">Automotive &amp; Components</div>
                                     </div>
-                                    <div class="rfp-option-card" data-value="工業避震與密封">
+                                    <div class="rfp-option-card" data-value="Industrial Damping &amp; Sealing">
                                         <svg class="rfp-option-icon lucide" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-                                        <div class="rfp-option-title">工業避震與密封</div>
+                                        <div class="rfp-option-title">Industrial Damping &amp; Sealing</div>
                                     </div>
-                                    <div class="rfp-option-card" data-value="其他特殊客製">
+                                    <div class="rfp-option-card" data-value="Other Custom Applications">
                                         <svg class="rfp-option-icon lucide" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
-                                        <div class="rfp-option-title">其他特殊客製</div>
+                                        <div class="rfp-option-title">Other Custom Applications</div>
                                     </div>
                                 </div>
                                 <input type="hidden" name="rfp_application" id="rfp-application">
                             </div>
 
-                            <!-- Step 2: 加工製程選擇 -->
+                            <!-- Step 2: Processing Process Select -->
                             <div class="rfp-step" data-step="2">
                                 <div class="rfp-step-title">
                                     <svg class="lucide" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:20px;height:20px;margin-right:8px;vertical-align:middle;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" x2="12" y1="22.08" y2="12"/></svg>
-                                    選擇加工製程 (非必選)
+                                    Select Manufacturing Process (Optional)
                                 </div>
                                 <div class="rfp-options-grid" data-input-id="rfp-process">
-                                    <div class="rfp-option-card" data-value="LSR 液態射出">
+                                    <div class="rfp-option-card" data-value="LSR Liquid Injection">
                                         <svg class="rfp-option-icon lucide" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 22a7 7 0 0 0 5-11.75l-5-5.25-5 5.25A7 7 0 0 0 12 22Z"/></svg>
-                                        <div class="rfp-option-title">LSR 液態矽膠射出</div>
+                                        <div class="rfp-option-title">LSR Liquid Silicone Injection</div>
                                     </div>
-                                    <div class="rfp-option-card" data-value="固態真空熱壓">
+                                    <div class="rfp-option-card" data-value="Solid Compression Molding">
                                         <svg class="rfp-option-icon lucide" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 14h16v6H4zm0-8h16v3H4z"/></svg>
-                                        <div class="rfp-option-title">固態真空熱壓</div>
+                                        <div class="rfp-option-title">Solid Compression Molding</div>
                                     </div>
-                                    <div class="rfp-option-card" data-value="異材包膠結合">
+                                    <div class="rfp-option-card" data-value="Overmolding / Insertion">
                                         <svg class="rfp-option-icon lucide" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m18 8 4 4-4 4M6 8l-4 4 4 4M14.5 4l-5 16"/></svg>
-                                        <div class="rfp-option-title">異材包膠結合</div>
+                                        <div class="rfp-option-title">Overmolding / Insertion</div>
                                     </div>
-                                    <div class="rfp-option-card" data-value="特殊材料客製">
+                                    <div class="rfp-option-card" data-value="Special Material Customization">
                                         <svg class="rfp-option-icon lucide" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                                        <div class="rfp-option-title">特殊材料客製</div>
+                                        <div class="rfp-option-title">Special Material Customization</div>
                                     </div>
                                 </div>
                                 <input type="hidden" name="rfp_process" id="rfp-process">
                             </div>
 
-                            <!-- Step 3: 規格需求填寫 -->
+                            <!-- Step 3: Specifications and Requirements -->
                             <div class="rfp-step" data-step="3">
                                 <div class="rfp-step-title">
                                     <svg class="lucide" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:20px;height:20px;margin-right:8px;vertical-align:middle;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 20h9M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
-                                    填寫規格與需求 (非必填)
+                                    Enter Specifications &amp; Requirements (Optional)
                                 </div>
                                 <div class="form-row">
                                     <div class="form-group">
-                                        <label for="rfp-quantity">預估年產量 (pcs)</label>
-                                        <input type="text" id="rfp-quantity" name="rfp_quantity" placeholder="例如: 10,000">
+                                        <label for="rfp-quantity">Estimated Annual Quantity (pcs)</label>
+                                        <input type="text" id="rfp-quantity" name="rfp_quantity" placeholder="e.g. 10,000">
                                     </div>
                                     <div class="form-group">
-                                        <label for="rfp-hardness">矽膠硬度要求 (Shore A)</label>
-                                        <input type="text" id="rfp-hardness" name="rfp_hardness" placeholder="例如: 50A">
+                                        <label for="rfp-hardness">Silicone Hardness (Shore A)</label>
+                                        <input type="text" id="rfp-hardness" name="rfp_hardness" placeholder="e.g. 50A">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="rfp-temp">使用環境與耐溫</label>
-                                    <input type="text" id="rfp-temp" name="rfp_temp" placeholder="例如: -40℃ ~ 200℃">
+                                    <label for="rfp-temp">Operating Environment &amp; Temp Range</label>
+                                    <input type="text" id="rfp-temp" name="rfp_temp" placeholder="e.g. -40°C ~ 200°C">
                                 </div>
                             </div>
                             
-                            <!-- Step 4: 聯絡資料與檔案上傳 -->
+                            <!-- Step 4: Contact and File Upload -->
                             <div class="rfp-step" data-step="4">
                                 <div class="rfp-step-title">
                                     <svg class="lucide" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:20px;height:20px;margin-right:8px;vertical-align:middle;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                                    填寫聯絡資訊與上傳圖面 (非必填)
+                                    Contact Info &amp; Drawing Upload (Optional)
                                 </div>
                                 <div class="form-group">
-                                    <label for="rfp-company">公司名稱</label>
-                                    <input type="text" id="rfp-company" name="company" placeholder="請輸入完整公司名稱">
+                                    <label for="rfp-company">Company Name</label>
+                                    <input type="text" id="rfp-company" name="company" placeholder="Enter complete company name">
                                 </div>
                                 <div class="form-row">
                                     <div class="form-group">
-                                        <label for="rfp-name">聯絡人姓名</label>
-                                        <input type="text" id="rfp-name" name="name" placeholder="您的姓名">
+                                        <label for="rfp-name">Contact Person</label>
+                                        <input type="text" id="rfp-name" name="name" placeholder="Your Name">
                                     </div>
                                     <div class="form-group">
-                                        <label for="rfp-phone">電話號碼</label>
-                                        <input type="tel" id="rfp-phone" name="phone" placeholder="聯絡電話">
+                                        <label for="rfp-phone">Phone Number</label>
+                                        <input type="tel" id="rfp-phone" name="phone" placeholder="Contact Phone">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="rfp-email">E-mail 信箱</label>
+                                    <label for="rfp-email">Email Address</label>
                                     <input type="email" id="rfp-email" name="email" placeholder="your@email.com">
                                 </div>
                                 <div class="form-group">
-                                    <label for="rfp-file">設計圖面上傳 (支援 PDF, DWG, STEP, 圖片檔)</label>
+                                    <label for="rfp-file">Upload Design Drawings (Supports PDF, DWG, STEP, Images)</label>
                                     <input type="file" id="rfp-file" name="attachment" accept=".pdf,.dwg,.step,.stp,.png,.jpg,.jpeg">
                                 </div>
                                 <div class="form-group">
-                                    <label for="rfp-message">其他補充需求</label>
-                                    <textarea id="rfp-message" name="message" rows="3" placeholder="請填寫任何其他製程或檢驗規格要求..."></textarea>
+                                    <label for="rfp-message">Additional Requirements</label>
+                                    <textarea id="rfp-message" name="message" rows="3" placeholder="Please fill in any other processing or testing specification requirements..."></textarea>
                                 </div>
                                 <!-- Hidden inputs for FormSubmit configuration -->
-                                <input type="hidden" name="_subject" value="【鈞翔實業】新互動式詢價單需求通知">
+                                <input type="hidden" name="_subject" value="[Jun-Hsiang Enterprise] Interactive RFP Submission">
                                 <input type="hidden" name="_captcha" value="false">
                                 <input type="hidden" name="_honey" style="display:none">
                             </div>
 
                             <!-- Buttons -->
                             <div class="rfp-buttons">
-                                <button type="button" class="btn btn-secondary" id="rfp-prev-btn" style="display: none;">上一步</button>
-                                <button type="button" class="btn btn-primary" id="rfp-next-btn">下一步</button>
+                                <button type="button" class="btn btn-secondary" id="rfp-prev-btn" style="display: none;">Back</button>
+                                <button type="button" class="btn btn-primary" id="rfp-next-btn">Next</button>
                                 <button type="submit" class="btn btn-primary" id="rfp-submit-btn" style="display: none;">
                                     <svg class="lucide" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:16px;height:16px;margin-right:8px;vertical-align:middle;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><line x1="22" x2="11" y1="2" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-                                    送出詢價需求
+                                    Submit RFP
                                 </button>
                             </div>
                         </form>
@@ -1045,10 +1025,10 @@
             </div>
 <div class="contact-info-wrapper reveal-right">
 <div class="contact-info-card">
-<h3>聯絡資訊</h3>
+<h3>Contact Information</h3>
 <div class="contact-item">
 <svg class="lucide lucide-map-pin" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:18px;height:18px;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-<span>242 新北市新莊區新樹路 345 巷 3 號</span>
+<span>No. 3, Lane 345, Xinshu Rd., Xinzhuang Dist., New Taipei City 242, Taiwan</span>
 </div>
 <div class="contact-item">
 <svg class="lucide lucide-phone" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:18px;height:18px;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
@@ -1064,11 +1044,11 @@
 </div>
 <div class="contact-item">
 <svg class="lucide lucide-clock" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:18px;height:18px;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-<span>週一至週五 08:00 - 17:00</span>
+<span>Mon - Fri 08:00 - 17:00</span>
 </div>
 </div>
 <div class="map-container">
-<iframe allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=鈞翔實業有限公司&amp;z=17&amp;output=embed" title="鈞翔實業有限公司地圖"></iframe>
+<iframe allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=鈞翔實業有限公司&amp;z=17&amp;output=embed" title="Jun-Hsiang Enterprise Co., Ltd. Map"></iframe>
 </div>
 </div>
 </div>
@@ -1079,27 +1059,27 @@
 <div class="footer-grid">
 <div class="footer-brand">
 <div class="footer-logo">
-<div class="logo-icon">鈞</div>
-<span>鈞翔實業</span>
+<div class="logo-icon">J</div>
+<span>Jun-Hsiang Enterprise</span>
 </div>
-<p>專業矽橡膠製品客製化代工廠。擁有30年以上工藝傳承與 ISO 9001 認證，提供高品質固態矽膠熱壓與 LSR 液態矽膠射出成型服務，為您打造最可靠的精密矽膠製造方案。</p>
+<p>A professional custom silicone &amp; rubber OEM factory. With over 30 years of manufacturing experience and ISO 9001 certification, we provide high-quality Compression Molding and LSR Liquid Silicone Injection Molding services, delivering the most reliable precision silicone manufacturing solutions for you.</p>
 </div>
 <div class="footer-nav">
-<h4>快速連結</h4>
+<h4>Quick Links</h4>
 <ul class="footer-links">
-<li><a href="#about">關於鈞翔</a></li>
-<li><a href="service.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'zh-TW')">服務技術</a></li>
-<li><a href="products_list.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'zh-TW')">產品實現</a></li>
-<li><a href="knowledge.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'zh-TW')">技術知識庫</a></li>
-<li><a href="#quality">品質認證</a></li>
-<li><a href="#contact">聯絡我們</a></li>
+<li><a href="#about">About Us</a></li>
+<li><a href="service.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'zh-TW')">Services &amp; Tech</a></li>
+<li><a href="products_list.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'zh-TW')">Products</a></li>
+<li><a href="knowledge.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'zh-TW')">Knowledge Base</a></li>
+<li><a href="#quality">Quality Certification</a></li>
+<li><a href="#contact">Contact Us</a></li>
 </ul>
 </div>
 <div class="footer-contact">
-<h4>聯絡資訊</h4>
+<h4>Contact Info</h4>
 <div class="contact-item">
 <svg class="lucide lucide-map-pin" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:16px;height:16px;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-<span>242 新北市新莊區新樹路 345 巷 3 號</span>
+<span>No. 3, Lane 345, Xinshu Rd., Xinzhuang Dist., New Taipei City 242, Taiwan</span>
 </div>
 <div class="contact-item">
 <svg class="lucide lucide-phone" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:16px;height:16px;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
@@ -1111,11 +1091,12 @@
 </div>
 </div>
 </div>
+</div>
 <div class="footer-bottom">
-<span>© 2026 鈞翔實業有限公司 版權所有 Jun-Hsiang Enterprise Co., Ltd.</span>
+<span>© 2026 Jun-Hsiang Enterprise Co., Ltd. All Rights Reserved.</span>
 <a class="btn btn-outline" href="#hero" style="font-size: 0.7rem; padding: 6px 16px;">
 <svg class="lucide lucide-arrow-up" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:14px;height:14px;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m5 12 7-7 7 7"></path><path d="M12 19V5"></path></svg>
-                    回到頂部
+                    Back to Top
                 </a>
 </div>
 </div>
@@ -1123,48 +1104,48 @@
 <div class="product-modal" id="product-modal">
 <div class="modal-backdrop" id="modal-backdrop"></div>
 <div class="modal-content">
-<button aria-label="關閉視窗" class="modal-close" id="modal-close"><svg class="lucide lucide-x" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:24px;height:24px;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><line x1="18" x2="6" y1="6" y2="18"></line><line x1="6" x2="18" y1="6" y2="18"></line></svg></button>
+<button aria-label="Close" class="modal-close" id="modal-close"><svg class="lucide lucide-x" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:24px;height:24px;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><line x1="18" x2="6" y1="6" y2="18"></line><line x1="6" x2="18" y1="6" y2="18"></line></svg></button>
 <div class="breadcrumb">
-<span>首頁</span> <span class="divider">/</span> <span>產品實現</span> <span class="divider">/</span> <span id="modal-category-text">矽膠製品</span> <span class="divider">/</span> <span class="current" id="modal-title-small">標題</span>
+<span>Home</span> <span class="divider">/</span> <span>Products</span> <span class="divider">/</span> <span id="modal-category-text">Silicone Products</span> <span class="divider">/</span> <span class="current" id="modal-title-small">Title</span>
 </div>
 <div class="modal-body">
 <div class="modal-image-wrapper">
-<img alt="產品圖片" id="modal-img" src=""/>
+<img alt="Product image" id="modal-img" src=""/>
 </div>
 <div class="modal-details">
-<h2 class="section-title" id="modal-title">標題</h2>
+<h2 class="section-title" id="modal-title">Title</h2>
 <div class="modal-divider"></div>
-<p class="modal-description" id="modal-desc">產品詳細描述</p>
+<p class="modal-description" id="modal-desc">Product description</p>
 <div class="modal-specs">
 <div class="spec-row">
 <svg class="lucide lucide-check-circle" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:18px;height:18px;color:var(--color-accent);" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-<span class="spec-text">100% 依客戶需求度身客製</span>
+<span class="spec-text">100% customized to client specifications</span>
 </div>
 <div class="spec-row">
 <svg class="lucide lucide-check-circle" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:18px;height:18px;color:var(--color-accent);" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-<span class="spec-text">符合高規格國際品質標準</span>
+<span class="spec-text">Complies with high international quality standards</span>
 </div>
 <div class="spec-row">
 <svg class="lucide lucide-check-circle" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:18px;height:18px;color:var(--color-accent);" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-<span class="spec-text">提供多種類色彩與硬度調配</span>
+<span class="spec-text">Available in a wide range of colors and hardness levels</span>
 </div>
 </div>
 <div class="modal-cta">
 <a class="btn btn-primary" href="#contact" onclick="closeModal()">
 <svg class="lucide lucide-mail" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:18px;height:18px;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect height="16" rx="2" width="20" x="2" y="4"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
-                            填寫詢問單
+                            Request a Quote
                         </a>
 </div>
 </div>
 </div>
 </div>
 </div>
-<button aria-label="回到頂部" class="back-to-top" id="back-to-top">
+<button aria-label="Back to Top" class="back-to-top" id="back-to-top">
 <svg class="lucide lucide-chevron-up" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:24px;height:24px;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m18 15-6-6-6 6"></path></svg>
 </button>
-<script src="js/particles.js"></script>
-<script src="js/animations.js"></script>
-<script src="js/counter.js"></script>
-<script src="js/main.js"></script>
+<script src="../js/particles.js"></script>
+<script src="../js/animations.js"></script>
+<script src="../js/counter.js"></script>
+<script src="../js/main.js"></script>
 </body>
 </html>

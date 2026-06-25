@@ -9,6 +9,10 @@
     <meta content="鈞翔實業有限公司" name="author"/>
     <meta content="index, follow" name="robots"/>
     <link href="https://andy-hsu0127.github.io/jun-hsiang-web/knowledge.html" rel="canonical"/>
+    <link rel="alternate" hreflang="zh-TW" href="https://andy-hsu0127.github.io/jun-hsiang-web/knowledge.html" />
+    <link rel="alternate" hreflang="en" href="https://andy-hsu0127.github.io/jun-hsiang-web/en/knowledge.html" />
+    <link rel="alternate" hreflang="ja" href="https://andy-hsu0127.github.io/jun-hsiang-web/ja/knowledge.html" />
+    <link rel="alternate" hreflang="x-default" href="https://andy-hsu0127.github.io/jun-hsiang-web/knowledge.html" />
     <meta content="技術知識庫與客製案例 - LSR 液態矽膠射出工廠 - 鈞翔實業有限公司" property="og:title"/>
     <meta content="30年矽膠橡膠專業代工經驗，ISO 9001認證，提供LSR液態矽膠射出、固態矽膠壓出與異材結合技術解答與成功案例。" property="og:description"/>
     <meta content="website" property="og:type"/>
@@ -248,17 +252,29 @@
 </div>
 <nav class="navbar" id="navbar">
     <div class="container">
-        <a class="nav-logo" href="index.html" id="nav-logo">
+        <a class="nav-logo" href="index.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'zh-TW')" id="nav-logo">
             <div class="logo-icon">鈞</div>
             <span>鈞翔實業</span>
         </a>
         <div class="nav-links" id="nav-links">
             <a class="nav-link" href="index.html#about">關於鈞翔</a>
-            <a class="nav-link" href="service.html">服務技術</a>
-            <a class="nav-link" href="products_list.html">產品實現</a>
-            <a class="nav-link active" href="knowledge.html">技術知識</a>
+            <a class="nav-link" href="service.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'zh-TW')">服務技術</a>
+            <a class="nav-link" href="products_list.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'zh-TW')">產品實現</a>
+            <a class="nav-link active" href="knowledge.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'zh-TW')">技術知識</a>
             <a class="nav-link" href="index.html#quality">品質認證</a>
             <a class="nav-link" href="index.html#contact">聯絡我們</a>
+            <div class="lang-selector">
+                <button class="lang-selector-btn" aria-label="Select Language">
+                    <svg class="lucide lucide-globe" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:16px;height:16px;margin-right:4px;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+                    <span>繁中</span>
+                    <svg class="lucide lucide-chevron-down" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:12px;height:12px;margin-left:2px;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m6 9 6 6 6-6"></path></svg>
+                </button>
+                <div class="lang-dropdown">
+                    <a href="knowledge.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'zh-TW')" class="active">繁中</a>
+                    <a href="en/knowledge.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'en')">EN</a>
+                    <a href="ja/knowledge.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'ja')">日本語</a>
+                </div>
+            </div>
         </div>
         <div aria-label="開啟選單" class="hamburger" id="hamburger" role="button" tabindex="0">
             <span></span>
@@ -269,19 +285,27 @@
 </nav>
 <div class="mobile-menu" id="mobile-menu">
     <a class="nav-link" href="index.html#about">關於鈞翔</a>
-    <a class="nav-link" href="service.html">服務技術</a>
-    <a class="nav-link" href="products_list.html">產品實現</a>
-    <a class="nav-link active" href="knowledge.html">技術知識</a>
+    <a class="nav-link" href="service.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'zh-TW')">服務技術</a>
+    <a class="nav-link" href="products_list.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'zh-TW')">產品實現</a>
+    <a class="nav-link active" href="knowledge.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'zh-TW')">技術知識</a>
     <a class="nav-link" href="index.html#quality">品質認證</a>
     <a class="nav-link" href="index.html#contact">聯絡我們</a>
+    <div class="mobile-lang-links">
+        <a href="knowledge.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'zh-TW')" class="mobile-lang-link active">繁中</a>
+        <span style="color: rgba(255,255,255,0.2);">|</span>
+        <a href="en/knowledge.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'en')" class="mobile-lang-link">EN</a>
+        <span style="color: rgba(255,255,255,0.2);">|</span>
+        <a href="ja/knowledge.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'ja')" class="mobile-lang-link">日本語</a>
+    </div>
 </div>
 
 <!-- Page Banner -->
-<header class="page-banner">
-    <div class="container">
+<header class="page-banner" style="position: relative; overflow: hidden;">
+    <div class="glow-blob" style="top: 50%; left: 50%; transform: translate(-50%, -50%);"></div>
+    <div class="container" style="position: relative; z-index: 1;">
         <h1 class="page-banner-title">技術<span class="accent">知識庫</span></h1>
         <div class="breadcrumb">
-            <a href="index.html">首頁</a>
+            <a href="index.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'zh-TW')">首頁</a>
             <span class="divider">/</span>
             <span class="current">技術知識與案例</span>
         </div>
@@ -361,8 +385,8 @@
                                 <h5>2. LSR 液態矽膠射出成型 (Liquid Silicone Rubber Injection)</h5>
                                 <p>這是適應精密高分子產品需求而生的自動化射出製程，使用雙組份（A劑與B劑）低黏度液態矽膠。</p>
                                 <ul>
-                                    <li><strong>生產製程</strong>：A/B原料以 1:1 精密比例混合後，經由冷澆道系統直接射入加熱的密閉模腔內，在數秒至數十秒內快速高溫固化。</li>
-                                    <li><strong>優勢</strong>：全自動化進料與生產，Cycle Time（生產週期）極短。由於液態矽膠流動性極佳，能製造結構極度複雜、壁厚極薄的微米級零件，尺寸公差可精準控制在 ±0.02mm ~ ±0.05mm。生產過程無毛邊或毛邊極少，且全封閉管路防止環境人為污染物，非常適合醫療級矽膠件與電子級防水防塵圈。</li>
+                                    <li><strong>生產製程</strong>：A/B原料以 1:1 精密比例混合後，經由精密流道系統直接射入加熱的密閉模腔內，在數秒至數十秒內快速高溫固化。</li>
+                                    <li><strong>優勢</strong>：全自動化進料與生產，Cycle Time（生產週期）極短。由於液態矽膠流動性極佳，能製造結構極度複雜、壁厚極薄的微米級零件，尺寸公差可精準控制在 ±0.02mm ~ ±0.05mm。生產過程毛邊極少，且全封閉管路防止環境人為污染物，非常適合醫療級矽膠件與電子級防水防塵圈。</li>
                                     <li><strong>劣勢</strong>：模具設計高度精密（如流道控制、高真空排氣），因此模具造價昂貴，建議在大批量量產下能實現最佳折舊性。</li>
                                 </ul>
                                 
@@ -514,7 +538,7 @@
                                 <h5>【鈞翔的技術解決方案】</h5>
                                 <ul>
                                     <li><strong>導入 LSR 液態矽膠射出成型</strong>：採用全閉鎖式的雙液型液態矽膠計量系統，原料從密封桶直接以 1:1 比例被壓送入射出機，全程無空氣暴露與人工接觸，保證 100% 的無污染防護。</li>
-                                    <li><strong>高精密無冷澆道模具 (Cold Runner System)</strong>：我們設計了具備閥針式噴嘴（Valve Gated）的冷澆道模具，控制矽膠直接流至產品入口，達成無毛邊、無澆道廢料的精密射出，毛邊精細度成功小於 0.02mm，免除後段修邊工序。</li>
+                                    <li><strong>高精密模具設計與精密成型</strong>：我們設計了具備精密分模與排氣系統的模具，精確控制射出參數，使產品毛邊精細度成功小於 0.03mm，大幅降低後段修邊需求。</li>
                                     <li><strong>生物相容性材料驗證</strong>：協助客戶進行高溫硫化時間與二次加硫溫度的優化，完全排除揮發性小分子，確保通過 FDA 21 CFR 177.2600 檢測。</li>
                                 </ul>
                                 
@@ -636,9 +660,9 @@
                 <h4>快速連結</h4>
                 <ul class="footer-links">
                     <li><a href="index.html#about">關於鈞翔</a></li>
-                    <li><a href="service.html">服務技術</a></li>
-                    <li><a href="products_list.html">產品實現</a></li>
-                    <li><a href="knowledge.html">技術知識庫</a></li>
+                    <li><a href="service.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'zh-TW')">服務技術</a></li>
+                    <li><a href="products_list.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'zh-TW')">產品實現</a></li>
+                    <li><a href="knowledge.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'zh-TW')">技術知識庫</a></li>
                     <li><a href="index.html#quality">品質認證</a></li>
                     <li><a href="index.html#contact">聯絡我們</a></li>
                 </ul>
