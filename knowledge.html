@@ -225,6 +225,38 @@
                 text-align: center;
             }
         }
+        
+        .article-figure-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: var(--space-6);
+            margin: var(--space-6) 0;
+            align-items: center;
+        }
+        .article-figure-grid.reverse {
+            grid-template-columns: 1fr 1.2fr;
+        }
+        .article-figure-container {
+            width: 100%;
+            height: auto;
+        }
+        .article-figure-img {
+            width: 100%;
+            height: auto;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--color-border);
+            box-shadow: var(--shadow-sm);
+            transition: transform var(--transition-normal);
+        }
+        .article-figure-img:hover {
+            transform: scale(1.02);
+        }
+        @media (max-width: 768px) {
+            .article-figure-grid, .article-figure-grid.reverse {
+                grid-template-columns: 1fr;
+                gap: var(--space-4);
+            }
+        }
     </style>
 </head>
 <body>
@@ -367,64 +399,99 @@
                             <span>分類：前沿科技矽膠應用</span> | <span>發布日期：2026-06-26</span>
                         </div>
                         <p class="article-summary">
-                            隨著人工智慧（AI）伺服器及無人機（Drone）產業的爆發性成長，硬體對於「高溫散熱」、「高頻減震」與「極端環境防水防塵」的要求達到了前所未有的高度。矽橡膠憑藉其優異的耐溫、吸震與電氣絕緣性能，已成為這兩大前沿產業不可或缺的核心精密配件。本篇將為您詳細解析...
+                            隨著人工智慧（AI）伺服器及無人載具（無人機）產業的爆發性成長，硬體系統對於「極端散熱性能」、「高頻防震減震」與「戶外極端防水防塵」的規格要求已推升至工業與航太級標準。矽橡膠材質憑藉其無可替代的彈性、耐溫、絕緣與化學穩定性，成為推動兩大尖端科技穩定運作的「關鍵零組件」。本篇將深入解析產品結構設計與量產技術...
                         </p>
                         
                         <div class="article-expanded-content">
                             <div class="article-body">
-                                <p>在人工智慧 (AI) 與無人載具 (UAV) 飛速發展的時代，硬體系統的穩定性直接決定了演算法與控制系統的表現。在高壓、高熱、高速震動及戶外多變氣候的運作環境下，高階精密矽橡膠零件扮演著「無名英雄」的角色。以下是這兩大核心領域的關鍵應用與設計趨勢：</p>
+                                <p>在人工智慧 (AI) 伺服器與無人載具 (UAV) 系統中，硬體架構的可靠性是演算法能穩定發揮的底氣。面對高壓、高熱、動態震動、電磁波干擾 (EMI) 及全天候嚴酷環境，精密矽膠與橡膠元件提供了完美的解決方案。以下為兩大高成長硬體市場的深度應用分析與材料設計要點：</p>
                                 
-                                <h5>一、 AI 伺服器與硬體中的矽橡膠關鍵應用</h5>
-                                <p>AI 運算晶片（如 GPU、ASIC）在超載運作時會釋放驚人熱量，且高速運作的冷卻系統會帶來微震動，這對硬體密封與防震提出了嚴苛要求：</p>
-                                <ul>
-                                    <li><strong>1. 高效散熱導熱矽膠片 (Thermal Interface Materials, TIM)</strong>：AI 晶片與散熱模組之間必須使用超高導熱係數的矽膠片或導熱凝膠。透過添加氧化鋁或氮化硼等導熱陶瓷粉體，矽膠能在保持絕緣與柔軟彈性的同時，提供極佳的熱傳導效率。</li>
-                                    <li><strong>2. 液冷/水冷系統防漏密封圈 (Liquid Cooling Gaskets)</strong>：為了解決散熱瓶頸，AI 機櫃正全面導入液冷系統。採用 <strong>LSR 液態矽膠射出成型</strong> 的密封圈與水路密封墊，具備極低的壓縮永久變形率與耐化學降解性，能在數年高溫循環下依然維持 100% 防滲漏，保護昂貴的板卡不受水氣侵害。</li>
-                                    <li><strong>3. 高阻尼避震襯墊與高溫護套</strong>：伺服器內部的高速排風扇和水泵浦會產生高頻微震，這會影響高頻差分訊號的傳輸穩定性。利用特殊配方的高阻尼彈性橡膠減震墊，能有效吸收高頻震動，降低機櫃共振。</li>
-                                </ul>
+                                <h4>一、 AI 伺服器與高算力機櫃中的橡矽膠關鍵零件</h4>
+                                <p>AI 運算晶片（GPU/ASIC）在高負載下發熱量巨大，且高速運作的冷卻系統及風扇運作時產生的微震動會直接干擾高頻訊號傳輸。這對密封、導熱與防震提出了極高要求：</p>
                                 
-                                <h5>二、 無人機 (Drones) 對精密橡矽膠的技術需求</h5>
-                                <p>無人機需要面對高空嚴寒、雨水沖刷與馬達高速旋轉的動態環境，對輕量化、抗震與耐候性極為敏感：</p>
-                                <ul>
-                                    <li><strong>1. 雲台相機高阻尼減震球 (Gimbal Dampening Balls)</strong>：無人機螺旋槳的高速旋轉會產生高頻抖動（滾擺效應）。雲台避震球必須採用極佳回彈力與阻尼係數的橡矽膠，精確調校硬度（通常在 Shore A 30°~45° 之間），才能完美吸收微震動，確保航拍與巡檢畫面穩定不抖動。</li>
-                                    <li><strong>2. 電池模組防震緩衝墊與阻燃阻隔</strong>：無人機大倍率放電的鋰電池在充放電時會發熱膨脹，且著陸碰撞時易受衝擊。使用超輕量矽膠泡棉 (Silicone Foam) 或低硬度防震墊，能同時提供物理緩衝、熱隔離，並達到 UL94-V0 等級的阻燃防火效果，提高飛行安全。</li>
-                                    <li><strong>3. IP67/IP68 外殼防水密封圈與 LSR 雙色包膠 (Overmolding)</strong>：為了實現全天候飛行（如雨中巡檢、海上搜救），無人機外殼、相機艙口與內部連接器必須使用精密矽膠密封。利用 **LSR 與硬質塑膠（如 PC/PA）的雙色一體成型技術**，能將防水膠條直接黏合於骨架上，避免人工安裝的間隙，並在高空 -40°C 至 80°C 的極端溫差下不變形、不龜裂。</li>
-                                </ul>
+                                <div class="article-figure-grid">
+                                    <div>
+                                        <h5>1. 超導熱介面材料 (Thermal Conductive Silicone, TIM)</h5>
+                                        <p>GPU/CPU 晶片與散熱片、均溫板之間，需填充高熱導率的導熱矽膠片或導熱凝膠。透過精密配方在矽膠基材中填充氧化鋁、氮化硼或碳化矽等陶瓷微粒，在維持 Shore A 10°~25° 極佳彈性與間隙填充性能的同時，達到 3.0~8.0 W/m·K 以上的熱傳導效率，大幅降低晶片溫升。</p>
+                                        
+                                        <h5>2. 水冷/液冷系統防漏密封圈 (Liquid Cooling Gaskets)</h5>
+                                        <p>液冷（CDU 水路、水冷板）正成為 AI 機櫃散熱主流。水冷接頭與冷卻板的密封圈需在長達數年的 80°C 高溫水汽環境中工作，對<b>永久壓縮變形率（要求 &lt; 10%）</b>與耐化學降解（耐乙二醇水溶液）有極高要求。採用 <strong>LSR 液態矽膠射出成型</strong> 的 O型環與異形密封墊，是防堵伺服器內部液漏短路的唯一防線。</p>
+                                    </div>
+                                    <div class="article-figure-container">
+                                        <img src="images/tech/ai-gaskets.png" alt="AI 伺服器導熱矽膠與 LSR 液冷密封圈" class="article-figure-img" loading="lazy" />
+                                        <p style="font-size: 0.8rem; color: var(--color-text-muted); text-align: center; margin-top: var(--space-2);">▲ 鈞翔精密生產的 AI 伺服器超導熱矽膠片與高氣密 LSR 密封圈</p>
+                                    </div>
+                                </div>
+
+                                <h5>3. 導電橡膠電磁遮蔽蓋與絕緣墊圈 (EMI Shielding Gaskets)</h5>
+                                <p>AI 伺服器內部有著大量高頻通訊模組，電磁干擾 (EMI) 會顯著降低資料傳輸速率。我們透過在矽膠中混入鎳包石墨、銀包銅等導電顆粒，開發出具有共擠或壓出成型的電磁遮蔽導電橡膠條。這些零件既能防塵，又能阻絕高頻雜訊，電阻率可控制在 &lt; 0.01 Ω·cm。</p>
+
+                                <h4>二、 無人機 (Drones) 對精密避震與耐候氣密零件的技術需求</h4>
+                                <p>專業級與工業級無人機（如農用植保、電力巡檢、防汛搜救）需在高空嚴寒、雨水沖刷與螺旋槳馬達高速共振環境中作業，對零件重量、抗震能效有著苛刻考驗：</p>
                                 
-                                <h5>AI 與無人機應用之材料規格設計指南：</h5>
+                                <div class="article-figure-grid reverse">
+                                    <div class="article-figure-container">
+                                        <img src="images/tech/drone-dampers.png" alt="無人機避震球與馬達防震墊" class="article-figure-img" loading="lazy" />
+                                        <p style="font-size: 0.8rem; color: var(--color-text-muted); text-align: center; margin-top: var(--space-2);">▲ 鈞翔無人機雲台相機高阻尼避震球及馬達金屬接著接著件</p>
+                                    </div>
+                                    <div>
+                                        <h5>1. 雲台相機高阻尼減震球 (Gimbal Dampening Balls)</h5>
+                                        <p>旋翼旋轉時產生的 50Hz~200Hz 高頻震動會使航拍畫面產生「果凍效應」（Jello Effect）。雲台減震球必須精準控制硬度（Shore A 30°~45°）與阻尼值（tan δ）。我們採用高撕裂強度、高彈性天然膠與矽膠複合配方，既有足夠剛性支撐相機重力，端能完美隔絕螺旋槳的微震動。</p>
+                                        
+                                        <h5>2. 馬達減震座與金屬接著接著件 (Motor Mount Dampers)</h5>
+                                        <p>無人機馬達座是震動與溫升源頭。利用**橡膠與金屬接著技術（Rubber to Metal Bonding）**將鋁合金與特製丁腈橡膠（NBR）在模具內共價結合，免去二次裝配，不僅具備高拉拔力強度，亦能阻隔馬達震動往機架（碳纖維板）傳遞，保護陀螺儀晶片不受干擾。</p>
+                                    </div>
+                                </div>
+
+                                <h5>3. 起落架緩衝腳墊 (Landing Gear Shock Absorbers)</h5>
+                                <p>選用高耐磨、耐撕裂的丁腈橡膠 (NBR) 或聚氨酯 (PU) 製造起落架緩衝墊，吸收重載無人機降落時的瞬間物理衝擊，避免機身碳纖維結構微損龜裂。</p>
+                                
+                                <h5>4. 動力舵機與擺臂防水防塵套 (Servo Dust Boots)</h5>
+                                <p>在垂直起降（VTOL）傾轉旋翼無人機的傾轉轉軸、舵機連桿處，使用極薄壁（0.3mm~0.5mm）的波紋狀矽橡膠防塵套筒。高強度的矽膠能在阻擋農藥噴灑、沙塵及雨水的同時，確保不阻礙舵機的極致轉向回饋彈力。</p>
+                                
+                                <h5>5. 外殼 IP67/IP68 防水圈與 LSR 雙色包膠 (Overmolding)</h5>
+                                <p>為實現大雨中執勤，機殼與電池艙門的交接面必須實現完美防水。<b>LSR 雙色射出技術</b>將液態矽膠直接包覆在硬質 PC/PA 塑膠框架上，無組裝公差，且在 -40°C ~ 85°C 極端環境中不會有脫膠、龜裂、老化漏水的風險。</p>
+
+                                <h5>AI 伺服器與無人機零組件規格設計對照表：</h5>
                                 <table style="width:100%; border-collapse: collapse; margin-bottom: 20px; font-size: 0.9rem;">
                                     <thead>
                                         <tr style="border-bottom: 2px solid var(--color-border); text-align: left;">
-                                            <th style="padding: 10px; color: var(--color-text-primary);">應用場景</th>
-                                            <th style="padding: 10px; color: var(--color-text-primary);">核心要求</th>
-                                            <th style="padding: 10px; color: var(--color-text-primary);">建議製程與硬度</th>
+                                            <th style="padding: 10px; color: var(--color-text-primary);">核心零件</th>
+                                            <th style="padding: 10px; color: var(--color-text-primary);">推薦材質</th>
+                                            <th style="padding: 10px; color: var(--color-text-primary);">核心規格指引</th>
+                                            <th style="padding: 10px; color: var(--color-text-primary);">關鍵加工製程</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr style="border-bottom: 1px solid var(--color-border);">
-                                            <td style="padding: 10px; font-weight: 600;">AI 晶片導熱介質</td>
-                                            <td style="padding: 10px;">超高導熱率、超低熱阻、高絕緣性</td>
-                                            <td style="padding: 10px;">導熱矽膠片 / Shore A 10°~20° (極軟)</td>
+                                            <td style="padding: 10px; font-weight: 600;">晶片導熱片</td>
+                                            <td style="padding: 10px;">陶瓷粉填充矽膠</td>
+                                            <td style="padding: 10px;">導熱率 3~8 W/m·K、Shore A 15°</td>
+                                            <td style="padding: 10px;">混煉壓出 / 沖切加工</td>
                                         </tr>
                                         <tr style="border-bottom: 1px solid var(--color-border);">
-                                            <td style="padding: 10px; font-weight: 600;">伺服器液冷密封</td>
-                                            <td style="padding: 10px;">耐冷卻液（乙二醇等）、低永久壓縮變形率</td>
-                                            <td style="padding: 10px; color: var(--color-accent);">LSR 液態射出 / Shore A 50°~60°</td>
+                                            <td style="padding: 10px; font-weight: 600;">液冷系統密封件</td>
+                                            <td style="padding: 10px;">LSR 液態矽膠</td>
+                                            <td style="padding: 10px;">壓縮變形 &lt; 10%、耐冷卻液</td>
+                                            <td style="padding: 10px; color: var(--color-accent);">高精度 LSR 自動射出</td>
                                         </tr>
                                         <tr style="border-bottom: 1px solid var(--color-border);">
-                                            <td style="padding: 10px; font-weight: 600;">無人機雲台減震球</td>
-                                            <td style="padding: 10px;">高阻尼、高耐疲勞、抗拉撕、耐候抗 UV</td>
-                                            <td style="padding: 10px;">精密壓出或 LSR 射出 / Shore A 30°~40°</td>
+                                            <td style="padding: 10px; font-weight: 600;">雲台相機避震球</td>
+                                            <td style="padding: 10px;">高撕裂矽橡膠</td>
+                                            <td style="padding: 10px;">高阻尼（tan δ）、Shore A 35°</td>
+                                            <td style="padding: 10px;">真空抽氣熱壓 / LSR 射出</td>
                                         </tr>
                                         <tr style="border-bottom: 1px solid var(--color-border);">
-                                            <td style="padding: 10px; font-weight: 600;">無人機防水連接器</td>
-                                            <td style="padding: 10px;">IP68防水、與塑膠件緊密黏合不脫膠、極端溫差耐受</td>
-                                            <td style="padding: 10px; color: var(--color-accent);">LSR 雙色包膠 (Overmolding) / Shore A 40°~50°</td>
+                                            <td style="padding: 10px; font-weight: 600;">無人機外殼防水</td>
+                                            <td style="padding: 10px;">LSR 矽膠 + PC/PA</td>
+                                            <td style="padding: 10px;">IP68防水、剪切強度 &gt; 4.0 MPa</td>
+                                            <td style="padding: 10px; color: var(--color-accent);">LSR 雙色二次包膠 (Overmolding)</td>
                                         </tr>
                                     </tbody>
                                 </table>
                                 
-                                <h5>三、 鈞翔實業的一站式前沿客製解決方案</h5>
-                                <p>鈞翔實業有限公司擁有 30 年以上精密模具研發實力，緊跟新科技硬體趨勢。我們在新北新莊的廠區，能為 AI 硬體與無人機開發商提供從材料配方調研（如高導熱率、UL94-V0阻燃、高減震阻尼）、模具流道設計、到高產能自動化 LSR 射出的一站式代工服務，助您的硬體產品完美應對高頻高效的未來市場挑戰。</p>
+                                <h4>三、 鈞翔實業 — 您的前沿硬體量產最佳合作夥伴</h4>
+                                <p>多數 AI 與無人機專案的精密矽膠件均為非標客製化零件。鈞翔實業有限公司擁有 30 年以上模具研製與材料改性研發技術，在新北新莊廠區設有高精度模具加工廠與自動化 LSR 射出設備。我們能針對客戶的高散熱、高阻尼減震或極端氣候防水需求，進行 NRE 客製化模具開發，提供極具競爭力的打樣與高良率量產代工服務。歡迎各界提供 3D 圖檔（STEP/IGS）或樣品，與我們的技術團隊進行深度探討。</p>
                             </div>
                         </div>
                         <div class="article-toggle-btn">

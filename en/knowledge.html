@@ -225,6 +225,38 @@
                 text-align: center;
             }
         }
+        
+        .article-figure-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: var(--space-6);
+            margin: var(--space-6) 0;
+            align-items: center;
+        }
+        .article-figure-grid.reverse {
+            grid-template-columns: 1fr 1.2fr;
+        }
+        .article-figure-container {
+            width: 100%;
+            height: auto;
+        }
+        .article-figure-img {
+            width: 100%;
+            height: auto;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--color-border);
+            box-shadow: var(--shadow-sm);
+            transition: transform var(--transition-normal);
+        }
+        .article-figure-img:hover {
+            transform: scale(1.02);
+        }
+        @media (max-width: 768px) {
+            .article-figure-grid, .article-figure-grid.reverse {
+                grid-template-columns: 1fr;
+                gap: var(--space-4);
+            }
+        }
     </style>
 </head>
 <body>
@@ -367,64 +399,99 @@
                             <span>Category: Frontier Tech Silicone Applications</span> | <span>Published: 2026-06-26</span>
                         </div>
                         <p class="article-summary">
-                            With the explosive growth of the Artificial Intelligence (AI) server and drone (UAV) industries, hardware requirements for high-temperature thermal dissipation, high-frequency vibration damping, and extreme weatherproofing have reached unprecedented heights. Silicone rubber, with its superior thermal tolerance, shock absorption, and electrical insulation properties, has become an indispensable core precision component in these two frontier industries. This article provides an in-depth analysis...
+                            With the explosive growth of the Artificial Intelligence (AI) server and drone (UAV) industries, hardware requirements for high-temperature thermal dissipation, high-frequency vibration damping, and extreme weatherproofing have reached industrial and aerospace standards. Silicone rubber, with its superior thermal tolerance, shock absorption, and electrical insulation properties, has become an indispensable core precision component in these two frontier industries. This article provides an in-depth analysis...
                         </p>
                         
                         <div class="article-expanded-content">
                             <div class="article-body">
                                 <p>In the era of rapid development of Artificial Intelligence (AI) and Unmanned Aerial Vehicles (UAV), hardware stability directly determines the performance of algorithms and control systems. Operating in environments characterized by high voltage, high heat, high-speed vibration, and highly variable outdoor weather, high-end precision silicone rubber components play the role of "unsung heroes." Below are the key applications and design trends in these two core areas:</p>
                                 
-                                <h5>1. Key Applications of Silicone Rubber in AI Servers &amp; Hardware</h5>
+                                <h4>1. Key Applications of Silicone Rubber in AI Servers &amp; Hardware</h4>
                                 <p>AI computing chips (such as GPUs and ASICs) release massive amounts of heat under heavy loads, and high-speed cooling systems introduce micro-vibrations, placing strict requirements on hardware sealing and shock absorption:</p>
-                                <ul>
-                                    <li><strong>Efficient Thermal Conductive Silicone Sheets (TIM)</strong>: Ultra-high thermal conductivity silicone sheets or thermal gels must be used between AI chips and heat dissipation modules. By adding ceramic powders such as alumina or boron nitride, silicone provides excellent heat transfer efficiency while maintaining electrical insulation and soft elasticity.</li>
-                                    <li><strong>Liquid/Water Cooling Leak-Proof Gaskets</strong>: To break through heat dissipation bottlenecks, AI cabinets are rapidly shifting to liquid cooling. Gaskets and water-way seals manufactured via <strong>LSR (Liquid Silicone Rubber) injection molding</strong> possess extremely low compression set and high chemical degradation resistance. They maintain 100% leak-proofing over years of high-temperature cycling, protecting expensive boards from moisture damage.</li>
-                                    <li><strong>High-Damping Vibration Pads and High-Temperature Sleeves</strong>: High-speed exhaust fans and water pumps inside servers generate high-frequency micro-vibrations, which can affect the stability of high-frequency differential signal transmissions. Using custom-formulated high-damping elastic rubber dampers effectively absorbs high-frequency vibrations and minimizes cabinet resonance.</li>
-                                </ul>
                                 
-                                <h5>2. Technical Demand of Drones (UAVs) for Precision Silicone Rubber</h5>
+                                <div class="article-figure-grid">
+                                    <div>
+                                        <h5>A. Efficient Thermal Interface Materials (TIM)</h5>
+                                        <p>Ultra-high thermal conductivity silicone sheets or thermal gels must be used between AI chips and heat dissipation modules. By adding ceramic powders such as alumina, boron nitride, or silicon carbide, silicone provides excellent heat transfer efficiency (3.0~8.0 W/m·K or higher) while maintaining electrical insulation and soft elasticity (Shore A 10°~25°).</p>
+                                        
+                                        <h5>B. Liquid/Water Cooling Leak-Proof Gaskets</h5>
+                                        <p>To break through heat dissipation bottlenecks, AI cabinets are rapidly shifting to liquid cooling. Gaskets and water-way seals manufactured via <strong>LSR (Liquid Silicone Rubber) injection molding</strong> possess extremely low compression set (requiring &lt; 10%) and high chemical degradation resistance. They maintain 100% leak-proofing over years of high-temperature cycling, protecting expensive boards from moisture damage.</p>
+                                    </div>
+                                    <div class="article-figure-container">
+                                        <img src="../images/tech/ai-gaskets.png" alt="AI Server Thermal Pads &amp; LSR Cooling Gaskets" class="article-figure-img" loading="lazy" />
+                                        <p style="font-size: 0.8rem; color: var(--color-text-muted); text-align: center; margin-top: var(--space-2);">▲ High-conductivity thermal sheets and high-sealing LSR gaskets produced by Jun-Hsiang</p>
+                                    </div>
+                                </div>
+
+                                <h5>C. EMI Shielding Gaskets</h5>
+                                <p>AI servers host numerous high-frequency communication modules where electromagnetic interference (EMI) can severely degrade data rates. We mix conductive particles like nickel-graphite or silver-copper into silicone to produce co-extruded or molded EMI shielding gaskets. These shield high-frequency noise, keeping volume resistivity below 0.01 Ω·cm.</p>
+
+                                <h4>2. Technical Demand of Drones (UAVs) for Precision Silicone Rubber</h4>
                                 <p>Drones must withstand high-altitude freezing temperatures, rain wash, and high-speed motor rotation. They are highly sensitive to lightweight construction, shock absorption, and weather resistance:</p>
-                                <ul>
-                                    <li><strong>Gimbal Camera High-Damping Balls</strong>: The high-speed rotation of drone propellers causes high-frequency jitter (jello effect). Gimbal dampening balls must utilize silicone rubber with excellent resilience and damping coefficients, with carefully calibrated hardness (typically between Shore A 30° to 45°), to perfectly absorb micro-vibrations and ensure stable aerial photography and inspection footage.</li>
-                                    <li><strong>Battery Module Vibration Buffers and Flame Retardancy</strong>: High-discharge lithium batteries in drones heat up and expand during discharge, and are subject to impact during landing collisions. Using lightweight silicone foam or low-hardness anti-vibration pads provides physical buffering, thermal isolation, and achieves UL94-V0 flame retardancy, improving flight safety.</li>
-                                    <li><strong>IP67/IP68 Weatherproof Seals and LSR Overmolding</strong>: To achieve all-weather flight (such as patrolling in rain or maritime search and rescue), drone enclosures, camera bays, and internal connectors must use precision silicone seals. Utilizing **LSR and rigid plastic (such as PC/PA) double-shot overmolding technology**, waterproof seals can be directly bonded onto the structural frame, eliminating manual installation gaps and preventing deformation or cracking under extreme temperature differences from -40°C to 80°C.</li>
-                                </ul>
                                 
-                                <h5>Material Specification Design Guide for AI &amp; Drone Applications:</h5>
+                                <div class="article-figure-grid reverse">
+                                    <div class="article-figure-container">
+                                        <img src="../images/tech/drone-dampers.png" alt="Drone Dampers &amp; Vibration Mounts" class="article-figure-img" loading="lazy" />
+                                        <p style="font-size: 0.8rem; color: var(--color-text-muted); text-align: center; margin-top: var(--space-2);">▲ Drone gimbal dampening balls and metal-bonded motor mount dampers by Jun-Hsiang</p>
+                                    </div>
+                                    <div>
+                                        <h5>A. Gimbal Camera High-Damping Balls</h5>
+                                        <p>The high-speed rotation of drone propellers causes high-frequency jitter (jello effect). Gimbal dampening balls must utilize silicone rubber with excellent resilience and damping coefficients, with carefully calibrated hardness (typically between Shore A 30° to 45°), to perfectly absorb micro-vibrations and ensure stable aerial photography and inspection footage.</p>
+                                        
+                                        <h5>B. Motor Mount Dampers (Rubber-to-Metal Bonding)</h5>
+                                        <p>A drone's motor mount is the origin of heat and vibration. Utilizing **rubber-to-metal bonding technology**, aluminum alloy inserts are covalently bonded with custom NBR rubber inside the mold. This eliminates secondary assembly, provides high pull-out strength, isolates motor heat, and prevents motor vibrations from interfering with the IMU/gyroscope sensors.</p>
+                                    </div>
+                                </div>
+
+                                <h5>C. Landing Gear Shock Absorbers</h5>
+                                <p>Using high-wear, tear-resistant NBR or PU rubber buffers on landing gear feet dampens landing impact forces, preventing micro-fractures in the drone's carbon fiber arms over time.</p>
+                                
+                                <h5>D. Servo Dust Boots</h5>
+                                <p>On the tilt-rotor joints and servo linkages of VTOL drones, ultra-thin (0.3mm~0.5mm) bellows made of high-strength silicone are used. They protect servo gearboxes from agricultural chemical sprays, dust, and rain without adding rotation resistance.</p>
+                                
+                                <h5>E. IP67/IP68 Enclosure Seals via LSR Overmolding</h5>
+                                <p>For all-weather drones (e.g., patrolling in rain or marine rescue), battery bays and housing joints require robust seals. **LSR double-shot overmolding** direct-bonds liquid silicone onto rigid PC/PA plastic frames, offering zero assembly tolerances and preventing peel-off or leakage from -40°C to 85°C.</p>
+
+                                <h5>Material Specification Guide for AI &amp; Drone Applications:</h5>
                                 <table style="width:100%; border-collapse: collapse; margin-bottom: 20px; font-size: 0.9rem;">
                                     <thead>
                                         <tr style="border-bottom: 2px solid var(--color-border); text-align: left;">
-                                            <th style="padding: 10px; color: var(--color-text-primary);">Application</th>
-                                            <th style="padding: 10px; color: var(--color-text-primary);">Core Requirement</th>
-                                            <th style="padding: 10px; color: var(--color-text-primary);">Suggested Process &amp; Hardness</th>
+                                            <th style="padding: 10px; color: var(--color-text-primary);">Component</th>
+                                            <th style="padding: 10px; color: var(--color-text-primary);">Material</th>
+                                            <th style="padding: 10px; color: var(--color-text-primary);">Core Spec Guideline</th>
+                                            <th style="padding: 10px; color: var(--color-text-primary);">Key Process</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr style="border-bottom: 1px solid var(--color-border);">
-                                            <td style="padding: 10px; font-weight: 600;">AI Chip Thermal Interface</td>
-                                            <td style="padding: 10px;">Ultra-high thermal conductivity, ultra-low thermal impedance, high insulation</td>
-                                            <td style="padding: 10px;">Thermal Pad / Shore A 10°~20° (Very Soft)</td>
+                                            <td style="padding: 10px; font-weight: 600;">Chip Thermal Pad</td>
+                                            <td style="padding: 10px;">Ceramic-filled Silicone</td>
+                                            <td style="padding: 10px;">3~8 W/m·K, Shore A 15°</td>
+                                            <td style="padding: 10px;">Mixing Extrusion / Die-cut</td>
                                         </tr>
                                         <tr style="border-bottom: 1px solid var(--color-border);">
-                                            <td style="padding: 10px; font-weight: 600;">Server Liquid Cooling Seal</td>
-                                            <td style="padding: 10px;">Resistance to coolants (ethylene glycol, etc.), low compression set</td>
-                                            <td style="padding: 10px; color: var(--color-accent);">LSR Injection / Shore A 50°~60°</td>
+                                            <td style="padding: 10px; font-weight: 600;">Liquid Cooling Gasket</td>
+                                            <td style="padding: 10px;">LSR Liquid Silicone</td>
+                                            <td style="padding: 10px;">Compression Set &lt; 10%, Coolant Res.</td>
+                                            <td style="padding: 10px; color: var(--color-accent);">Automated LSR Injection</td>
                                         </tr>
                                         <tr style="border-bottom: 1px solid var(--color-border);">
-                                            <td style="padding: 10px; font-weight: 600;">Drone Gimbal Dampener</td>
-                                            <td style="padding: 10px;">High damping, high fatigue resistance, high tear strength, UV resistance</td>
-                                            <td style="padding: 10px;">Compression Molding or LSR / Shore A 30°~40°</td>
+                                            <td style="padding: 10px; font-weight: 600;">Gimbal Dampening Ball</td>
+                                            <td style="padding: 10px;">High-Tear Silicone</td>
+                                            <td style="padding: 10px;">High tan δ damping, Shore A 35°</td>
+                                            <td style="padding: 10px;">Compression Molding / LSR</td>
                                         </tr>
                                         <tr style="border-bottom: 1px solid var(--color-border);">
-                                            <td style="padding: 10px; font-weight: 600;">Drone Waterproof Connector</td>
-                                            <td style="padding: 10px;">IP68 waterproofing, tight bonding with plastic inserts, extreme temp tolerance</td>
-                                            <td style="padding: 10px; color: var(--color-accent);">LSR Overmolding / Shore A 40°~50°</td>
+                                            <td style="padding: 10px; font-weight: 600;">Waterproof Connector</td>
+                                            <td style="padding: 10px;">LSR + PC/PA Plastic</td>
+                                            <td style="padding: 10px;">IP68, Bond Strength &gt; 4.0 MPa</td>
+                                            <td style="padding: 10px; color: var(--color-accent);">Double-shot LSR Overmolding</td>
                                         </tr>
                                     </tbody>
                                 </table>
                                 
-                                <h5>3. Jun-Hsiang's One-Stop Frontier Custom Solutions</h5>
-                                <p>Jun-Hsiang Enterprise Co., Ltd. possesses over 30 years of precision mold development expertise, closely following emerging hardware trends. In our plant in Hsinchuang, New Taipei City, we offer drone and AI hardware developers a comprehensive range of services—from material formulation research (such as high thermal conductivity, UL94-V0 flame retardancy, high shock-absorbing damping) and mold runner layout design, to high-volume automated LSR injection molding. We help your hardware products perfectly meet the challenges of the high-frequency, high-efficiency markets of tomorrow.</p>
+                                <h4>3. Jun-Hsiang — Your Trusted Partner for Next-Gen Hardware Manufacturing</h4>
+                                <p>Most precision silicone components for AI and drone projects require custom tooling. Jun-Hsiang Enterprise Co., Ltd. possesses over 30 years of mold engineering and material modification experience. At our plant in New Taipei City, we offer complete NRE services, from formulation adjustments to automated LSR injection molding. Bring your STEP/IGS files or physical samples to our technical team for custom prototypes and high-yield mass production.</p>
                             </div>
                         </div>
                         <div class="article-toggle-btn">

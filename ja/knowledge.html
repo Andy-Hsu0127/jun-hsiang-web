@@ -225,6 +225,38 @@
                 text-align: center;
             }
         }
+        
+        .article-figure-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: var(--space-6);
+            margin: var(--space-6) 0;
+            align-items: center;
+        }
+        .article-figure-grid.reverse {
+            grid-template-columns: 1fr 1.2fr;
+        }
+        .article-figure-container {
+            width: 100%;
+            height: auto;
+        }
+        .article-figure-img {
+            width: 100%;
+            height: auto;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--color-border);
+            box-shadow: var(--shadow-sm);
+            transition: transform var(--transition-normal);
+        }
+        .article-figure-img:hover {
+            transform: scale(1.02);
+        }
+        @media (max-width: 768px) {
+            .article-figure-grid, .article-figure-grid.reverse {
+                grid-template-columns: 1fr;
+                gap: var(--space-4);
+            }
+        }
     </style>
 </head>
 <body>
@@ -344,19 +376,7 @@
                         <button class="tag-btn" data-tag="LSR射出" style="font-size: 0.75rem; background: rgba(255,255,255,0.03); color: var(--color-text-secondary); border: 1px solid var(--color-border); padding: 4px 10px; border-radius: var(--radius-full); cursor: pointer; transition: all 0.3s; border-radius: 9999px;">#LSR射出</button>
                         <button class="tag-btn" data-tag="設計指南" style="font-size: 0.75rem; background: rgba(255,255,255,0.03); color: var(--color-text-secondary); border: 1px solid var(--color-border); padding: 4px 10px; border-radius: var(--radius-full); cursor: pointer; transition: all 0.3s; border-radius: 9999px;">#設計ガイド</button>
                         <button class="tag-btn" data-tag="異材結合" style="font-size: 0.75rem; background: rgba(255,255,255,0.03); color: var(--color-text-secondary); border: 1px solid var(--color-border); padding: 4px 10px; border-radius: var(--radius-full); cursor: pointer; transition: all 0.3s; border-radius: 9999px;">#インサート成形</button>
-                        <button class="tag-btn" data-tag="材料知識" style="font-size: 0.75rem; background: rgba(255,255,255,0.03); color: var(--color-text-secondary); border: 1px solid var(--color-border); padding: 4px 10px; border-radius: var(--radius-full); cursor: pointer; transition: all 0.3s; border-radius: 9999px;">#材料知識</button>
-                        <button class="tag-btn" data-tag="醫療級" style="font-size: 0.75rem; background: rgba(255,255,255,0.03); color: var(--color-text-secondary); border: 1px solid var(--color-border); padding: 4px 10px; border-radius: var(--radius-full); cursor: pointer; transition: all 0.3s; border-radius: 9999px;">#医療グレード</button>
-                        <button class="tag-btn" data-tag="防水密封" style="font-size: 0.75rem; background: rgba(255,255,255,0.03); color: var(--color-text-secondary); border: 1px solid var(--color-border); padding: 4px 10px; border-radius: var(--radius-full); cursor: pointer; transition: all 0.3s; border-radius: 9999px;">#防水密閉</button>
-                    </div>
-                </div>
-            </aside>
-            
-            <!-- Articles Content Area -->
-            <main class="knowledge-main reveal-right">
-                <div class="article-list" id="article-list">
-                    
-                    <!-- Article 1: AI & Drone -->
-                    <article class="article-card" data-category="tech" data-tags="LSR射出,設計指南,防水密封">
+                                <article class="article-card" data-category="tech" data-tags="LSR射出,設計指南,防水密封">
                         <div class="article-header">
                             <div>
                                 <span class="article-tag">技術コラム</span>
@@ -367,64 +387,99 @@
                             <span>カテゴリー：先端技術シリコーン応用</span> | <span>公開日：2026-06-26</span>
                         </div>
                         <p class="article-summary">
-                            人工知能（AI）サーバーおよびドローン（無人航空機）産業の爆発的な成長に伴い、ハードウェアにおける「高温放熱」「高周波防振」「過酷な環境での防水・防塵」への要求はかつてない高まりを見せています。シリコーンゴムは、優れた耐熱性、防振性、電気絶縁特性により、これら2つの先端産業に欠かせない精密部品となっています。本稿ではその応用動向について詳細に解説します...
+                            人工知能（AI）サーバーおよび無人航空機（ドローン）産業の爆発的な成長に伴い、ハードウェアシステムに対する「極限の放熱性」「高周波防振・減衰」「屋外の極限環境における防水・防塵」などの仕様要件は、産業用および航空宇宙グレードにまで引き上げられています。シリコーンゴム素材は、その代替不可能な弾性、耐温性、絶縁性、化学的安定性により、これら2つの最先端技術の安定稼働を支える「重要部品」となっています。本稿では、製品の構造設計と量産技術について深く掘り下げて解説します。
                         </p>
                         
                         <div class="article-expanded-content">
                             <div class="article-body">
-                                <p>人工知能 (AI) やドローン (UAV) の急速な発展に伴い、ハードウェアシステムの安定性はアルゴリズムや制御システムの性能を直接左右するようになっています。高電圧、高熱、高速振動、そして屋外の多様な気象環境において、高機能シリコーンゴムおよびゴム部品は「陰の立役者」として機能しています。以下に、これら2つの主要分野における応用例と設計動向をご紹介します。</p>
+                                <p>AIサーバーや無人航空機（UAV）システムにおいて、ハードウェアアーキテクチャの信頼性は、アルゴリズムが安定して性能を発揮するための基盤です。高圧、高温、動的振動、電磁妨害（EMI）、そして全天候型の過酷な環境に直面する中、精密なシリコーンおよびゴム部品は完璧なソリューションを提供します。以下は、これら2つの急成長するハードウェア市場におけるディープな応用分析と材料設計の要点です。</p>
                                 
-                                <h5>一、 AIサーバーおよびハードウェアにおけるシリコーンゴムのキーアプリケーション</h5>
-                                <p>AI演算チップ（GPUやASICなど）は高負荷時に大量の熱を放出し、また冷却システムの高速回転は微細な振動をもたらします。これらはハードウェアの密封性と防振性に極めて高い要求を突きつけています。</p>
-                                <ul>
-                                    <li><strong>1. 高効率熱伝導シリコーンシート（TIM：Thermal Interface Materials）</strong>：AIチップと放熱モジュールの間には、超高熱伝導率のシリコーンシートまたはサーマルゲルが必須です。酸化アルミニウムや窒化ホウ素などの導熱セラミック粉末を配合することで、電気絶縁性と柔軟な弾力性を維持しながら、優れた熱伝導効率を実現します。</li>
-                                    <li><strong>2. 水冷・液冷システム漏れ防止ガスケット</strong>：放熱のボトルネックを解消するため、AIサーバーラックでは液冷システムの導入が急速に進んでいます。**LSR（液状シリコーンゴム）射出成形**によるガスケットおよび水路シールは、極めて低い圧縮永久ひずみと高い耐薬品性を備えており、長期にわたる高温サイクル下でも漏れを防ぎ、高価な基板を水分の侵入から保護します。</li>
-                                    <li><strong>3. 高減衰防振パッドと高温用スリーブ</strong>：サーバー内部の高速冷却ファンやウォーターポンプから発生する高周波の微振動は、高周波差動信号の伝送安定性に影響を与える可能性があります。独自配合の高減衰弾性ゴム防振ダンパーは、高周波振動を効果的に吸収し、ラック全体の共振を最小限に抑えます。</li>
-                                </ul>
+                                <h4>一、 AIサーバーおよび高演算能力ラックにおけるゴム・シリコーン重要部品</h4>
+                                <p>AI演算チップ（GPU/ASIC）は高負荷時に膨大な熱を発生し、また冷却システムやファンが高速回転する際に発生する微小な振動は、高周波信号の伝送に直接干渉します。これにより、シーリング、熱伝導、および防振に対して極めて高い要件が突きつけられます。</p>
                                 
-                                <h5>二、 ドローン（UAV）における精密シリコーンゴムの技術要求</h5>
-                                <p>ドローンは、高空の氷点下の寒さ、雨による洗礼、およびモーターの高速回転という動的な環境に対処しなければなりません。そのため、軽量化、衝撃吸収、耐候性に非常に敏感です。</p>
-                                <ul>
-                                    <li><strong>1. ジンバルカメラ用高減衰防振ボール</strong>：プロペラの高速回転は高周波のジッター（ブレ）を引き起こします。ジンバル防振ボールは、優れた復元性と防振減衰係数を持つシリコーンゴムを採用し、硬度を適切に調整（通常 Shore A 30°〜45°）することで、微振動を効果的に吸収し、ブレのない安定した空撮・点検映像を確保します。</li>
-                                    <li><strong>2. バッテリーモジュール用緩衝パッドと難燃バリア</strong>：ドローンに搭載される高出力リチウムイオンバッテリーは、放電時に発熱膨脹し、また着陸時の衝撃も受けやすくなります。軽量のシリコーンスポンジ（シリコーンフォーム）や低硬度の防振パッドを使用することで、物理的な緩衝と熱絶縁を同時に提供し、かつ UL94-V0 等級の難燃性をクリアして飛行安全性を高めます。</li>
-                                    <li><strong>3. IP67/IP68防水シールとLSR二色成形（インサート成形）</strong>：雨天時の点検や洋上捜索救助など、全天候型の飛行を実現するためには、ドローン外殻、カメラベイ、内部コネクタの防水シールが不可欠です。**LSRと硬質プラスチック（PC/PAなど）の二色成形（オーバーモールド）技術**により、シール部分を骨架上に直接一体成形し、手作業によるズレや隙間を排除。高空の -40°C から 80°C の極端な温度差でも変形やひび割れが生じません。</li>
-                                </ul>
+                                <div class="article-figure-grid">
+                                    <div>
+                                        <h5>1. 超高熱伝導性インターフェース材料 (Thermal Conductive Silicone, TIM)</h5>
+                                        <p>GPU/CPUチップとヒートシンク、ベーパーチャンバーの間に、高熱伝導率の導熱シリコーンシートや熱伝導ゲルを充填する必要があります。シリコーン基材に酸化アルミニウム、窒化ホウ素、炭化ケイ素などのセラミック微粒子を精密にブレンドすることで、Shore A 10°〜25°の優れた柔軟性と隙間充填性を維持しつつ、3.0〜8.0 W/m·K以上の熱伝導効率を達成し、チップの温度上昇を大幅に抑制します。</p>
+                                        
+                                        <h5>2. 水冷・液冷システム用シールガスケット (Liquid Cooling Gaskets)</h5>
+                                        <p>液冷方式（CDU水路、水冷プレート）は、AIラック放熱の主流になりつつあります。水冷ジョイントおよび冷却プレート用のシールガスケットは、数年にわたり80°Cの高温水蒸気環境で動作する必要があり、<b>圧縮永久歪み（要件 &lt; 10%）</b>および耐化学劣化性（耐エチレングリコール水溶液）に対して極めて厳しい要求があります。<strong>LSR（液状シリコーンゴム）射出成形</strong>技術で製造されたOリングや異形シールガスケットは、サーバー内部の液漏れによるショートを防ぐ唯一の防線です。</p>
+                                    </div>
+                                    <div class="article-figure-container">
+                                        <img src="../images/tech/ai-gaskets.png" alt="AIサーバー熱伝導シリコーンとLSR液冷シール" class="article-figure-img" loading="lazy" />
+                                        <p style="font-size: 0.8rem; color: var(--color-text-muted); text-align: center; margin-top: var(--space-2);">▲ 鈞翔実業が生産するAIサーバー用超高熱伝導シリコーンシートと高気密LSRシール部品</p>
+                                    </div>
+                                </div>
+
+                                <h5>3. 導電ゴム電磁波シールドカバーおよび絶縁ワッシャー (EMI Shielding Gaskets)</h5>
+                                <p>AIサーバーの内部には多数の高周波通信モジュールが存在し、電磁干渉（EMI）はデータ伝送速度を著しく低下させます。シリコーンゴムにニッケル被覆グラファイトや銀被覆銅などの導電性微粒子を配合し、共押出やプレス成形による電磁波シールド導電ゴムストリップを開発しました。これらの部品は防塵と同時に高周波ノイズを遮断し、体積抵抗率を &lt; 0.01 Ω·cm に制御できます。</p>
+
+                                <h4>二、 ドローン（無人機）における精密防振および耐候・気密部品への技術要求</h4>
+                                <p>プロフェッショナル向けおよび産業用ドローン（農薬散布、送電線点検、防災・救助など）は、高空の極寒、雨水の激しい打ちつけ、プロペラモーターの高速共振環境下で動作する必要があり、部品の軽量化や防振性能に対して非常に厳しいテストが課されます。</p>
                                 
-                                <h5>AI・ドローン用途における材料選定設計ガイド：</h5>
+                                <div class="article-figure-grid reverse">
+                                    <div class="article-figure-container">
+                                        <img src="../images/tech/drone-dampers.png" alt="ドローン防振ボールとモーター防振ガスケット" class="article-figure-img" loading="lazy" />
+                                        <p style="font-size: 0.8rem; color: var(--color-text-muted); text-align: center; margin-top: var(--space-2);">▲ 鈞翔実業のドローンジンバルカメラ用高減衰防振ボールおよびモーター金属接着部品</p>
+                                    </div>
+                                    <div>
+                                        <h5>1. ジンバルカメラ用高減衰防振ボール (Gimbal Dampening Balls)</h5>
+                                        <p>ローターの回転によって発生する50Hz〜200Hzの高周波振動は、空撮映像に「コニャック現象（ゼリー効果/Jello Effect）」を引き起こします。ジンバル防振ボールは、硬度（Shore A 30°〜45°）および減衰特性（tan δ）を正確に制御しなければなりません。高引き裂き強度、高弾性の天然ゴムとシリコーンの複合配合を採用し、カメラの自重を支える十分な剛性を持ちながら、プロペラの微細な振動を完全に遮断します。</p>
+                                        
+                                        <h5>2. モーターマウント防振ダンパーおよび金属接着部品 (Motor Mount Dampers)</h5>
+                                        <p>ドローンのモーターマウントは振動と温度上昇の発生源です。**ゴム金属焼付接着（Rubber-to-Metal Bonding）**技術を用いて、アルミ合金と特殊ニトリルゴム（NBR）を金型内で共有結合させ、二次アセンブリを排除しました。高い引き抜き強度を備えるだけでなく、モーターの振動がフレーム（カーボンプレート）に伝わるのを遮断し、ジャイロセンサーチップへの干渉を防ぎます。</p>
+                                    </div>
+                                </div>
+
+                                <h5>3. 着陸装置用緩衝パッド (Landing Gear Shock Absorbers)</h5>
+                                <p>耐摩耗性と耐引き裂き性に優れたニトリルゴム（NBR）またはポリウレタン（PU）を採用し、重量級ドローンが着陸する際の瞬間的な物理的衝撃を吸収します。これにより、機体のカーボンファイバー構造に生じる微細な損傷や亀裂を防ぎます。</p>
+                                
+                                <h5>4. 動力サーボおよびスイングアーム防水防塵ブーツ (Servo Dust Boots)</h5>
+                                <p>VTOL（垂直離着陸）チルトロータードローンのチルト軸やサーボリンケージ部に、極薄肉（0.3mm〜0.5mm）の蛇腹状シリコーンゴム製防塵カバーを使用します。高強度のシリコーンゴムは、農薬散布、砂塵、雨水を遮断しつつ、サーボの極めて精密なステアリングレスポンスを妨げない優れた柔軟性を保証します。</p>
+                                
+                                <h5>5. 外殻 IP67/IP68 防水ガスケットとLSR2色成形 (Overmolding)</h5>
+                                <p>大雨の中でのミッション遂行を実現するため、筐体とバッテリーハッチの接触部は完全な防水が必要です。<b>LSR2色射出成形技術</b>により、液状シリコーンゴムを硬質PC/PAプラスチックフレーム上に直接オーバーモールドします。組立公差がなく、-40°Cから85°Cの極限環境下でも剥離、亀裂、経年劣化による浸水リスクがありません。</p>
+
+                                <h5>AIサーバーおよびドローン部品の設計仕様対照表：</h5>
                                 <table style="width:100%; border-collapse: collapse; margin-bottom: 20px; font-size: 0.9rem;">
                                     <thead>
                                         <tr style="border-bottom: 2px solid var(--color-border); text-align: left;">
-                                            <th style="padding: 10px; color: var(--color-text-primary);">応用領域</th>
-                                            <th style="padding: 10px; color: var(--color-text-primary);">要求特性</th>
-                                            <th style="padding: 10px; color: var(--color-text-primary);">推奨製法・硬度範囲</th>
+                                            <th style="padding: 10px; color: var(--color-text-primary);">コア部品</th>
+                                            <th style="padding: 10px; color: var(--color-text-primary);">推奨素材</th>
+                                            <th style="padding: 10px; color: var(--color-text-primary);">設計仕様ガイドライン</th>
+                                            <th style="padding: 10px; color: var(--color-text-primary);">主要製造プロセス</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr style="border-bottom: 1px solid var(--color-border);">
-                                            <td style="padding: 10px; font-weight: 600;">AIチップ熱伝導界面</td>
-                                            <td style="padding: 10px;">超高熱伝導率、超低熱抵抗、高電気絶縁性</td>
-                                            <td style="padding: 10px;">熱伝導シリコーンシート / Shore A 10°~20°（極軟）</td>
+                                            <td style="padding: 10px; font-weight: 600;">チップ用熱伝導シート</td>
+                                            <td style="padding: 10px;">セラミック粉末充填シリコーン</td>
+                                            <td style="padding: 10px;">熱伝導率 3~8 W/m·K、Shore A 15°</td>
+                                            <td style="padding: 10px;">コンパウンド押出 / プレス・打ち抜き加工</td>
                                         </tr>
                                         <tr style="border-bottom: 1px solid var(--color-border);">
-                                            <td style="padding: 10px; font-weight: 600;">サーバー水冷・液冷シール</td>
-                                            <td style="padding: 10px;">耐冷却液性（エチレングリコール等）、低圧縮永久歪み</td>
-                                            <td style="padding: 10px; color: var(--color-accent);">LSR液状射出成形 / Shore A 50°~60°</td>
+                                            <td style="padding: 10px; font-weight: 600;">液冷システムシール部品</td>
+                                            <td style="padding: 10px;">LSR 液状シリコーンゴム</td>
+                                            <td style="padding: 10px;">圧縮永久歪み &lt; 10%、耐冷却液特性</td>
+                                            <td style="padding: 10px; color: var(--color-accent);">高精度 LSR 自動射出成形</td>
                                         </tr>
                                         <tr style="border-bottom: 1px solid var(--color-border);">
-                                            <td style="padding: 10px; font-weight: 600;">ドローンジンバル防振ボール</td>
-                                            <td style="padding: 10px;">高減衰性、高耐疲労性、高引裂き強度、耐UV性</td>
-                                            <td style="padding: 10px;">コンプレッション成形またはLSR / Shore A 30°~40°</td>
+                                            <td style="padding: 10px; font-weight: 600;">ジンバル用防振ボール</td>
+                                            <td style="padding: 10px;">高引き裂き強度ゴム</td>
+                                            <td style="padding: 10px;">高減衰（tan δ）、Shore A 35°</td>
+                                            <td style="padding: 10px;">真空熱プレス成形 / LSR 射出</td>
                                         </tr>
                                         <tr style="border-bottom: 1px solid var(--color-border);">
-                                            <td style="padding: 10px; font-weight: 600;">ドローン防水コネクタ</td>
-                                            <td style="padding: 10px;">IP68防水、プラスチック製インサートとの強力密着、耐極端温度</td>
-                                            <td style="padding: 10px; color: var(--color-accent);">LSRオーバーモールド成形 / Shore A 40°~50°</td>
+                                            <td style="padding: 10px; font-weight: 600;">ドローン筐體防水シール</td>
+                                            <td style="padding: 10px;">LSR シリコーン + PC/PA</td>
+                                            <td style="padding: 10px;">IP68防水、せん断強度 &gt; 4.0 MPa</td>
+                                            <td style="padding: 10px; color: var(--color-accent);">LSR 2色オーバーモールド (Overmolding)</td>
                                         </tr>
                                     </tbody>
                                 </table>
                                 
-                                <h5>三、 鈞翔実業のワンストップカスタムソリューション</h5>
-                                <p>鈞翔実業有限公司は、30年以上にわたる精密金型開発のノウハウを持ち、新技術のハードウェアトレンドにいち早く対応しています。台湾・新北市の新莊工場では、材料設計（高熱伝導、UL94-V0難燃、高減衰制振特性など）から、金型流路設計、高効率なLSR自動射出成形まで、一貫した製造受託サービスを提供しています。次世代の先端ハードウェア開発を強力にサポートいたします。</p>
+                                <h4>三、 鈞翔実業 — 先端ハードウェア量産における最適なパートナー</h4>
+                                <p>多くのAIおよびドローン開発プロジェクトにおける精密シリコーン部品は、すべて特注（カスタム）部品です。鈞翔実業有限公司は、30年以上にわたる金型開発と材料改質研究の技術力を有し、台湾新北市新荘の自社工場に高精度金型加工工場と自動LSR射出成形ラインを備えています。お客様の高い熱放散、高い減衰防振、または過酷な気候下での防水性能要求に応じ、カスタム金型開発から競争力のある試作開発、高歩留まりの量産製造までを一貫して提供します。設計図面（3D: STEP/IGS）または現物サンプルをご用意の上、お気軽に弊社の技術チームまでご相談ください。</p>
                             </div>
                         </div>
                         <div class="article-toggle-btn">
