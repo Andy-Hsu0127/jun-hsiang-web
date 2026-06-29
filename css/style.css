@@ -391,24 +391,21 @@ button {
 .nav-logo .logo-icon {
     width: 40px;
     height: 40px;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1.5px solid rgba(13, 148, 136, 0.4);
-    border-radius: 12px;
+    background: url('../images/logo.png') no-repeat center center / contain !important;
+    border: none !important;
+    border-radius: 50% !important;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: 800;
-    font-size: 1.25rem;
-    color: var(--color-accent-light);
-    box-shadow: 0 0 15px rgba(14, 165, 233, 0.15);
+    font-size: 0 !important;
+    color: transparent !important;
+    box-shadow: 0 0 15px rgba(251, 192, 45, 0.25);
     transition: all var(--transition-normal);
 }
 
 .nav-logo:hover .logo-icon {
-    background: var(--gradient-accent);
-    color: #ffffff;
     border-color: transparent;
-    box-shadow: 0 0 20px rgba(13, 148, 136, 0.4);
+    box-shadow: 0 0 20px rgba(251, 192, 45, 0.5);
     transform: rotate(5deg);
 }
 
@@ -1659,24 +1656,21 @@ button {
 .footer-brand .footer-logo .logo-icon {
     width: 36px;
     height: 36px;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1.5px solid rgba(13, 148, 136, 0.4);
-    border-radius: var(--radius-sm);
+    background: url('../images/logo.png') no-repeat center center / contain !important;
+    border: none !important;
+    border-radius: 50% !important;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: 800;
-    font-size: 0.95rem;
-    color: var(--color-accent-light);
-    box-shadow: 0 0 10px rgba(14, 165, 233, 0.15);
+    font-size: 0 !important;
+    color: transparent !important;
+    box-shadow: 0 0 10px rgba(251, 192, 45, 0.25);
     transition: all var(--transition-normal);
 }
 
 .footer-brand .footer-logo:hover .logo-icon {
-    background: var(--gradient-accent);
-    color: #ffffff;
     border-color: transparent;
-    box-shadow: 0 0 15px rgba(13, 148, 136, 0.4);
+    box-shadow: 0 0 15px rgba(251, 192, 45, 0.5);
     transform: rotate(5deg);
 }
 
