@@ -2,8 +2,7 @@
 # https://andy-hsu0127.github.io/jun-hsiang-web/
 
 User-agent: *
-Allow: /jun-hsiang-web/
-Disallow: /jun-hsiang-web/photos/
+Allow: /
 
 # Sitemap
 Sitemap: https://andy-hsu0127.github.io/jun-hsiang-web/sitemap.xml
