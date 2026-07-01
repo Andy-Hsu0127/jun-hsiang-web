@@ -836,4 +836,29 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    // ---- Lazy Load Video ----
+    const lazyVideo = document.getElementById('intro-video');
+    if (lazyVideo) {
+        const videoObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const video = entry.target;
+                    video.src = video.dataset.src;
+                    video.load();
+                    videoObserver.unobserve(video);
+                }
+            });
+        }, { threshold: 0.1 });
+        videoObserver.observe(lazyVideo);
+
+        // Auto-scroll to products when video ends
+        lazyVideo.addEventListener('ended', () => {
+            const productsSection = document.getElementById('products');
+            if (productsSection) {
+                productsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    }
 });
+
