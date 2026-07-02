@@ -74,3 +74,10 @@ When writing or generating new technical articles for the website:
 * **Title (JA)**: 《産業用重荷重防振ゴム脚（金属焼付接着）：高引き裂き強度と物理的接着性能の最適化》
 * **Category**: `case`
 * **Key Topics**: Heavy-duty machinery, Metal-to-rubber bonding, High tear strength, EPDM/NBR.
+
+### 9. 極端耐油與化學溶劑環境下的特種橡膠選擇
+* **Title (ZH)**: 《極端耐油與化學溶劑環境下的特種橡膠選擇：氟橡膠（Viton）與氟矽橡膠（FVMQ）性能與應用對比》
+* **Title (EN)**: 《Selecting Specialty Elastomers for Extreme Oil and Chemical Solvent Environments: Viton (FKM) vs. Fluorosilicone (FVMQ)》
+* **Title (JA)**: 《極端な耐油・化学溶剤環境における特殊ゴムの選定：フッ素ゴム（Viton）とフルオロシリコーン（FVMQ）の特性と応用比較》
+* **Category**: `tech`
+* **Key Topics**: Viton, FKM, FVMQ, Fluorosilicone, Chemical resistance, Rubber-to-metal bonding.
