@@ -1,2272 +1,4364 @@
 <!DOCTYPE html>
 
+
+
 <html lang="zh-TW">
+
+
 
 <head>
 
+
+
     <meta charset="utf-8"/>
+
+
 
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 
+
+
     <title>矽橡膠技術知識庫與客戶代工案例分享 | 鈞翔實業 — 新北新莊精密矽膠工廠</title>
+
+
 
     <meta content="鈞翔實業技術知識庫提供固態矽膠熱壓、LSR液態矽膠射出成型、矽膠包膠（Overmolding）等專業知識與設計指南。分享醫療器材、電子零件及汽車防水密封圈客製代工成功案例。" name="description"/>
 
+
+
     <meta content="新北矽膠工廠, 新莊橡膠代工, 液態矽膠射出, 矽橡膠知識, 異材結合, 矽膠包鐵, 台北橡膠代工, 矽膠製品客製" name="keywords"/>
+
+
 
     <meta content="鈞翔實業有限公司" name="author"/>
 
+
+
     <meta content="index, follow" name="robots"/>
+
+
 
     <link href="https://andy-hsu0127.github.io/jun-hsiang-web/knowledge.html" rel="canonical"/>
 
+
+
     <link rel="alternate" hreflang="zh-TW" href="https://andy-hsu0127.github.io/jun-hsiang-web/knowledge.html" />
+
+
 
     <link rel="alternate" hreflang="en" href="https://andy-hsu0127.github.io/jun-hsiang-web/en/knowledge.html" />
 
+
+
     <link rel="alternate" hreflang="ja" href="https://andy-hsu0127.github.io/jun-hsiang-web/ja/knowledge.html" />
+
+
 
     <link rel="alternate" hreflang="x-default" href="https://andy-hsu0127.github.io/jun-hsiang-web/knowledge.html" />
 
+
+
     <meta content="技術知識庫與客製案例 - LSR 液態矽膠射出工廠 - 鈞翔實業有限公司" property="og:title"/>
+
+
 
     <meta content="30年矽膠橡膠專業代工經驗，ISO 9001認證，提供LSR液態矽膠射出、固態矽膠壓出與異材結合技術解答與成功案例。" property="og:description"/>
 
+
+
     <meta content="website" property="og:type"/>
+
+
 
     <meta content="zh_TW" property="og:locale"/>
 
+
+
     <meta content="https://andy-hsu0127.github.io/jun-hsiang-web/knowledge.html" property="og:url"/>
+
+
 
     <meta content="鈞翔實業有限公司" property="og:site_name"/>
 
+
+
     <meta content="https://andy-hsu0127.github.io/jun-hsiang-web/images/og-image.png" property="og:image"/>
+
+
 
     <meta content="#0A0F1C" name="theme-color"/>
 
+
+
     <link href="favicon.ico" rel="icon" type="image/x-icon"/>
+
+
 
     <link href="images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
 
+
+
     <link href="images/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+
+
 
     <link href="css/style.css" rel="stylesheet"/>
 
+
+
     <link href="https://fonts.googleapis.com" rel="preconnect"/>
+
+
 
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 
+
+
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Noto+Sans+TC:wght@300;400;500;700;900&family=Outfit:wght@300;400;500;600;700;800;900&family=Instrument+Serif:italic@0;1&display=swap" media="print" onload="this.media='all'" rel="stylesheet"/>
+
+
 
     <link as="image" href="images/tech/service-banner.webp" rel="preload" type="image/webp"/>
 
+
+
     
+
+
 
     <style>
 
+
+
         .knowledge-layout {
 
+
+
             display: grid;
+
+
 
             grid-template-columns: 280px 1fr;
 
+
+
             gap: var(--space-8);
+
+
 
             margin-top: var(--space-6);
 
+
+
         }
 
+
+
         
+
+
 
         .knowledge-sidebar {
 
+
+
             position: sticky;
+
+
 
             top: 100px;
 
+
+
             height: fit-content;
+
+
 
         }
 
+
+
         
+
+
 
         .knowledge-nav {
 
+
+
             background: var(--color-bg-secondary);
+
+
 
             border: 1px solid var(--color-border);
 
+
+
             border-radius: var(--radius-lg);
+
+
 
             padding: var(--space-4);
 
+
+
         }
 
+
+
         
+
+
 
         .knowledge-nav-title {
 
+
+
             font-size: 1.1rem;
+
+
 
             font-weight: 700;
 
+
+
             color: var(--color-text-primary);
 
+
+
             margin-bottom: var(--space-4);
+
+
 
             padding-bottom: var(--space-2);
 
+
+
             border-bottom: 1px solid var(--color-border);
+
+
 
         }
 
+
+
         
+
+
 
         .knowledge-nav-list {
 
+
+
             list-style: none;
+
+
 
             padding: 0;
 
+
+
             margin: 0;
+
+
 
             display: flex;
 
+
+
             flex-direction: column;
+
+
 
             gap: var(--space-2);
 
+
+
         }
 
+
+
         
+
+
 
         .knowledge-nav-item {
 
+
+
             padding: var(--space-3) var(--space-4);
+
+
 
             border-radius: var(--radius-md);
 
+
+
             color: var(--color-text-secondary);
+
+
 
             font-weight: 500;
 
+
+
             cursor: pointer;
+
+
 
             transition: all var(--transition-normal);
 
+
+
         }
 
+
+
         
+
+
 
         .knowledge-nav-item:hover, .knowledge-nav-item.active {
 
+
+
             background: var(--color-bg-card);
 
+
+
             color: var(--color-accent);
+
+
 
             border-left: 3px solid var(--color-accent);
 
+
+
             padding-left: calc(var(--space-4) - 3px);
+
+
 
         }
 
+
+
         
+
+
 
         .article-list {
 
+
+
             display: flex;
+
+
 
             flex-direction: column;
 
+
+
             gap: var(--space-6);
+
+
 
         }
 
+
+
         
+
+
 
         .article-card {
 
+
+
             background: var(--gradient-card);
+
+
 
             border: 1px solid var(--color-border);
 
+
+
             border-radius: var(--radius-lg);
+
+
 
             padding: var(--space-6);
 
+
+
             transition: all var(--transition-normal);
+
+
 
             cursor: pointer;
 
+
+
         }
 
+
+
         
+
+
 
         .article-card:hover {
 
+
+
             border-color: var(--color-border-hover);
+
+
 
             transform: translateY(-2px);
 
+
+
             box-shadow: var(--shadow-sm);
+
+
 
         }
 
+
+
         
+
+
 
         .article-header {
 
+
+
             display: flex;
+
+
 
             justify-content: space-between;
 
+
+
             align-items: flex-start;
+
+
 
             gap: var(--space-4);
 
+
+
             margin-bottom: var(--space-3);
+
+
 
         }
 
+
+
         
+
+
 
         .article-tag {
 
+
+
             background: rgba(214, 168, 67, 0.1);
 
+
+
             color: var(--color-accent);
+
+
 
             border: 1px solid rgba(214, 168, 67, 0.2);
 
+
+
             padding: var(--space-1) var(--space-3);
+
+
 
             border-radius: var(--radius-full);
 
+
+
             font-size: var(--text-caption);
+
+
 
             font-weight: 600;
 
+
+
         }
 
+
+
         
+
+
 
         .article-title {
 
+
+
             font-size: clamp(1.2rem, 2vw, 1.4rem);
+
+
 
             font-weight: 700;
 
+
+
             color: var(--color-text-primary);
+
+
 
             line-height: var(--leading-tight);
 
+
+
             margin-top: var(--space-2);
+
+
 
         }
 
+
+
         
+
+
 
         .article-meta {
 
+
+
             font-size: var(--text-caption);
+
+
 
             color: var(--color-text-muted);
 
+
+
             margin-bottom: var(--space-4);
+
+
 
         }
 
+
+
         
+
+
 
         .article-summary {
 
+
+
             color: var(--color-text-secondary);
 
+
+
             font-size: var(--text-small);
+
+
 
             line-height: var(--leading-normal);
 
+
+
         }
 
+
+
         
+
+
 
         .article-expanded-content {
 
+
+
             max-height: 0;
+
+
 
             overflow: hidden;
 
+
+
             transition: max-height 0.5s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.5s ease;
+
+
 
             opacity: 0;
 
+
+
             border-top: 0 solid var(--color-border);
+
+
 
             margin-top: 0;
 
+
+
             padding-top: 0;
+
+
 
         }
 
+
+
         
+
+
 
         .article-card.expanded .article-expanded-content {
 
+
+
             max-height: 3500px; /* Large enough to fit text */
+
+
 
             opacity: 1;
 
+
+
             border-top-width: 1px;
 
+
+
             margin-top: var(--space-4);
+
+
 
             padding-top: var(--space-4);
 
+
+
         }
 
+
+
         
+
+
 
         .article-body {
 
+
+
             color: var(--color-text-secondary);
+
+
 
             font-size: 0.95rem;
 
+
+
             line-height: var(--leading-relaxed);
+
+
 
         }
 
+
+
         
+
+
 
         .article-body p {
 
+
+
             margin-bottom: var(--space-4);
+
+
 
         }
 
+
+
         
+
+
 
         .article-body h5 {
 
+
+
             font-size: 1.1rem;
+
+
 
             color: var(--color-text-primary);
 
+
+
             margin-top: var(--space-5);
+
+
 
             margin-bottom: var(--space-2);
 
+
+
             font-weight: 600;
+
+
 
         }
 
+
+
         
+
+
 
         .article-body ul {
 
+
+
             padding-left: var(--space-5);
+
+
 
             margin-bottom: var(--space-4);
 
+
+
         }
 
+
+
         
+
+
 
         .article-body li {
 
+
+
             margin-bottom: var(--space-2);
+
+
 
         }
 
+
+
         
+
+
 
         .article-toggle-btn {
 
+
+
             display: inline-flex;
 
+
+
             align-items: center;
+
+
 
             gap: var(--space-1);
 
+
+
             color: var(--color-accent);
+
+
 
             font-weight: 600;
 
+
+
             font-size: var(--text-small);
+
+
 
             margin-top: var(--space-4);
 
+
+
             transition: transform var(--transition-normal);
+
+
 
         }
 
+
+
         
+
+
 
         .article-toggle-btn svg {
 
+
+
             transition: transform var(--transition-normal);
+
+
 
         }
 
+
+
         
+
+
 
         .article-card.expanded .article-toggle-btn svg {
 
+
+
             transform: rotate(180deg);
+
+
 
         }
 
+
+
         
+
+
 
         @media (max-width: 992px) {
 
+
+
             .knowledge-layout {
+
+
 
                 grid-template-columns: 1fr;
 
+
+
             }
+
+
 
             .knowledge-sidebar {
 
+
+
                 position: relative;
+
+
 
                 top: 0;
 
+
+
             }
+
+
 
             .knowledge-nav-list {
 
+
+
                 flex-direction: row;
+
+
 
                 flex-wrap: wrap;
 
+
+
             }
+
+
 
             .knowledge-nav-item {
 
+
+
                 flex: 1 1 calc(50% - var(--space-2));
+
+
 
                 text-align: center;
 
+
+
             }
 
+
+
         }
+
+
 
         
 
+
+
         .article-figure-grid {
+
+
 
             display: grid;
 
+
+
             grid-template-columns: 1.2fr 1fr;
+
+
 
             gap: var(--space-6);
 
+
+
             margin: var(--space-6) 0;
+
+
 
             align-items: center;
 
+
+
         }
+
+
 
         .article-figure-grid.reverse {
 
+
+
             grid-template-columns: 1fr 1.2fr;
 
+
+
         }
+
+
 
         .article-figure-container {
 
+
+
             width: 100%;
+
+
 
             height: auto;
 
+
+
         }
+
+
 
         .article-figure-img {
 
+
+
             width: 100%;
+
+
 
             height: auto;
 
+
+
             border-radius: var(--radius-lg);
+
+
 
             border: 1px solid var(--color-border);
 
+
+
             box-shadow: var(--shadow-sm);
+
+
 
             transition: transform var(--transition-normal);
 
+
+
         }
+
+
 
         .article-figure-img:hover {
 
+
+
             transform: scale(1.02);
 
+
+
         }
+
+
 
         @media (max-width: 768px) {
 
+
+
             .article-figure-grid, .article-figure-grid.reverse {
+
+
 
                 grid-template-columns: 1fr;
 
+
+
                 gap: var(--space-4);
+
+
 
             }
 
+
+
         }
+
+
 
     </style>
 
+
+
 </head>
+
+
 
 <body>
 
+
+
 <div class="loading-screen" id="loading-screen">
+
+
 
     <div class="loading-logo">鈞翔<span class="accent">實業</span></div>
 
+
+
     <div class="loading-bar"></div>
 
+
+
 </div>
+
+
 
 <div class="announcement-bar" id="announcement-bar">
 
+
+
     <div class="marquee-track">
+
+
 
         <div class="marquee-content">
 
-            <span class="marquee-item"><svg class="lucide lucide-award" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="8" r="6"></circle><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path></svg> ISO 9001 專業認證</span>
 
-            <span class="marquee-dot">·</span>
-
-            <span class="marquee-item">專營熱固壓模成形 &amp; LSR 液態矽膠射出成型</span>
-
-            <span class="marquee-dot">·</span>
-
-            <span class="marquee-item">各類矽膠製品 &amp; 特殊矽膠橡膠材料製品 &amp; 防水制震止滑矽膠</span>
-
-            <span class="marquee-dot">·</span>
 
             <span class="marquee-item"><svg class="lucide lucide-award" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="8" r="6"></circle><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path></svg> ISO 9001 專業認證</span>
 
+
+
             <span class="marquee-dot">·</span>
+
+
 
             <span class="marquee-item">專營熱固壓模成形 &amp; LSR 液態矽膠射出成型</span>
 
+
+
             <span class="marquee-dot">·</span>
+
+
 
             <span class="marquee-item">各類矽膠製品 &amp; 特殊矽膠橡膠材料製品 &amp; 防水制震止滑矽膠</span>
 
+
+
             <span class="marquee-dot">·</span>
+
+
+
+            <span class="marquee-item"><svg class="lucide lucide-award" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="8" r="6"></circle><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path></svg> ISO 9001 專業認證</span>
+
+
+
+            <span class="marquee-dot">·</span>
+
+
+
+            <span class="marquee-item">專營熱固壓模成形 &amp; LSR 液態矽膠射出成型</span>
+
+
+
+            <span class="marquee-dot">·</span>
+
+
+
+            <span class="marquee-item">各類矽膠製品 &amp; 特殊矽膠橡膠材料製品 &amp; 防水制震止滑矽膠</span>
+
+
+
+            <span class="marquee-dot">·</span>
+
+
 
         </div>
 
+
+
     </div>
 
+
+
 </div>
+
+
 
 <nav class="navbar" id="navbar">
 
+
+
     <div class="container">
+
+
 
         <a class="nav-logo" href="index.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'zh-TW')" id="nav-logo">
 
+
+
             <div class="logo-icon">鈞</div>
+
+
 
             <span>鈞翔實業</span>
 
+
+
         </a>
+
+
 
         <div class="nav-links" id="nav-links">
 
+
+
             <a class="nav-link" href="index.html#about">關於鈞翔</a>
+
+
 
             <a class="nav-link" href="service.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'zh-TW')">服務技術</a>
 
+
+
             <a class="nav-link" href="products_list.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'zh-TW')">產品實現</a>
+
+
 
             <a class="nav-link active" href="knowledge.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'zh-TW')">技術知識</a>
 
+
+
             <a class="nav-link" href="index.html#quality">品質認證</a>
+
+
 
             <a class="nav-link" href="index.html#contact">聯絡我們</a>
 
+
+
             <div class="lang-selector">
+
+
 
                 <button class="lang-selector-btn" aria-label="Select Language">
 
+
+
                     <svg class="lucide lucide-globe" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:16px;height:16px;margin-right:4px;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+
+
 
                     <span>繁中</span>
 
+
+
                     <svg class="lucide lucide-chevron-down" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:12px;height:12px;margin-left:2px;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m6 9 6 6 6-6"></path></svg>
+
+
 
                 </button>
 
+
+
                 <div class="lang-dropdown">
+
+
 
                     <a href="knowledge.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'zh-TW')" class="active">繁中</a>
 
+
+
                     <a href="en/knowledge.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'en')">EN</a>
+
+
 
                     <a href="ja/knowledge.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'ja')">日本語</a>
 
+
+
                 </div>
+
+
 
             </div>
 
+
+
         </div>
+
+
 
         <div aria-label="開啟選單" class="hamburger" id="hamburger" role="button" tabindex="0">
 
-            <span></span>
+
 
             <span></span>
 
+
+
             <span></span>
+
+
+
+            <span></span>
+
+
 
         </div>
 
+
+
     </div>
+
+
 
 </nav>
 
+
+
 <div class="mobile-menu" id="mobile-menu">
+
+
 
     <a class="nav-link" href="index.html#about">關於鈞翔</a>
 
+
+
     <a class="nav-link" href="service.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'zh-TW')">服務技術</a>
+
+
 
     <a class="nav-link" href="products_list.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'zh-TW')">產品實現</a>
 
+
+
     <a class="nav-link active" href="knowledge.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'zh-TW')">技術知識</a>
+
+
 
     <a class="nav-link" href="index.html#quality">品質認證</a>
 
+
+
     <a class="nav-link" href="index.html#contact">聯絡我們</a>
+
+
 
     <div class="mobile-lang-links">
 
+
+
         <a href="knowledge.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'zh-TW')" class="mobile-lang-link active">繁中</a>
 
+
+
         <span style="color: rgba(255,255,255,0.2);">|</span>
+
+
 
         <a href="en/knowledge.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'en')" class="mobile-lang-link">EN</a>
 
+
+
         <span style="color: rgba(255,255,255,0.2);">|</span>
+
+
 
         <a href="ja/knowledge.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'ja')" class="mobile-lang-link">日本語</a>
 
+
+
     </div>
 
+
+
 </div>
+
+
+
+
 
 
 
 <!-- Page Banner -->
 
+
+
 <header class="page-banner" style="position: relative; overflow: hidden;">
+
+
 
     <div class="glow-blob" style="top: 50%; left: 50%; transform: translate(-50%, -50%);"></div>
 
+
+
     <div class="container" style="position: relative; z-index: 1;">
+
+
 
         <h1 class="page-banner-title">技術<span class="accent">知識庫</span></h1>
 
+
+
         <div class="breadcrumb">
+
+
 
             <a href="index.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'zh-TW')">首頁</a>
 
+
+
             <span class="divider">/</span>
+
+
 
             <span class="current">技術知識與案例</span>
 
+
+
         </div>
 
+
+
     </div>
+
+
 
 </header>
 
 
 
+
+
+
+
 <!-- Knowledge Section -->
+
+
 
 <section class="section" style="padding: clamp(3rem, 6vh, 4rem) 0;">
 
+
+
     <div class="container">
+
+
 
         <div class="knowledge-layout">
 
+
+
             <!-- Sidebar Navigation -->
+
+
 
             <aside class="knowledge-sidebar reveal-left">
 
+
+
                 <!-- Search Input Box -->
+
+
 
                 <div class="knowledge-search-wrapper" style="margin-bottom: var(--space-6);">
 
+
+
                     <h3 class="knowledge-nav-title" style="margin-bottom: var(--space-3);">搜尋文章</h3>
+
+
 
                     <div style="position: relative;">
 
+
+
                         <input type="text" id="article-search" placeholder="輸入關鍵字搜尋..." style="width: 100%; padding: 10px 12px 10px 36px; border: 1px solid var(--color-border); background: rgba(255,255,255,0.02); border-radius: var(--radius-md); color: var(--color-text-primary); font-size: 0.9rem; transition: all 0.3s;" />
+
+
 
                         <svg class="lucide" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="position: absolute; left: 12px; top: 50%; transform: translateY(-50%); width: 16px; height: 16px; color: var(--color-text-muted);" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="11" cy="11" r="8"/><line x1="21" x2="16.65" y1="21" y2="16.65"/></svg>
 
+
+
                     </div>
 
+
+
                 </div>
+
+
+
+
 
 
 
                 <div class="knowledge-nav">
 
+
+
                     <h3 class="knowledge-nav-title">欄目分類</h3>
+
+
 
                     <ul class="knowledge-nav-list">
 
+
+
                         <li class="knowledge-nav-item active" data-type="all">全部文章</li>
+
+
 
                         <li class="knowledge-nav-item" data-type="tech">技術專欄</li>
 
+
+
                         <li class="knowledge-nav-item" data-type="case">客戶案例分享</li>
+
+
 
                     </ul>
 
+
+
                 </div>
+
+
+
+
 
 
 
                 <!-- Hot Tags Wrapper -->
 
+
+
                 <div class="knowledge-tags-wrapper" style="margin-top: var(--space-6);">
+
+
 
                     <h3 class="knowledge-nav-title" style="margin-bottom: var(--space-3);">熱門標籤</h3>
 
+
+
                     <div class="knowledge-hot-tags" style="display: flex; flex-wrap: wrap; gap: 8px;">
+
+
 
                         <button class="tag-btn active" data-tag="all" style="font-size: 0.75rem; background: rgba(214, 168, 67, 0.1); color: var(--color-accent); border: 1px solid var(--color-accent); padding: 4px 10px; border-radius: var(--radius-full); cursor: pointer; transition: all 0.3s; border-radius: 9999px;">#全部</button>
 
+
+
                         <button class="tag-btn" data-tag="LSR射出" style="font-size: 0.75rem; background: rgba(255,255,255,0.03); color: var(--color-text-secondary); border: 1px solid var(--color-border); padding: 4px 10px; border-radius: var(--radius-full); cursor: pointer; transition: all 0.3s; border-radius: 9999px;">#LSR射出</button>
+
+
 
                         <button class="tag-btn" data-tag="設計指南" style="font-size: 0.75rem; background: rgba(255,255,255,0.03); color: var(--color-text-secondary); border: 1px solid var(--color-border); padding: 4px 10px; border-radius: var(--radius-full); cursor: pointer; transition: all 0.3s; border-radius: 9999px;">#設計指南</button>
 
+
+
                         <button class="tag-btn" data-tag="異材結合" style="font-size: 0.75rem; background: rgba(255,255,255,0.03); color: var(--color-text-secondary); border: 1px solid var(--color-border); padding: 4px 10px; border-radius: var(--radius-full); cursor: pointer; transition: all 0.3s; border-radius: 9999px;">#異材結合</button>
+
+
 
                         <button class="tag-btn" data-tag="材料知識" style="font-size: 0.75rem; background: rgba(255,255,255,0.03); color: var(--color-text-secondary); border: 1px solid var(--color-border); padding: 4px 10px; border-radius: var(--radius-full); cursor: pointer; transition: all 0.3s; border-radius: 9999px;">#材料知識</button>
 
+
+
                         <button class="tag-btn" data-tag="醫療級" style="font-size: 0.75rem; background: rgba(255,255,255,0.03); color: var(--color-text-secondary); border: 1px solid var(--color-border); padding: 4px 10px; border-radius: var(--radius-full); cursor: pointer; transition: all 0.3s; border-radius: 9999px;">#醫療級</button>
+
+
 
                         <button class="tag-btn" data-tag="防水密封" style="font-size: 0.75rem; background: rgba(255,255,255,0.03); color: var(--color-text-secondary); border: 1px solid var(--color-border); padding: 4px 10px; border-radius: var(--radius-full); cursor: pointer; transition: all 0.3s; border-radius: 9999px;">#防水密封</button>
 
+
+
                         <button class="tag-btn" data-tag="無人機" style="font-size: 0.75rem; background: rgba(255,255,255,0.03); color: var(--color-text-secondary); border: 1px solid var(--color-border); padding: 4px 10px; border-radius: var(--radius-full); cursor: pointer; transition: all 0.3s; border-radius: 9999px;">#無人機</button>
+
+
 
                     </div>
 
+
+
                 </div>
+
+
 
             </aside>
 
+
+
             
+
+
 
             <!-- Articles Content Area -->
 
+
+
             <main class="knowledge-main reveal-right">
 
+
+
                 <div class="article-list" id="article-list">
-                    <!-- Article: EV Battery Sealing -->
-                    <article class="article-card" data-category="tech" data-tags="材料知識,防水密封">
-                        <div class="article-header">
-                            <div>
-                                <span class="article-tag">技術專欄</span>
-                                <h3 class="article-title">新能源車（EV）電池包密封系統設計：EPDM 與矽膠發泡材料的特性對比與選擇指南</h3>
-                            </div>
-                        </div>
-                        <div class="article-meta">
-                            <span>分類：前沿科技矽膠應用</span> | <span>發布日期：2026-07-02</span>
-                        </div>
-                        <p class="article-summary">
-                            隨著電動車（EV）與儲能系統（ESS）向高能量密度與長壽命發展，電池包（Battery Pack）的防護設計要求已達到極苛刻的標準。電池包不僅要面臨風雨侵蝕（防塵防水達 IP67/IP68），更需具備優異的防火阻燃（UL94 V-0）與高低溫適應性。在密封材料的選擇中，三元乙丙橡膠（EPDM）發泡與矽膠發泡（Silicone Foam）是兩種最常見的彈性體。本篇將深度解析這兩種材料在電池包密封中的物理特性、極限環境耐受力及選型指南。
-                        </p>
-                        
-                        <div class="article-expanded-content">
-                            <div class="article-body">
-                                <p>在新能源汽車的動力電池包設計中，外殼結構的氣密性與環境阻絕能力，是確保電芯（Cells）和電池管理系統（BMS）安全運作的首要防線。一旦水分或粉塵滲入，極易引發電路短路甚至熱失控（Thermal Runaway）。因此，電池包上蓋與底座之間的密封圈，必須承受車輛長期行駛中的物理擠壓、高低溫交變（-40°C至150°C以上）、震動老化及潛在的火焰考驗。以下我們將針對兩大主流密封材料——三元乙丙橡膠（EPDM）發泡與矽膠發泡進行全方位的對比分析：</p>
-                                
-                                <h4>一、 EPDM 發泡材料：經濟高效的戶外防護先鋒</h4>
-                                <p>三元乙丙橡膠（EPDM）因其優異的耐臭氧、耐紫外線及耐候性，廣泛應用於汽車車門密封條與戶外防水工程中。在電池包密封應用中，EPDM 常以閉孔發泡（Closed-cell Foam）形式呈現：</p>
-                                <ul>
-                                    <li><strong>優勢：</strong> 密度低、質輕，且成本顯著低於矽膠發泡。對於預算有限、且電池包最高運作溫度不超過 120°C 的專案，EPDM 提供了極佳的性價比，且具備良好的水汽阻絕性能。</li>
-                                    <li><strong>劣勢：</strong> 耐溫極限較低（長期工作溫度一般在 120°C 以下，短期最高約 150°C），且在持續受壓後的永久壓縮變形率（Compression Set）較矽膠高。當環境溫度降至 -30°C 以下時，EPDM 會逐漸失去彈性並變硬，可能導致密封失效。此外，EPDM 的阻燃等級（UL94）通常較難直接達到 V-0 級，需添加大量阻燃劑，這會降低其物理強度。</li>
-                                </ul>
-                                
-                                <h4>二、 矽膠發泡材料：極限溫差與高安全防護的黃金標準</h4>
-                                <p>矽膠發泡（Silicone Foam）是通過化學發泡或機械發泡技術製成的微孔彈性體，繼承了矽橡膠特有的高分子鏈結構：</p>
-                                <ul>
-                                    <li><strong>優勢：</strong>
-                                        <ul>
-                                            <li><strong>極寬耐溫範圍：</strong> 能在 -50°C 至 200°C（甚至短期 250°C）的極端溫度下維持 Shore C 10°~30° 的穩定彈性，在高溫下不黏連，低溫下不脆裂。</li>
-                                            <li><strong>極低永久壓縮變形：</strong> 在高溫下長期受壓後，仍具有極佳的回彈力，能維持超過 10 年以上的氣密效果，大幅降低電池包後期維護成本。</li>
-                                            <li><strong>天然阻燃性：</strong> 矽膠分子結構本身具備優良的阻燃性能，無需添加有害的鹵素阻燃劑即可輕鬆達到 UL94 V-0 標準，且在高溫燃燒時產生的煙霧極低、無毒。</li>
-                                        </ul>
-                                    </li>
-                                    <li><strong>劣勢：</strong> 原材料成本相對較高，且拉伸強度與抗撕裂強度略低於發泡橡膠，在安裝時需要避免過度拉扯。</li>
-                                </ul>
-                                
-                                <h4>三、 EPDM 發泡與矽膠發泡材料物理特性對照表：</h4>
-                                <table style="width:100%; border-collapse: collapse; margin-bottom: 20px; font-size: 0.9rem;">
-                                    <thead>
-                                        <tr style="border-bottom: 2px solid var(--color-border); text-align: left;">
-                                            <th style="padding: 10px; color: var(--color-text-primary);">物理特性 / 指標</th>
-                                            <th style="padding: 10px; color: var(--color-text-primary);">EPDM 發泡</th>
-                                            <th style="padding: 10px; color: var(--color-text-primary);">矽膠發泡 (Silicone Foam)</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr style="border-bottom: 1px solid var(--color-border);">
-                                            <td style="padding: 10px; font-weight: 600;">長期工作溫度範圍</td>
-                                            <td style="padding: 10px;">-35°C ~ 120°C</td>
-                                            <td style="padding: 10px; color: var(--color-accent);">-55°C ~ 200°C</td>
-                                        </tr>
-                                        <tr style="border-bottom: 1px solid var(--color-border);">
-                                            <td style="padding: 10px; font-weight: 600;">永久壓縮變形率 (70°C/22h)</td>
-                                            <td style="padding: 10px;">中至高 (通常 &gt; 25%)</td>
-                                            <td style="padding: 10px; color: var(--color-accent);">極低 (通常 &lt; 5% ~ 10%)</td>
-                                        </tr>
-                                        <tr style="border-bottom: 1px solid var(--color-border);">
-                                            <td style="padding: 10px; font-weight: 600;">耐臭氧 / 耐候老化性</td>
-                                            <td style="padding: 10px;">優異</td>
-                                            <td style="padding: 10px; color: var(--color-accent);">極佳（20年以上不老化）</td>
-                                        </tr>
-                                        <tr style="border-bottom: 1px solid var(--color-border);">
-                                            <td style="padding: 10px; font-weight: 600;">阻燃等級 (UL94)</td>
-                                            <td style="padding: 10px;">HB ~ V-1 (需添加阻燃劑)</td>
-                                            <td style="padding: 10px; color: var(--color-accent);">V-0 (天然阻燃、低煙無毒)</td>
-                                        </tr>
-                                        <tr style="border-bottom: 1px solid var(--color-border);">
-                                            <td style="padding: 10px; font-weight: 600;">材料成本</td>
-                                            <td style="padding: 10px; color: var(--color-accent);">低（具經濟性）</td>
-                                            <td style="padding: 10px;">中至高</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                
-                                <h4>四、 鈞翔實業 — 您的動力電池包密封方案專家</h4>
-                                <p>在新能源車電池包研發階段，選擇正確的密封材料並配合精密的斷面形狀設計，是確保量產良率的關鍵。鈞翔實業有限公司深耕精密橡矽膠製品代工30年，能針對您的工程需求，提供高度定製化的發泡材料解決方案：</p>
-                                <ul>
-                                    <li><strong>配方調配與二次加工：</strong> 支援防靜電、導電、阻燃級（UL94 V-0）發泡矽膠配方調製，並提供自粘背膠（3M 等膠帶貼合）、多層異型複合模切服務。</li>
-                                    <li><strong>精密模具開發：</strong> 配備高精密度切割與熱壓成型模具，能滿足電池包上蓋大型異形密封圈的尺寸公差控制，避免因安裝公差導致的防水失效。</li>
-                                </ul>
-                                <p>無論您處於快速打樣設計還是量產階段，我們皆可提供材料物理性能測試報告（包括硬度、拉伸強度及永久變形測試），歡迎提供 CAD 設計圖檔，與我們的技術團隊展開深度對話。</p>
-                            </div>
-                        </div>
-                        <div class="article-toggle-btn">
-                            <span>閱讀全文</span>
-                            <svg class="lucide lucide-chevron-down" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:16px;height:16px;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m6 9 6 6 6-6"></path></svg>
-                        </div>
-                    </article>
+
+                    
+
+
+
 
 
                     
+
+
 
                     <!-- Article 1: Drone Precision Parts -->
 
+
+
                     <article class="article-card" data-category="tech" data-tags="無人機,LSR射出,設計指南,防水密封">
+
+
 
                         <div class="article-header">
 
+
+
                             <div>
 
+
+
                                 <span class="article-tag">技術專欄</span>
+
+
 
                                 <h3 class="article-title">無人機精密矽橡膠零件設計指南：避震球、防水圈與起落架避震結構材料全解析</h3>
 
+
+
                             </div>
+
+
 
                         </div>
 
+
+
                         <div class="article-meta">
+
+
 
                             <span>分類：前沿科技矽膠應用</span> | <span>發布日期：2026-07-02</span>
 
+
+
                         </div>
 
+
+
                         <p class="article-summary">
+
+
 
                             隨着無人機（UAV/Drones）在智慧配送、電網巡檢與農業噴灑等領域迎來爆發性成長，設備零件的環境耐受度與可靠度已成為設計關鍵。無人機的核心避震、氣密密封與結構保護高度依賴高分子矽膠與橡膠零組件。本篇將從硬度校調、防震阻尼到液態矽膠（LSR）射出與異材結合等製造製程，深入解析無人機精密矽橡膠零件的設計指南。
 
+
+
                         </p>
+
+
 
                         
 
+
+
                         <div class="article-expanded-content">
 
+
+
                             <div class="article-body">
+
+
 
                                 <p>在無人機（UAV）系統的硬體設計中，飛控晶片、相機雲台以及動力系統對高頻震動與雨水塵埃極度敏感。精密矽橡膠零件雖不起眼，卻是決定無人機能否穩定飛行、防範水分滲漏並減緩降落衝擊的「隱形力學屏障」。以下為您詳解無人機三大核心應用場景下的橡矽膠零件設計指引：</p>
 
+
+
                                 
+
+
 
                                 <div class="article-figure-grid">
 
+
+
                                     <div>
+
+
 
                                         <h5>1. 雲台相機避震球與馬達減震墊（阻尼避震設計）</h5>
 
+
+
                                         <p>馬達高速旋轉（50Hz~200Hz）會導致相機畫面產生「果凍效應」。
+
+
 
                                         <ul>
 
+
+
                                             <li><strong>雲台避震球</strong>：設計時需使用 Shore A 30°~45° 的高阻尼（tan δ）矽橡膠，藉由其黏彈性吸收微震動，並需配合相機重量精算避震球的剪切與壓縮剛性。</li>
+
+
 
                                             <li><strong>馬達減震墊</strong>：推薦使用橡膠與金屬共價接著製程（Rubber to Metal Bonding），將特製丁腈橡膠（NBR）或氟橡膠直接包覆於鋁合金馬達安裝座上，有效阻絕高頻共振，防止陀螺儀訊號失真。</li>
 
+
+
                                         </ul>
+
+
 
                                         </p>
 
+
+
                                     </div>
 
+
+
                                     <div class="article-figure-container">
+
+
 
                                         <img src="images/tech/drone-dampers.png" alt="無人機避震球與馬達防震墊" class="article-figure-img" loading="lazy" />
 
+
+
                                         <p style="font-size: 0.8rem; color: var(--color-text-muted); text-align: center; margin-top: var(--space-2);">▲ 鈞翔精密為客戶客製化生產的無人機高阻尼避震球與異材接著馬達座</p>
+
+
 
                                     </div>
 
+
+
                                 </div>
 
+
+
                                 
+
+
 
                                 <h5>2. 電控艙防水密封與轉軸防塵套（極端耐候氣密）</h5>
 
+
+
                                 <p>工業級與物流配送無人機必須具備全天候執勤能力，需應對高空嚴寒（-40°C以下）與暴雨侵襲。</p>
 
+
+
                                 <ul>
+
+
 
                                     <li><strong>防水密封圈</strong>：傳統密封件低溫易硬化脆裂。採用 <strong>LSR 液態矽膠射出成型</strong> 的密封墊片，具有極佳的抗永久壓縮變形率（&lt; 10%）與耐高低溫極限（-60°C ~ 250°C），能實現 IP67/IP68 氣密防護，避免電池與飛控舱水汽滲入。</li>
 
+
+
                                     <li><strong>舵機波紋套</strong>：在 VTOL 無人機轉軸等動態密封處，使用壁厚僅 0.3mm ~ 0.5mm 的高撕裂強度矽橡膠波紋套，在阻擋灰塵雨水同時，確保不阻礙舵機的極致轉向回饋。</li>
+
+
 
                                 </ul>
 
+
+
                                 
+
+
 
                                 <h5>3. 降落緩衝腳墊與電池固定墊（高頻物理防護）</h5>
 
+
+
                                 <ul>
+
+
 
                                     <li><strong>起落架緩衝墊</strong>：選用高耐磨、耐撕裂的丁腈橡膠（NBR）或聚氨酯（PU），吸收降落瞬間的巨大物理衝擊，防止碳纖維起落架微損。</li>
 
+
+
                                     <li><strong>電池固定止滑墊</strong>：使用耐候性佳的三元乙丙橡膠（EPDM），在高溫日照與劇烈氣流中，仍能維持強大摩擦力防止電池包高速移位。</li>
+
+
 
                                 </ul>
 
+
+
                                 
+
+
 
                                 <h5>無人機核心橡矽膠零組件設計對照表：</h5>
 
+
+
                                 <table style="width:100%; border-collapse: collapse; margin-bottom: 20px; font-size: 0.9rem;">
+
+
 
                                     <thead>
 
+
+
                                         <tr style="border-bottom: 2px solid var(--color-border); text-align: left;">
+
+
 
                                             <th style="padding: 10px; color: var(--color-text-primary);">零件名稱</th>
 
+
+
                                             <th style="padding: 10px; color: var(--color-text-primary);">推薦材料</th>
+
+
 
                                             <th style="padding: 10px; color: var(--color-text-primary);">硬度範圍</th>
 
+
+
                                             <th style="padding: 10px; color: var(--color-text-primary);">關鍵性能指標</th>
 
+
+
                                         </tr>
+
+
 
                                     </thead>
 
+
+
                                     <tbody>
 
+
+
                                         <tr style="border-bottom: 1px solid var(--color-border);">
+
+
 
                                             <td style="padding: 10px; font-weight: 600;">雲台避震球</td>
 
+
+
                                             <td style="padding: 10px;">高撕裂矽膠 / 天然膠</td>
+
+
 
                                             <td style="padding: 10px;">Shore A 30°~45°</td>
 
+
+
                                             <td style="padding: 10px;">高阻尼係數、高回彈性、耐撕裂</td>
+
+
 
                                         </tr>
 
+
+
                                         <tr style="border-bottom: 1px solid var(--color-border);">
+
+
 
                                             <td style="padding: 10px; font-weight: 600;">電控艙防水圈</td>
 
+
+
                                             <td style="padding: 10px;">LSR 液態矽膠</td>
+
+
 
                                             <td style="padding: 10px;">Shore A 50°~65°</td>
 
+
+
                                             <td style="padding: 10px;">抗低溫收縮、低壓縮變形率（&lt;10%）</td>
+
+
 
                                         </tr>
 
+
+
                                         <tr style="border-bottom: 1px solid var(--color-border);">
+
+
 
                                             <td style="padding: 10px; font-weight: 600;">馬達避震座</td>
 
+
+
                                             <td style="padding: 10px;">耐油 NBR 橡膠</td>
+
+
 
                                             <td style="padding: 10px;">Shore A 60°~70°</td>
 
+
+
                                             <td style="padding: 10px;">拉拔強度 &gt; 4.5 MPa（與金屬接著良好）</td>
 
+
+
                                         </tr>
+
+
 
                                         <tr style="border-bottom: 1px solid var(--color-border);">
 
+
+
                                             <td style="padding: 10px; font-weight: 600;">起落架緩衝墊</td>
+
+
 
                                             <td style="padding: 10px;">聚氨酯 (PU) / CR 橡膠</td>
 
+
+
                                             <td style="padding: 10px;">Shore A 70°~80°</td>
+
+
 
                                             <td style="padding: 10px;">超高耐磨耗、抗撕裂強度</td>
 
+
+
                                         </tr>
+
+
 
                                     </tbody>
 
+
+
                                 </table>
 
+
+
                                 
+
+
 
                                 <h4>四、 鈞翔實業 — 您高可靠度航太級代工的堅實後盾</h4>
 
+
+
                                 <p>無人機的避震球與密封件多為非標客製件。鈞翔實業有限公司深耕精密橡矽膠製品代工30年，廠區配備液態矽膠（LSR）射出機台與獨立的橡膠金屬表面接著處理線。我們能為設備商提供從客製化配方調配（耐寒、高撕裂）、高精度模具研製、快速原型打樣到量產出廠一站式解決方案，協助您的產品通過嚴苛的環境可靠度測試，搶占全天候無人載具市場商機。</p>
+
+
 
                             </div>
 
+
+
                         </div>
+
+
 
                         <div class="article-toggle-btn">
 
+
+
                             <span>閱讀全文</span>
+
+
 
                             <svg class="lucide lucide-chevron-down" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:16px;height:16px;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m6 9 6 6 6-6"></path></svg>
 
+
+
                         </div>
+
+
 
                     </article>
 
+
+
                     
+
+
 
                     <!-- Article 2: AI & Drone -->
 
+
+
                     <article class="article-card" data-category="tech" data-tags="LSR射出,設計指南,防水密封">
+
+
 
                         <div class="article-header">
 
+
+
                             <div>
+
+
 
                                 <span class="article-tag">技術專欄</span>
 
+
+
                                 <h3 class="article-title">AI 伺服器與無人機的崛起：高階精密矽橡膠零件的關鍵應用與設計趨勢</h3>
+
+
 
                             </div>
 
+
+
                         </div>
+
+
 
                         <div class="article-meta">
 
+
+
                             <span>分類：前沿科技矽膠應用</span> | <span>發布日期：2026-06-26</span>
+
+
 
                         </div>
 
+
+
                         <p class="article-summary">
+
+
 
                             隨著人工智慧（AI）伺服器及無人載具（無人機）產業的爆發性成長，硬體系統對於「極端散熱性能」、「高頻防震減震」與「戶外極端防水防塵」的規格要求已推升至工業與航太級標準。矽橡膠材質憑藉其無可替代的彈性、耐溫、絕緣與化學穩定性，成為推動兩大尖端科技穩定運作的「關鍵零組件」。本篇將深入解析產品結構設計與量產技術...
 
+
+
                         </p>
+
+
 
                         
 
+
+
                         <div class="article-expanded-content">
+
+
 
                             <div class="article-body">
 
+
+
                                 <p>在人工智慧 (AI) 伺服器與無人載具 (UAV) 系統中，硬體架構的可靠性是演算法能穩定發揮的底氣。面對高壓、高熱、動態震動、電磁波干擾 (EMI) 及全天候嚴酷環境，精密矽膠與橡膠元件提供了完美的解決方案。以下為兩大高成長硬體市場的深度應用分析與材料設計要點：</p>
 
+
+
                                 
+
+
 
                                 <h4>一、 AI 伺服器與高算力機櫃中的橡矽膠關鍵零件</h4>
 
+
+
                                 <p>AI 運算晶片（GPU/ASIC）在高負載下發熱量巨大，且高速運作的冷卻系統及風扇運作時產生的微震動會直接干擾高頻訊號傳輸。這對密封、導熱與防震提出了極高要求：</p>
+
+
 
                                 
 
+
+
                                 <div class="article-figure-grid">
+
+
 
                                     <div>
 
+
+
                                         <h5>1. 超導熱介面材料 (Thermal Conductive Silicone, TIM)</h5>
+
+
 
                                         <p>GPU/CPU 晶片與散熱片、均溫板之間，需填充高熱導率的導熱矽膠片或導熱凝膠。透過精密配方在矽膠基材中填充氧化鋁、氮化硼或碳化矽等陶瓷微粒，在維持 Shore A 10°~25° 極佳彈性與間隙填充性能的同時，達到 3.0~8.0 W/m·K 以上的熱傳導效率，大幅降低晶片溫升。</p>
 
+
+
                                         
+
+
 
                                         <h5>2. 水冷/液冷系統防漏密封圈 (Liquid Cooling Gaskets)</h5>
 
+
+
                                         <p>液冷（CDU 水路、水冷板）正成為 AI 機櫃散熱主流。水冷接頭與冷卻板的密封圈需在長達數年的 80°C 高溫水汽環境中工作，對<b>永久壓縮變形率（要求 &lt; 10%）</b>與耐化學降解（耐乙二醇水溶液）有極高要求。採用 <strong>LSR 液態矽膠射出成型</strong> 的 O型環與異形密封墊，是防堵伺服器內部液漏短路的唯一防線。</p>
 
+
+
                                     </div>
+
+
 
                                     <div class="article-figure-container">
 
+
+
                                         <img src="images/tech/ai-gaskets.png" alt="AI 伺服器導熱矽膠與 LSR 液冷密封圈" class="article-figure-img" loading="lazy" />
+
+
 
                                         <p style="font-size: 0.8rem; color: var(--color-text-muted); text-align: center; margin-top: var(--space-2);">▲ 鈞翔精密生產的 AI 伺服器超導熱矽膠片與高氣密 LSR 密封圈</p>
 
+
+
                                     </div>
 
+
+
                                 </div>
+
+
+
+
 
 
 
                                 <h5>3. 導電橡膠電磁遮蔽蓋與絕緣墊圈 (EMI Shielding Gaskets)</h5>
 
+
+
                                 <p>AI 伺服器內部有著大量高頻通訊模組，電磁干擾 (EMI) 會顯著降低資料傳輸速率。我們透過在矽膠中混入鎳包石墨、銀包銅等導電顆粒，開發出具有共擠或壓出成型的電磁遮蔽導電橡膠條。這些零件既能防塵，又能阻絕高頻雜訊，電阻率可控制在 &lt; 0.01 Ω·cm。</p>
+
+
+
+
 
 
 
                                 <h4>二、 無人機 (Drones) 對精密避震與耐候氣密零件的技術需求</h4>
 
+
+
                                 <p>專業級與工業級無人機（如農用植保、電力巡檢、防汛搜救）需在高空嚴寒、雨水沖刷與螺旋槳馬達高速共振環境中作業，對零件重量、抗震能效有著苛刻考驗：</p>
+
+
 
                                 
 
+
+
                                 <div class="article-figure-grid reverse">
+
+
 
                                     <div class="article-figure-container">
 
+
+
                                         <img src="images/tech/drone-dampers.png" alt="無人機避震球與馬達防震墊" class="article-figure-img" loading="lazy" />
+
+
 
                                         <p style="font-size: 0.8rem; color: var(--color-text-muted); text-align: center; margin-top: var(--space-2);">▲ 鈞翔無人機雲台相機高阻尼避震球及馬達金屬接著接著件</p>
 
+
+
                                     </div>
+
+
 
                                     <div>
 
+
+
                                         <h5>1. 雲台相機高阻尼減震球 (Gimbal Dampening Balls)</h5>
+
+
 
                                         <p>旋翼旋轉時產生的 50Hz~200Hz 高頻震動會使航拍畫面產生「果凍效應」（Jello Effect）。雲台減震球必須精準控制硬度（Shore A 30°~45°）與阻尼值（tan δ）。我們採用高撕裂強度、高彈性天然膠與矽膠複合配方，既有足夠剛性支撐相機重力，端能完美隔絕螺旋槳的微震動。</p>
 
+
+
                                         
+
+
 
                                         <h5>2. 馬達減震座與金屬接著接著件 (Motor Mount Dampers)</h5>
 
+
+
                                         <p>無人機馬達座是震動與溫升源頭。利用**橡膠與金屬接著技術（Rubber to Metal Bonding）**將鋁合金與特製丁腈橡膠（NBR）在模具內共價結合，免去二次裝配，不僅具備高拉拔力強度，亦能阻隔馬達震動往機架（碳纖維板）傳遞，保護陀螺儀晶片不受干擾。</p>
+
+
 
                                     </div>
 
+
+
                                 </div>
+
+
+
+
 
 
 
                                 <h5>3. 起落架緩衝腳墊 (Landing Gear Shock Absorbers)</h5>
 
+
+
                                 <p>選用高耐磨、耐撕裂的丁腈橡膠 (NBR) 或聚氨酯 (PU) 製造起落架緩衝墊，吸收重載無人機降落時的瞬間物理衝擊，避免機身碳纖維結構微損龜裂。</p>
 
+
+
                                 
+
+
 
                                 <h5>4. 動力舵機與擺臂防水防塵套 (Servo Dust Boots)</h5>
 
+
+
                                 <p>在垂直起降（VTOL）傾轉旋翼無人機的傾轉轉軸、舵機連桿處，使用極薄壁（0.3mm~0.5mm）的波紋狀矽橡膠防塵套筒。高強度的矽膠能在阻擋農藥噴灑、沙塵及雨水的同時，確保不阻礙舵機的極致轉向回饋彈力。</p>
+
+
 
                                 
 
+
+
                                 <h5>5. 外殼 IP67/IP68 防水圈與 LSR 雙色包膠 (Overmolding)</h5>
+
+
 
                                 <p>為實現大雨中執勤，機殼與電池艙門的交接面必須實現完美防水。<b>LSR 雙色射出技術</b>將液態矽膠直接包覆在硬質 PC/PA 塑膠框架上，無組裝公差，且在 -40°C ~ 85°C 極端環境中不會有脫膠、龜裂、老化漏水的風險。</p>
 
 
 
+
+
+
+
                                 <h5>AI 伺服器與無人機零組件規格設計對照表：</h5>
+
+
 
                                 <table style="width:100%; border-collapse: collapse; margin-bottom: 20px; font-size: 0.9rem;">
 
+
+
                                     <thead>
 
+
+
                                         <tr style="border-bottom: 2px solid var(--color-border); text-align: left;">
+
+
 
                                             <th style="padding: 10px; color: var(--color-text-primary);">核心零件</th>
 
+
+
                                             <th style="padding: 10px; color: var(--color-text-primary);">推薦材質</th>
+
+
 
                                             <th style="padding: 10px; color: var(--color-text-primary);">核心規格指引</th>
 
+
+
                                             <th style="padding: 10px; color: var(--color-text-primary);">關鍵加工製程</th>
+
+
 
                                         </tr>
 
+
+
                                     </thead>
+
+
 
                                     <tbody>
 
+
+
                                         <tr style="border-bottom: 1px solid var(--color-border);">
+
+
 
                                             <td style="padding: 10px; font-weight: 600;">晶片導熱片</td>
 
+
+
                                             <td style="padding: 10px;">陶瓷粉填充矽膠</td>
+
+
 
                                             <td style="padding: 10px;">導熱率 3~8 W/m·K、Shore A 15°</td>
 
+
+
                                             <td style="padding: 10px;">混煉壓出 / 沖切加工</td>
+
+
 
                                         </tr>
 
+
+
                                         <tr style="border-bottom: 1px solid var(--color-border);">
+
+
 
                                             <td style="padding: 10px; font-weight: 600;">液冷系統密封件</td>
 
+
+
                                             <td style="padding: 10px;">LSR 液態矽膠</td>
+
+
 
                                             <td style="padding: 10px;">壓縮變形 &lt; 10%、耐冷卻液</td>
 
+
+
                                             <td style="padding: 10px; color: var(--color-accent);">高精度 LSR 自動射出</td>
+
+
 
                                         </tr>
 
+
+
                                         <tr style="border-bottom: 1px solid var(--color-border);">
+
+
 
                                             <td style="padding: 10px; font-weight: 600;">雲台相機避震球</td>
 
+
+
                                             <td style="padding: 10px;">高撕裂矽橡膠</td>
+
+
 
                                             <td style="padding: 10px;">高阻尼（tan δ）、Shore A 35°</td>
 
+
+
                                             <td style="padding: 10px;">真空抽氣熱壓 / LSR 射出</td>
+
+
 
                                         </tr>
 
+
+
                                         <tr style="border-bottom: 1px solid var(--color-border);">
+
+
 
                                             <td style="padding: 10px; font-weight: 600;">無人機外殼防水</td>
 
+
+
                                             <td style="padding: 10px;">LSR 矽膠 + PC/PA</td>
+
+
 
                                             <td style="padding: 10px;">IP68防水、剪切強度 &gt; 4.0 MPa</td>
 
+
+
                                             <td style="padding: 10px; color: var(--color-accent);">LSR 雙色二次包膠 (Overmolding)</td>
+
+
 
                                         </tr>
 
+
+
                                     </tbody>
+
+
 
                                 </table>
 
+
+
                                 
+
+
 
                                 <h4>三、 鈞翔實業 — 您的前沿硬體量產最佳合作夥伴</h4>
 
+
+
                                 <p>多數 AI 與無人機專案的精密矽膠件均為非標客製化零件。鈞翔實業有限公司擁有 30 年以上模具研製與材料改性研發技術，在新北新莊廠區設有高精度模具加工廠與自動化 LSR 射出設備。我們能針對客戶的高散熱、高阻尼減震或極端氣候防水需求，進行 NRE 客製化模具開發，提供極具競爭力的打樣與高良率量產代工服務。歡迎各界提供 3D 圖檔（STEP/IGS）或樣品，與我們的技術團隊進行深度探討。</p>
+
+
 
                             </div>
 
+
+
                         </div>
+
+
 
                         <div class="article-toggle-btn">
 
+
+
                             <span>閱讀全文</span>
+
+
 
                             <svg class="lucide lucide-chevron-down" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:16px;height:16px;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m6 9 6 6 6-6"></path></svg>
 
+
+
                         </div>
+
+
 
                     </article>
 
+
+
                     
 
+
+
                     <!-- Article 2 -->
+
+
 
                     <article class="article-card" data-category="tech" data-tags="LSR射出,材料知識,設計指南">
 
+
+
                         <div class="article-header">
+
+
 
                             <div>
 
+
+
                                 <span class="article-tag">技術專欄</span>
+
+
 
                                 <h3 class="article-title">固態矽膠熱壓 vs. LSR 液態矽膠射出：如何選擇最適合的客製化製程？</h3>
 
+
+
                             </div>
+
+
 
                         </div>
 
+
+
                         <div class="article-meta">
+
+
 
                             <span>分類：矽橡膠成型技術</span> | <span>發布日期：2026-06-24</span>
 
+
+
                         </div>
 
+
+
                         <p class="article-summary">
+
+
 
                             許多工程師與採購在尋找矽膠代工廠開發新產品時，常面臨「要用傳統固態熱壓成型」還是「液態矽膠射出 (LSR)」的抉擇。這兩種製程在模具成本、精密度與適合的量產數量上有極大差異。本篇將為您詳細解析...
 
+
+
                         </p>
+
+
 
                         
 
+
+
                         <div class="article-expanded-content">
 
+
+
                             <div class="article-body">
+
+
 
                                 <p>在開發矽橡膠製品時，選擇正確的成型工藝不僅關係到產品品質，更直接決定了模具預算與長期量產成本。以下為您深入分析傳統固態熱壓成型與現代自動化液態矽膠射出的差別：</p>
 
+
+
                                 
+
+
 
                                 <div class="article-figure-grid">
 
+
+
                                     <div>
+
+
 
                                         <h5>1. 固態矽膠真空熱壓成型 (Solid Silicone Pressing)</h5>
 
+
+
                                         <p>這是歷史悠久、技術成熟的成型方式，使用混煉好的固態矽膠原料（似黏土狀）。</p>
 
+
+
                                         <ul>
+
+
 
                                             <li><strong>生產製程</strong>：將原料裁切並秤重後，由人工放置到預熱的鋼模模腔中，透過油壓機閉合施加高溫高壓，使矽膠在模具內硫化熟化。</li>
 
+
+
                                             <li><strong>優勢</strong>：模具開發難度與精密要求相對較低，模具費用便宜。適合中低批量生產，尤其是尺寸大、結構簡單的矽膠件。</li>
+
+
 
                                             <li><strong>劣勢</strong>：人工擺料效率受限，毛邊較厚，尺寸公差通常為 ±0.15mm ~ ±0.20mm。</li>
 
+
+
                                         </ul>
 
+
+
                                         
+
+
 
                                         <h5>2. LSR 液態矽膠射出成型 (Liquid Silicone Rubber Injection)</h5>
 
+
+
                                         <p>這是適應精密高分子產品需求而生的自動化射出製程，使用雙組份（A劑與B劑）低黏度液態矽膠。</p>
+
+
 
                                         <ul>
 
+
+
                                             <li><strong>生產製程</strong>：A/B原料以 1:1 精密比例混合後，經由精密流道系統射入加熱的密閉模腔內，在數秒至數十秒內快速高溫固化。</li>
+
+
 
                                             <li><strong>優勢</strong>：生產週期極短。流動性極佳，可製造結構複雜、壁厚極薄的微米級零件，尺寸公差精準控制在 ±0.02mm ~ ±0.05mm。</li>
 
+
+
                                             <li><strong>劣勢</strong>：模具設計極度精密，初期造價較高，建議搭配大批量量產以攤提模具折舊成本。</li>
+
+
 
                                         </ul>
 
+
+
                                     </div>
 
+
+
                                     <div class="article-figure-container">
+
+
 
                                         <img src="images/tech/pressing-vs-lsr.png" alt="固態熱壓與液態射出製程對比" class="article-figure-img" loading="lazy" />
 
+
+
                                         <p style="font-size: 0.8rem; color: var(--color-text-muted); text-align: center; margin-top: var(--space-2);">▲ 固態矽膠熱壓與液態矽膠射出 (LSR) 自動化成型工藝對比圖</p>
+
+
 
                                     </div>
 
+
+
                                 </div>
 
+
+
                                 
+
+
 
                                 <h5>製程選擇決策表格：</h5>
 
+
+
                                 <table style="width:100%; border-collapse: collapse; margin-bottom: 20px; font-size: 0.9rem;">
+
+
 
                                     <thead>
 
+
+
                                         <tr style="border-bottom: 2px solid var(--color-border); text-align: left;">
+
+
 
                                             <th style="padding: 10px; color: var(--color-text-primary);">評估指標</th>
 
+
+
                                             <th style="padding: 10px; color: var(--color-text-primary);">固態矽膠熱壓</th>
+
+
 
                                             <th style="padding: 10px; color: var(--color-text-primary);">LSR 液態射出</th>
 
+
+
                                         </tr>
+
+
 
                                     </thead>
 
+
+
                                     <tbody>
 
+
+
                                         <tr style="border-bottom: 1px solid var(--color-border);">
+
+
 
                                             <td style="padding: 10px; font-weight: 600;">模具費用</td>
 
+
+
                                             <td style="padding: 10px;">低至中等（經濟實惠）</td>
+
+
 
                                             <td style="padding: 10px; color: var(--color-accent);">高（技術要求高）</td>
 
+
+
                                         </tr>
 
+
+
                                         <tr style="border-bottom: 1px solid var(--color-border);">
+
+
 
                                             <td style="padding: 10px; font-weight: 600;">單件加工費</td>
 
+
+
                                             <td style="padding: 10px;">中（含手動人工費）</td>
+
+
 
                                             <td style="padding: 10px; color: var(--color-accent);">低</td>
 
+
+
                                         </tr>
 
+
+
                                         <tr style="border-bottom: 1px solid var(--color-border);">
+
+
 
                                             <td style="padding: 10px; font-weight: 600;">精密度 / 公差</td>
 
+
+
                                             <td style="padding: 10px;">±0.15mm ~ ±0.20mm</td>
+
+
 
                                             <td style="padding: 10px; color: var(--color-accent);">±0.02mm ~ ±0.05mm</td>
 
+
+
                                         </tr>
+
+
 
                                         <tr style="border-bottom: 1px solid var(--color-border);">
 
+
+
                                             <td style="padding: 10px; font-weight: 600;">適合批量</td>
+
+
 
                                             <td style="padding: 10px;">小量至中批量 (1K~20K)</td>
 
+
+
                                             <td style="padding: 10px; color: var(--color-accent);">大批量生產 (>10K 起)</td>
+
+
 
                                         </tr>
 
+
+
                                     </tbody>
+
+
 
                                 </table>
 
+
+
                             </div>
 
+
+
                         </div>
+
+
 
                         <div class="article-toggle-btn">
 
+
+
                             <span>閱讀全文</span>
+
+
 
                             <svg class="lucide lucide-chevron-down" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:16px;height:16px;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m6 9 6 6 6-6"></path></svg>
 
+
+
                         </div>
+
+
 
                     </article>
 
+
+
                     
+
+
 
                     <!-- Article 2 -->
 
+
+
                     <article class="article-card" data-category="tech" data-tags="設計指南,異材結合">
+
+
 
                         <div class="article-header">
 
+
+
                             <div>
 
+
+
                                 <span class="article-tag">技術專欄</span>
+
+
 
                                 <h3 class="article-title">矽膠包塑膠與金屬（異材結合）：如何確保緊密黏合、絕不脫膠的關鍵技術</h3>
 
+
+
                             </div>
+
+
 
                         </div>
 
+
+
                         <div class="article-meta">
+
+
 
                             <span>分類：異材結合包膠技術</span> | <span>發布日期：2026-06-24</span>
 
+
+
                         </div>
 
+
+
                         <p class="article-summary">
+
+
 
                             異材包膠成型（Overmolding / Insertion Molding）是將彈性矽膠直接一體成型於硬質塑膠（PC/PA/PBT）或金屬底座（鋁合金/不銹鋼/銅/鐵件）上的工藝。如何在各種外力下，維持其化學與物理結合性，考驗代工廠的模具開發實力...
 
+
+
                         </p>
+
+
 
                         
 
+
+
                         <div class="article-expanded-content">
 
+
+
                             <div class="article-body">
+
+
 
                                 <p>在電子防水配件、醫療導管接頭、汽車減震件等設計中，「矽膠包塑膠」與「矽膠包鐵/包金屬」的結構極為常見。此工藝可以省去後段人工黏合組裝，並能實現極佳的 IP68 防水防塵功能。以下是確保兩種不同材質完美架橋結合、絕不脫離的四大核心步驟：</p>
 
+
+
                                 
+
+
 
                                 <h5>1. 嚴格選擇基材耐溫極限</h5>
 
+
+
                                 <p>矽膠的硫化成型溫度通常介於 130°C 至 175°C 之間。因此，在進行「矽膠包塑膠」時，作為骨架的硬質塑膠基材必須具備耐高溫能力，如 PC（聚碳酸酯）、PA+GF（玻纖增強尼龍）、PBT 或 PEEK 等。若是耐溫低的塑膠（如 ABS、PE），則容易在模具內融化變形。</p>
 
+
+
                                 
+
+
 
                                 <h5>2. 基材表面物理處理與活化 (Surface Preparation)</h5>
 
+
+
                                 <p>完美的結合建立在乾淨且能形成物理微咬合的表面。金屬嵌件（如不鏽鋼或銅）在放入模具前，需先進行去油、去氧化物程序，並視情況進行噴砂（Sandblasting）或電漿活化處理（Plasma Treatment），增加表面微觀粗糙度，以利矽膠嵌入物理微孔中。</p>
 
+
+
                                 
+
+
 
                                 <h5>3. 均勻塗佈黏著架橋劑 (Primer Application)</h5>
 
+
+
                                 <p>這是決定化學鍵結成敗的關鍵。底漆（Primer）分子具備雙重活性官能基：一端能與金屬（或塑膠）表面產生分子間作用力或共價鍵，另一端能參與矽膠在高溫熟化時的交聯反應。塗佈底漆時，必須嚴格控制其塗層厚度與烘乾溫度，太厚容易產生脆化層，太薄則黏接不牢。</p>
 
+
+
                                 
+
+
 
                                 <h5>4. 精密模具定位與高壓氣密控制</h5>
 
+
+
                                 <p>高壓矽膠射出時，流動的矽膠會對內部的金屬或塑膠嵌件產生強大的衝擊力。如果模具定位不準，嵌件容易產生微米級的位移（Shift），導致成品厚度不均或局部露骨架。此外，模具必須設置良好的真空排氣結構，避免結合面殘存殘氣，阻礙架橋劑的化學反應。</p>
 
+
+
                                 
+
+
 
                                 <p>鈞翔實業有限公司擁有 30 年以上客製代工經驗，在新北新莊工廠內設置了獨立的表面處理區與精密拉拔測試機台，能針對客戶各類複雜的異材結合組件，提供最穩定的黏著品質與防水保證。</p>
 
+
+
                             </div>
 
+
+
                         </div>
+
+
 
                         <div class="article-toggle-btn">
 
+
+
                             <span>閱讀全文</span>
+
+
 
                             <svg class="lucide lucide-chevron-down" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:16px;height:16px;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m6 9 6 6 6-6"></path></svg>
 
+
+
                         </div>
+
+
 
                     </article>
 
+
+
                     
+
+
 
                     <!-- Article 3 -->
 
+
+
                     <article class="article-card" data-category="tech" data-tags="設計指南,材料知識">
+
+
 
                         <div class="article-header">
 
+
+
                             <div>
+
+
 
                                 <span class="article-tag">技術專欄</span>
 
+
+
                                 <h3 class="article-title">導電矽膠按鍵設計指南：電阻、行程與橡膠彈力規格全面解析</h3>
+
+
 
                             </div>
 
+
+
                         </div>
 
+
+
                         <div class="article-meta">
+
+
 
                             <span>分類：導電按鍵設計</span> | <span>發布日期：2026-06-24</span>
 
+
+
                         </div>
 
+
+
                         <p class="article-summary">
+
+
 
                             導電矽膠按鍵廣泛應用於工業儀器、遙控器、醫療器材與汽車中控台。要設計一個手感舒適、反饋清脆且導電信號穩定可靠的按鍵，必須在「彈力回饋」、「行程設計」與「導電接點」上進行綜合調校...
 
+
+
                         </p>
+
+
 
                         
 
+
+
                         <div class="article-expanded-content">
 
+
+
                             <div class="article-body">
+
+
 
                                 <p>矽膠按鍵之所以有「按下去彈上來」的手感，完全依賴其內部的「斜壁（Web）」設計。優良的按鍵設計需要掌握以下三大物理核心數值：</p>
 
+
+
                                 
+
+
 
                                 <div class="article-figure-grid">
 
+
+
                                     <div>
+
+
 
                                         <h5>1. 按鍵下壓彈力 (Actuation Force) 與手感比率 (Tactile Ratio)</h5>
 
+
+
                                         <p>按下按鍵所需的力道 (F1)。消費級電子（遙控器）為 80g ~ 120g；工業儀器、醫療及車用面板，為防誤觸通常要求較重的 150g ~ 250g。手感比率 `(F1 - F2) / F1` 應控制在 40% ~ 60% 之間，以提供清脆的點擊感。</p>
 
+
+
                                         
+
+
 
                                         <h5>2. 行程設計 (Travel) 與預壓 (Pre-travel)</h5>
 
+
+
                                         <p>常規按鍵總行程約在 1.0mm ~ 2.0mm。行程過短（如 &lt; 0.8mm）則不易有清晰反饋；行程過長則易引起手指疲勞。</p>
 
+
+
                                         
+
+
 
                                         <h5>3. 導電接觸面材料的選擇 (Conductive Contacts)</h5>
 
+
+
                                         <p><strong>導電碳粒 (Carbon Pill)</strong>（電阻 100~150Ω）是最實惠耐磨的方案；<strong>金/銀粒 (Metal Pill)</strong>（電阻 &lt; 10Ω）用於低延遲的高精密控制；<strong>印導電油墨</strong>則適合薄型化設計。</p>
+
+
 
                                     </div>
 
+
+
                                     <div class="article-figure-container">
+
+
 
                                         <img src="images/tech/conductive-keypad.png" alt="導電矽膠按鍵行程與結構圖" class="article-figure-img" loading="lazy" />
 
+
+
                                         <p style="font-size: 0.8rem; color: var(--color-text-muted); text-align: center; margin-top: var(--space-2);">▲ 矽膠導電按鍵斜壁、行程、預壓及底部導電碳粒接觸結構設計示意圖</p>
+
+
 
                                     </div>
 
+
+
                                 </div>
 
+
+
                                 
+
+
 
                                 <p>鈞翔實業具備 30 年以上精密模具研發實力，能提供模具一站式服務，協助您調整按鍵斜壁厚度以達到最完美的手感回饋。我們的工廠位於新莊新樹路，歡迎提供圖面進行技術討論。</p>
 
+
+
                             </div>
 
+
+
                         </div>
+
+
 
                         <div class="article-toggle-btn">
 
+
+
                             <span>閱讀全文</span>
+
+
 
                             <svg class="lucide lucide-chevron-down" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:16px;height:16px;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m6 9 6 6 6-6"></path></svg>
 
+
+
                         </div>
+
+
 
                     </article>
 
+
+
                     
+
+
 
                     <!-- Article 4 (Case Study 1) -->
 
+
+
                     <article class="article-card" data-category="case" data-tags="醫療級,LSR射出">
+
+
 
                         <div class="article-header">
 
+
+
                             <div>
 
+
+
                                 <span class="article-tag">客戶案例分享</span>
+
+
 
                                 <h3 class="article-title">醫療級 LSR 液態矽膠呼吸面罩配件：高品質與精密的量產實踐</h3>
 
+
+
                             </div>
+
+
 
                         </div>
 
+
+
                         <div class="article-meta">
+
+
 
                             <span>分類：醫療器械矽膠代工</span> | <span>發布日期：2026-06-24</span>
 
+
+
                         </div>
 
+
+
                         <p class="article-summary">
+
+
 
                             台灣知名呼吸醫療器材大廠，委託生產新一代睡眠呼吸面罩密封矽膠墊圈。產品要求：必須符合 FDA 食品級與 ISO 10993 生物相容性規範、嚴格控制毛邊在 0.03mm 以下，且製程中不能有人為油脂污染...
 
+
+
                         </p>
+
+
 
                         
 
+
+
                         <div class="article-expanded-content">
 
+
+
                             <div class="article-body">
+
+
 
                                 <div class="article-figure-grid reverse">
 
+
+
                                     <div class="article-figure-container">
+
+
 
                                         <img src="images/tech/medical-mask.png" alt="醫療級液態矽膠呼吸面罩" class="article-figure-img" loading="lazy" />
 
+
+
                                         <p style="font-size: 0.8rem; color: var(--color-text-muted); text-align: center; margin-top: var(--space-2);">▲ 鈞翔實業生產的無塵無污染、通過生物相容性檢測醫療級 LSR 呼吸面罩墊片</p>
+
+
 
                                     </div>
 
+
+
                                     <div>
 
+
+
                                         <h5>【面臨的技術挑戰】</h5>
+
+
 
                                         <p>面罩長時間與肌膚接觸，高溫消毒時不能釋放揮發物。傳統固態矽膠壓出有人工操作，易夾雜粉塵或人為油脂，且複雜3D構造容易產生毛邊導致肌膚不適。</p>
 
+
+
                                         
 
+
+
                                         <h5>【鈞翔的技術解決方案】</h5>
+
+
 
                                         <p>採用全閉鎖雙液型液態矽膠自動計量系統，原料 100% 無空氣暴露與人工接觸。設計精密分模與真空排氣系統，毛邊控制在 0.03mm 以下。優化硫化參數以排除微量小分子，順利通過 FDA 檢測。</p>
 
+
+
                                         
 
+
+
                                         <h5>【量產效益】</h5>
+
+
 
                                         <p>單件生產週期縮短至 25 秒，產能提升 380%，成品出廠良率高達 99.7%，協助客戶順利開拓全球醫療配件市場。</p>
 
+
+
                                     </div>
+
+
 
                                 </div>
 
+
+
                             </div>
 
+
+
                         </div>
+
+
 
                         <div class="article-toggle-btn">
 
+
+
                             <span>閱讀全文</span>
+
+
 
                             <svg class="lucide lucide-chevron-down" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:16px;height:16px;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m6 9 6 6 6-6"></path></svg>
 
+
+
                         </div>
+
+
 
                     </article>
 
+
+
                     
+
+
 
                     <!-- Article 5 (Case Study 2) -->
 
+
+
                     <article class="article-card" data-category="case" data-tags="LSR射出,異材結合,防水密封">
+
+
 
                         <div class="article-header">
 
+
+
                             <div>
 
+
+
                                 <span class="article-tag">客戶案例分享</span>
+
+
 
                                 <h3 class="article-title">車載高精密防水插座：LSR 雙色包膠 (Overmolding) 代工合作案</h3>
 
+
+
                             </div>
+
+
 
                         </div>
 
+
+
                         <div class="article-meta">
+
+
 
                             <span>分類：汽機車電子防水密封</span> | <span>發布日期：2026-06-24</span>
 
+
+
                         </div>
 
+
+
                         <p class="article-summary">
+
+
 
                             歐美一級車用零部件供應商，需在防錯硬質 PA66 塑膠插座骨架上，直接成型一層柔軟的液態矽膠密封圈。產品需要通過 IP69K 耐高溫高壓水柱沖刷測試，且需要在 -40°C ~ 150°C 的極端氣候循環中維持穩定黏合...
 
+
+
                         </p>
+
+
 
                         
 
+
+
                         <div class="article-expanded-content">
 
+
+
                             <div class="article-body">
+
+
 
                                 <div class="article-figure-grid">
 
+
+
                                     <div>
+
+
 
                                         <h5>【面臨的技術挑戰】</h5>
 
+
+
                                         <p>汽車行駛的高頻震動易使傳統套裝的 O型環位移，導致漏水與短路。因此客戶決定採用 Overmolding 一體成型製程。挑戰在於 PA66 與矽膠結合面極小，且需在極高射出壓力下貼合不脫膠。</p>
 
+
+
                                         
+
+
 
                                         <h5>【鈞翔的技術解決方案】</h5>
 
+
+
                                         <p>使用雙色二次射出定位模具，定位精度達 ±0.01mm 以防漏膠溢料。挑選自粘性液態矽膠材料，省去底漆塗佈。設計特殊膠道，確保高溫射出時熔融界面交聯，剪切強度大於 4.5 MPa。</p>
+
+
 
                                         
 
+
+
                                         <h5>【量產效益】</h5>
+
+
 
                                         <p>成功通過車廠 IP69K 最高等級防水檢測與汽車零組件大廠震動測試，省去人工套圈成本，封裝可靠度提升至 100%。</p>
 
+
+
                                     </div>
+
+
 
                                     <div class="article-figure-container">
 
+
+
                                         <img src="images/tech/car-plug.png" alt="車載雙色包膠防水接頭" class="article-figure-img" loading="lazy" />
+
+
 
                                         <p style="font-size: 0.8rem; color: var(--color-text-muted); text-align: center; margin-top: var(--space-2);">▲ LSR 液態矽膠雙色二次射出於硬質 PA66 汽車插座的防漏包膠成品</p>
 
+
+
                                     </div>
+
+
 
                                 </div>
 
+
+
                             </div>
 
+
+
                         </div>
+
+
 
                         <div class="article-toggle-btn">
 
+
+
                             <span>閱讀全文</span>
+
+
 
                             <svg class="lucide lucide-chevron-down" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:16px;height:16px;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m6 9 6 6 6-6"></path></svg>
 
+
+
                         </div>
+
+
 
                     </article>
 
+
+
                     
+
+
 
                     <!-- Article 6 (Case Study 3) -->
 
+
+
                     <article class="article-card" data-category="case" data-tags="異材結合,材料知識">
+
+
 
                         <div class="article-header">
 
+
+
                             <div>
+
+
 
                                 <span class="article-tag">客戶案例分享</span>
 
+
+
                                 <h3 class="article-title">工業重載避震腳墊（矽膠包鐵件）：優化高撕裂強度物理黏合性能</h3>
+
+
 
                             </div>
 
+
+
                         </div>
+
+
 
                         <div class="article-meta">
 
+
+
                             <span>分類：重型工業防震避震</span> | <span>發布日期：2026-06-24</span>
 
+
+
                         </div>
+
+
 
                         <p class="article-summary">
 
+
+
                             重型機械設備大廠委託開發一款防震支撐腳墊，核心結構為厚重的內部鐵件骨架，外圍包覆一層具有高吸震效能的橡矽膠。產品需承受超過 500 公斤的重壓力，且在高頻率強烈震動環境下，橡膠與內部鐵件絕不脫膠崩離...
+
+
 
                         </p>
 
+
+
                         
+
+
 
                         <div class="article-expanded-content">
 
+
+
                             <div class="article-body">
+
+
 
                                 <h5>【面臨的技術挑戰】</h5>
 
+
+
                                 <p>重載避震器的鐵件骨架體積較大，熱傳導效率與矽膠不同，在模具內容易引起受熱不均進而導致局部硫化不足。此外，設備運作時產生持續的高頻震動，結合界面會承受極大的動態剪切力，傳統壓出成型極易使金屬與橡膠剝離，失去避震和緩衝效果。</p>
 
+
+
                                 
+
+
 
                                 <h5>【鈞翔的技術解決方案】</h5>
 
+
+
                                 <ul>
+
+
 
                                     <li><strong>表面改性噴砂與化學清洗</strong>：我們對內部鐵件（金屬骨架）先進行 80 目粗金剛砂的高壓噴砂，打毛金屬表面以提供優異的物理機械咬合面；再以專用化學溶劑去除微量金屬加工油漬。</li>
 
+
+
                                     <li><strong>專業金屬矽膠架橋劑（底漆）噴塗技術</strong>：在防塵潔淨環境下，將特製底漆均勻噴塗在鐵件結合面上，控制厚度於 5 ~ 10 微米。底漆能與金屬表面的羥基產生共價鍵，並與矽膠分子發生雙硫交聯反應。</li>
+
+
 
                                     <li><strong>高溫真空熱壓成型與二次加硫控制</strong>：使用抽真空熱壓機，在模具內先抽真空以消除結合界面的氣體殘留，確保結合無孔洞。並設定長達 4 小時的二次加硫，使材料熟化更加均勻。</li>
 
+
+
                                 </ul>
+
+
 
                                 
 
+
+
                                 <h5>【量產效益】</h5>
+
+
 
                                 <p>開發出來的避震腳墊順利通過客戶 20 萬次高頻重載壓縮測試，拉拔破壞測試中表現為橡膠基材破壞（代表金屬與矽膠的結合面強度已超越橡膠本身的抗拉扯極限），成功為客戶提供最高耐用度防護。</p>
 
+
+
                             </div>
 
+
+
                         </div>
+
+
 
                         <div class="article-toggle-btn">
 
+
+
                             <span>閱讀全文</span>
+
+
 
                             <svg class="lucide lucide-chevron-down" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:16px;height:16px;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m6 9 6 6 6-6"></path></svg>
 
+
+
                         </div>
+
+
 
                     </article>
 
+
+
                     
+
+
 
                 </div>
 
+
+
             </main>
+
+
 
         </div>
 
+
+
     </div>
 
+
+
 </section>
+
+
+
+
 
 
 
 <!-- Service CTA Section -->
 
+
+
 <section class="section service-cta" style="background: var(--color-bg-secondary); border-top: 1px solid var(--color-border); padding: clamp(4rem, 8vh, 6rem) 0; text-align: center;">
+
+
 
     <div class="container">
 
+
+
         <h3 style="font-family: var(--font-heading); font-size: clamp(1.5rem, 3vw, 2.25rem); font-weight: 700; color: var(--color-text-primary); margin-bottom: 1.5rem;">想深入討論您的產品製程？</h3>
+
+
 
         <p style="color: var(--color-text-secondary); margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto; line-height: var(--leading-relaxed);">
 
+
+
             我們在新莊擁有30年以上的模具開發與矽橡膠製品成型經驗，ISO 9001品質認證，為您提供最可靠的技術解答。
+
+
 
         </p>
 
+
+
         <a class="btn btn-primary" href="index.html#contact" style="display: inline-flex; align-items: center; gap: 8px;">
+
+
 
             <svg class="lucide lucide-mail" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:18px;height:18px;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect height="16" rx="2" width="20" x="2" y="4"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
 
+
+
             聯繫技術人員
+
+
 
         </a>
 
+
+
     </div>
+
+
 
 </section>
 
 
 
+
+
+
+
 <footer class="footer">
+
+
 
     <div class="container">
 
+
+
         <div class="footer-grid">
+
+
 
             <div class="footer-brand">
 
+
+
                 <div class="footer-logo">
+
+
 
                     <div class="logo-icon">鈞</div>
 
+
+
                     <span>鈞翔實業</span>
 
+
+
                 </div>
+
+
 
                 <p>專業矽橡膠製品客製化代工廠。擁有30年以上工藝傳承與 ISO 9001 認證，提供高品質固態矽膠熱壓與 LSR 液態矽膠射出成型服務，為您打造最可靠的精密矽膠製造方案。</p>
 
+
+
             </div>
+
+
 
             <div class="footer-nav">
 
+
+
                 <h4>快速連結</h4>
+
+
 
                 <ul class="footer-links">
 
+
+
                     <li><a href="index.html#about">關於鈞翔</a></li>
+
+
 
                     <li><a href="service.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'zh-TW')">服務技術</a></li>
 
+
+
                     <li><a href="products_list.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'zh-TW')">產品實現</a></li>
+
+
 
                     <li><a href="knowledge.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'zh-TW')">技術知識庫</a></li>
 
+
+
                     <li><a href="index.html#quality">品質認證</a></li>
+
+
 
                     <li><a href="index.html#contact">聯絡我們</a></li>
 
+
+
                 </ul>
 
+
+
             </div>
+
+
 
             <div class="footer-contact">
 
+
+
                 <h4>聯絡資訊</h4>
 
+
+
                 <div class="contact-item">
+
+
 
                     <svg class="lucide lucide-map-pin" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:16px;height:16px;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
 
+
+
                     <span>242 新北市新莊區新樹路 345 巷 3 號</span>
+
+
 
                 </div>
 
+
+
                 <div class="contact-item">
+
+
 
                     <svg class="lucide lucide-phone" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:16px;height:16px;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
 
+
+
                     <a href="tel:0222039918">(02) 2203-9918</a>
 
+
+
                 </div>
+
+
 
                 <div class="contact-item">
 
+
+
                     <svg class="lucide lucide-mail" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:16px;height:16px;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect height="16" rx="2" width="20" x="2" y="4"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+
+
 
                     <a href="mailto:jojo.li888@msa.hinet.net">jojo.li888@msa.hinet.net</a>
 
+
+
                 </div>
+
+
 
             </div>
 
+
+
         </div>
+
+
 
         <div class="footer-bottom">
 
+
+
             <span>© 2026 鈞翔實業有限公司 版權所有 Jun-Hsiang Enterprise Co., Ltd.</span>
+
+
 
             <a class="btn btn-outline" href="#navbar" style="font-size: 0.7rem; padding: 6px 16px;">
 
+
+
                 <svg class="lucide lucide-arrow-up" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:14px;height:14px;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m5 12 7-7 7 7"></path><path d="M12 19V5"></path></svg>
+
+
 
                 回到頂部
 
+
+
             </a>
+
+
 
         </div>
 
+
+
     </div>
+
+
 
 </footer>
 
 
 
+
+
+
+
 <button aria-label="回到頂部" class="back-to-top" id="back-to-top">
 
+
+
     <svg class="lucide lucide-chevron-up" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m18 15-6-6-6 6"></path></svg>
+
+
 
 </button>
 
 
 
+
+
+
+
 <script src="js/animations.js"></script>
+
+
 
 <script src="js/main.js"></script>
 
 
 
+
+
+
+
 <script>
+
+
 
     document.addEventListener('DOMContentLoaded', () => {
 
+
+
         // Article Accordion Toggle
+
+
 
         const articleCards = document.querySelectorAll('.article-card');
 
+
+
         
+
+
 
         articleCards.forEach(card => {
 
+
+
             card.addEventListener('click', (e) => {
+
+
 
                 // If user clicked inside a link/button, do nothing
 
+
+
                 if (e.target.closest('a') || e.target.closest('button') || e.target.closest('table')) {
+
+
 
                     return;
 
+
+
                 }
 
+
+
                 
+
+
 
                 const isExpanded = card.classList.contains('expanded');
 
+
+
                 
+
+
 
                 // If the article is already expanded, ONLY collapse if the user explicitly clicked the toggle button
 
+
+
                 if (isExpanded && !e.target.closest('.article-toggle-btn')) {
+
+
 
                     return;
 
+
+
                 }
 
+
+
                 
+
+
 
                 // Close all other articles to keep layout clean
 
+
+
                 articleCards.forEach(c => {
+
+
 
                     if (c !== card) {
 
+
+
                         c.classList.remove('expanded');
+
+
 
                         const btnText = c.querySelector('.article-toggle-btn span');
 
+
+
                         if (btnText) btnText.textContent = '閱讀全文';
+
+
 
                     }
 
+
+
                 });
 
+
+
                 
+
+
 
                 // Toggle current article
 
+
+
                 card.classList.toggle('expanded');
 
+
+
                 
+
+
 
                 const btnText = card.querySelector('.article-toggle-btn span');
 
+
+
                 if (btnText) {
+
+
 
                     btnText.textContent = card.classList.contains('expanded') ? '收起文章' : '閱讀全文';
 
+
+
                 }
+
+
 
                 
 
+
+
                 // Smooth scroll into view if expanding
+
+
 
                 if (!isExpanded) {
 
+
+
                     setTimeout(() => {
+
+
 
                         card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 
+
+
                     }, 300);
+
+
 
                 }
 
+
+
             });
+
+
 
         });
 
+
+
         
+
+
 
         // Combined Filter Function
 
+
+
         const searchInput = document.getElementById('article-search');
+
+
 
         const tagButtons = document.querySelectorAll('.tag-btn');
 
+
+
         const navItems = document.querySelectorAll('.knowledge-nav-item');
+
+
 
         
 
+
+
         let activeCategory = 'all';
 
+
+
         let activeTag = 'all';
+
+
 
         let searchQuery = '';
 
 
 
+
+
+
+
         function filterArticles() {
+
+
 
             articleCards.forEach(card => {
 
+
+
                 const category = card.dataset.category || '';
+
+
 
                 const tags = card.dataset.tags ? card.dataset.tags.split(',') : [];
 
+
+
                 
+
+
 
                 // Match Category
 
+
+
                 const matchCategory = (activeCategory === 'all' || category === activeCategory);
 
+
+
                 
+
+
 
                 // Match Tag
 
+
+
                 const matchTag = (activeTag === 'all' || tags.includes(activeTag));
 
+
+
                 
+
+
 
                 // Match Search Query (Title + Summary + Body)
 
+
+
                 const cardTitle = card.querySelector('.article-title') ? card.querySelector('.article-title').textContent.toLowerCase() : '';
+
+
 
                 const cardSummary = card.querySelector('.article-summary') ? card.querySelector('.article-summary').textContent.toLowerCase() : '';
 
+
+
                 const cardBody = card.querySelector('.article-body') ? card.querySelector('.article-body').textContent.toLowerCase() : '';
+
+
 
                 
 
+
+
                 const matchSearch = (!searchQuery || 
+
+
 
                                      cardTitle.includes(searchQuery) || 
 
+
+
                                      cardSummary.includes(searchQuery) ||
+
+
 
                                      cardBody.includes(searchQuery));
 
+
+
                                      
+
+
 
                 if (matchCategory && matchTag && matchSearch) {
 
+
+
                     card.style.display = 'block';
+
+
 
                     card.style.opacity = '1';
 
+
+
                 } else {
+
+
 
                     card.style.display = 'none';
 
+
+
                     // If active card was expanded, collapse it to keep layout clean
+
+
 
                     if (card.classList.contains('expanded')) {
 
+
+
                         card.classList.remove('expanded');
+
+
 
                         const btnText = card.querySelector('.article-toggle-btn span');
 
+
+
                         if (btnText) btnText.textContent = '閱讀全文';
+
+
 
                     }
 
+
+
                 }
+
+
 
             });
 
+
+
         }
+
+
+
+
 
 
 
         // Category Filter Event
 
+
+
         navItems.forEach(item => {
+
+
 
             item.addEventListener('click', () => {
 
+
+
                 navItems.forEach(i => i.classList.remove('active'));
+
+
 
                 item.classList.add('active');
 
+
+
                 activeCategory = item.dataset.type;
+
+
 
                 filterArticles();
 
+
+
             });
 
+
+
         });
+
+
+
+
 
 
 
         // Tag Filter Event
 
+
+
         tagButtons.forEach(btn => {
+
+
 
             btn.addEventListener('click', () => {
 
+
+
                 tagButtons.forEach(b => {
+
+
 
                     b.classList.remove('active');
 
+
+
                     b.style.background = 'rgba(255,255,255,0.03)';
+
+
 
                     b.style.color = 'var(--color-text-secondary)';
 
+
+
                     b.style.borderColor = 'var(--color-border)';
+
+
 
                 });
 
+
+
                 btn.classList.add('active');
+
+
 
                 btn.style.background = 'rgba(214, 168, 67, 0.1)';
 
+
+
                 btn.style.color = 'var(--color-accent)';
+
+
 
                 btn.style.borderColor = 'var(--color-accent)';
 
+
+
                 
+
+
 
                 activeTag = btn.dataset.tag;
 
+
+
                 filterArticles();
 
+
+
             });
+
+
 
         });
 
 
 
+
+
+
+
         // Search Input Event
+
+
 
         if (searchInput) {
 
+
+
             searchInput.addEventListener('input', (e) => {
+
+
 
                 searchQuery = e.target.value.trim().toLowerCase();
 
+
+
                 filterArticles();
+
+
 
             });
 
+
+
         }
+
+
 
     });
 
+
+
 </script>
+
+
 
 </body>
 
+
+
 </html>
+
+
 
