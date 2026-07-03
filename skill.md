@@ -855,3 +855,26 @@ html {
    * 提供首頁 Banner 或外部連結直接導向產品列表並自動篩選的功能。
    * 規則：當 URL 包含 `?category=分類代碼` 時，`js/main.js` 必須在 DOM 加載完畢後，自動尋找對應的 `.category-item` 並觸發點擊事件，藉此完成自動篩選與展示。
 
+## ⚡ 十四、自訂網域發信與安全優化機制 (Custom Domain Email Sending & Security Guidelines)
+
+為解決聯絡表單發信落入垃圾信箱的問題，網站已於 2026 年 7 月完成自訂網域發信機制整合：
+
+1. **DNS 網域解析與驗證 (GoDaddy)**：
+   * **主網域與 www 子網域**：4 筆 A 記錄 (`@`) 均已指向 GitHub Pages IP (`185.199.108.153` 至 `111.153`)；CNAME 記錄 (`www`) 指向 `andy-hsu0127.github.io`。這確保了 `jun-hsiang.com.tw` 與 `www.jun-hsiang.com.tw` 均可正常開啟網站，並在 GitHub Pages 順利通過網域與 SSL 憑證驗證。
+   * **郵件發送驗證 (DKIM/SPF)**：於 GoDaddy 中為 `jun-hsiang.com.tw` 成功設定 Resend 提供之 MX 與 TXT 驗證記錄，完成 SPF 與 DKIM 驗證，使網域在 Resend 顯示為 `Verified`。
+
+2. **自訂發信代理對接 (EmailJS + Resend)**：
+   * **發信服務 (Service)**：使用 EmailJS 之自訂 SMTP 服務 (`service_941qf5m`)，連線主機 `smtp.resend.com` (Port `465`, SSL)，並以 Resend API Key (`re_K6S5HQxA_EfH27WeijyUhqQdEscVVUz8J`) 作為密碼完成認證。
+   * **信件範本 (Template)**：使用範本 `template_xd47fdq`，設定寄件者為 `website@jun-hsiang.com.tw`，收件者維持為官方信箱 `jojo.li888@msa.hinet.net`。
+   * **前端 SDK 調用 (Public Key)**：全網頁載入 EmailJS 瀏覽器 SDK (v4)，並在 `js/main.js` 中發送時，明確以 options 物件 `{ publicKey: "x4U1bJa_bowbuMl3r" }` 傳入公鑰，確保發信權限正確。
+
+3. **智能混合發信邏輯 (Hybrid Submission Logic)**：
+   * **一般聯絡表單**（無附件）：一律由前端透過 EmailJS 搭配自訂網域寄出，防範郵件落入垃圾信箱。
+   * **RFP 詢價表單**（有/無附件）：
+     * *若有夾帶檔案*：因 EmailJS 免費版限制附件大小為 50KB，程式會自動無縫切換，將表單資料透過 `FormData` POST 送至 FormSubmit.co 管道寄送，以支援高達 10MB 的圖檔傳輸。
+     * *若無夾帶檔案*：則走 EmailJS 透過自訂網域高品質發送。
+
+4. **安全防護設定 (Allowed Domains)**：
+   * 於 EmailJS 設定之 `Allowed Domains` 中新增 `www.jun-hsiang.com.tw`、`jun-hsiang.com.tw` 與 `localhost`，限制唯有上述來源才能調用公鑰，防止發信配額被第三方惡意程式刷爆。
+
+
