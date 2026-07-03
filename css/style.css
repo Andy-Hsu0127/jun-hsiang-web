@@ -1918,6 +1918,13 @@ button {
         direction: ltr;
     }
 
+    .service-image,
+    .about-image {
+        width: 90%;
+        max-width: 550px;
+        margin: 0 auto;
+    }
+
     .contact-grid {
         grid-template-columns: 1fr;
     }
