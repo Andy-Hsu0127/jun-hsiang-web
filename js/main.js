@@ -2,7 +2,7 @@
    Main Application Logic
    Navigation, Loading, Product Filter, Interactions
    ============================================================ */
-// Trigger rebuild for DNS propagation
+// Trigger rebuild 2 for DNS propagation
 
 document.addEventListener('DOMContentLoaded', () => {
     // ---- Initialize EmailJS ----
