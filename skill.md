@@ -864,7 +864,7 @@ html {
    * **郵件發送驗證 (DKIM/SPF)**：於 GoDaddy 中為 `jun-hsiang.com.tw` 成功設定 Resend 提供之 MX 與 TXT 驗證記錄，完成 SPF 與 DKIM 驗證，使網域在 Resend 顯示為 `Verified`。
 
 2. **自訂發信代理對接 (EmailJS + Resend)**：
-   * **發信服務 (Service)**：使用 EmailJS 之自訂 SMTP 服務 (`service_941qf5m`)，連線主機 `smtp.resend.com` (Port `465`, SSL)，並以 Resend API Key (`re_K6S5HQxA_EfH27WeijyUhqQdEscVVUz8J`) 作為密碼完成認證。
+   * **發信服務 (Service)**：使用 EmailJS 之自訂 SMTP 服務 (`service_941qf5m`)，連線主機 `smtp.resend.com` (Port `465`, SSL)，並以 Resend API Key (`re_K6S5************************`) 作為密碼完成認證。
    * **信件範本 (Template)**：使用範本 `template_xd47fdq`，設定寄件者為 `website@jun-hsiang.com.tw`，收件者維持為官方信箱 `jojo.li888@msa.hinet.net`。
    * **前端 SDK 調用 (Public Key)**：全網頁載入 EmailJS 瀏覽器 SDK (v4)，並在 `js/main.js` 中發送時，明確以 options 物件 `{ publicKey: "x4U1bJa_bowbuMl3r" }` 傳入公鑰，確保發信權限正確。
 
