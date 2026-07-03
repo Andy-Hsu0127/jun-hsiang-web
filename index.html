@@ -922,6 +922,7 @@
                             <label for="general-message">留言內容</label>
                             <textarea id="general-message" name="message" placeholder="請描述您的需求..." rows="5"></textarea>
                         </div>
+                        <div class="g-recaptcha" data-sitekey="0x4AAAAAAADu_tOZgKOefaEIG" style="margin-bottom: 15px;"></div>
                         <button class="btn btn-primary btn-submit" id="general-submit-btn" type="submit" style="width: 100%; justify-content: center;">
                             <svg class="lucide" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:18px;height:18px;margin-right:8px;vertical-align:middle;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><line x1="22" x2="11" y1="2" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
                             送出聯絡訊息
@@ -1063,6 +1064,7 @@
                                     <label for="rfp-message">其他補充需求</label>
                                     <textarea id="rfp-message" name="message" rows="3" placeholder="請填寫任何其他製程或檢驗規格要求..."></textarea>
                                 </div>
+                                <div class="g-recaptcha" data-sitekey="0x4AAAAAAADu_tOZgKOefaEIG" style="margin-top: 15px; margin-bottom: 15px;"></div>
                                 <!-- Hidden inputs for FormSubmit configuration -->
                                 <input type="hidden" name="_subject" value="【鈞翔實業】新互動式詢價單需求通知">
                                 <input type="hidden" name="_captcha" value="false">
@@ -1205,6 +1207,7 @@
 <script src="js/animations.js"></script>
 <script src="js/counter.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js?compat=recaptcha" async defer></script>
 <script src="js/main.js"></script>
 </body>
 </html>
