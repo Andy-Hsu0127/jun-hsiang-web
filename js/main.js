@@ -9,6 +9,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (typeof emailjs !== 'undefined') {
         emailjs.init({
             publicKey: 'x4U1bJa_bowbuMl3r',
+            limitRate: {
+                id: 'jun-hsiang-app',
+                throttle: 30000, // 限制 30 秒內同一使用者只能發送一次，防止重複點擊
+            }
         });
     }
 
