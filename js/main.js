@@ -733,7 +733,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     message: `預估年產量: ${qtyVal}\n硬度要求: ${hardVal}\n使用溫度: ${tempVal}\n其他補充需求: ${msgVal}`
                 };
 
-                emailjs.send("service_941qf5m", "template_xd47fdq", templateParams, "GcaZOlTBRPCuTB_CIHoAB")
+                emailjs.send("service_941qf5m", "template_xd47fdq", templateParams, { publicKey: "GcaZOlTBRPCuTB_CIHoAB" })
                 .then(() => {
                     handleRFPSuccess();
                 })
@@ -856,7 +856,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 message: document.getElementById('general-message') ? document.getElementById('general-message').value : ""
             };
 
-            emailjs.send("service_941qf5m", "template_xd47fdq", templateParams, "GcaZOlTBRPCuTB_CIHoAB")
+            emailjs.send("service_941qf5m", "template_xd47fdq", templateParams, { publicKey: "GcaZOlTBRPCuTB_CIHoAB" })
             .then(() => {
                 showStatusModal(true);
                 generalForm.reset();
