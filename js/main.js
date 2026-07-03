@@ -4,6 +4,13 @@
    ============================================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
+    // ---- Initialize EmailJS ----
+    if (typeof emailjs !== 'undefined') {
+        emailjs.init({
+            publicKey: 'GcaZOlTBRPCuTB_CIHoAB',
+        });
+    }
+
     // ---- Initialize Lucide Icons ----
     if (typeof lucide !== 'undefined') {
         lucide.createIcons();
@@ -662,35 +669,20 @@ document.addEventListener('DOMContentLoaded', () => {
             rfpSubmitBtn.innerHTML = `<span style="display:inline-flex;align-items:center;gap:8px;">${t.submitting}</span>`;
             rfpSubmitBtn.disabled = true;
 
-            // Use FormData to allow file uploads
-            const formData = new FormData(rfpForm);
-            const actionUrl = rfpForm.getAttribute('action') || "https://formsubmit.co/jojo.li888@msa.hinet.net";
-
-            fetch(actionUrl, {
-                method: "POST",
-                body: formData
-            })
-            .then(response => {
-                if (response.ok) {
-                    showStatusModal(true);
-                    
-                    rfpForm.reset();
-                    // Reset option cards selection
-                    document.querySelectorAll('.rfp-option-card').forEach(c => c.classList.remove('selected'));
-                    // Go back to step 1
-                    rfpCurrentStep = 1;
-                    updateRFPWizard();
-                    
-                    rfpSubmitBtn.innerHTML = originalContent;
-                    rfpSubmitBtn.disabled = false;
-                    if (typeof lucide !== 'undefined') {
-                        lucide.createIcons();
-                    }
-                } else {
-                    throw new Error("Form submission failed");
+            const handleRFPSuccess = () => {
+                showStatusModal(true);
+                rfpForm.reset();
+                document.querySelectorAll('.rfp-option-card').forEach(c => c.classList.remove('selected'));
+                rfpCurrentStep = 1;
+                updateRFPWizard();
+                rfpSubmitBtn.innerHTML = originalContent;
+                rfpSubmitBtn.disabled = false;
+                if (typeof lucide !== 'undefined') {
+                    lucide.createIcons();
                 }
-            })
-            .catch(error => {
+            };
+
+            const handleRFPError = (error) => {
                 console.error(error);
                 showStatusModal(false);
                 rfpSubmitBtn.innerHTML = originalContent;
@@ -698,7 +690,56 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (typeof lucide !== 'undefined') {
                     lucide.createIcons();
                 }
-            });
+            };
+
+            const fileInput = document.getElementById('rfp-file');
+            const hasFile = fileInput && fileInput.files && fileInput.files.length > 0;
+
+            if (hasFile) {
+                // If there's an attachment, fall back to FormSubmit.co
+                const formData = new FormData(rfpForm);
+                const actionUrl = rfpForm.getAttribute('action') || "https://formsubmit.co/jojo.li888@msa.hinet.net";
+
+                fetch(actionUrl, {
+                    method: "POST",
+                    body: formData
+                })
+                .then(response => {
+                    if (response.ok) {
+                        handleRFPSuccess();
+                    } else {
+                        throw new Error("Form submission failed");
+                    }
+                })
+                .catch(error => {
+                    handleRFPError(error);
+                });
+            } else {
+                // If there's no attachment, use EmailJS to send via Resend SMTP
+                const appVal = document.getElementById('rfp-application') ? document.getElementById('rfp-application').value || "未填寫" : "未填寫";
+                const procVal = document.getElementById('rfp-process') ? document.getElementById('rfp-process').value || "未填寫" : "未填寫";
+                const qtyVal = document.getElementById('rfp-quantity') ? document.getElementById('rfp-quantity').value || "未填寫" : "未填寫";
+                const hardVal = document.getElementById('rfp-hardness') ? document.getElementById('rfp-hardness').value || "未填寫" : "未填寫";
+                const tempVal = document.getElementById('rfp-temp') ? document.getElementById('rfp-temp').value || "未填寫" : "未填寫";
+                const msgVal = document.getElementById('rfp-message') ? document.getElementById('rfp-message').value || "無" : "無";
+
+                const templateParams = {
+                    company: document.getElementById('rfp-company') ? document.getElementById('rfp-company').value : "",
+                    name: document.getElementById('rfp-name') ? document.getElementById('rfp-name').value : "",
+                    phone: document.getElementById('rfp-phone') ? document.getElementById('rfp-phone').value : "",
+                    email: document.getElementById('rfp-email') ? document.getElementById('rfp-email').value : "",
+                    product: `應用領域: ${appVal} | 加工製程: ${procVal}`,
+                    message: `預估年產量: ${qtyVal}\n硬度要求: ${hardVal}\n使用溫度: ${tempVal}\n其他補充需求: ${msgVal}`
+                };
+
+                emailjs.send("service_941qf5m", "template_xd47fdq", templateParams)
+                .then(() => {
+                    handleRFPSuccess();
+                })
+                .catch(error => {
+                    handleRFPError(error);
+                });
+            }
         });
     }
 
@@ -804,25 +845,24 @@ document.addEventListener('DOMContentLoaded', () => {
             generalSubmitBtn.innerHTML = `<span style="display:inline-flex;align-items:center;gap:8px;">${t.submitting}</span>`;
             generalSubmitBtn.disabled = true;
 
-            const formData = new FormData(generalForm);
-            const actionUrl = generalForm.getAttribute('action') || "https://formsubmit.co/jojo.li888@msa.hinet.net";
+            // Use EmailJS to send via Resend SMTP
+            const templateParams = {
+                company: document.getElementById('general-company') ? document.getElementById('general-company').value : "",
+                name: document.getElementById('general-name') ? document.getElementById('general-name').value : "",
+                phone: document.getElementById('general-phone') ? document.getElementById('general-phone').value : "",
+                email: document.getElementById('general-email') ? document.getElementById('general-email').value : "",
+                product: document.getElementById('general-product-need') ? document.getElementById('general-product-need').value : "",
+                message: document.getElementById('general-message') ? document.getElementById('general-message').value : ""
+            };
 
-            fetch(actionUrl, {
-                method: "POST",
-                body: formData
-            })
-            .then(response => {
-                if (response.ok) {
-                    showStatusModal(true);
-                    
-                    generalForm.reset();
-                    generalSubmitBtn.innerHTML = originalContent;
-                    generalSubmitBtn.disabled = false;
-                    if (typeof lucide !== 'undefined') {
-                        lucide.createIcons();
-                    }
-                } else {
-                    throw new Error("Form submission failed");
+            emailjs.send("service_941qf5m", "template_xd47fdq", templateParams)
+            .then(() => {
+                showStatusModal(true);
+                generalForm.reset();
+                generalSubmitBtn.innerHTML = originalContent;
+                generalSubmitBtn.disabled = false;
+                if (typeof lucide !== 'undefined') {
+                    lucide.createIcons();
                 }
             })
             .catch(error => {
