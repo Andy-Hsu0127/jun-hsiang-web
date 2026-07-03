@@ -1,119 +1,119 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
    <!-- 中文版 (zh-TW) -->
    <url>
-      <loc>https://andy-hsu0127.github.io/jun-hsiang-web/</loc>
+      <loc>https://www.jun-hsiang.com.tw/</loc>
       <lastmod>2026-07-02</lastmod>
       <changefreq>monthly</changefreq>
       <priority>1.0</priority>
-      <xhtml:link rel="alternate" hreflang="zh-TW" href="https://andy-hsu0127.github.io/jun-hsiang-web/"/>
-      <xhtml:link rel="alternate" hreflang="en" href="https://andy-hsu0127.github.io/jun-hsiang-web/en/index.html"/>
-      <xhtml:link rel="alternate" hreflang="ja" href="https://andy-hsu0127.github.io/jun-hsiang-web/ja/index.html"/>
+      <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.jun-hsiang.com.tw/"/>
+      <xhtml:link rel="alternate" hreflang="en" href="https://www.jun-hsiang.com.tw/en/index.html"/>
+      <xhtml:link rel="alternate" hreflang="ja" href="https://www.jun-hsiang.com.tw/ja/index.html"/>
    </url>
    <url>
-      <loc>https://andy-hsu0127.github.io/jun-hsiang-web/products_list.html</loc>
+      <loc>https://www.jun-hsiang.com.tw/products_list.html</loc>
       <lastmod>2026-07-02</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
-      <xhtml:link rel="alternate" hreflang="zh-TW" href="https://andy-hsu0127.github.io/jun-hsiang-web/products_list.html"/>
-      <xhtml:link rel="alternate" hreflang="en" href="https://andy-hsu0127.github.io/jun-hsiang-web/en/products_list.html"/>
-      <xhtml:link rel="alternate" hreflang="ja" href="https://andy-hsu0127.github.io/jun-hsiang-web/ja/products_list.html"/>
+      <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.jun-hsiang.com.tw/products_list.html"/>
+      <xhtml:link rel="alternate" hreflang="en" href="https://www.jun-hsiang.com.tw/en/products_list.html"/>
+      <xhtml:link rel="alternate" hreflang="ja" href="https://www.jun-hsiang.com.tw/ja/products_list.html"/>
    </url>
    <url>
-      <loc>https://andy-hsu0127.github.io/jun-hsiang-web/service.html</loc>
+      <loc>https://www.jun-hsiang.com.tw/service.html</loc>
       <lastmod>2026-07-02</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
-      <xhtml:link rel="alternate" hreflang="zh-TW" href="https://andy-hsu0127.github.io/jun-hsiang-web/service.html"/>
-      <xhtml:link rel="alternate" hreflang="en" href="https://andy-hsu0127.github.io/jun-hsiang-web/en/service.html"/>
-      <xhtml:link rel="alternate" hreflang="ja" href="https://andy-hsu0127.github.io/jun-hsiang-web/ja/service.html"/>
+      <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.jun-hsiang.com.tw/service.html"/>
+      <xhtml:link rel="alternate" hreflang="en" href="https://www.jun-hsiang.com.tw/en/service.html"/>
+      <xhtml:link rel="alternate" hreflang="ja" href="https://www.jun-hsiang.com.tw/ja/service.html"/>
    </url>
    <url>
-      <loc>https://andy-hsu0127.github.io/jun-hsiang-web/knowledge.html</loc>
+      <loc>https://www.jun-hsiang.com.tw/knowledge.html</loc>
       <lastmod>2026-07-02</lastmod>
       <changefreq>weekly</changefreq>
       <priority>0.9</priority>
-      <xhtml:link rel="alternate" hreflang="zh-TW" href="https://andy-hsu0127.github.io/jun-hsiang-web/knowledge.html"/>
-      <xhtml:link rel="alternate" hreflang="en" href="https://andy-hsu0127.github.io/jun-hsiang-web/en/knowledge.html"/>
-      <xhtml:link rel="alternate" hreflang="ja" href="https://andy-hsu0127.github.io/jun-hsiang-web/ja/knowledge.html"/>
+      <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.jun-hsiang.com.tw/knowledge.html"/>
+      <xhtml:link rel="alternate" hreflang="en" href="https://www.jun-hsiang.com.tw/en/knowledge.html"/>
+      <xhtml:link rel="alternate" hreflang="ja" href="https://www.jun-hsiang.com.tw/ja/knowledge.html"/>
    </url>
 
    <!-- English Version -->
    <url>
-      <loc>https://andy-hsu0127.github.io/jun-hsiang-web/en/index.html</loc>
+      <loc>https://www.jun-hsiang.com.tw/en/index.html</loc>
       <lastmod>2026-07-02</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.9</priority>
-      <xhtml:link rel="alternate" hreflang="zh-TW" href="https://andy-hsu0127.github.io/jun-hsiang-web/"/>
-      <xhtml:link rel="alternate" hreflang="en" href="https://andy-hsu0127.github.io/jun-hsiang-web/en/index.html"/>
-      <xhtml:link rel="alternate" hreflang="ja" href="https://andy-hsu0127.github.io/jun-hsiang-web/ja/index.html"/>
+      <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.jun-hsiang.com.tw/"/>
+      <xhtml:link rel="alternate" hreflang="en" href="https://www.jun-hsiang.com.tw/en/index.html"/>
+      <xhtml:link rel="alternate" hreflang="ja" href="https://www.jun-hsiang.com.tw/ja/index.html"/>
    </url>
    <url>
-      <loc>https://andy-hsu0127.github.io/jun-hsiang-web/en/products_list.html</loc>
+      <loc>https://www.jun-hsiang.com.tw/en/products_list.html</loc>
       <lastmod>2026-07-02</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.7</priority>
-      <xhtml:link rel="alternate" hreflang="zh-TW" href="https://andy-hsu0127.github.io/jun-hsiang-web/products_list.html"/>
-      <xhtml:link rel="alternate" hreflang="en" href="https://andy-hsu0127.github.io/jun-hsiang-web/en/products_list.html"/>
-      <xhtml:link rel="alternate" hreflang="ja" href="https://andy-hsu0127.github.io/jun-hsiang-web/ja/products_list.html"/>
+      <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.jun-hsiang.com.tw/products_list.html"/>
+      <xhtml:link rel="alternate" hreflang="en" href="https://www.jun-hsiang.com.tw/en/products_list.html"/>
+      <xhtml:link rel="alternate" hreflang="ja" href="https://www.jun-hsiang.com.tw/ja/products_list.html"/>
    </url>
    <url>
-      <loc>https://andy-hsu0127.github.io/jun-hsiang-web/en/service.html</loc>
+      <loc>https://www.jun-hsiang.com.tw/en/service.html</loc>
       <lastmod>2026-07-02</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.7</priority>
-      <xhtml:link rel="alternate" hreflang="zh-TW" href="https://andy-hsu0127.github.io/jun-hsiang-web/service.html"/>
-      <xhtml:link rel="alternate" hreflang="en" href="https://andy-hsu0127.github.io/jun-hsiang-web/en/service.html"/>
-      <xhtml:link rel="alternate" hreflang="ja" href="https://andy-hsu0127.github.io/jun-hsiang-web/ja/service.html"/>
+      <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.jun-hsiang.com.tw/service.html"/>
+      <xhtml:link rel="alternate" hreflang="en" href="https://www.jun-hsiang.com.tw/en/service.html"/>
+      <xhtml:link rel="alternate" hreflang="ja" href="https://www.jun-hsiang.com.tw/ja/service.html"/>
    </url>
    <url>
-      <loc>https://andy-hsu0127.github.io/jun-hsiang-web/en/knowledge.html</loc>
+      <loc>https://www.jun-hsiang.com.tw/en/knowledge.html</loc>
       <lastmod>2026-07-02</lastmod>
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
-      <xhtml:link rel="alternate" hreflang="zh-TW" href="https://andy-hsu0127.github.io/jun-hsiang-web/knowledge.html"/>
-      <xhtml:link rel="alternate" hreflang="en" href="https://andy-hsu0127.github.io/jun-hsiang-web/en/knowledge.html"/>
-      <xhtml:link rel="alternate" hreflang="ja" href="https://andy-hsu0127.github.io/jun-hsiang-web/ja/knowledge.html"/>
+      <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.jun-hsiang.com.tw/knowledge.html"/>
+      <xhtml:link rel="alternate" hreflang="en" href="https://www.jun-hsiang.com.tw/en/knowledge.html"/>
+      <xhtml:link rel="alternate" hreflang="ja" href="https://www.jun-hsiang.com.tw/ja/knowledge.html"/>
    </url>
 
    <!-- Japanese Version -->
    <url>
-      <loc>https://andy-hsu0127.github.io/jun-hsiang-web/ja/index.html</loc>
+      <loc>https://www.jun-hsiang.com.tw/ja/index.html</loc>
       <lastmod>2026-07-02</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.9</priority>
-      <xhtml:link rel="alternate" hreflang="zh-TW" href="https://andy-hsu0127.github.io/jun-hsiang-web/"/>
-      <xhtml:link rel="alternate" hreflang="en" href="https://andy-hsu0127.github.io/jun-hsiang-web/en/index.html"/>
-      <xhtml:link rel="alternate" hreflang="ja" href="https://andy-hsu0127.github.io/jun-hsiang-web/ja/index.html"/>
+      <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.jun-hsiang.com.tw/"/>
+      <xhtml:link rel="alternate" hreflang="en" href="https://www.jun-hsiang.com.tw/en/index.html"/>
+      <xhtml:link rel="alternate" hreflang="ja" href="https://www.jun-hsiang.com.tw/ja/index.html"/>
    </url>
    <url>
-      <loc>https://andy-hsu0127.github.io/jun-hsiang-web/ja/products_list.html</loc>
+      <loc>https://www.jun-hsiang.com.tw/ja/products_list.html</loc>
       <lastmod>2026-07-02</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.7</priority>
-      <xhtml:link rel="alternate" hreflang="zh-TW" href="https://andy-hsu0127.github.io/jun-hsiang-web/products_list.html"/>
-      <xhtml:link rel="alternate" hreflang="en" href="https://andy-hsu0127.github.io/jun-hsiang-web/en/products_list.html"/>
-      <xhtml:link rel="alternate" hreflang="ja" href="https://andy-hsu0127.github.io/jun-hsiang-web/ja/products_list.html"/>
+      <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.jun-hsiang.com.tw/products_list.html"/>
+      <xhtml:link rel="alternate" hreflang="en" href="https://www.jun-hsiang.com.tw/en/products_list.html"/>
+      <xhtml:link rel="alternate" hreflang="ja" href="https://www.jun-hsiang.com.tw/ja/products_list.html"/>
    </url>
    <url>
-      <loc>https://andy-hsu0127.github.io/jun-hsiang-web/ja/service.html</loc>
+      <loc>https://www.jun-hsiang.com.tw/ja/service.html</loc>
       <lastmod>2026-07-02</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.7</priority>
-      <xhtml:link rel="alternate" hreflang="zh-TW" href="https://andy-hsu0127.github.io/jun-hsiang-web/service.html"/>
-      <xhtml:link rel="alternate" hreflang="en" href="https://andy-hsu0127.github.io/jun-hsiang-web/en/service.html"/>
-      <xhtml:link rel="alternate" hreflang="ja" href="https://andy-hsu0127.github.io/jun-hsiang-web/ja/service.html"/>
+      <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.jun-hsiang.com.tw/service.html"/>
+      <xhtml:link rel="alternate" hreflang="en" href="https://www.jun-hsiang.com.tw/en/service.html"/>
+      <xhtml:link rel="alternate" hreflang="ja" href="https://www.jun-hsiang.com.tw/ja/service.html"/>
    </url>
    <url>
-      <loc>https://andy-hsu0127.github.io/jun-hsiang-web/ja/knowledge.html</loc>
+      <loc>https://www.jun-hsiang.com.tw/ja/knowledge.html</loc>
       <lastmod>2026-07-02</lastmod>
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
-      <xhtml:link rel="alternate" hreflang="zh-TW" href="https://andy-hsu0127.github.io/jun-hsiang-web/knowledge.html"/>
-      <xhtml:link rel="alternate" hreflang="en" href="https://andy-hsu0127.github.io/jun-hsiang-web/en/knowledge.html"/>
-      <xhtml:link rel="alternate" hreflang="ja" href="https://andy-hsu0127.github.io/jun-hsiang-web/ja/knowledge.html"/>
+      <xhtml:link rel="alternate" hreflang="zh-TW" href="https://www.jun-hsiang.com.tw/knowledge.html"/>
+      <xhtml:link rel="alternate" hreflang="en" href="https://www.jun-hsiang.com.tw/en/knowledge.html"/>
+      <xhtml:link rel="alternate" hreflang="ja" href="https://www.jun-hsiang.com.tw/ja/knowledge.html"/>
    </url>
 
 </urlset>
