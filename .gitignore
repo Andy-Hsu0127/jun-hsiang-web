@@ -23,3 +23,11 @@ walkthrough.md
 *.pptm
 lighthouse_report.json
 
+# 排除 AI 代理工具相關資料夾
+.agents/
+seqvio-repo/
+extracted_ppt_images/
+skills-lock.json
+temp/
+
+
