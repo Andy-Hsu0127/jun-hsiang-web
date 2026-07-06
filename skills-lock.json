@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "seqvio": {
+      "source": "makesynt/seqvio",
+      "sourceType": "github",
+      "skillPath": "skills/seqvio/SKILL.md",
+      "computedHash": "9ea8acd07fd3d8cdf14060a75002c03b9e60889f8532a80c63cd88b788b6ee40"
+    }
+  }
+}
