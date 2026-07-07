@@ -691,8 +691,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 updateRFPWizard();
                 rfpSubmitBtn.innerHTML = originalContent;
                 rfpSubmitBtn.disabled = false;
-                if (typeof grecaptcha !== 'undefined') {
-                    grecaptcha.reset();
+                if (typeof grecaptcha !== 'undefined' && grecaptcha.enterprise) {
+                    grecaptcha.enterprise.reset();
                 }
                 if (typeof lucide !== 'undefined') {
                     lucide.createIcons();
@@ -704,8 +704,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 showStatusModal(false);
                 rfpSubmitBtn.innerHTML = originalContent;
                 rfpSubmitBtn.disabled = false;
-                if (typeof grecaptcha !== 'undefined') {
-                    grecaptcha.reset();
+                if (typeof grecaptcha !== 'undefined' && grecaptcha.enterprise) {
+                    grecaptcha.enterprise.reset();
                 }
                 if (typeof lucide !== 'undefined') {
                     lucide.createIcons();
@@ -892,8 +892,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 generalForm.reset();
                 generalSubmitBtn.innerHTML = originalContent;
                 generalSubmitBtn.disabled = false;
-                if (typeof grecaptcha !== 'undefined') {
-                    grecaptcha.reset();
+                if (typeof grecaptcha !== 'undefined' && grecaptcha.enterprise) {
+                    grecaptcha.enterprise.reset();
                 }
                 if (typeof lucide !== 'undefined') {
                     lucide.createIcons();
@@ -904,8 +904,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 showStatusModal(false);
                 generalSubmitBtn.innerHTML = originalContent;
                 generalSubmitBtn.disabled = false;
-                if (typeof grecaptcha !== 'undefined') {
-                    grecaptcha.reset();
+                if (typeof grecaptcha !== 'undefined' && grecaptcha.enterprise) {
+                    grecaptcha.enterprise.reset();
                 }
                 if (typeof lucide !== 'undefined') {
                     lucide.createIcons();
