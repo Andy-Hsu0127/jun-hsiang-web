@@ -131,7 +131,6 @@ medical-lsr-mask
 oring-seal-custom-mold
 semiconductor-silicone-seal
 shore-hardness-guide
-silicone-manufacturer-guide
 silicone-overmolding
 solid-vs-lsr
 uav-silicone-parts
