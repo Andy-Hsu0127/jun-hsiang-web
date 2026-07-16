@@ -1634,6 +1634,7 @@ button {
     background: var(--color-bg-elevated);
     padding: var(--space-16) 0 var(--space-8);
     border-top: 1px solid var(--color-border);
+    color: var(--color-text-primary);
 }
 
 .footer-grid {
@@ -1675,7 +1676,7 @@ button {
 }
 
 .footer-brand p {
-    color: var(--color-text-muted);
+    color: var(--color-text-secondary);
     font-size: var(--text-small);
     line-height: var(--leading-relaxed);
     max-width: 320px;
@@ -1686,6 +1687,7 @@ button {
     font-size: var(--text-body);
     font-weight: 600;
     margin-bottom: var(--space-6);
+    color: var(--color-text-primary);
 }
 
 .footer-links li {
@@ -1693,7 +1695,7 @@ button {
 }
 
 .footer-links a {
-    color: var(--color-text-muted);
+    color: var(--color-text-secondary);
     font-size: var(--text-small);
     transition: all var(--transition-normal);
     display: inline-flex;
@@ -1717,7 +1719,7 @@ button {
     align-items: center;
     padding-top: var(--space-8);
     border-top: 1px solid var(--color-border);
-    color: var(--color-text-muted);
+    color: var(--color-text-secondary);
     font-size: var(--text-caption);
 }
 
