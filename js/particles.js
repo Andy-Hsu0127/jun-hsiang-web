@@ -9,7 +9,7 @@ class ParticleSystem {
         
         this.ctx = this.canvas.getContext('2d');
         this.particles = [];
-        this.particleCount = window.innerWidth < 768 ? 15 : 80;
+        this.particleCount = window.innerWidth < 768 ? 6 : 30;
         this.mouse = { x: null, y: null, radius: 150 };
         
         this.config = {
@@ -109,8 +109,8 @@ class ParticleSystem {
                 let dy = p.y - p2.y;
                 let dist = Math.sqrt(dx * dx + dy * dy);
                 
-                if (dist < 150) {
-                    let opacity = (1 - (dist / 150)) * this.config.lineOpacity;
+                if (dist < 100) {
+                    let opacity = (1 - (dist / 100)) * this.config.lineOpacity;
                     this.ctx.strokeStyle = `rgba(${this.config.color}, ${opacity})`;
                     this.ctx.lineWidth = 0.5;
                     this.ctx.beginPath();
