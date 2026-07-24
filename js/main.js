@@ -1,49 +1,71 @@
-/* ============================================================
-   Main Application Logic
-   Navigation, Loading, Product Filter, Interactions
-   ============================================================ */
-// Trigger rebuild 4 for DNS propagation
+
 
 document.addEventListener('DOMContentLoaded', () => {
-    // ---- Initialize EmailJS ----
-    if (typeof emailjs !== 'undefined') {
-        emailjs.init({
-            publicKey: 'x4U1bJa_bowbuMl3r',
-            limitRate: {
-                id: 'jun-hsiang-app',
-                throttle: 30000, // 限制 30 秒內同一使用者只能發送一次，防止重複點擊
+
+    function initFormThirdParties() {
+        if (window.formThirdPartiesLoaded) return;
+        window.formThirdPartiesLoaded = true;
+
+        const s1 = document.createElement('script');
+        s1.src = 'https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js';
+        s1.onload = () => {
+            if (typeof emailjs !== 'undefined') {
+                emailjs.init({
+                    publicKey: 'x4U1bJa_bowbuMl3r',
+                    limitRate: {
+                        id: 'jun-hsiang-app',
+                        throttle: 30000,
+                    }
+                });
             }
-        });
+        };
+        document.body.appendChild(s1);
+
+        const s2 = document.createElement('script');
+        s2.src = 'https://www.google.com/recaptcha/api.js';
+        s2.async = true;
+        s2.defer = true;
+        document.body.appendChild(s2);
     }
 
-    // ---- Initialize Lucide Icons ----
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+        const contactObserver = new IntersectionObserver((entries) => {
+            if (entries[0].isIntersecting) {
+                initFormThirdParties();
+                contactObserver.disconnect();
+            }
+        }, { rootMargin: '200px' });
+        contactObserver.observe(contactSection);
+    } else {
+        setTimeout(initFormThirdParties, 4000);
+    }
+
     if (typeof lucide !== 'undefined') {
         lucide.createIcons();
     }
 
-    // ---- Loading Screen ----
     const loadingScreen = document.getElementById('loading-screen');
     const hero = document.querySelector('.hero');
 
     setTimeout(() => {
         if (loadingScreen) {
             loadingScreen.classList.add('hide');
-            // Initialize Particles earlier
+
             if (window.initHeroParticles) {
                 window.initHeroParticles('hero-canvas');
             }
-            // Trigger hero animations
+
             setTimeout(() => {
                 if (hero) hero.classList.add('loaded');
             }, 200);
-            // Remove loading screen from DOM
+
             setTimeout(() => {
                 loadingScreen.remove();
             }, 1000);
         }
     }, 800); 
 
-    // ---- Navbar Scroll Effects ----
     const navbar = document.getElementById('navbar');
     let lastScrollY = 0;
     let ticking = false;
@@ -51,14 +73,12 @@ document.addEventListener('DOMContentLoaded', () => {
     function updateNavbar() {
         const scrollY = window.scrollY;
 
-        // Add scrolled class
         if (scrollY > 50) {
             navbar.classList.add('scrolled');
         } else {
             navbar.classList.remove('scrolled');
         }
 
-        // Hide/show navbar on scroll direction (only on desktop)
         if (window.innerWidth > 768) {
             if (scrollY > lastScrollY && scrollY > 400) {
                 navbar.style.transform = 'translateY(-100%)';
@@ -80,7 +100,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ---- Hamburger Menu ----
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobile-menu');
 
@@ -91,7 +110,6 @@ document.addEventListener('DOMContentLoaded', () => {
             document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
         });
 
-        // Close mobile menu on link click
         mobileMenu.querySelectorAll('.nav-link').forEach(link => {
             link.addEventListener('click', () => {
                 hamburger.classList.remove('active');
@@ -101,7 +119,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ---- Hero Carousel ----
     const slides = document.querySelectorAll('.hero-slide');
     const dotsContainer = document.getElementById('hero-dots');
     const prevBtn = document.getElementById('hero-prev');
@@ -110,7 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let slideInterval;
 
     if (slides.length > 0 && dotsContainer && prevBtn && nextBtn) {
-        // Create dots
+
         slides.forEach((_, index) => {
             const dot = document.createElement('span');
             dot.classList.add('dot');
@@ -126,8 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
             slides[currentSlide].classList.remove('active');
             dots[currentSlide].classList.remove('active');
             currentSlide = (index + slides.length) % slides.length;
-            
-            // Lazy load target slide background
+
             const slide = slides[currentSlide];
             if (slide.dataset.bg && !slide.style.backgroundImage) {
                 slide.style.backgroundImage = `url('${slide.dataset.bg}')`;
@@ -148,7 +164,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         resetInterval();
 
-        // Lazy load all remaining slides after page load (delay 2.5 seconds) to protect PageSpeed
         window.addEventListener('load', () => {
             setTimeout(() => {
                 slides.forEach(slide => {
@@ -160,7 +175,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ---- Product Filter (Sidebar) ----
     const categoryItems = document.querySelectorAll('.category-item');
     const productCards = document.querySelectorAll('.product-card');
 
@@ -192,20 +206,18 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Check URL query parameter for category
     const urlParams = new URLSearchParams(window.location.search);
     const catParam = urlParams.get('category');
     if (catParam) {
         const targetItem = Array.from(categoryItems).find(item => item.dataset.filter === catParam);
         if (targetItem) {
-            // Wait slightly for DOM and reveal animations to settle
+
             setTimeout(() => {
                 targetItem.click();
             }, 100);
         }
     }
 
-    // ---- Back to Top Button ----
     const backToTop = document.getElementById('back-to-top');
     if (backToTop) {
         window.addEventListener('scroll', () => {
@@ -224,7 +236,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ---- Smooth Scroll for anchor links ----
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -240,26 +251,22 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // ---- Product Modal System ----
     const modal = document.getElementById('product-modal');
     const modalClose = document.getElementById('modal-close');
     const modalBackdrop = document.getElementById('modal-backdrop');
 
     function openModal(card) {
         if (!modal) return;
-        
-        // Fill data
+
         document.getElementById('modal-title').textContent = card.dataset.title || '';
         document.getElementById('modal-title-small').textContent = card.dataset.title || '';
         document.getElementById('modal-category-text').textContent = card.dataset.type || '';
         document.getElementById('modal-desc').textContent = card.dataset.desc || '';
         document.getElementById('modal-img').src = card.dataset.img || '';
 
-        // Show modal
         modal.classList.add('show');
         document.body.style.overflow = 'hidden'; // prevent background scrolling
-        
-        // Re-initialize icons if needed inside modal
+
         if (typeof lucide !== 'undefined') {
             lucide.createIcons();
         }
@@ -274,22 +281,18 @@ document.addEventListener('DOMContentLoaded', () => {
     if (modal) {
         if (modalClose) modalClose.addEventListener('click', closeModal);
         if (modalBackdrop) modalBackdrop.addEventListener('click', closeModal);
-        
-        // Attach click to all product cards
+
         document.querySelectorAll('.product-card').forEach(card => {
             card.addEventListener('click', () => openModal(card));
-            
-            // Magnetic Tilt Effect
+
             card.addEventListener('mousemove', (e) => {
                 const rect = card.getBoundingClientRect();
                 const x = e.clientX - rect.left;
                 const y = e.clientY - rect.top;
-                
-                // Update CSS variables for light effect
+
                 card.style.setProperty('--mouse-x', `${x}px`);
                 card.style.setProperty('--mouse-y', `${y}px`);
-                
-                // Calculate Tilt (More sensitive)
+
                 const centerX = rect.width / 2;
                 const centerY = rect.height / 2;
                 const rotateX = (y - centerY) / 10;
@@ -303,31 +306,27 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
-    
-    // Export closeModal to window for inline onclick usage if any
+
     window.closeModal = closeModal;
 
-    // ---- FAQ Accordion Toggle ----
     const faqItems = document.querySelectorAll('.faq-item');
     faqItems.forEach(item => {
         const question = item.querySelector('.faq-question');
         if (question) {
             question.addEventListener('click', () => {
                 const isActive = item.classList.contains('active');
-                
-                // Close other items
+
                 faqItems.forEach(otherItem => {
                     otherItem.classList.remove('active');
                 });
-                
-                // Toggle current item
+
                 if (!isActive) {
                     item.classList.add('active');
                 }
             });
         }
     });
-    // ---- Glow Card Mouse Effects ----
+
     const glowCards = document.querySelectorAll('.glow-card');
     glowCards.forEach(card => {
         card.addEventListener('mousemove', (e) => {
@@ -339,7 +338,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // ---- RFP Option Cards Selection ----
     const optionCards = document.querySelectorAll('.rfp-option-card');
     optionCards.forEach(card => {
         card.addEventListener('click', () => {
@@ -350,14 +348,12 @@ document.addEventListener('DOMContentLoaded', () => {
             if (input) {
                 input.value = card.dataset.value;
             }
-            
-            // Toggle selection class
+
             grid.querySelectorAll('.rfp-option-card').forEach(c => c.classList.remove('selected'));
             card.classList.add('selected');
         });
     });
 
-    // ---- RFP Wizard Navigation ----
     let rfpCurrentStep = 1;
     const rfpTotalSteps = 4;
     const rfpPrevBtn = document.getElementById('rfp-prev-btn');
@@ -368,7 +364,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const rfpSteps = document.querySelectorAll('.rfp-step');
 
     function updateRFPWizard() {
-        // Show/hide steps
+
         rfpSteps.forEach(step => {
             if (parseInt(step.dataset.step) === rfpCurrentStep) {
                 step.classList.add('active');
@@ -377,7 +373,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Update step dots
         rfpStepDots.forEach(dot => {
             const stepNum = parseInt(dot.dataset.step);
             if (stepNum === rfpCurrentStep) {
@@ -392,13 +387,11 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Update Progress Bar
         const progressPercent = ((rfpCurrentStep - 1) / (rfpTotalSteps - 1)) * 100;
         if (rfpProgressBar) {
             rfpProgressBar.style.width = `${25 + progressPercent * 0.75}%`; // start at 25%, end at 100%
         }
 
-        // Show/hide buttons
         if (rfpPrevBtn) {
             rfpPrevBtn.style.display = rfpCurrentStep > 1 ? 'block' : 'none';
         }
@@ -430,7 +423,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ---- Form Validation & Translation Dictionary ----
     const lang = window.location.pathname.includes('/en/') ? 'en' : (window.location.pathname.includes('/ja/') ? 'ja' : 'zh');
 
     const translations = {
@@ -481,7 +473,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function validatePhone(phoneVal) {
         if (!phoneVal) return true;
-        // Allow digits, spaces, dashes, parentheses, plus sign. Length >= 6
+
         const re = /^[\d\s()+\-]+$/;
         return re.test(phoneVal.trim()) && phoneVal.trim().replace(/[^\d]/g, '').length >= 6;
     }
@@ -507,7 +499,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Interactive Field Validation
     function validateField(inputEl) {
         clearError(inputEl);
         const id = inputEl.id;
@@ -534,7 +525,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
-        // Check if both are empty (either general or rfp)
         const isGeneral = id.startsWith('general-');
         const phoneId = isGeneral ? 'general-phone' : 'rfp-phone';
         const emailId = isGeneral ? 'general-email' : 'rfp-email';
@@ -550,8 +540,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 setError(emailEl, t.contactRequired);
                 return false;
             } else {
-                // Clear the generic contactRequired error if at least one is filled,
-                // but preserve specific format error if invalid.
+
+
                 if (id === phoneId) {
                     clearError(emailEl);
                     if (emailVal && !validateEmail(emailVal)) {
@@ -569,8 +559,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return true;
     }
 
-    // Restrict Phone Number inputs to valid characters only (numbers, spaces, dashes, parentheses, plus sign)
-    // This physically prevents typing or pasting non-phone characters like Chinese characters, providing ultimate error-proofing
+
     const phoneInputs = document.querySelectorAll('#general-phone, #rfp-phone');
     phoneInputs.forEach(input => {
         input.addEventListener('input', () => {
@@ -581,7 +570,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Attach real-time validation listeners
     const formInputs = document.querySelectorAll('.form-group input, .form-group select, .form-group textarea');
     formInputs.forEach(input => {
         input.addEventListener('blur', () => {
@@ -594,7 +582,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
         input.addEventListener('change', () => {
-            // Always run validation on change (such as autocomplete filling)
+
             validateField(input);
         });
     });
@@ -650,13 +638,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ---- RFP Form Submit Handler ----
     const rfpForm = document.getElementById('contact-form');
     if (rfpForm) {
         rfpForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            
-            // Validate step 4 inputs
+
             const name = document.getElementById('rfp-name');
             const phone = document.getElementById('rfp-phone');
             const email = document.getElementById('rfp-email');
@@ -669,8 +655,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
-
-            // Validate CAPTCHA
             const captchaEl = rfpForm.querySelector('[name="g-recaptcha-response"]');
             const captchaToken = captchaEl ? captchaEl.value : "";
             if (!captchaToken) {
@@ -678,7 +662,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
-            // Disable button and show sending state
             const originalContent = rfpSubmitBtn.innerHTML;
             rfpSubmitBtn.innerHTML = `<span style="display:inline-flex;align-items:center;gap:8px;">${t.submitting}</span>`;
             rfpSubmitBtn.disabled = true;
@@ -716,7 +699,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const hasFile = fileInput && fileInput.files && fileInput.files.length > 0;
 
             if (hasFile) {
-                // If there's an attachment, fall back to FormSubmit.co
+
                 const formData = new FormData(rfpForm);
                 const actionUrl = rfpForm.getAttribute('action') || "https://formsubmit.co/jojo.li888@msa.hinet.net";
 
@@ -735,7 +718,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     handleRFPError(error);
                 });
             } else {
-                // If there's no attachment, use EmailJS to send via Resend SMTP
+
                 const appVal = document.getElementById('rfp-application') ? document.getElementById('rfp-application').value || "未填寫" : "未填寫";
                 const procVal = document.getElementById('rfp-process') ? document.getElementById('rfp-process').value || "未填寫" : "未填寫";
                 const qtyVal = document.getElementById('rfp-quantity') ? document.getElementById('rfp-quantity').value || "未填寫" : "未填寫";
@@ -764,7 +747,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ---- Material Selection Helper Interaction ----
     const materialHelper = document.getElementById('material-results');
     if (materialHelper) {
         const checkboxes = document.querySelectorAll('.material-checkbox-input');
@@ -772,7 +754,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const emptyState = document.getElementById('material-helper-empty');
 
         function filterMaterials() {
-            // Get all checked values
+
             const activeProps = [];
             checkboxes.forEach(cb => {
                 const label = cb.closest('.material-checkbox-label');
@@ -790,11 +772,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 const cardTags = card.dataset.tags ? card.dataset.tags.split(',') : [];
                 
                 if (activeProps.length === 0) {
-                    // Show all cards when no checkbox is checked
+
                     card.classList.remove('hidden');
                     visibleCount++;
                 } else {
-                    // Check if card matches AT LEAST ONE selected property (OR match)
+
                     const isMatch = activeProps.some(prop => cardTags.includes(prop));
                     if (isMatch) {
                         card.classList.remove('hidden');
@@ -805,7 +787,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
 
-            // Show empty state if no matches
             if (visibleCount === 0 && emptyState) {
                 emptyState.classList.remove('hidden');
             } else if (emptyState) {
@@ -817,10 +798,9 @@ document.addEventListener('DOMContentLoaded', () => {
             cb.addEventListener('change', filterMaterials);
         });
 
-        // Initial run to format correctly
         filterMaterials();
     }
-    // ---- Contact Tabs Switcher ----
+
     const contactTabButtons = document.querySelectorAll('.contact-tabs .tab-btn');
     const contactTabContents = document.querySelectorAll('.contact-form-tab-content');
 
@@ -843,7 +823,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // ---- General Contact Form Submit Handler ----
     const generalForm = document.getElementById('general-contact-form');
     const generalSubmitBtn = document.getElementById('general-submit-btn');
     if (generalForm && generalSubmitBtn) {
@@ -862,8 +841,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
-
-            // Validate CAPTCHA
             const captchaEl = generalForm.querySelector('[name="g-recaptcha-response"]');
             const captchaToken = captchaEl ? captchaEl.value : "";
             if (!captchaToken) {
@@ -875,7 +852,6 @@ document.addEventListener('DOMContentLoaded', () => {
             generalSubmitBtn.innerHTML = `<span style="display:inline-flex;align-items:center;gap:8px;">${t.submitting}</span>`;
             generalSubmitBtn.disabled = true;
 
-            // Use EmailJS to send via Resend SMTP
             const templateParams = {
                 company: document.getElementById('general-company') ? document.getElementById('general-company').value : "",
                 name: document.getElementById('general-name') ? document.getElementById('general-name').value : "",
@@ -914,7 +890,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ---- Lazy Load Video ----
     const lazyVideo = document.getElementById('intro-video');
     if (lazyVideo) {
         const videoObserver = new IntersectionObserver((entries) => {
@@ -929,7 +904,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }, { threshold: 0.1 });
         videoObserver.observe(lazyVideo);
 
-        // Auto-scroll to products when video ends
         lazyVideo.addEventListener('ended', () => {
             const productsSection = document.getElementById('products');
             if (productsSection) {
