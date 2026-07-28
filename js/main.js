@@ -732,8 +732,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     phone: document.getElementById('rfp-phone') ? document.getElementById('rfp-phone').value : "",
                     email: document.getElementById('rfp-email') ? document.getElementById('rfp-email').value : "",
                     product: `應用領域: ${appVal} | 加工製程: ${procVal}`,
-                    message: `預估年產量: ${qtyVal}\n硬度要求: ${hardVal}\n使用溫度: ${tempVal}\n其他補充需求: ${msgVal}`,
-                    'g-recaptcha-response': captchaToken
+                    message: `預估年產量: ${qtyVal}\n硬度要求: ${hardVal}\n使用溫度: ${tempVal}\n其他補充需求: ${msgVal}`
                 };
 
                 emailjs.send("service_941qf5m", "template_xd47fdq", templateParams, { publicKey: "x4U1bJa_bowbuMl3r" })
@@ -741,7 +740,29 @@ document.addEventListener('DOMContentLoaded', () => {
                     handleRFPSuccess();
                 })
                 .catch(error => {
-                    handleRFPError(error);
+                    console.warn("EmailJS failed, trying FormSubmit fallback...", error);
+                    fetch("https://formsubmit.co/ajax/jojo.li888@msa.hinet.net", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json", "Accept": "application/json" },
+                        body: JSON.stringify({
+                            "公司名稱": templateParams.company,
+                            "聯絡姓名": templateParams.name,
+                            "聯絡電話": templateParams.phone,
+                            "E-mail": templateParams.email,
+                            "需求細節": templateParams.product,
+                            "補充說明": templateParams.message,
+                            "_subject": "【鈞翔實業官網】專案需求聯絡 (備援發送)"
+                        })
+                    })
+                    .then(res => res.json())
+                    .then(data => {
+                        if (data.success === "true" || data.success === true) {
+                            handleRFPSuccess();
+                        } else {
+                            handleRFPError(error);
+                        }
+                    })
+                    .catch(() => handleRFPError(error));
                 });
             }
         });
@@ -858,8 +879,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 phone: document.getElementById('general-phone') ? document.getElementById('general-phone').value : "",
                 email: document.getElementById('general-email') ? document.getElementById('general-email').value : "",
                 product: document.getElementById('general-product-need') ? document.getElementById('general-product-need').value : "",
-                message: document.getElementById('general-message') ? document.getElementById('general-message').value : "",
-                'g-recaptcha-response': captchaToken
+                message: document.getElementById('general-message') ? document.getElementById('general-message').value : ""
             };
 
             emailjs.send("service_941qf5m", "template_xd47fdq", templateParams, { publicKey: "x4U1bJa_bowbuMl3r" })
@@ -868,24 +888,42 @@ document.addEventListener('DOMContentLoaded', () => {
                 generalForm.reset();
                 generalSubmitBtn.innerHTML = originalContent;
                 generalSubmitBtn.disabled = false;
-                if (typeof grecaptcha !== 'undefined') {
-                    grecaptcha.reset();
-                }
-                if (typeof lucide !== 'undefined') {
-                    lucide.createIcons();
-                }
+                if (typeof grecaptcha !== 'undefined') grecaptcha.reset();
+                if (typeof lucide !== 'undefined') lucide.createIcons();
             })
             .catch(error => {
-                console.error(error);
-                showStatusModal(false);
-                generalSubmitBtn.innerHTML = originalContent;
-                generalSubmitBtn.disabled = false;
-                if (typeof grecaptcha !== 'undefined') {
-                    grecaptcha.reset();
-                }
-                if (typeof lucide !== 'undefined') {
-                    lucide.createIcons();
-                }
+                console.warn("EmailJS failed, trying FormSubmit fallback...", error);
+                fetch("https://formsubmit.co/ajax/jojo.li888@msa.hinet.net", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json", "Accept": "application/json" },
+                    body: JSON.stringify({
+                        "公司名稱": templateParams.company,
+                        "聯絡姓名": templateParams.name,
+                        "聯絡電話": templateParams.phone,
+                        "E-mail": templateParams.email,
+                        "需求產品": templateParams.product,
+                        "留言內容": templateParams.message,
+                        "_subject": "【鈞翔實業官網】一般聯絡詢問 (備援發送)"
+                    })
+                })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.success === "true" || data.success === true) {
+                        showStatusModal(true);
+                        generalForm.reset();
+                    } else {
+                        showStatusModal(false);
+                    }
+                })
+                .catch(() => {
+                    showStatusModal(false);
+                })
+                .finally(() => {
+                    generalSubmitBtn.innerHTML = originalContent;
+                    generalSubmitBtn.disabled = false;
+                    if (typeof grecaptcha !== 'undefined') grecaptcha.reset();
+                    if (typeof lucide !== 'undefined') lucide.createIcons();
+                });
             });
         });
     }
