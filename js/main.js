@@ -732,7 +732,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     phone: document.getElementById('rfp-phone') ? document.getElementById('rfp-phone').value : "",
                     email: document.getElementById('rfp-email') ? document.getElementById('rfp-email').value : "",
                     product: `應用領域: ${appVal} | 加工製程: ${procVal}`,
-                    message: `預估年產量: ${qtyVal}\n硬度要求: ${hardVal}\n使用溫度: ${tempVal}\n其他補充需求: ${msgVal}`
+                    message: `預估年產量: ${qtyVal}\n硬度要求: ${hardVal}\n使用溫度: ${tempVal}\n其他補充需求: ${msgVal}`,
+                    'g-recaptcha-response': captchaToken
                 };
 
                 emailjs.send("service_941qf5m", "template_xd47fdq", templateParams, { publicKey: "x4U1bJa_bowbuMl3r" })
@@ -879,7 +880,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 phone: document.getElementById('general-phone') ? document.getElementById('general-phone').value : "",
                 email: document.getElementById('general-email') ? document.getElementById('general-email').value : "",
                 product: document.getElementById('general-product-need') ? document.getElementById('general-product-need').value : "",
-                message: document.getElementById('general-message') ? document.getElementById('general-message').value : ""
+                message: document.getElementById('general-message') ? document.getElementById('general-message').value : "",
+                'g-recaptcha-response': captchaToken
             };
 
             emailjs.send("service_941qf5m", "template_xd47fdq", templateParams, { publicKey: "x4U1bJa_bowbuMl3r" })
