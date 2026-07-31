@@ -56,8 +56,13 @@ document.addEventListener('DOMContentLoaded', () => {
         if (loadingScreen) {
             loadingScreen.classList.add('hide');
 
-            if (window.initHeroParticles) {
-                window.initHeroParticles('hero-canvas');
+            // ⚡ 僅在桌面版閒置時啟動 Canvas 粒子系統，行動裝置跳過以省 CPU TBT
+            if (window.initHeroParticles && !isMobile) {
+                if ('requestIdleCallback' in window) {
+                    requestIdleCallback(() => window.initHeroParticles('hero-canvas'));
+                } else {
+                    setTimeout(() => window.initHeroParticles('hero-canvas'), 500);
+                }
             }
 
             setTimeout(() => {

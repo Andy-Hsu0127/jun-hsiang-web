@@ -80,7 +80,12 @@ class ScrollAnimations {
     }
 }
 
-// Initialize
-document.addEventListener('DOMContentLoaded', () => {
+// Defer initialization to idle time to minimize TBT
+function initScrollAnimations() {
     window.scrollAnimations = new ScrollAnimations();
-});
+}
+if ('requestIdleCallback' in window) {
+    requestIdleCallback(initScrollAnimations, { timeout: 1500 });
+} else {
+    window.addEventListener('load', () => setTimeout(initScrollAnimations, 200));
+}

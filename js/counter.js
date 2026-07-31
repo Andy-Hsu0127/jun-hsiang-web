@@ -103,8 +103,13 @@ class HeroStatCounter {
     }
 }
 
-// Initialize
-document.addEventListener('DOMContentLoaded', () => {
+// Defer initialization to idle time to minimize TBT
+function initCounters() {
     window.counterAnimation = new CounterAnimation();
     window.heroStatCounter = new HeroStatCounter();
-});
+}
+if ('requestIdleCallback' in window) {
+    requestIdleCallback(initCounters, { timeout: 2000 });
+} else {
+    window.addEventListener('load', () => setTimeout(initCounters, 300));
+}
