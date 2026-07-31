@@ -47,7 +47,23 @@
 
 <link href="images/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
 
-<link href="css/style.css?v=1.0.1" rel="stylesheet"/>
+<!-- ⚡ 關鍵 CSS 內聯：讓首次渲染不依賴 style.css 下載 -->
+<style id="critical-css">
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{overflow-x:hidden}
+body{font-family:'Outfit','Noto Sans TC',sans-serif;background:#080C14;color:#F8FAFC;overflow-x:hidden}
+#loading-screen{position:fixed;inset:0;background:#080C14;z-index:10000;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.loading-logo{font-size:2rem;font-weight:800;color:#F8FAFC}
+.loading-logo .accent{color:#D4A843}
+.loading-bar{width:200px;height:3px;background:rgba(255,255,255,0.1);border-radius:9999px;overflow:hidden;margin-top:2rem}
+.loading-bar::after{content:'';display:block;width:0;height:100%;background:linear-gradient(135deg,#E8C86A,#D4A843,#B08A2E);border-radius:9999px;animation:ldProg .9s ease .1s forwards}
+@keyframes ldProg{to{width:100%}}
+@media(max-width:768px){#loading-screen{display:none!important}}
+</style>
+
+<!-- ⚡ style.css 非同步載入（消除 render-blocking） -->
+<link rel="preload" href="css/style.css?v=1.0.2" as="style" onload="this.rel='stylesheet';document.getElementById('critical-css').remove()"/>
+<noscript><link href="css/style.css?v=1.0.2" rel="stylesheet"/></noscript>
 
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 
