@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 loadingScreen.remove();
             }, 1000);
         }
-    }, 800); 
+    }, 200); // ⚡ 效能優化：從 800ms 縮短至 200ms 以加速 LCP
 
     const navbar = document.getElementById('navbar');
     let lastScrollY = 0;
@@ -285,20 +285,22 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('.product-card').forEach(card => {
             card.addEventListener('click', () => openModal(card));
 
+            let tiltRaf = null;
             card.addEventListener('mousemove', (e) => {
-                const rect = card.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
-
-                card.style.setProperty('--mouse-x', `${x}px`);
-                card.style.setProperty('--mouse-y', `${y}px`);
-
-                const centerX = rect.width / 2;
-                const centerY = rect.height / 2;
-                const rotateX = (y - centerY) / 10;
-                const rotateY = (centerX - x) / 10;
-                
-                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-8px)`;
+                if (tiltRaf) return;
+                tiltRaf = requestAnimationFrame(() => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    card.style.setProperty('--mouse-x', `${x}px`);
+                    card.style.setProperty('--mouse-y', `${y}px`);
+                    const centerX = rect.width / 2;
+                    const centerY = rect.height / 2;
+                    const rotateX = (y - centerY) / 10;
+                    const rotateY = (centerX - x) / 10;
+                    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-8px)`;
+                    tiltRaf = null;
+                });
             });
             
             card.addEventListener('mouseleave', () => {
@@ -329,12 +331,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const glowCards = document.querySelectorAll('.glow-card');
     glowCards.forEach(card => {
+        let glowRaf = null;
         card.addEventListener('mousemove', (e) => {
-            const rect = card.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            card.style.setProperty('--mouse-x', `${x}px`);
-            card.style.setProperty('--mouse-y', `${y}px`);
+            if (glowRaf) return;
+            glowRaf = requestAnimationFrame(() => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+                glowRaf = null;
+            });
         });
     });
 
