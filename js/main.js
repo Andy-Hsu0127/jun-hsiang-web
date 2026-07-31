@@ -48,6 +48,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const loadingScreen = document.getElementById('loading-screen');
     const hero = document.querySelector('.hero');
 
+    // ⚡ 行動裝置跳過 loading 延遲，直接顯示頁面以改善 Mobile LCP
+    const isMobile = window.innerWidth <= 768;
+    const loadDelay = isMobile ? 0 : 200;
+
     setTimeout(() => {
         if (loadingScreen) {
             loadingScreen.classList.add('hide');
@@ -64,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 loadingScreen.remove();
             }, 1000);
         }
-    }, 200); // ⚡ 效能優化：從 800ms 縮短至 200ms 以加速 LCP
+    }, loadDelay); // ⚡ 效能優化：行動裝置 0ms，桌面 200ms
 
     const navbar = document.getElementById('navbar');
     let lastScrollY = 0;
