@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
             navbar.classList.remove('scrolled');
         }
 
-        if (window.innerWidth > 768) {
+        if (!isMobile) {
             if (scrollY > lastScrollY && scrollY > 400) {
                 navbar.style.transform = 'translateY(-100%)';
             } else {
@@ -132,15 +132,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const dots = document.querySelectorAll('.dot');
 
+        function loadSlideImage(slide) {
+            if (slide.dataset.bg && !slide.dataset.bgLoaded) {
+                slide.dataset.bgLoaded = '1';
+                const img = new Image();
+                img.onload = () => { slide.style.backgroundImage = `url('${slide.dataset.bg}')`; };
+                img.src = slide.dataset.bg;
+            }
+        }
+
         function goToSlide(index) {
             slides[currentSlide].classList.remove('active');
             dots[currentSlide].classList.remove('active');
             currentSlide = (index + slides.length) % slides.length;
 
-            const slide = slides[currentSlide];
-            if (slide.dataset.bg && !slide.style.backgroundImage) {
-                slide.style.backgroundImage = `url('${slide.dataset.bg}')`;
-            }
+            loadSlideImage(slides[currentSlide]);
+            // Preload the next slide in sequence
+            const nextIndex = (currentSlide + 1) % slides.length;
+            loadSlideImage(slides[nextIndex]);
 
             slides[currentSlide].classList.add('active');
             dots[currentSlide].classList.add('active');
@@ -156,16 +165,12 @@ document.addEventListener('DOMContentLoaded', () => {
             slideInterval = setInterval(nextSlide, 5000);
         }
         resetInterval();
-
-        window.addEventListener('load', () => {
-            setTimeout(() => {
-                slides.forEach(slide => {
-                    if (slide.dataset.bg && !slide.style.backgroundImage) {
-                        slide.style.backgroundImage = `url('${slide.dataset.bg}')`;
-                    }
-                });
-            }, 2500);
-        });
+        // Preload only slide 2 image after page is idle (not all at once)
+        if ('requestIdleCallback' in window) {
+            requestIdleCallback(() => loadSlideImage(slides[1]), { timeout: 3000 });
+        } else {
+            setTimeout(() => loadSlideImage(slides[1]), 3000);
+        }
     }
 
     const categoryItems = document.querySelectorAll('.category-item');
