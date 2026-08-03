@@ -53,7 +53,8 @@
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&amp;family=Outfit:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
 
-<link as="image" href="images/hero-premium-mold.webp" rel="preload" type="image/webp" fetchpriority="high"/>
+<link as="image" href="images/hero-premium-mold-mobile.webp" media="(max-width: 768px)" rel="preload" type="image/webp" fetchpriority="high"/>
+<link as="image" href="images/hero-premium-mold.webp" media="(min-width: 769px)" rel="preload" type="image/webp" fetchpriority="high"/>
 
 <script type="application/ld+json">
 {
@@ -226,13 +227,7 @@
 
 <body>
 
-<div class="loading-screen" id="loading-screen">
 
-<div class="loading-logo">鈞翔<span class="accent">實業</span></div>
-
-<div class="loading-bar"></div>
-
-</div>
 
 <div class="announcement-bar" id="announcement-bar">
 
@@ -374,7 +369,10 @@
 
 <div class="hero-slide active">
 
+<picture>
+<source media="(max-width: 768px)" srcset="images/hero-premium-mold-mobile.webp" type="image/webp"/>
 <img src="images/hero-premium-mold.webp" alt="鈞翔實業 矽膠橡膠專業製造代工" class="hero-slide-bg" width="1024" height="1024" fetchpriority="high" loading="eager" decoding="async"/>
+</picture>
 
 <div class="hero-overlay"></div>
 

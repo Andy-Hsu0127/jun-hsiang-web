@@ -45,35 +45,16 @@ document.addEventListener('DOMContentLoaded', () => {
         lucide.createIcons();
     }
 
-    const loadingScreen = document.getElementById('loading-screen');
-    const hero = document.querySelector('.hero');
-
-    // ⚡ 行動裝置跳過 loading 延遲，直接顯示頁面以改善 Mobile LCP
     const isMobile = window.innerWidth <= 768;
-    const loadDelay = isMobile ? 0 : 200;
+    if (hero) hero.classList.add('loaded');
 
-    setTimeout(() => {
-        if (loadingScreen) {
-            loadingScreen.classList.add('hide');
-
-            // ⚡ 僅在桌面版閒置時啟動 Canvas 粒子系統，行動裝置跳過以省 CPU TBT
-            if (window.initHeroParticles && !isMobile) {
-                if ('requestIdleCallback' in window) {
-                    requestIdleCallback(() => window.initHeroParticles('hero-canvas'));
-                } else {
-                    setTimeout(() => window.initHeroParticles('hero-canvas'), 500);
-                }
-            }
-
-            setTimeout(() => {
-                if (hero) hero.classList.add('loaded');
-            }, 200);
-
-            setTimeout(() => {
-                loadingScreen.remove();
-            }, 1000);
+    if (window.initHeroParticles && !isMobile) {
+        if ('requestIdleCallback' in window) {
+            requestIdleCallback(() => window.initHeroParticles('hero-canvas'));
+        } else {
+            setTimeout(() => window.initHeroParticles('hero-canvas'), 500);
         }
-    }, loadDelay); // ⚡ 效能優化：行動裝置 0ms，桌面 200ms
+    }
 
     const navbar = document.getElementById('navbar');
     let lastScrollY = 0;
