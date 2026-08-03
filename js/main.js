@@ -33,6 +33,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const contactObserver = new IntersectionObserver((entries) => {
             if (entries[0].isIntersecting) {
                 initFormThirdParties();
+                const mapIframe = document.querySelector('.map-container iframe[data-src]');
+                if (mapIframe) mapIframe.src = mapIframe.dataset.src;
                 contactObserver.disconnect();
             }
         }, { rootMargin: '200px' });
