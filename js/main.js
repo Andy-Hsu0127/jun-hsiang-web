@@ -47,7 +47,8 @@ document.addEventListener('DOMContentLoaded', () => {
         lucide.createIcons();
     }
 
-    const isMobile = window.innerWidth <= 768;
+    const isMobile = window.matchMedia('(max-width: 768px)').matches;
+    const hero = document.querySelector('.hero');
     if (hero) hero.classList.add('loaded');
 
     if (window.initHeroParticles && !isMobile) {
