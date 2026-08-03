@@ -189,7 +189,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     card.style.opacity = '0';
                     card.style.transform = 'scale(0.9)';
                     requestAnimationFrame(() => {
-                        card.style.transition = 'all 0.4s cubic-bezier(0.16, 1, 0.3, 1)';
+                        card.style.transition = 'opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), transform 0.4s cubic-bezier(0.16, 1, 0.3, 1)';
                         card.style.opacity = '1';
                         card.style.transform = 'scale(1)';
                     });
