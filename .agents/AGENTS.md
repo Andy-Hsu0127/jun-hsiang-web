@@ -137,3 +137,53 @@ uav-silicone-parts
 viton-vs-fvmq
 ```
 （此清單同時維護於 `.agents/skills/website_seo/SKILL.md`）
+
+---
+
+## 🟢 效能與 PageSpeed 優化開發規則
+
+在 2026-08 進行的 PageSpeed 性能優化中（行動裝置提升至 91 分、電腦版提升至 99 分），我們歸納出以下關鍵效能規則，**後續修改或新增頁面時必須強制遵守**：
+
+### 1. 禁用中文字型 Webfont 下載
+- **問題根源**：使用 Google Fonts 載入中文字型（如 `Noto Sans TC`）會迫使瀏覽器在 4G 下下載超過 1.1MB 的 `woff2` 分片字型檔案，這會直接堵塞網路通道，將 FCP/LCP 延遲拉長到 10 秒以上。
+- **✅ 規則**：
+  - 禁止在任何頁面的 `<head>` 中引入 Google Fonts 中文字型（`Noto Sans TC` 等）。
+  - Google Fonts 僅可用於載入輕量級的英文/數字字型（如 `Outfit`），此時 CSS 與字型資源僅約 30KB。
+  - 所有 CSS 的中文字型 fallback 必須強制使用**原生系統字型字底 (System Font Stack)**：
+    ```css
+    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans CJK TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+    ```
+
+### 2. 嚴禁使用 `transition: all`
+- **問題根源**：在大量元素（如 `.reveal` 進場動畫、卡片 hover 特效）上使用 `transition: all` 會導致瀏覽器在滾動或渲染時進行嚴重的「Style & Layout」主執行緒計算，造成 Layout Thrashing。
+- **✅ 規則**：
+  - 動態效果必須顯式、精確地指定 transition 的屬性（通常僅限於 GPU 可優化的 `opacity` 與 `transform`），例如：
+    ```css
+    /* ❌ 錯誤 */
+    transition: all 0.7s var(--ease-out-expo);
+    
+    /* ✅ 正確 */
+    transition: opacity 0.7s var(--ease-out-expo), transform 0.7s var(--ease-out-expo);
+    ```
+
+### 3. 首屏 Hero 圖片與資源優化
+- **問題根源**：行動裝置載入大圖、多張 Hero banner 同時下載會極大拉垮 LCP 指標。
+- **✅ 規則**：
+  - 首屏第一張 Hero 背景圖必須使用 `<picture>` 標籤，針對 `max-width: 768px` 裝置提供專屬的手機壓縮版 WebP 圖片（建議解析度寬度 450px 到 768px，檔案大小控制在 25KB 以內）。
+  - 首屏圖片必須在 `<head>` 中加入 `preload` 並設定 `fetchpriority="high"`：
+    ```html
+    <link as="image" href="images/hero-premium-mold-mobile.webp" media="(max-width: 768px)" rel="preload" type="image/webp" fetchpriority="high"/>
+    ```
+  - 首頁其他 Slide 2-6 的背景圖片，**絕對不可**在頁面初始化時同時下載。必須使用 `data-bg` 屬性，在 JS 輪播切換或 idle 時才觸發 progressive 載入。
+
+### 4. 消除強迫同步佈局計算 (Forced Reflow)
+- **問題根源**：在 `scroll`、`resize` 等高頻觸發事件中直接讀取 `window.innerWidth` 或進行 DOM 寬高計算會打斷瀏覽器的渲染管線，強制進行同步重排。
+- **✅ 規則**：
+  - 嚴禁在高頻 scroll 事件中反覆讀取 `window.innerWidth` 或元素尺寸。
+  - 需要判斷行動版時，應在 DOM 初始化時使用快取變數，或使用高效能的 `window.matchMedia('(max-width: 768px)').matches`。
+
+### 5. 第三方腳本與 Iframe 懶載入
+- **問題根源**：如 Google Maps 等 iframe 會在初次載入時引入 1MB 以上的第三方 JavaScript，造成主執行緒嚴重阻塞。
+- **✅ 規則**：
+  - 所有的地圖 iframe、EmailJS、reCAPTCHA 等第三方腳本，必須使用懶載入（`data-src` 搭配 `IntersectionObserver`），只有當使用者滾動到該區塊（例如聯絡我們區塊）時，才去動態載入與初始化。
+
