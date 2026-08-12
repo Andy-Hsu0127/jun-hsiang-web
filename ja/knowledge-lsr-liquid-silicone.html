@@ -99,22 +99,22 @@
 
 <nav class="navbar" id="navbar">
     <div class="container">
-        <a class="nav-logo" href="ja/" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'ja')" id="nav-logo">
+        <a class="nav-logo" href="index.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'ja')" id="nav-logo">
             <div class="logo-icon">鈞</div>
             <span>鈞翔実業</span>
         </a>
         <div class="nav-links" id="nav-links">
-            <a class="nav-link" href="ja/">ホーム</a>
-            <a class="nav-link" href="ja/products_list.html">製品一覧</a>
-            <a class="nav-link" href="ja/service.html">加工サービス</a>
-            <a class="nav-link active" href="ja/knowledge.html">技術知識</a>
-            <a class="nav-link" href="ja/#contact">お問い合わせ</a>
+            <a class="nav-link" href="index.html">ホーム</a>
+            <a class="nav-link" href="products_list.html">製品一覧</a>
+            <a class="nav-link" href="service.html">加工サービス</a>
+            <a class="nav-link active" href="knowledge.html">技術知識</a>
+            <a class="nav-link" href="index.html#contact">お問い合わせ</a>
         </div>
         <div class="nav-actions">
             <div class="lang-switcher">
-                <button class="lang-btn" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'zh-TW'); window.location.href='knowledge-lsr-liquid-silicone.html'">繁中</button>
-                <button class="lang-btn" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'en'); window.location.href='en/knowledge-lsr-liquid-silicone.html'">EN</button>
-                <button class="lang-btn active" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'ja')">日本語</button>
+                <a class="lang-btn" href="../knowledge-lsr-liquid-silicone.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'zh-TW')">繁中</a>
+                <a class="lang-btn" href="../en/knowledge-lsr-liquid-silicone.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'en')">EN</a>
+                <a class="lang-btn active" href="knowledge-lsr-liquid-silicone.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'ja')">日本語</a>
             </div>
             <button class="nav-toggle" id="nav-toggle">
                 <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><line x1="3" x2="21" y1="6" y2="6"/><line x1="3" x2="21" y1="12" y2="12"/><line x1="3" x2="21" y1="18" y2="18"/></svg>
@@ -127,9 +127,9 @@
 <section class="page-hero">
     <div class="container">
         <nav class="breadcrumb" aria-label="breadcrumb">
-            <a href="ja/">ホーム</a>
+            <a href="index.html">ホーム</a>
             <span>›</span>
-            <a href="ja/knowledge.html">技術知識</a>
+            <a href="knowledge.html">技術知識</a>
             <span>›</span>
             <span>LSR解説</span>
         </nav>
@@ -253,15 +253,26 @@
         </section>
 
         <!-- CTA -->
+                <!-- 関連技術ガイド -->
+        <section class="article-related" style="margin-top:var(--space-8);padding:var(--space-6);border:1px solid var(--color-border);border-radius:var(--radius-lg);background:var(--color-bg-card);">
+            <h3 style="font-size:1.2rem;margin-bottom:var(--space-4);color:var(--color-text-primary);">💡 関連技術ガイド・推奨記事</h3>
+            <ul style="list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));gap:var(--space-3);">
+                <li><a href="knowledge-solid-vs-lsr.html" style="color:var(--color-accent);text-decoration:none;font-weight:500;">📌 固形シリコーン圧縮成形 vs LSR射出成形比較</a></li>
+                <li><a href="knowledge-self-bonding-lsr-guide.html" style="color:var(--color-accent);text-decoration:none;font-weight:500;">📌 自己接着型LSR（Self-Bonding LSR）成形ガイド</a></li>
+                <li><a href="knowledge-silicone-overmolding.html" style="color:var(--color-accent);text-decoration:none;font-weight:500;">📌 シリコーンと樹脂・金属の複合成形技術</a></li>
+                <li><a href="knowledge-silicone-factory-guide.html" style="color:var(--color-accent);text-decoration:none;font-weight:500;">📌 カスタムシリコーン成形工場の選定ガイド</a></li>
+            </ul>
+        </section>
+
         <section class="article-cta" style="background:var(--gradient-card);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:var(--space-8);text-align:center;margin-top:var(--space-8);">
             <h2 style="font-size:1.5rem;margin-bottom:var(--space-3);">LSR液状シリコーン射出成形・金型開発のご相談</h2>
             <p style="color:var(--color-text-secondary);margin-bottom:var(--space-5);">鈞翔実業は30年の製造実績を有し、試作・金型設計からインサート受託製造までワンストップで対応いたします。技術チームへお気軽にお問い合わせください。</p>
-            <a class="btn btn-primary" href="ja/#contact">技術チームへのお問い合わせ →</a>
+            <a class="btn btn-primary" href="index.html#contact">技術チームへのお問い合わせ →</a>
         </section>
 
         <!-- 回到知識庫 -->
         <div style="text-align:center;margin-top:var(--space-8);">
-            <a class="btn btn-secondary" href="ja/knowledge.html">← 技術知識一覧へ戻る</a>
+            <a class="btn btn-secondary" href="knowledge.html">← 技術知識一覧へ戻る</a>
         </div>
     </article>
 </main>
@@ -271,7 +282,7 @@
     <div class="container">
         <div class="footer-grid">
             <div class="footer-brand">
-                <a class="footer-logo" href="ja/">鈞翔<span class="accent">実業</span></a>
+                <a class="footer-logo" href="index.html">鈞翔<span class="accent">実業</span></a>
                 <p class="footer-tagline">新北市新莊区 | 精密シリコーン・ゴム受託製造OEM工場</p>
             </div>
         </div>

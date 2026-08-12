@@ -99,22 +99,22 @@
 
 <nav class="navbar" id="navbar">
     <div class="container">
-        <a class="nav-logo" href="en/" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'en')" id="nav-logo">
+        <a class="nav-logo" href="index.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'en')" id="nav-logo">
             <div class="logo-icon">J</div>
             <span>Jun-Hsiang</span>
         </a>
         <div class="nav-links" id="nav-links">
-            <a class="nav-link" href="en/">Home</a>
-            <a class="nav-link" href="en/products_list.html">Products</a>
-            <a class="nav-link" href="en/service.html">Services</a>
-            <a class="nav-link active" href="en/knowledge.html">Knowledge</a>
-            <a class="nav-link" href="en/#contact">Contact</a>
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="products_list.html">Products</a>
+            <a class="nav-link" href="service.html">Services</a>
+            <a class="nav-link active" href="knowledge.html">Knowledge</a>
+            <a class="nav-link" href="index.html#contact">Contact</a>
         </div>
         <div class="nav-actions">
             <div class="lang-switcher">
-                <button class="lang-btn" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'zh-TW'); window.location.href='knowledge-lsr-liquid-silicone.html'">繁中</button>
-                <button class="lang-btn active" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'en')">EN</button>
-                <button class="lang-btn" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'ja'); window.location.href='ja/knowledge-lsr-liquid-silicone.html'">日本語</button>
+                <a class="lang-btn" href="../knowledge-lsr-liquid-silicone.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'zh-TW')">繁中</a>
+                <a class="lang-btn active" href="knowledge-lsr-liquid-silicone.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'en')">EN</a>
+                <a class="lang-btn" href="../ja/knowledge-lsr-liquid-silicone.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'ja')">日本語</a>
             </div>
             <button class="nav-toggle" id="nav-toggle">
                 <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><line x1="3" x2="21" y1="6" y2="6"/><line x1="3" x2="21" y1="12" y2="12"/><line x1="3" x2="21" y1="18" y2="18"/></svg>
@@ -127,9 +127,9 @@
 <section class="page-hero">
     <div class="container">
         <nav class="breadcrumb" aria-label="breadcrumb">
-            <a href="en/">Home</a>
+            <a href="index.html">Home</a>
             <span>›</span>
-            <a href="en/knowledge.html">Knowledge Base</a>
+            <a href="knowledge.html">Knowledge Base</a>
             <span>›</span>
             <span>LSR Guide</span>
         </nav>
@@ -253,15 +253,26 @@
         </section>
 
         <!-- CTA -->
+                <!-- Related Reading -->
+        <section class="article-related" style="margin-top:var(--space-8);padding:var(--space-6);border:1px solid var(--color-border);border-radius:var(--radius-lg);background:var(--color-bg-card);">
+            <h3 style="font-size:1.2rem;margin-bottom:var(--space-4);color:var(--color-text-primary);">💡 Related Technical Guides</h3>
+            <ul style="list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));gap:var(--space-3);">
+                <li><a href="knowledge-solid-vs-lsr.html" style="color:var(--color-accent);text-decoration:none;font-weight:500;">📌 Solid HCR Compression vs LSR Injection Comparison</a></li>
+                <li><a href="knowledge-self-bonding-lsr-guide.html" style="color:var(--color-accent);text-decoration:none;font-weight:500;">📌 Self-Bonding Liquid Silicone (Self-Bonding LSR) Guide</a></li>
+                <li><a href="knowledge-silicone-overmolding.html" style="color:var(--color-accent);text-decoration:none;font-weight:500;">📌 Silicone Overmolding Plastic & Metal Guide</a></li>
+                <li><a href="knowledge-silicone-factory-guide.html" style="color:var(--color-accent);text-decoration:none;font-weight:500;">📌 Custom Silicone OEM Manufacturer Selection</a></li>
+            </ul>
+        </section>
+
         <section class="article-cta" style="background:var(--gradient-card);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:var(--space-8);text-align:center;margin-top:var(--space-8);">
             <h2 style="font-size:1.5rem;margin-bottom:var(--space-3);">Need Custom LSR Silicone Injection & Mold Development?</h2>
             <p style="color:var(--color-text-secondary);margin-bottom:var(--space-5);">Jun-Hsiang Enterprise provides 30 years of OEM expertise, DFM analysis, and custom LSR overmolding services. Contact our engineering team today.</p>
-            <a class="btn btn-primary" href="en/#contact">Contact Technical Team →</a>
+            <a class="btn btn-primary" href="index.html#contact">Contact Technical Team →</a>
         </section>
 
         <!-- Back to Knowledge -->
         <div style="text-align:center;margin-top:var(--space-8);">
-            <a class="btn btn-secondary" href="en/knowledge.html">← Back to Knowledge Base</a>
+            <a class="btn btn-secondary" href="knowledge.html">← Back to Knowledge Base</a>
         </div>
     </article>
 </main>
@@ -271,7 +282,7 @@
     <div class="container">
         <div class="footer-grid">
             <div class="footer-brand">
-                <a class="footer-logo" href="en/">Jun-Hsiang<span class="accent"> Enterprise</span></a>
+                <a class="footer-logo" href="index.html">Jun-Hsiang<span class="accent"> Enterprise</span></a>
                 <p class="footer-tagline">Xinzhuang, New Taipei City | Custom Silicone & Rubber Molding Factory</p>
             </div>
         </div>

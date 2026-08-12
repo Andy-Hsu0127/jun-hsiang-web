@@ -1,0 +1,90 @@
+<!-- ===== 新文章卡片樣板 (繁中版本) ===== -->
+<!-- 插入位置：knowledge.html 中 <div class="article-list"> 的第一個子元素 -->
+<article class="article-card" id="{{SLUG}}" data-category="{{CATEGORY}}" data-tags="{{TAGS_ZH}}">
+    <div class="article-header">
+        <div>
+            <span class="article-tag">{{CATEGORY_LABEL_ZH}}</span>
+            <h3 class="article-title">{{TITLE_ZH}}</h3>
+        </div>
+    </div>
+    <p class="article-meta">
+        發布日期：<time datetime="{{DATE_ISO}}">{{DATE_DISPLAY_ZH}}</time>
+        &nbsp;·&nbsp; 鈞翔實業技術團隊 &nbsp;·&nbsp; 閱讀時間：約 {{READ_MINUTES}} 分鐘
+    </p>
+    <p class="article-summary">{{SUMMARY_ZH}}</p>
+    <button class="article-toggle-btn">
+        展開全文
+        <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><polyline points="6 9 12 15 18 9"/></svg>
+    </button>
+    <div class="article-expanded-content">
+        <div class="article-body">
+            {{EXPANDED_CONTENT_ZH}}
+        </div>
+        <div style="margin-top: var(--space-6); padding-top: var(--space-4); border-top: 1px solid var(--color-border);">
+            <a class="btn btn-primary btn-sm" href="knowledge-{{SLUG}}.html" style="display:inline-flex;align-items:center;gap:var(--space-2);">
+                閱讀完整文章
+                <svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="14" xmlns="http://www.w3.org/2000/svg"><line x1="5" x2="19" y1="12" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+        </div>
+    </div>
+</article>
+
+<!-- ===== EN 版本 (插入 en/knowledge.html) ===== -->
+<article class="article-card" id="{{SLUG}}" data-category="{{CATEGORY}}" data-tags="{{TAGS_EN}}">
+    <div class="article-header">
+        <div>
+            <span class="article-tag">{{CATEGORY_LABEL_EN}}</span>
+            <h3 class="article-title">{{TITLE_EN}}</h3>
+        </div>
+    </div>
+    <p class="article-meta">
+        Published: <time datetime="{{DATE_ISO}}">{{DATE_DISPLAY_EN}}</time>
+        &nbsp;·&nbsp; Jun-Hsiang Technical Team &nbsp;·&nbsp; {{READ_MINUTES}} min read
+    </p>
+    <p class="article-summary">{{SUMMARY_EN}}</p>
+    <button class="article-toggle-btn">
+        Read More
+        <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><polyline points="6 9 12 15 18 9"/></svg>
+    </button>
+    <div class="article-expanded-content">
+        <div class="article-body">
+            {{EXPANDED_CONTENT_EN}}
+        </div>
+        <div style="margin-top: var(--space-6); padding-top: var(--space-4); border-top: 1px solid var(--color-border);">
+            <a class="btn btn-primary btn-sm" href="knowledge-{{SLUG}}.html" style="display:inline-flex;align-items:center;gap:var(--space-2);">
+                Read Full Article
+                <svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="14" xmlns="http://www.w3.org/2000/svg"><line x1="5" x2="19" y1="12" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+        </div>
+    </div>
+</article>
+
+<!-- ===== JA 版本 (插入 ja/knowledge.html) ===== -->
+<article class="article-card" id="{{SLUG}}" data-category="{{CATEGORY}}" data-tags="{{TAGS_JA}}">
+    <div class="article-header">
+        <div>
+            <span class="article-tag">{{CATEGORY_LABEL_JA}}</span>
+            <h3 class="article-title">{{TITLE_JA}}</h3>
+        </div>
+    </div>
+    <p class="article-meta">
+        公開日：<time datetime="{{DATE_ISO}}">{{DATE_DISPLAY_JA}}</time>
+        &nbsp;·&nbsp; 鈞翔実業技術チーム &nbsp;·&nbsp; 読了時間：約 {{READ_MINUTES}} 分
+    </p>
+    <p class="article-summary">{{SUMMARY_JA}}</p>
+    <button class="article-toggle-btn">
+        続きを読む
+        <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><polyline points="6 9 12 15 18 9"/></svg>
+    </button>
+    <div class="article-expanded-content">
+        <div class="article-body">
+            {{EXPANDED_CONTENT_JA}}
+        </div>
+        <div style="margin-top: var(--space-6); padding-top: var(--space-4); border-top: 1px solid var(--color-border);">
+            <a class="btn btn-primary btn-sm" href="knowledge-{{SLUG}}.html" style="display:inline-flex;align-items:center;gap:var(--space-2);">
+                記事全文を読む
+                <svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="14" xmlns="http://www.w3.org/2000/svg"><line x1="5" x2="19" y1="12" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+        </div>
+    </div>
+</article>

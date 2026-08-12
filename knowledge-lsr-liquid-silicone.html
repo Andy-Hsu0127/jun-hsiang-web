@@ -112,9 +112,9 @@
         </div>
         <div class="nav-actions">
             <div class="lang-switcher">
-                <button class="lang-btn active" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'zh-TW')">繁中</button>
-                <button class="lang-btn" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'en'); window.location.href='en/knowledge-lsr-liquid-silicone.html'">EN</button>
-                <button class="lang-btn" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'ja'); window.location.href='ja/knowledge-lsr-liquid-silicone.html'">日本語</button>
+                <a class="lang-btn active" href="knowledge-lsr-liquid-silicone.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'zh-TW')">繁中</a>
+                <a class="lang-btn" href="en/knowledge-lsr-liquid-silicone.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'en')">EN</a>
+                <a class="lang-btn" href="ja/knowledge-lsr-liquid-silicone.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'ja')">日本語</a>
             </div>
             <button class="nav-toggle" id="nav-toggle">
                 <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><line x1="3" x2="21" y1="6" y2="6"/><line x1="3" x2="21" y1="12" y2="12"/><line x1="3" x2="21" y1="18" y2="18"/></svg>
@@ -260,7 +260,22 @@
             </details>
         </section>
 
+        <!-- 相關閱讀 -->
+        <section class="article-related" style="margin-top:var(--space-8);padding:var(--space-6);border:1px solid var(--color-border);border-radius:var(--radius-lg);background:var(--color-bg-card);">
+            <h3 style="font-size:1.2rem;margin-bottom:var(--space-4);color:var(--color-text-primary);">💡 延伸閱讀與相關技術指南</h3>
+            <ul style="list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));gap:var(--space-3);">
+                <li><a href="knowledge-solid-vs-lsr.html" style="color:var(--color-accent);text-decoration:none;font-weight:500;">📌 固態矽膠熱壓 vs. LSR 液態矽膠射出對比</a></li>
+                <li><a href="knowledge-self-bonding-lsr-guide.html" style="color:var(--color-accent);text-decoration:none;font-weight:500;">📌 自黏型液態矽膠（Self-Bonding LSR）技術指南</a></li>
+                <li><a href="knowledge-silicone-overmolding.html" style="color:var(--color-accent);text-decoration:none;font-weight:500;">📌 矽膠包塑膠與金屬（異材結合）關鍵技術</a></li>
+                <li><a href="knowledge-silicone-factory-guide.html" style="color:var(--color-accent);text-decoration:none;font-weight:500;">📌 如何選擇專業矽膠廠與矽膠代工廠全解析</a></li>
+            </ul>
+        </section>
+
         <!-- CTA -->
+        <div style="background:var(--color-bg-secondary);border-left:4px solid var(--color-accent);padding:var(--space-4);margin:var(--space-6) 0;border-radius:var(--radius-sm);">
+    <p style="margin:0;font-weight:600;color:var(--color-text-primary);">⚙️ 鈞翔實業提供專業 <a href="service.html" style="color:var(--color-accent);text-decoration:underline;">液態射出代工與 LSR 液態矽膠成型技術服務</a>，歡迎提供圖面進行技術評估與詢價。</p>
+</div>
+
         <section class="article-cta" style="background:var(--gradient-card);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:var(--space-8);text-align:center;margin-top:var(--space-8);">
             <h2 style="font-size:1.5rem;margin-bottom:var(--space-3);">尋求專業 LSR 液態矽膠射出與模具開發？</h2>
             <p style="color:var(--color-text-secondary);margin-bottom:var(--space-5);">鈞翔實業擁有 30 年技術積澱，提供從 2D/3D 設計、DFM 分析、模具開發到量產包膠的一站式代工服務。歡迎與我們的工程團隊聯繫取得專業報價。</p>

@@ -77,9 +77,9 @@
         </div>
         <div class="nav-actions">
             <div class="lang-switcher">
-                <button class="lang-btn active" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'zh-TW')">繁中</button>
-                <button class="lang-btn" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'en'); window.location.href='en/knowledge-silicone-factory-guide.html'">EN</button>
-                <button class="lang-btn" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'ja'); window.location.href='ja/knowledge-silicone-factory-guide.html'">日本語</button>
+                <a class="lang-btn active" href="knowledge-silicone-factory-guide.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'zh-TW')">繁中</a>
+                <a class="lang-btn" href="en/knowledge-silicone-factory-guide.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'en')">EN</a>
+                <a class="lang-btn" href="ja/knowledge-silicone-factory-guide.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'ja')">日本語</a>
             </div>
             <button class="nav-toggle" id="nav-toggle">
                 <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><line x1="3" x2="21" y1="6" y2="6"/><line x1="3" x2="21" y1="12" y2="12"/><line x1="3" x2="21" y1="18" y2="18"/></svg>
@@ -293,6 +293,17 @@
                 <summary style="font-weight:600;cursor:pointer;color:var(--color-text-primary);">Q5：在產品開發初期，我應該提供哪些資料給矽膠廠以獲取精準報價？</summary>
                 <p style="margin-top:var(--space-3);color:var(--color-text-secondary); line-height: 1.8;">為了加速報價流程並確保估價精準度，建議您準備以下資料：1. 產品 3D 圖檔（STEP、IGES 格式為佳）與 2D 工程圖（標註關鍵尺寸與公差要求）；2. 預期的材質硬度、顏色與安規認證需求（如 FDA）；3. 產品應用環境（是否耐高溫、耐油污等）；4. 預估的首批訂單數量及年需求量。資料越齊全，我們提供的製程建議與報價就越符合您的真實成本。</p>
             </details>
+        </section>
+
+                <!-- 相關閱讀 -->
+        <section class="article-related" style="margin-top:var(--space-8);padding:var(--space-6);border:1px solid var(--color-border);border-radius:var(--radius-lg);background:var(--color-bg-card);">
+            <h3 style="font-size:1.2rem;margin-bottom:var(--space-4);color:var(--color-text-primary);">💡 延伸閱讀與相關技術指南</h3>
+            <ul style="list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));gap:var(--space-3);">
+                <li><a href="knowledge-rubber-factory-guide.html" style="color:var(--color-accent);text-decoration:none;font-weight:500;">📌 台灣橡膠工廠與矽膠加工廠選型及代工評估指南</a></li>
+                <li><a href="knowledge-lsr-silicone-supplier-taiwan.html" style="color:var(--color-accent);text-decoration:none;font-weight:500;">📌 台灣 LSR 液態矽膠射出代工廠怎麼選？評估指標全解析</a></li>
+                <li><a href="knowledge-solid-vs-lsr.html" style="color:var(--color-accent);text-decoration:none;font-weight:500;">📌 固態矽膠熱壓成型 vs. LSR 液態矽膠射出成本分析</a></li>
+                <li><a href="knowledge-silicone-overmolding.html" style="color:var(--color-accent);text-decoration:none;font-weight:500;">📌 矽膠包覆金屬與塑膠（異材結合 Overmolding）評估</a></li>
+            </ul>
         </section>
 
         <section class="article-cta" style="background:var(--gradient-card);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:var(--space-8);text-align:center;margin-top:var(--space-8);">
