@@ -297,3 +297,93 @@
     background: rgba(255, 255, 255, 0.08);
     margin: 4px 0;
 }
+
+
+/* Robust Navbar & Dropdown Fix */
+.nav-logo {
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+}
+.nav-logo span {
+    white-space: nowrap !important;
+}
+.nav-links {
+    display: flex !important;
+    align-items: center !important;
+    gap: clamp(10px, 1.4vw, 22px) !important;
+    flex-wrap: nowrap !important;
+}
+.nav-link {
+    white-space: nowrap !important;
+    font-size: 0.9rem !important;
+}
+.nav-dropdown-wrapper {
+    position: relative !important;
+    display: inline-flex !important;
+    align-items: center !important;
+}
+.nav-dropdown-wrapper .nav-dropdown-menu {
+    position: absolute !important;
+    top: 100% !important;
+    left: 50% !important;
+    transform: translateX(-50%) translateY(10px) !important;
+    background: #0E1422 !important;
+    border: 1px solid rgba(212, 168, 67, 0.35) !important;
+    border-radius: 12px !important;
+    padding: 8px !important;
+    min-width: 230px !important;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6) !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease !important;
+    z-index: 1100 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 4px !important;
+}
+.nav-dropdown-wrapper:hover .nav-dropdown-menu {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    transform: translateX(-50%) translateY(0) !important;
+}
+.nav-dropdown-item {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    padding: 8px 12px !important;
+    color: #CBD5E1 !important;
+    font-size: 0.85rem !important;
+    font-weight: 500 !important;
+    border-radius: 6px !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+    transition: background-color 0.2s ease, color 0.2s ease !important;
+}
+.nav-dropdown-item:hover {
+    background: rgba(212, 168, 67, 0.15) !important;
+    color: #D4A843 !important;
+}
+.nav-dropdown-divider {
+    height: 1px !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    margin: 4px 0 !important;
+}
+.btn-nav-cta {
+    background: linear-gradient(135deg, #E8C86A 0%, #D4A843 50%, #B08A2E 100%) !important;
+    color: #080C14 !important;
+    font-weight: 700 !important;
+    font-size: 0.85rem !important;
+    padding: 6px 14px !important;
+    border-radius: 9999px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 4px !important;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+    text-decoration: none !important;
+}
+.btn-nav-cta:hover {
+    transform: scale(1.05) !important;
+}
