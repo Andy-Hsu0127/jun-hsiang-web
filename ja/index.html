@@ -276,11 +276,24 @@
 
 <a class="nav-link" data-section="about" href="#about">鈞翔について</a>
 
-<a class="nav-link" data-section="services" href="#services">技術とサービス</a>
+<div class="nav-dropdown-wrapper">
+    <a class="nav-link" href="service.html" style="display:inline-flex;align-items:center;gap:4px;">
+        加工サービス
+        <svg class="lucide lucide-chevron-down" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:12px;height:12px;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m6 9 6 6 6-6"></path></svg>
+    </a>
+    <div class="nav-dropdown-menu">
+        <a class="nav-dropdown-item" href="service.html#service-lsr">🧪 LSR 液状射出成形</a>
+        <a class="nav-dropdown-item" href="service.html#service-compression">🔥 固形熱プレス成形</a>
+        <a class="nav-dropdown-item" href="service.html#service-material">💧 自己潤滑性シリコーン</a>
+        <a class="nav-dropdown-item" href="service.html#service-overmolding">🔗 異材結合インサート成形</a>
+        <div class="nav-dropdown-divider"></div>
+        <a class="nav-dropdown-item" href="service.html" style="color:var(--color-accent);font-weight:600;">📄 加工サービス総覧 →</a>
+    </div>
+</div>
 
-<a class="nav-link" data-section="products" href="#products">製品紹介</a>
+<a class="nav-link" href="products_list.html">製品紹介</a>
 
-<a class="nav-link" href="knowledge.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'zh-TW')">技術知識</a>
+<a class="nav-link" href="knowledge.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'ja')">技術知識</a>
 
 <a class="nav-link" data-section="quality" href="#quality">品質認証</a>
 
