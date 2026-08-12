@@ -184,7 +184,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const filter = item.dataset.filter;
 
             productCards.forEach(card => {
-                if (filter === 'all' || card.dataset.category === filter) {
+                if (filter === 'all' || card.dataset.category.includes(filter)) {
                     card.style.display = '';
                     card.style.opacity = '0';
                     card.style.transform = 'scale(0.9)';
