@@ -141,6 +141,14 @@ When writing or generating new technical articles, products, or services for the
 * **Category**: `tech`
 * **Key Topics**: 自潤矽膠, 出油膠, Self-Lubricating Silicone, 低摩擦密封件, 汽車線束防水插塞, 醫療注射器密封件, HCR 熱固壓縮成型.
 
+### 17. 矽膠包金屬與工程塑膠異材結合代工指南
+* **Anchor ID / ID**: `silicone-overmolding-bonding`
+* **Title (ZH)**: 《矽膠包金屬與工程塑膠（Overmolding）代工全解析：如何確保緊密黏合不脫膠？》
+* **Title (EN)**: 《Silicone Overmolding to Metal & Plastic: How to Ensure Strong Bonding without Delamination》
+* **Title (JA)**: 《シリコン異材質接合（インサート成形・オーバーモールド）：剥離しない高強度接着技術のポイント》
+* **Category**: `tech`
+* **Key Topics**: 異材結合, 矽膠包金屬, 矽膠包塑膠, Silicone Overmolding, 專用底塗, 防溢膠模具設計, 模具自主開發, ISO 9001.
+
 ---
 
 ## 🤖 SEO Content Copilot 工作流程
@@ -165,7 +173,8 @@ food-grade-silicone-fda, industrial-vibration-feet, industrial-vibration-pad,
 medical-lsr-mask, oring-seal-custom-mold, semiconductor-silicone-seal,
 shore-hardness-guide, silicone-overmolding, solid-vs-lsr,
 uav-silicone-parts, viton-vs-fvmq, self-bonding-lsr-guide, lsr-liquid-silicone,
-lsr-silicone-supplier-taiwan, lsr-silicone-vs-hcr
+lsr-silicone-supplier-taiwan, lsr-silicone-vs-hcr, self-lubricating-silicone,
+silicone-overmolding-bonding
 ```
 若主題重複，告知使用者並建議替代角度，不要繼續生成。
 
