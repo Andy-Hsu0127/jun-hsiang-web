@@ -149,6 +149,14 @@ When writing or generating new technical articles, products, or services for the
 * **Category**: `tech`
 * **Key Topics**: 異材結合, 矽膠包金屬, 矽膠包塑膠, Silicone Overmolding, 專用底塗, 防溢膠模具設計, 模具自主開發, ISO 9001.
 
+### 18. 汽車與工業線束防水塞代工指南
+* **Anchor ID / ID**: `automotive-wire-harness-seals`
+* **Title (ZH)**: 《汽車與工業線束防水塞代工：自潤矽膠（出油膠）配方與模具開發實務》
+* **Title (EN)**: 《Automotive & Industrial Wire Harness Seals OEM: Self-Lubricating Silicone Molding》
+* **Title (JA)**: 《自動車・産業用ワイヤーハーネス防水プラグ受託製造：自己潤滑シリコーン配合と金型設計実務》
+* **Category**: `tech`
+* **Key Topics**: 線束防水塞, 自潤矽膠, 出油膠, Single Wire Seal, 穿孔插拔阻力, 多穴模具, ISO 9001.
+
 ---
 
 ## 🤖 SEO Content Copilot 工作流程
@@ -174,7 +182,7 @@ medical-lsr-mask, oring-seal-custom-mold, semiconductor-silicone-seal,
 shore-hardness-guide, silicone-overmolding, solid-vs-lsr,
 uav-silicone-parts, viton-vs-fvmq, self-bonding-lsr-guide, lsr-liquid-silicone,
 lsr-silicone-supplier-taiwan, lsr-silicone-vs-hcr, self-lubricating-silicone,
-silicone-overmolding-bonding
+silicone-overmolding-bonding, automotive-wire-harness-seals
 ```
 若主題重複，告知使用者並建議替代角度，不要繼續生成。
 
