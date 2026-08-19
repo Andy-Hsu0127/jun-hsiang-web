@@ -31,8 +31,7 @@ class ParticleSystem {
         
         this.isAnimating = false;
         this.resize();
-        this.createParticles();
-        this.setupObserver();
+        if ('requestIdleCallback' in window) { requestIdleCallback(() => { this.createParticles(); this.setupObserver(); }); } else { setTimeout(() => { this.createParticles(); this.setupObserver(); }, 200); }
     }
 
     setupObserver() {
