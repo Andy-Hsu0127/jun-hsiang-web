@@ -54,13 +54,13 @@ When writing or generating new technical articles, products, or services for the
 * **Category**: `tech`
 * **Key Topics**: Solid compression molding, LSR liquid injection molding, Tooling cost, Precision tolerances.
 
-### 4. 異材結合技術（矽膠包塑膠與金屬）
+### 4. 矽膠包塑膠異材結合技術指南
 * **Anchor ID / ID**: `silicone-overmolding`
-* **Title (ZH)**: 《矽膠包塑膠與金屬（異材結合）：如何確保緊密黏合、絕不脫膠的關鍵技術》
-* **Title (EN)**: 《Silicone Overmolding on Plastics and Metals (Multi-Material Bonding): Key Technologies to Ensure Tight Adhesion without Delamination》
-* **Title (JA)**: 《シリコーンのプラスチック・金属インサート成形（異材結合）：強固な密着を確保し、剥離を防ぐための核心技術》
+* **Title (ZH)**: 《矽膠包塑膠（PC/PA工程塑膠包膠代工）：底塗化學鍵結與熱變形控制全解析》
+* **Title (EN)**: 《Silicone Overmolding on Engineering Plastics (PC/PA): Primer Chemistry & Thermal Control》
+* **Title (JA)**: 《シリコーンのエンジニアリングプラスチック（PC/PA）インサート成形：プライマー化学接着と熱変形制御》
 * **Category**: `tech`
-* **Key Topics**: Overmolding, Insert molding, Primer adhesion, Physical anchor effect.
+* **Key Topics**: 矽膠包塑膠, PC/PA包膠, Primer 化學鍵結, 低溫固化防變形, 模具防溢膠.
 
 ### 5. 導電矽膠按鍵設計指南
 * **Anchor ID / ID**: `conductive-keypad`
@@ -146,13 +146,13 @@ When writing or generating new technical articles, products, or services for the
 * **Category**: `tech`
 * **Key Topics**: 自潤矽膠, 出油膠, Self-Lubricating Silicone, 低摩擦密封件, 汽車線束防水插塞, 醫療注射器密封件, HCR 熱固壓縮成型.
 
-### 17. 矽膠包金屬與工程塑膠異材結合代工指南
+### 17. 矽膠包金屬異材結合代工指南
 * **Anchor ID / ID**: `silicone-overmolding-bonding`
-* **Title (ZH)**: 《矽膠包金屬與工程塑膠（Overmolding）代工全解析：如何確保緊密黏合不脫膠？》
-* **Title (EN)**: 《Silicone Overmolding to Metal & Plastic: How to Ensure Strong Bonding without Delamination》
-* **Title (JA)**: 《シリコン異材質接合（インサート成形・オーバーモールド）：剥離しない高強度接着技術のポイント》
+* **Title (ZH)**: 《矽膠包金屬代工（矽膠包鐵/鋁/銅件）：模具機械咬合、防溢膠與抗拉拔測試實務》
+* **Title (EN)**: 《Silicone-to-Metal Bonding OEM (Iron/Aluminum/Copper): Mechanical Interlocking & Anti-Flash Tooling》
+* **Title (JA)**: 《シリコーン金属焼き付け・インサート成形受託（鉄・アルミ・銅）：機械的アンカー効果とバリ防止金型実務》
 * **Category**: `tech`
-* **Key Topics**: 異材結合, 矽膠包金屬, 矽膠包塑膠, Silicone Overmolding, 專用底塗, 防溢膠模具設計, 模具自主開發, ISO 9001.
+* **Key Topics**: 異材結合, 矽膠包金屬, 矽膠包鐵, 矽膠包鋁, 機械倒扣咬合, 模具防溢膠, 抗拉拔測試, ISO 9001.
 
 ### 18. 汽車與工業線束防水塞代工指南
 * **Anchor ID / ID**: `automotive-wire-harness-seals`
