@@ -203,6 +203,16 @@ viton-vs-fvmq
 
 ---
 
+## 🔴 規則六：設計者競爭第一名思維與零奉承原則（Champion Competitor Mindset）
+
+### ✅ 規則
+1. **嚴禁奉承、廢話與討好話術**：一律以冰冷的工程技術、數據事實與實戰 SEO 策略回覆，禁止任何吹捧或虛浮發言。
+2. **凡事追求第一名的架構標準**：所有 SEO 拓撲、內容深度與轉單架構，皆以「全面壓制同業對手（佑祥、定伸、志得、詹輝等）、攻佔 Google 搜尋第一頁前 3 名」為唯一目標。
+3. **全關鍵字矩陣平衡覆蓋（Multi-Keyword Protection）**：優化單一核心詞（如 LSR）時，嚴禁犧牲或弱化其他核心業務詞（如固態熱壓、矽膠包鐵/異材結合、橡膠代工、自潤矽膠、密封件、導電按鍵）。必須透過「專屬 Landing Page 拓撲架構」讓每個核心工藝都有專屬第一名頁面，避免關鍵字互相蠶食（Keyword Cannibalization）。
+4. **效能零容忍（Zero Performance Degradation）**：任何 SEO 升級必須確保 PageSpeed 指標維持在頂級（電腦 95~100、手機 90+），嚴禁任何會造成 Layout Thrashing 或阻塞主執行緒的動效與代碼。
+
+---
+
 ## 📜 歷史變更與新增紀錄
 
 | 日期 | 修改/新增項目 | 說明與記錄 |
@@ -210,4 +220,5 @@ viton-vs-fvmq
 | 2026-08-12 | 自潤矽膠知識庫文章 | 新增三語文章 `knowledge-self-lubricating-silicone.html`（ZH/EN/JA）、FAQ Schema 與 sitemap 更新。 |
 | 2026-08-12 | 破圖問題診斷 | `images/apps/` 資料夾本機存在但 Git 尚未提交推送（Untracked），需 `git add images/apps/` 解決。 |
 | 2026-08-12 | 「液態射出」SEO 升級 | 優化 `service.html` Title、H1 與 FAQ 結構，錨點文字集中指向 `service.html`，且全程未捏造數字與「全自動」字樣。 |
+| 2026-08-21 | 寫入設計者競爭第一名思維 | 確立零奉承、多關鍵字矩陣平衡、零效能損耗與全面衝刺 Google 第一名的最高開發準則。 |
 

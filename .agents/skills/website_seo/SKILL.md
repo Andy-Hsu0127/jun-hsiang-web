@@ -20,6 +20,11 @@ When writing or generating new technical articles, products, or services for the
 6. **Clean Code & Hash Routing**: Ensure the JS click event listener is preserved. Do not break the deep-linking hash routing logic in `knowledge.html` which auto-expands cards when landing via `#[slug-id]`.
 7. **No "全自動" (Fully Automatic) wording**: Avoid "全自動" or "自動" in equipment/machinery descriptions unless specifically approved.
 8. **No Fabricated / Unverified Specifications or Numbers**: Never invent or guess quantitative specifications (such as tolerances ±0.02mm, cycle times, machine tonnages) in proposals or article copy. Always stick to verified process capabilities, materials, ISO 9001 compliance, and custom engineering support.
+9. **設計者競爭第一名思維與零奉承原則 (Champion Competitor Mindset & Zero Flattery)**:
+   - **嚴禁奉承與廢話**：直接點出技術痛點與實質差距，禁止任何討好或罐頭話術。
+   - **以競爭第一名為唯一標準**：SEO 架構、內容深度、轉換路徑必須全方位壓制同業對手（佑祥、定伸、志得、詹輝等），目標鎖定 Google 第一頁前 3 名。
+   - **全關鍵字矩陣平衡覆蓋（Multi-Keyword Protection）**：優化單一詞（如 LSR）時，絕不犧牲其他核心詞（固態矽膠熱壓、異材結合包膠、橡膠代工、自潤矽膠、密封件）。必須透過「專屬 Landing Page 拓撲」讓每個核心工藝都有專屬第一名頁面，避免關鍵字蠶食（Keyword Cannibalization）。
+   - **效能零容忍（Zero Performance Degradation）**：任何 SEO 或內容更新，必須確保 PageSpeed 電腦 95-100、手機 90+，嚴禁任何會拖慢速度的代碼。
 
 ---
 
@@ -157,6 +162,14 @@ When writing or generating new technical articles, products, or services for the
 * **Category**: `tech`
 * **Key Topics**: 線束防水塞, 自潤矽膠, 出油膠, Single Wire Seal, 穿孔插拔阻力, 多穴模具, ISO 9001.
 
+### 19. 大劑量 LSR 液態矽膠射出成型代工指南
+* **Anchor ID / ID**: `large-shot-lsr-molding`
+* **Title (ZH)**: 《大劑量 LSR 液態矽膠射出成型代工：大克重、厚件製品防氣泡與模具開發實務》
+* **Title (EN)**: 《Large-Shot LSR Liquid Silicone Injection Molding OEM: Thick-Wall & High-Weight Parts》
+* **Title (JA)**: 《大容量 LSR 液状シリコーン射出成形受託製造：大重量・厚肉成形品の気泡対策と金型設計実務》
+* **Category**: `tech`
+* **Key Topics**: 大劑量射出, LSR厚件射出, 液態矽膠射出, 模具排氣, 真空抽氣, 大克重成型, ISO 9001.
+
 ---
 
 ## 🤖 SEO Content Copilot 工作流程
@@ -182,7 +195,8 @@ medical-lsr-mask, oring-seal-custom-mold, semiconductor-silicone-seal,
 shore-hardness-guide, silicone-overmolding, solid-vs-lsr,
 uav-silicone-parts, viton-vs-fvmq, self-bonding-lsr-guide, lsr-liquid-silicone,
 lsr-silicone-supplier-taiwan, lsr-silicone-vs-hcr, self-lubricating-silicone,
-silicone-overmolding-bonding, automotive-wire-harness-seals
+silicone-overmolding-bonding, automotive-wire-harness-seals,
+large-shot-lsr-molding
 ```
 若主題重複，告知使用者並建議替代角度，不要繼續生成。
 
