@@ -1,0 +1,1514 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鈞翔實業｜Google SEO 排名與能見度作戰中心</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0284C7;
+            --primary-dark: #0369A1;
+            --bg: #F8FAFC;
+            --card-bg: #FFFFFF;
+            --text-main: #0F172A;
+            --text-muted: #64748B;
+            --border: #E2E8F0;
+            --danger: #EF4444;
+            --success: #10B981;
+            --warning: #F59E0B;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Outfit', 'Noto Sans TC', sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            min-height: 100vh;
+            padding: 24px;
+        }
+        .app-container {
+            max-width: 1240px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+            overflow: hidden;
+        }
+        .app-header {
+            background: #0F172A;
+            color: #fff;
+            padding: 18px 28px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .app-brand { display: flex; align-items: center; gap: 12px; font-size: 1.25rem; font-weight: 800; }
+        .badge-online { background: #064E3B; color: #34D399; font-size: 0.75rem; padding: 4px 10px; border-radius: 999px; font-weight: 600; }
+        
+        .toolbar {
+            background: #1E293B;
+            padding: 10px 28px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #334155;
+            color: #94A3B8;
+            font-size: 0.85rem;
+        }
+
+        .workspace { padding: 28px; }
+        .section-title {
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: #0F172A;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        /* 100% GSC Real Metric Cards */
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-bottom: 28px;
+        }
+        .kpi-card {
+            background: #F8FAFC;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 18px 20px;
+        }
+        .kpi-title { font-size: 0.78rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; }
+        .kpi-val { font-size: 1.85rem; font-weight: 800; margin: 4px 0 2px; color: #0F172A; }
+        .kpi-sub { font-size: 0.78rem; color: var(--primary); font-weight: 600; }
+
+        /* 3 Real Actions */
+        .action-list { display: flex; flex-direction: column; gap: 12px; margin-bottom: 28px; }
+        .action-item {
+            border-radius: 10px;
+            padding: 16px 20px;
+            border-left: 6px solid;
+            background: #FAFAFA;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .act-p1 { background: #FFF1F2; border-color: #F43F5E; }
+        .act-p2 { background: #FEF9C3; border-color: #EAB308; }
+        .act-p3 { background: #F0FDF4; border-color: #10B981; }
+        .act-name { font-size: 1.05rem; font-weight: 800; color: #0F172A; }
+        .act-status { font-size: 0.85rem; color: #64748B; margin-top: 4px; }
+        .act-todo { font-size: 0.9rem; font-weight: 700; color: #0F172A; }
+
+        /* Experiment Card */
+        .exp-box {
+            background: #FFFFFF;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 28px;
+        }
+        .exp-track {
+            background: #E2E8F0;
+            border-radius: 999px;
+            height: 10px;
+            width: 100%;
+            overflow: hidden;
+            margin: 12px 0 8px;
+        }
+        .exp-fill {
+            background: var(--primary);
+            height: 100%;
+            border-radius: 999px;
+            width: 4%;
+        }
+
+        .btn {
+            padding: 6px 14px;
+            border-radius: 6px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            border: 1px solid transparent;
+            transition: all 0.15s;
+        }
+        .btn-primary { background: var(--primary); color: #fff; }
+        .btn-primary:hover { background: var(--primary-dark); }
+        .btn-outline { background: #fff; color: #475569; border-color: #CBD5E1; }
+        .btn-outline:hover { background: #F1F5F9; color: #0F172A; }
+
+        /* Precision Balanced Table Widths */
+        .table-responsive {
+            width: 100%;
+            overflow-x: auto;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.88rem;
+            table-layout: fixed;
+        }
+        th {
+            background: #F1F5F9;
+            color: #475569;
+            font-weight: 700;
+            padding: 12px 14px;
+            border-bottom: 1px solid var(--border);
+            white-space: nowrap;
+        }
+        td {
+            padding: 12px 14px;
+            border-bottom: 1px solid var(--border);
+            color: #334155;
+            vertical-align: middle;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        tr:hover td { background: #F8FAFC; }
+
+        .tag {
+            font-size: 0.75rem;
+            padding: 4px 8px;
+            border-radius: 6px;
+            font-weight: 600;
+            display: inline-block;
+            white-space: nowrap;
+        }
+        .tag-p1 { background: #D1FAE5; color: #065F46; border: 1px solid #A7F3D0; }
+        .tag-strike { background: #DBEAFE; color: #1E40AF; border: 1px solid #BFDBFE; }
+        .tag-obs { background: #F1F5F9; color: #64748B; border: 1px solid #E2E8F0; }
+        .tag-status-progress { background: #FEF3C7; color: #92400E; }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Top App Bar -->
+        <div class="app-header">
+            <div class="app-brand">
+                <span>🛡️ 鈞翔實業｜Google SEO 排名與能見度作戰中心</span>
+                <span class="badge-online">🟢 GSC API 官方連線</span>
+            </div>
+            <div>
+                <a href="javascript:location.reload()" class="btn btn-outline" style="color:#F8FAFC; border-color:#475569; background:transparent;">🔄 重新整理</a>
+            </div>
+        </div>
+
+        <div class="toolbar">
+            <div>官方目標資產：<b>https://www.jun-hsiang.com.tw/</b> ｜ 資料校驗：<b>100% GSC API 官方真實數據（無任何模擬假數據）</b></div>
+            <div>最後同步：<b>2026/08/26 16:44</b></div>
+        </div>
+
+        <!-- Main Workspace -->
+        <div class="workspace">
+            
+            <!-- Real GSC KPIs -->
+            <div class="section-title">
+                <span>📊 Google 搜尋真實成效數據 (GSC 官方指標)</span>
+                <span style="font-size:0.85rem; font-weight:normal; color:var(--text-muted);">共 281 筆官方離散記錄 (117 組獨立 Query)</span>
+            </div>
+            <div class="kpi-grid">
+                <div class="kpi-card">
+                    <div class="kpi-title">Google 官方總曝光</div>
+                    <div class="kpi-val">1405</div>
+                    <div class="kpi-sub">官方搜尋結果展示次數</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-title">自然點擊訪客</div>
+                    <div class="kpi-val">11 次</div>
+                    <div class="kpi-sub">實際點進官網訪客 (CTR 0.78%)</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-title">第一頁守備關鍵字</div>
+                    <div class="kpi-val" style="color:#059669;">35 組</div>
+                    <div class="kpi-sub">GSC 平均位置 ≤ 10.0</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-title">第 2~3 頁衝刺目標</div>
+                    <div class="kpi-val" style="color:#0284C7;">12 組</div>
+                    <div class="kpi-sub">GSC 平均位置 11.0 ~ 30.0</div>
+                </div>
+            </div>
+
+            <!-- 3 Focused Actions -->
+            <div class="section-title">
+                <span>🔥 今日 SEO 最重要 3 項行動方針</span>
+                <span style="font-size:0.85rem; font-weight:normal; color:var(--text-muted);">專注在「真正能提升網站排名與曝光」的核心工作</span>
+            </div>
+            <div class="action-list">
+                <div class="action-item act-p1">
+                    <div>
+                        <div class="act-name">① 🔴 矽膠包鐵 (金屬異材結合)</div>
+                        <div class="act-status">GSC 平均 21.5 名 ｜ 曝光 14 次 ｜ <b>SEO 實驗 #001 進行中 (第 1 / 28 天)</b></div>
+                    </div>
+                    <div style="text-align:right;">
+                        <div class="act-todo" style="color:#BE123C;">👉 行動：不要頻繁改動，維持現狀等待 9/23 GSC 演算法重新收錄驗收</div>
+                    </div>
+                </div>
+                <div class="action-item act-p2">
+                    <div>
+                        <div class="act-name">② 🟡 液態矽膠是什麼 (LSR 科普關鍵字)</div>
+                        <div class="act-status">Google 第 2 頁 (14.5 名) ｜ 曝光 2 次 ｜ 具備衝刺進前 10 名空間</div>
+                    </div>
+                    <div style="text-align:right;">
+                        <div class="act-todo" style="color:#854D0E;">👉 行動：列為下一輪 SEO 內容擴充目標（待 TASK-001 驗收後啟動）</div>
+                    </div>
+                </div>
+                <div class="action-item act-p3">
+                    <div>
+                        <div class="act-name">③ 🟢 矽膠硬度 (Shore Hardness Guide)</div>
+                        <div class="act-status">Google 第 1 頁前段 (4.4 名) ｜ 曝光 22 次 ｜ 點擊 1 次</div>
+                    </div>
+                    <div style="text-align:right;">
+                        <div class="act-todo" style="color:#065F46;">👉 行動：第一頁基本盤，嚴禁破壞既有標題與結構，維持穩定收錄</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Experiment Tracker -->
+            <div class="section-title">
+                <span>📈 進行中 SEO 排名實驗 (TASK-001)</span>
+                <span style="font-size:0.85rem; font-weight:normal; color:var(--text-muted);">28 天週期驗收 (2026/08/26 ➔ 2026/09/23)</span>
+            </div>
+            <div class="exp-box">
+                <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <div>
+                        <b>目標頁面</b>：<code>knowledge-silicone-overmolding-bonding.html</code>
+                        <span style="margin:0 8px; color:var(--text-muted);">｜</span>
+                        <span>基準：<b>21.5 名</b> ➔ 目標：<b>&lt; 18.0 名</b></span>
+                    </div>
+                    <span class="tag tag-status-progress">觀測第 1 / 28 天</span>
+                </div>
+                <div class="exp-track">
+                    <div class="exp-fill"></div>
+                </div>
+                <div style="display:flex; justify-content:space-between; font-size:0.8rem; color:var(--text-muted); margin-top:4px;">
+                    <span>2026/08/26 (已完成脫膠表、實務FAQ與CAD諮詢區微調)</span>
+                    <span>2026/09/23 (驗收是否推進前 18 名)</span>
+                </div>
+                <div style="display:flex; gap:10px; margin-top:16px;">
+                    <a href="knowledge-silicone-overmolding-bonding.html" target="_blank" class="btn btn-primary">🌐 查看本機修改後頁面</a>
+                    <a href="https://www.jun-hsiang.com.tw/knowledge-silicone-overmolding-bonding.html" target="_blank" class="btn btn-outline">🔗 查看正式官網線上頁面</a>
+                </div>
+            </div>
+
+            <!-- Complete Keyword Ranking List with Compact Query Column -->
+            <div class="section-title">
+                <span>🔍 核心關鍵字 Google 排名清單</span>
+                <span style="font-size:0.85rem; font-weight:normal; color:var(--text-muted);">直接反映官網在 Google 搜尋引擎上的能見度</span>
+            </div>
+            <div style="margin-bottom:14px;">
+                <input type="text" id="kwSearch" style="width:100%; padding:12px 16px; border:1px solid var(--border); border-radius:8px; font-size:0.95rem;" placeholder="🔍 即時搜尋關鍵字（例如：矽膠包鐵、硬度、LSR、代工）..." onkeyup="filterKwTable()">
+            </div>
+            <div class="table-responsive">
+                <table id="kwTable">
+                    <thead>
+                        <tr>
+                            <th style="text-align:left; width:18%;">關鍵字 (Query)</th>
+                            <th style="text-align:left; width:34%;">對應落地頁</th>
+                            <th style="text-align:center; width:13%;">GSC 平均位置</th>
+                            <th style="text-align:center; width:10%;">曝光次數</th>
+                            <th style="text-align:center; width:9%;">點擊次數</th>
+                            <th style="text-align:center; width:8%;">點閱率</th>
+                            <th style="text-align:center; width:15%;">排名現況</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+    
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="鈞翔"><b>鈞翔</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="index.html"><small>index.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">2.6</td>
+                            <td style="text-align:center; white-space:nowrap;">39 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">1 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">2.56%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-p1'>🟢 第 1 頁 (Top 10)</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="矽膠硬度"><b>矽膠硬度</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="knowledge-shore-hardness-guide.html"><small>knowledge-shore-hardness-guide.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">4.4</td>
+                            <td style="text-align:center; white-space:nowrap;">22 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">1 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">4.55%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-p1'>🟢 第 1 頁 (Top 10)</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="lfgb 矽膠"><b>lfgb 矽膠</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="knowledge-food-grade-silicone-fda.html"><small>knowledge-food-grade-silicone-fda.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">5.1</td>
+                            <td style="text-align:center; white-space:nowrap;">9 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">1 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">11.11%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-p1'>🟢 第 1 頁 (Top 10)</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="silicone overmolding"><b>silicone overmolding</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="en/knowledge-silicone-overmolding.html"><small>en/knowledge-silicone-overmolding.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">91.9</td>
+                            <td style="text-align:center; white-space:nowrap;">56 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-obs'>⚪ 觀測區間</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="工廠"><b>工廠</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="index.html"><small>index.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">4.0</td>
+                            <td style="text-align:center; white-space:nowrap;">1 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-p1'>🟢 第 1 頁 (Top 10)</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="lfgb認證"><b>lfgb認證</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="knowledge-food-grade-silicone-fda.html"><small>knowledge-food-grade-silicone-fda.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">8.2</td>
+                            <td style="text-align:center; white-space:nowrap;">7 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-p1'>🟢 第 1 頁 (Top 10)</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="矽膠代工"><b>矽膠代工</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="knowledge-silicone-factory-guide.html"><small>knowledge-silicone-factory-guide.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">29.5</td>
+                            <td style="text-align:center; white-space:nowrap;">2 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-strike'>🔵 第 2~3 頁 (衝刺)</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="lsr射出成形"><b>lsr射出成形</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="ja/service.html"><small>ja/service.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">27.5</td>
+                            <td style="text-align:center; white-space:nowrap;">2 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-strike'>🔵 第 2~3 頁 (衝刺)</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="橡膠代工"><b>橡膠代工</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="knowledge-rubber-factory-guide.html"><small>knowledge-rubber-factory-guide.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">28.0</td>
+                            <td style="text-align:center; white-space:nowrap;">1 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-strike'>🔵 第 2~3 頁 (衝刺)</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="液態矽膠射出"><b>液態矽膠射出</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="knowledge-lsr-liquid-silicone.html"><small>knowledge-lsr-liquid-silicone.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">28.0</td>
+                            <td style="text-align:center; white-space:nowrap;">1 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-strike'>🔵 第 2~3 頁 (衝刺)</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="液態矽膠射出"><b>液態矽膠射出</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="knowledge-lsr-silicone-supplier-taiwan.html"><small>knowledge-lsr-silicone-supplier-taiwan.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">27.0</td>
+                            <td style="text-align:center; white-space:nowrap;">1 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-strike'>🔵 第 2~3 頁 (衝刺)</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="fda food grade silicone"><b>fda food grade silicone</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="en/knowledge-food-grade-silicone-fda.html"><small>en/knowledge-food-grade-silicone-fda.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">63.4</td>
+                            <td style="text-align:center; white-space:nowrap;">22 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-obs'>⚪ 觀測區間</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="lfgb certified"><b>lfgb certified</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="ja/knowledge-food-grade-silicone-fda.html"><small>ja/knowledge-food-grade-silicone-fda.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">5.0</td>
+                            <td style="text-align:center; white-space:nowrap;">1 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-p1'>🟢 第 1 頁 (Top 10)</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="シリコンゴム 硬度 規格"><b>シリコンゴム 硬度 規格</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="ja/knowledge-shore-hardness-guide.html"><small>ja/knowledge-shore-hardness-guide.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">10.0</td>
+                            <td style="text-align:center; white-space:nowrap;">1 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">1 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">100.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-p1'>🟢 第 1 頁 (Top 10)</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="液態矽膠射出"><b>液態矽膠射出</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="knowledge-solid-vs-lsr.html"><small>knowledge-solid-vs-lsr.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">41.0</td>
+                            <td style="text-align:center; white-space:nowrap;">1 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">1 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">100.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-obs'>⚪ 觀測區間</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="鈞翔"><b>鈞翔</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="products_list.html"><small>products_list.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">8.9</td>
+                            <td style="text-align:center; white-space:nowrap;">12 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">1 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">8.33%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-p1'>🟢 第 1 頁 (Top 10)</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="shore a"><b>shore a</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="ja/knowledge-shore-hardness-guide.html"><small>ja/knowledge-shore-hardness-guide.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">8.2</td>
+                            <td style="text-align:center; white-space:nowrap;">6 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-p1'>🟢 第 1 頁 (Top 10)</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="鈞翔實業有限公司"><b>鈞翔實業有限公司</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="index.html"><small>index.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">1.0</td>
+                            <td style="text-align:center; white-space:nowrap;">10 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">1 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">10.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-p1'>🟢 第 1 頁 (Top 10)</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="shore a 80"><b>shore a 80</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="knowledge-shore-hardness-guide.html"><small>knowledge-shore-hardness-guide.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">3.2</td>
+                            <td style="text-align:center; white-space:nowrap;">5 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-p1'>🟢 第 1 頁 (Top 10)</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="what is lfgb certified"><b>what is lfgb certified</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="en/knowledge-food-grade-silicone-fda.html"><small>en/knowledge-food-grade-silicone-fda.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">36.0</td>
+                            <td style="text-align:center; white-space:nowrap;">2 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-obs'>⚪ 觀測區間</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="shore a 40"><b>shore a 40</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="ja/knowledge-shore-hardness-guide.html"><small>ja/knowledge-shore-hardness-guide.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">8.0</td>
+                            <td style="text-align:center; white-space:nowrap;">2 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-p1'>🟢 第 1 頁 (Top 10)</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="shore 80"><b>shore 80</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="knowledge-shore-hardness-guide.html"><small>knowledge-shore-hardness-guide.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">3.0</td>
+                            <td style="text-align:center; white-space:nowrap;">1 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-p1'>🟢 第 1 頁 (Top 10)</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="液態矽膠射出"><b>液態矽膠射出</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="knowledge-self-bonding-lsr-guide.html"><small>knowledge-self-bonding-lsr-guide.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">73.0</td>
+                            <td style="text-align:center; white-space:nowrap;">1 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-obs'>⚪ 觀測區間</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="lsr射出成形"><b>lsr射出成形</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="ja/knowledge-lsr-liquid-silicone.html"><small>ja/knowledge-lsr-liquid-silicone.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">73.0</td>
+                            <td style="text-align:center; white-space:nowrap;">1 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-obs'>⚪ 觀測區間</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="食品グレードシリコンとは"><b>食品グレードシリコンとは</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="ja/knowledge-food-grade-silicone-fda.html"><small>ja/knowledge-food-grade-silicone-fda.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">6.5</td>
+                            <td style="text-align:center; white-space:nowrap;">9 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-p1'>🟢 第 1 頁 (Top 10)</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="鈞翔實業有限公司"><b>鈞翔實業有限公司</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="products_list.html"><small>products_list.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">4.8</td>
+                            <td style="text-align:center; white-space:nowrap;">10 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-p1'>🟢 第 1 頁 (Top 10)</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="ゴム 樹脂 接合 とは"><b>ゴム 樹脂 接合 とは</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="ja/knowledge-silicone-overmolding.html"><small>ja/knowledge-silicone-overmolding.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">76.0</td>
+                            <td style="text-align:center; white-space:nowrap;">7 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-obs'>⚪ 觀測區間</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="lfgb silicone"><b>lfgb silicone</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="en/knowledge-food-grade-silicone-fda.html"><small>en/knowledge-food-grade-silicone-fda.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">45.7</td>
+                            <td style="text-align:center; white-space:nowrap;">4 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-obs'>⚪ 觀測區間</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="ゴム 樹脂 接合"><b>ゴム 樹脂 接合</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="ja/knowledge-silicone-overmolding.html"><small>ja/knowledge-silicone-overmolding.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">72.0</td>
+                            <td style="text-align:center; white-space:nowrap;">4 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-obs'>⚪ 觀測區間</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="堃翔實業有限公司"><b>堃翔實業有限公司</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="index.html"><small>index.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">9.8</td>
+                            <td style="text-align:center; white-space:nowrap;">4 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-p1'>🟢 第 1 頁 (Top 10)</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="lsr選定"><b>lsr選定</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="ja/knowledge-lsr-silicone-supplier-taiwan.html"><small>ja/knowledge-lsr-silicone-supplier-taiwan.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">2.5</td>
+                            <td style="text-align:center; white-space:nowrap;">4 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-p1'>🟢 第 1 頁 (Top 10)</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="lfgb certification meaning"><b>lfgb certification meaning</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="en/knowledge-food-grade-silicone-fda.html"><small>en/knowledge-food-grade-silicone-fda.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">67.0</td>
+                            <td style="text-align:center; white-space:nowrap;">1 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-obs'>⚪ 觀測區間</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="lfgb meaning"><b>lfgb meaning</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="en/knowledge-food-grade-silicone-fda.html"><small>en/knowledge-food-grade-silicone-fda.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">77.0</td>
+                            <td style="text-align:center; white-space:nowrap;">1 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-obs'>⚪ 觀測區間</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="lfgb standard"><b>lfgb standard</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="en/knowledge-food-grade-silicone-fda.html"><small>en/knowledge-food-grade-silicone-fda.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">82.0</td>
+                            <td style="text-align:center; white-space:nowrap;">1 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-obs'>⚪ 觀測區間</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="test lfgb"><b>test lfgb</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="en/knowledge-food-grade-silicone-fda.html"><small>en/knowledge-food-grade-silicone-fda.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">79.0</td>
+                            <td style="text-align:center; white-space:nowrap;">1 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-obs'>⚪ 觀測區間</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="lfgb certified"><b>lfgb certified</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="en/knowledge-food-grade-silicone-fda.html"><small>en/knowledge-food-grade-silicone-fda.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">76.0</td>
+                            <td style="text-align:center; white-space:nowrap;">1 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-obs'>⚪ 觀測區間</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="lfgb certified silicone"><b>lfgb certified silicone</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="en/knowledge-food-grade-silicone-fda.html"><small>en/knowledge-food-grade-silicone-fda.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">59.0</td>
+                            <td style="text-align:center; white-space:nowrap;">1 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-obs'>⚪ 觀測區間</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="what is lfgb"><b>what is lfgb</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="en/knowledge-food-grade-silicone-fda.html"><small>en/knowledge-food-grade-silicone-fda.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">89.0</td>
+                            <td style="text-align:center; white-space:nowrap;">1 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-obs'>⚪ 觀測區間</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title=""fluorosilicone rubber" market analysis demand"><b>"fluorosilicone rubber" market analysis demand</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="en/knowledge.html"><small>en/knowledge.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">7.7</td>
+                            <td style="text-align:center; white-space:nowrap;">3 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-p1'>🟢 第 1 頁 (Top 10)</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="lsr"><b>lsr</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="knowledge-lsr-liquid-silicone.html"><small>knowledge-lsr-liquid-silicone.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">82.3</td>
+                            <td style="text-align:center; white-space:nowrap;">3 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">2 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">66.67%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-obs'>⚪ 觀測區間</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="silicone insert molding"><b>silicone insert molding</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="en/knowledge-silicone-overmolding.html"><small>en/knowledge-silicone-overmolding.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">34.2</td>
+                            <td style="text-align:center; white-space:nowrap;">7 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-obs'>⚪ 觀測區間</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="インサート成形 防水"><b>インサート成形 防水</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="ja/knowledge-automotive-waterproof-connector.html"><small>ja/knowledge-automotive-waterproof-connector.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">26.0</td>
+                            <td style="text-align:center; white-space:nowrap;">4 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-strike'>🔵 第 2~3 頁 (衝刺)</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="silicone shore hardness"><b>silicone shore hardness</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="en/knowledge-shore-hardness-guide.html"><small>en/knowledge-shore-hardness-guide.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">76.0</td>
+                            <td style="text-align:center; white-space:nowrap;">1 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-obs'>⚪ 觀測區間</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="silicone compression molding vietnam"><b>silicone compression molding vietnam</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="en/service.html"><small>en/service.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">77.7</td>
+                            <td style="text-align:center; white-space:nowrap;">10 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-obs'>⚪ 觀測區間</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="iso 22000 silicone"><b>iso 22000 silicone</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="en/knowledge-food-grade-silicone-fda.html"><small>en/knowledge-food-grade-silicone-fda.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">65.8</td>
+                            <td style="text-align:center; white-space:nowrap;">6 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-obs'>⚪ 觀測區間</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="lsr injection molding"><b>lsr injection molding</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="en/knowledge-lsr-liquid-silicone.html"><small>en/knowledge-lsr-liquid-silicone.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">76.5</td>
+                            <td style="text-align:center; white-space:nowrap;">5 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-obs'>⚪ 觀測區間</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="lsr material"><b>lsr material</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="en/knowledge-lsr-liquid-silicone.html"><small>en/knowledge-lsr-liquid-silicone.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">87.1</td>
+                            <td style="text-align:center; white-space:nowrap;">5 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-obs'>⚪ 觀測區間</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="lsr silicone injection"><b>lsr silicone injection</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="en/knowledge-lsr-liquid-silicone.html"><small>en/knowledge-lsr-liquid-silicone.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">63.5</td>
+                            <td style="text-align:center; white-space:nowrap;">4 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-obs'>⚪ 觀測區間</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="lsr molding"><b>lsr molding</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="en/knowledge-lsr-liquid-silicone.html"><small>en/knowledge-lsr-liquid-silicone.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">90.8</td>
+                            <td style="text-align:center; white-space:nowrap;">4 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-obs'>⚪ 觀測區間</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="silicone rubber overmolding"><b>silicone rubber overmolding</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="en/knowledge-silicone-overmolding.html"><small>en/knowledge-silicone-overmolding.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">96.3</td>
+                            <td style="text-align:center; white-space:nowrap;">3 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-obs'>⚪ 觀測區間</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="silicone rubber keypad design guide"><b>silicone rubber keypad design guide</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="en/knowledge-conductive-keypad.html"><small>en/knowledge-conductive-keypad.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">74.0</td>
+                            <td style="text-align:center; white-space:nowrap;">3 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-obs'>⚪ 觀測區間</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="lsr moulding"><b>lsr moulding</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="en/knowledge-lsr-liquid-silicone.html"><small>en/knowledge-lsr-liquid-silicone.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">64.3</td>
+                            <td style="text-align:center; white-space:nowrap;">3 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-obs'>⚪ 觀測區間</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="o ring mold design"><b>o ring mold design</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="en/knowledge-oring-seal-custom-mold.html"><small>en/knowledge-oring-seal-custom-mold.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">60.0</td>
+                            <td style="text-align:center; white-space:nowrap;">3 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-obs'>⚪ 觀測區間</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="high consistency rubber"><b>high consistency rubber</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="en/knowledge-lsr-silicone-vs-hcr.html"><small>en/knowledge-lsr-silicone-vs-hcr.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">46.0</td>
+                            <td style="text-align:center; white-space:nowrap;">3 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-obs'>⚪ 觀測區間</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="lsr"><b>lsr</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="index.html"><small>index.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">1.0</td>
+                            <td style="text-align:center; white-space:nowrap;">1 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">1 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">100.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-p1'>🟢 第 1 頁 (Top 10)</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="lsr 矽膠"><b>lsr 矽膠</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="knowledge-lsr-liquid-silicone.html"><small>knowledge-lsr-liquid-silicone.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">56.0</td>
+                            <td style="text-align:center; white-space:nowrap;">1 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">1 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">100.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-obs'>⚪ 觀測區間</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="余翔銓"><b>余翔銓</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="index.html"><small>index.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">5.0</td>
+                            <td style="text-align:center; white-space:nowrap;">1 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-p1'>🟢 第 1 頁 (Top 10)</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="high consistency rubber factory"><b>high consistency rubber factory</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="en/service.html"><small>en/service.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">74.0</td>
+                            <td style="text-align:center; white-space:nowrap;">1 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-obs'>⚪ 觀測區間</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="self-bonding lsr manufacturer"><b>self-bonding lsr manufacturer</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="en/service.html"><small>en/service.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">82.5</td>
+                            <td style="text-align:center; white-space:nowrap;">2 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-obs'>⚪ 觀測區間</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="シリコン自重"><b>シリコン自重</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="ja/knowledge.html"><small>ja/knowledge.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">8.0</td>
+                            <td style="text-align:center; white-space:nowrap;">1 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-p1'>🟢 第 1 頁 (Top 10)</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="aerospace ai server"><b>aerospace ai server</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="en/knowledge-ai-server-drone.html"><small>en/knowledge-ai-server-drone.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">12.0</td>
+                            <td style="text-align:center; white-space:nowrap;">1 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-strike'>🔵 第 2~3 頁 (衝刺)</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title=""fluorosilicone rubber" supply chain production"><b>"fluorosilicone rubber" supply chain production</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="en/knowledge.html"><small>en/knowledge.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">9.0</td>
+                            <td style="text-align:center; white-space:nowrap;">1 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-p1'>🟢 第 1 頁 (Top 10)</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title=""fluorosilicone rubber" industry trend forecast"><b>"fluorosilicone rubber" industry trend forecast</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="en/knowledge.html"><small>en/knowledge.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">8.5</td>
+                            <td style="text-align:center; white-space:nowrap;">2 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-p1'>🟢 第 1 頁 (Top 10)</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="翔鈞興業有限公司"><b>翔鈞興業有限公司</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="index.html"><small>index.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">1.0</td>
+                            <td style="text-align:center; white-space:nowrap;">1 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-p1'>🟢 第 1 頁 (Top 10)</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title=""electronic-grade specialty elastomer" market analysis demand"><b>"electronic-grade specialty elastomer" market analysis demand</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="en/knowledge.html"><small>en/knowledge.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">10.0</td>
+                            <td style="text-align:center; white-space:nowrap;">1 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-p1'>🟢 第 1 頁 (Top 10)</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="液態 矽膠"><b>液態 矽膠</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="knowledge-solid-vs-lsr.html"><small>knowledge-solid-vs-lsr.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">48.0</td>
+                            <td style="text-align:center; white-space:nowrap;">2 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-obs'>⚪ 觀測區間</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="食品級矽膠"><b>食品級矽膠</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="knowledge-food-grade-silicone-fda.html"><small>knowledge-food-grade-silicone-fda.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">7.0</td>
+                            <td style="text-align:center; white-space:nowrap;">1 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-p1'>🟢 第 1 頁 (Top 10)</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="liquid silicone overmolding"><b>liquid silicone overmolding</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="en/knowledge-silicone-overmolding.html"><small>en/knowledge-silicone-overmolding.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">96.0</td>
+                            <td style="text-align:center; white-space:nowrap;">1 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-obs'>⚪ 觀測區間</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="シリコンビブ"><b>シリコンビブ</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="ja/knowledge-food-grade-silicone-fda.html"><small>ja/knowledge-food-grade-silicone-fda.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">12.0</td>
+                            <td style="text-align:center; white-space:nowrap;">1 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-strike'>🔵 第 2~3 頁 (衝刺)</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="川連國際"><b>川連國際</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="index.html"><small>index.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">53.0</td>
+                            <td style="text-align:center; white-space:nowrap;">1 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-obs'>⚪ 觀測區間</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="科技業"><b>科技業</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="knowledge-semiconductor-silicone-seal.html"><small>knowledge-semiconductor-silicone-seal.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">12.0</td>
+                            <td style="text-align:center; white-space:nowrap;">1 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-strike'>🔵 第 2~3 頁 (衝刺)</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="silicone overmold process"><b>silicone overmold process</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="en/knowledge-silicone-overmolding.html"><small>en/knowledge-silicone-overmolding.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">91.5</td>
+                            <td style="text-align:center; white-space:nowrap;">2 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-obs'>⚪ 觀測區間</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="automotive rubber keypad design"><b>automotive rubber keypad design</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="en/knowledge-conductive-keypad.html"><small>en/knowledge-conductive-keypad.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">81.0</td>
+                            <td style="text-align:center; white-space:nowrap;">1 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-obs'>⚪ 觀測區間</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="keypad design guide"><b>keypad design guide</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="en/knowledge-conductive-keypad.html"><small>en/knowledge-conductive-keypad.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">58.0</td>
+                            <td style="text-align:center; white-space:nowrap;">1 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-obs'>⚪ 觀測區間</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="rubber keypad design guide"><b>rubber keypad design guide</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="en/knowledge-conductive-keypad.html"><small>en/knowledge-conductive-keypad.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">82.5</td>
+                            <td style="text-align:center; white-space:nowrap;">2 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-obs'>⚪ 觀測區間</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="silicone supplier for oems"><b>silicone supplier for oems</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="en/knowledge-silicone-factory-guide.html"><small>en/knowledge-silicone-factory-guide.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">85.0</td>
+                            <td style="text-align:center; white-space:nowrap;">2 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-obs'>⚪ 觀測區間</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="liquid silicone rubber overmolding"><b>liquid silicone rubber overmolding</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="en/knowledge-silicone-overmolding.html"><small>en/knowledge-silicone-overmolding.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">94.0</td>
+                            <td style="text-align:center; white-space:nowrap;">1 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-obs'>⚪ 觀測區間</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="overmolding silicone"><b>overmolding silicone</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="en/knowledge-silicone-overmolding.html"><small>en/knowledge-silicone-overmolding.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">96.0</td>
+                            <td style="text-align:center; white-space:nowrap;">1 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-obs'>⚪ 觀測區間</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="silicone for overmolding electronics"><b>silicone for overmolding electronics</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="en/knowledge-silicone-overmolding.html"><small>en/knowledge-silicone-overmolding.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">100.0</td>
+                            <td style="text-align:center; white-space:nowrap;">1 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-obs'>⚪ 觀測區間</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="silicone overmolding electronics"><b>silicone overmolding electronics</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="en/knowledge-silicone-overmolding.html"><small>en/knowledge-silicone-overmolding.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">90.5</td>
+                            <td style="text-align:center; white-space:nowrap;">2 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-obs'>⚪ 觀測區間</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="silicone overmolding process"><b>silicone overmolding process</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="en/knowledge-silicone-overmolding.html"><small>en/knowledge-silicone-overmolding.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">93.0</td>
+                            <td style="text-align:center; white-space:nowrap;">1 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-obs'>⚪ 觀測區間</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="overmolded silicone"><b>overmolded silicone</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="en/knowledge-silicone-overmolding.html"><small>en/knowledge-silicone-overmolding.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">96.0</td>
+                            <td style="text-align:center; white-space:nowrap;">1 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-obs'>⚪ 觀測區間</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="全氟橡膠"><b>全氟橡膠</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="knowledge-rubber-factory-guide.html"><small>knowledge-rubber-factory-guide.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">3.0</td>
+                            <td style="text-align:center; white-space:nowrap;">1 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-p1'>🟢 第 1 頁 (Top 10)</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="如何分辨"><b>如何分辨</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="knowledge-food-grade-silicone-fda.html"><small>knowledge-food-grade-silicone-fda.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">2.0</td>
+                            <td style="text-align:center; white-space:nowrap;">1 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-p1'>🟢 第 1 頁 (Top 10)</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="rubber to metal over molding"><b>rubber to metal over molding</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="en/knowledge-silicone-overmolding.html"><small>en/knowledge-silicone-overmolding.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">46.0</td>
+                            <td style="text-align:center; white-space:nowrap;">1 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-obs'>⚪ 觀測區間</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="silicone keypad design"><b>silicone keypad design</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="en/knowledge-conductive-keypad.html"><small>en/knowledge-conductive-keypad.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">84.0</td>
+                            <td style="text-align:center; white-space:nowrap;">1 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-obs'>⚪ 觀測區間</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="silicone keypad design guide"><b>silicone keypad design guide</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="en/knowledge-conductive-keypad.html"><small>en/knowledge-conductive-keypad.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">76.0</td>
+                            <td style="text-align:center; white-space:nowrap;">1 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-obs'>⚪ 觀測區間</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="lsr silicone"><b>lsr silicone</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="en/knowledge-lsr-liquid-silicone.html"><small>en/knowledge-lsr-liquid-silicone.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">92.0</td>
+                            <td style="text-align:center; white-space:nowrap;">2 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-obs'>⚪ 觀測區間</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="custom o ring moulded parts"><b>custom o ring moulded parts</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="en/knowledge-oring-seal-custom-mold.html"><small>en/knowledge-oring-seal-custom-mold.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">78.0</td>
+                            <td style="text-align:center; white-space:nowrap;">1 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-obs'>⚪ 觀測區間</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="lsr rubber"><b>lsr rubber</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="en/knowledge-lsr-liquid-silicone.html"><small>en/knowledge-lsr-liquid-silicone.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">89.0</td>
+                            <td style="text-align:center; white-space:nowrap;">2 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-obs'>⚪ 觀測區間</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="氟 橡膠"><b>氟 橡膠</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="knowledge-viton-vs-fvmq.html"><small>knowledge-viton-vs-fvmq.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">66.0</td>
+                            <td style="text-align:center; white-space:nowrap;">1 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-obs'>⚪ 觀測區間</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="clean room lsr injection molding"><b>clean room lsr injection molding</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="en/knowledge-lsr-liquid-silicone.html"><small>en/knowledge-lsr-liquid-silicone.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">86.0</td>
+                            <td style="text-align:center; white-space:nowrap;">1 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-obs'>⚪ 觀測區間</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="lsr liquid silicone rubber"><b>lsr liquid silicone rubber</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="en/knowledge-lsr-liquid-silicone.html"><small>en/knowledge-lsr-liquid-silicone.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">86.0</td>
+                            <td style="text-align:center; white-space:nowrap;">1 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-obs'>⚪ 觀測區間</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="drone rubber parts"><b>drone rubber parts</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="en/knowledge-uav-silicone-parts.html"><small>en/knowledge-uav-silicone-parts.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">27.0</td>
+                            <td style="text-align:center; white-space:nowrap;">1 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-strike'>🔵 第 2~3 頁 (衝刺)</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="lsr injection"><b>lsr injection</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="en/knowledge-lsr-liquid-silicone.html"><small>en/knowledge-lsr-liquid-silicone.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">97.5</td>
+                            <td style="text-align:center; white-space:nowrap;">2 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-obs'>⚪ 觀測區間</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="lsr silicone material"><b>lsr silicone material</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="en/knowledge-lsr-liquid-silicone.html"><small>en/knowledge-lsr-liquid-silicone.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">90.5</td>
+                            <td style="text-align:center; white-space:nowrap;">2 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-obs'>⚪ 觀測區間</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="lsr silicone rubber"><b>lsr silicone rubber</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="en/knowledge-lsr-liquid-silicone.html"><small>en/knowledge-lsr-liquid-silicone.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">100.0</td>
+                            <td style="text-align:center; white-space:nowrap;">1 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-obs'>⚪ 觀測區間</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="material lsr"><b>material lsr</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="en/knowledge-lsr-liquid-silicone.html"><small>en/knowledge-lsr-liquid-silicone.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">95.0</td>
+                            <td style="text-align:center; white-space:nowrap;">1 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-obs'>⚪ 觀測區間</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="viton 材質"><b>viton 材質</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="knowledge-viton-vs-fvmq.html"><small>knowledge-viton-vs-fvmq.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">61.0</td>
+                            <td style="text-align:center; white-space:nowrap;">1 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-obs'>⚪ 觀測區間</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="lsr compression molding"><b>lsr compression molding</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="en/knowledge-solid-vs-lsr.html"><small>en/knowledge-solid-vs-lsr.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">83.0</td>
+                            <td style="text-align:center; white-space:nowrap;">1 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-obs'>⚪ 觀測區間</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="lsr injection moulding"><b>lsr injection moulding</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="en/knowledge-lsr-liquid-silicone.html"><small>en/knowledge-lsr-liquid-silicone.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">89.0</td>
+                            <td style="text-align:center; white-space:nowrap;">1 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-obs'>⚪ 觀測區間</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="lsr silicone"><b>lsr silicone</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="knowledge-lsr-liquid-silicone.html"><small>knowledge-lsr-liquid-silicone.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">37.0</td>
+                            <td style="text-align:center; white-space:nowrap;">1 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-obs'>⚪ 觀測區間</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="液態矽橡膠"><b>液態矽橡膠</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="knowledge-lsr-liquid-silicone.html"><small>knowledge-lsr-liquid-silicone.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">77.0</td>
+                            <td style="text-align:center; white-space:nowrap;">1 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-obs'>⚪ 觀測區間</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="液態矽膠是什麼"><b>液態矽膠是什麼</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="knowledge-lsr-liquid-silicone.html"><small>knowledge-lsr-liquid-silicone.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">14.5</td>
+                            <td style="text-align:center; white-space:nowrap;">2 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-strike'>🔵 第 2~3 頁 (衝刺)</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="silicone certifications"><b>silicone certifications</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="en/knowledge-food-grade-silicone-fda.html"><small>en/knowledge-food-grade-silicone-fda.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">78.0</td>
+                            <td style="text-align:center; white-space:nowrap;">1 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-obs'>⚪ 觀測區間</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="鈞翔有限公司"><b>鈞翔有限公司</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="index.html"><small>index.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">9.5</td>
+                            <td style="text-align:center; white-space:nowrap;">2 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-p1'>🟢 第 1 頁 (Top 10)</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="lsrメーカー"><b>lsrメーカー</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="ja/service.html"><small>ja/service.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">28.0</td>
+                            <td style="text-align:center; white-space:nowrap;">1 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-strike'>🔵 第 2~3 頁 (衝刺)</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="lsr用途"><b>lsr用途</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="ja/knowledge-lsr-liquid-silicone.html"><small>ja/knowledge-lsr-liquid-silicone.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">94.0</td>
+                            <td style="text-align:center; white-space:nowrap;">1 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-obs'>⚪ 觀測區間</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="鈞翔有限公司"><b>鈞翔有限公司</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="products_list.html"><small>products_list.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">10.0</td>
+                            <td style="text-align:center; white-space:nowrap;">1 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-p1'>🟢 第 1 頁 (Top 10)</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="hcr silicone"><b>hcr silicone</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="en/knowledge-lsr-silicone-vs-hcr.html"><small>en/knowledge-lsr-silicone-vs-hcr.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">80.0</td>
+                            <td style="text-align:center; white-space:nowrap;">1 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-obs'>⚪ 觀測區間</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="liquid silicone"><b>liquid silicone</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="knowledge-lsr-liquid-silicone.html"><small>knowledge-lsr-liquid-silicone.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">10.0</td>
+                            <td style="text-align:center; white-space:nowrap;">1 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-p1'>🟢 第 1 頁 (Top 10)</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="self lubricating elastomers"><b>self lubricating elastomers</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="en/knowledge-self-lubricating-silicone.html"><small>en/knowledge-self-lubricating-silicone.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">47.0</td>
+                            <td style="text-align:center; white-space:nowrap;">1 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-obs'>⚪ 觀測區間</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="silicon hardness"><b>silicon hardness</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="en/knowledge-shore-hardness-guide.html"><small>en/knowledge-shore-hardness-guide.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">1.0</td>
+                            <td style="text-align:center; white-space:nowrap;">1 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-p1'>🟢 第 1 頁 (Top 10)</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="silicone fluid"><b>silicone fluid</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="knowledge-lsr-liquid-silicone.html"><small>knowledge-lsr-liquid-silicone.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">1.0</td>
+                            <td style="text-align:center; white-space:nowrap;">1 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-p1'>🟢 第 1 頁 (Top 10)</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="silicone rubber hardness"><b>silicone rubber hardness</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="en/knowledge-shore-hardness-guide.html"><small>en/knowledge-shore-hardness-guide.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">76.0</td>
+                            <td style="text-align:center; white-space:nowrap;">1 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-obs'>⚪ 觀測區間</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="بوندفيتون"><b>بوندفيتون</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="en/knowledge.html"><small>en/knowledge.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">9.0</td>
+                            <td style="text-align:center; white-space:nowrap;">1 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-p1'>🟢 第 1 頁 (Top 10)</span></td>
+                        </tr>
+        
+                        <tr>
+                            <td style="font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="シリコーン離型層を長期保管した際のブロッキングリスクの詳細 -filetype:txt -filetype:pdf -filetype:epub -filetype:doc -filetype:docx -filetype:xls -filetype:xlsx -filetype:ppt -filetype:csv -site:youtube.com -site:tiktok.com -site:instagram.com -site:ebay.com -site:jd.com -site:amazon.com -site:iqiyi.com -site:bilibili.com -site:t.me -site:douyin.com -site:douban.com -site:apple.com -site:reddit.com -site:researchgate.net -site:academia.edu -site:dokumen.pub -site:en.wikipedia.org -site:quora.com -site:sciencedirect.com -site:cambridge.org -site:mdpi.com -site:link.springer.com -site:zhuanlan.zhihu.com -site:journals.sagepub.com -site:imdb.com -site:tandfonline.com -site:onlinelibrary.wiley.com -site:brill.com -site:getyourguide.com -site:academic.oup.com -site:www.emerald.com -site:eresources.nlb.gov.sg -site:www.govinfo.gov"><b>シリコーン離型層を長期保管した際のブロッキングリスクの詳細 -filetype:txt -filetype:pdf -filetype:epub -filetype:doc -filetype:docx -filetype:xls -filetype:xlsx -filetype:ppt -filetype:csv -site:youtube.com -site:tiktok.com -site:instagram.com -site:ebay.com -site:jd.com -site:amazon.com -site:iqiyi.com -site:bilibili.com -site:t.me -site:douyin.com -site:douban.com -site:apple.com -site:reddit.com -site:researchgate.net -site:academia.edu -site:dokumen.pub -site:en.wikipedia.org -site:quora.com -site:sciencedirect.com -site:cambridge.org -site:mdpi.com -site:link.springer.com -site:zhuanlan.zhihu.com -site:journals.sagepub.com -site:imdb.com -site:tandfonline.com -site:onlinelibrary.wiley.com -site:brill.com -site:getyourguide.com -site:academic.oup.com -site:www.emerald.com -site:eresources.nlb.gov.sg -site:www.govinfo.gov</b></td>
+                            <td style="color:#64748B; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="ja/knowledge.html"><small>ja/knowledge.html</small></td>
+                            <td style="text-align:center; font-weight:800; font-size:1.02rem; color:#0F172A; white-space:nowrap;">10.0</td>
+                            <td style="text-align:center; white-space:nowrap;">2 次</td>
+                            <td style="text-align:center; font-weight:600; white-space:nowrap;">0 次</td>
+                            <td style="text-align:center; color:#0284C7; font-weight:600; white-space:nowrap;">0.00%</td>
+                            <td style="text-align:center; white-space:nowrap;"><span class='tag tag-p1'>🟢 第 1 頁 (Top 10)</span></td>
+                        </tr>
+        
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function filterKwTable() {
+            let input = document.getElementById('kwSearch').value.toLowerCase();
+            let rows = document.querySelectorAll('#kwTable tbody tr');
+            rows.forEach(r => {
+                let text = r.innerText.toLowerCase();
+                r.style.display = text.includes(input) ? '' : 'none';
+            });
+        }
+    </script>
+</body>
+</html>
