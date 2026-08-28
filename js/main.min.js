@@ -8,7 +8,7 @@ const ATTR_VERSION = 'v1';
 
 function getClusterFromPath(path) {
     const p = path.toLowerCase();
-    if (p.includes('overmolding') || p.includes('vibration')) return 'overmolding';
+    if (p.includes('overmolding') || p.includes('vibration') || p.includes('bonding')) return 'overmolding';
     if (p.includes('lsr') || p.includes('liquid') || p.includes('service.html')) return 'lsr_injection';
     if (p.includes('oring') || p.includes('seal') || p.includes('waterproof') || p.includes('viton')) return 'seals_waterproof';
     if (p.includes('self-lubricating')) return 'self_lubricating';

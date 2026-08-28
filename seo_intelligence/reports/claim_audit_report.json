@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-08-28T16:10:13.582584Z",
-  "files_scanned": 113,
+  "timestamp": "2026-08-28T16:17:09.794683Z",
+  "files_scanned": 114,
   "status": "PASSED",
   "summary": {
     "error_count": 0,
     "warning_count": 127,
-    "info_count": 2330,
-    "verified_count": 1484,
-    "conditional_pass_count": 846
+    "info_count": 2344,
+    "verified_count": 1495,
+    "conditional_pass_count": 849
   },
   "errors": [],
   "warnings": [
@@ -1078,7 +1078,7 @@
       "claim_id": "CLM-004",
       "claim_type": "material",
       "matched_text": "FDA",
-      "line": 3491,
+      "line": 3509,
       "context": "尋找台灣專業 LSR 液態矽膠射出工廠？本文提供完整的採購評估指標，包含川連射出設備規格、精密流道模具能力、潔淨室環境、FDA醫療級認證與包膠工藝，協助工程師與採購順利評估液態矽膠代工合作。",
       "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
     },
@@ -1087,7 +1087,7 @@
       "claim_id": "CLM-004",
       "claim_type": "material",
       "matched_text": "醫療級",
-      "line": 3491,
+      "line": 3509,
       "context": "尋找台灣專業 LSR 液態矽膠射出工廠？本文提供完整的採購評估指標，包含川連射出設備規格、精密流道模具能力、潔淨室環境、FDA醫療級認證與包膠工藝，協助工程師與採購順利評估液態矽膠代工合作。",
       "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
     },
@@ -1096,7 +1096,7 @@
       "claim_id": "CLM-004",
       "claim_type": "material",
       "matched_text": "醫療級",
-      "line": 7215,
+      "line": 7233,
       "context": "客戶案例分享 醫療級 LSR 液態矽膠呼吸面罩配件：高品質與精密的量產實踐",
       "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
     },
@@ -1105,7 +1105,7 @@
       "claim_id": "CLM-004",
       "claim_type": "material",
       "matched_text": "醫療級",
-      "line": 7231,
+      "line": 7249,
       "context": "醫療級 LSR 液態矽膠呼吸面罩配件：高品質與精密的量產實踐",
       "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
     },
@@ -1114,7 +1114,7 @@
       "claim_id": "CLM-004",
       "claim_type": "material",
       "matched_text": "醫療級",
-      "line": 7335,
+      "line": 7353,
       "context": "▲ 鈞翔實業生產的無塵無污染、通過生物相容性檢測醫療級 LSR 呼吸面罩墊片",
       "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
     },
@@ -1123,7 +1123,7 @@
       "claim_id": "CLM-004",
       "claim_type": "material",
       "matched_text": "醫療級",
-      "line": 7351,
+      "line": 7369,
       "context": "▲ 鈞翔實業生產的無塵無污染、通過生物相容性檢測醫療級 LSR 呼吸面罩墊片",
       "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
     },
@@ -1132,7 +1132,7 @@
       "claim_id": "CLM-004",
       "claim_type": "material",
       "matched_text": "FDA",
-      "line": 7367,
+      "line": 7385,
       "context": "【面臨的技術挑戰】 面罩長時間與肌膚接觸，高溫消毒時不能釋放揮發物。傳統固態矽膠壓出有人工操作，易夾雜粉塵或人為油脂，且複雜3D構造容易產生毛邊導致肌膚不適。 【鈞翔的技術解決方案】 採用全閉鎖雙液型液態矽膠自動計量系統，原料 100% 無空氣暴露與人工接觸。設計精密分模與真空排氣系統，毛邊控制極佳",
       "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
     },
@@ -1141,7 +1141,7 @@
       "claim_id": "CLM-004",
       "claim_type": "material",
       "matched_text": "FDA",
-      "line": 7407,
+      "line": 7425,
       "context": "採用全閉鎖雙液型液態矽膠自動計量系統，原料 100% 無空氣暴露與人工接觸。設計精密分模與真空排氣系統，毛邊控制極佳，達到細緻無瑕的外觀品質。優化硫化參數以排除微量小分子，順利通過 FDA 檢測。",
       "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
     },
@@ -21047,6 +21047,143 @@
       "findings": []
     },
     {
+      "file": "P:\\tets\\knowledge-silicone-metal-bonding-failure.html",
+      "counts": {
+        "VERIFIED": 11,
+        "CONDITIONAL_PASS": 3,
+        "WARNING": 0,
+        "ERROR": 0
+      },
+      "findings": [
+        {
+          "level": "INFO",
+          "claim_id": "CLM-001",
+          "claim_type": "certification",
+          "matched_text": "ISO 9001",
+          "line": 104,
+          "context": "ISO 9001 專業認證 · 專營熱固壓模成形 & LSR 液態矽膠射出成型 · 異材結合 (矽膠包金屬 / 包塑膠) 專業代工 · ISO 9001 專業認證 · 專營熱固壓模成形 & LSR 液態矽膠射出成型 ·",
+          "reason": "Verified fact/capability supported by 'TUV_Cert'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-001",
+          "claim_type": "certification",
+          "matched_text": "ISO 9001",
+          "line": 105,
+          "context": "ISO 9001 專業認證 · 專營熱固壓模成形 & LSR 液態矽膠射出成型 · 異材結合 (矽膠包金屬 / 包塑膠) 專業代工 · ISO 9001 專業認證 · 專營熱固壓模成形 & LSR 液態矽膠射出成型 ·",
+          "reason": "Verified fact/capability supported by 'TUV_Cert'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-001",
+          "claim_type": "certification",
+          "matched_text": "ISO 9001",
+          "line": 106,
+          "context": "ISO 9001 專業認證 · 專營熱固壓模成形 & LSR 液態矽膠射出成型 · 異材結合 (矽膠包金屬 / 包塑膠) 專業代工 · ISO 9001 專業認證 · 專營熱固壓模成形 & LSR 液態矽膠射出成型 ·",
+          "reason": "Verified fact/capability supported by 'TUV_Cert'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-001",
+          "claim_type": "certification",
+          "matched_text": "ISO 9001",
+          "line": 107,
+          "context": "ISO 9001 專業認證",
+          "reason": "Verified fact/capability supported by 'TUV_Cert'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-001",
+          "claim_type": "certification",
+          "matched_text": "ISO 9001",
+          "line": 113,
+          "context": "ISO 9001 專業認證",
+          "reason": "Verified fact/capability supported by 'TUV_Cert'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-006",
+          "claim_type": "document_material",
+          "matched_text": "材質證明",
+          "line": 166,
+          "context": " * 註：各項檢驗與測試項目依具體產品圖面、應用環境與客戶專案合約要求執行，出廠可配合提供檢驗與材質證明文件",
+          "reason": "Valid qualifier present for conditional claim 'CLM-006'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-001",
+          "claim_type": "certification",
+          "matched_text": "ISO 9001",
+          "line": 166,
+          "context": "工程導讀： 矽膠包覆金屬（Insert Overmolding）廣泛應用於車用感測器、重載避震腳墊、醫療把手與工業防水端子。然而，在實際量產或可靠度測試中，「界面脫膠（Delamination）」往往是讓研發工程師與品保主管最棘手的痛點。本文由鈞翔實業工程團隊從 界面化學鍵結、金屬表面前處理、底塗劑",
+          "reason": "Verified fact/capability supported by 'TUV_Cert'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-003",
+          "claim_type": "capability",
+          "matched_text": "單色 LSR",
+          "line": 166,
+          "context": "工程導讀： 矽膠包覆金屬（Insert Overmolding）廣泛應用於車用感測器、重載避震腳墊、醫療把手與工業防水端子。然而，在實際量產或可靠度測試中，「界面脫膠（Delamination）」往往是讓研發工程師與品保主管最棘手的痛點。本文由鈞翔實業工程團隊從 界面化學鍵結、金屬表面前處理、底塗劑",
+          "reason": "Verified fact/capability supported by 'Machine_List'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-006",
+          "claim_type": "document_material",
+          "matched_text": "材質證明",
+          "line": 167,
+          "context": " * 註：各項檢驗與測試項目依具體產品圖面、應用環境與客戶專案合約要求執行，出廠可配合提供檢驗與材質證明文件",
+          "reason": "Valid qualifier present for conditional claim 'CLM-006'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-001",
+          "claim_type": "certification",
+          "matched_text": "ISO 9001",
+          "line": 167,
+          "context": "工程導讀： 矽膠包覆金屬（Insert Overmolding）廣泛應用於車用感測器、重載避震腳墊、醫療把手與工業防水端子。然而，在實際量產或可靠度測試中，「界面脫膠（Delamination）」往往是讓研發工程師與品保主管最棘手的痛點。本文由鈞翔實業工程團隊從 界面化學鍵結、金屬表面前處理、底塗劑",
+          "reason": "Verified fact/capability supported by 'TUV_Cert'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-003",
+          "claim_type": "capability",
+          "matched_text": "單色 LSR",
+          "line": 167,
+          "context": "工程導讀： 矽膠包覆金屬（Insert Overmolding）廣泛應用於車用感測器、重載避震腳墊、醫療把手與工業防水端子。然而，在實際量產或可靠度測試中，「界面脫膠（Delamination）」往往是讓研發工程師與品保主管最棘手的痛點。本文由鈞翔實業工程團隊從 界面化學鍵結、金屬表面前處理、底塗劑",
+          "reason": "Verified fact/capability supported by 'Machine_List'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-006",
+          "claim_type": "document_material",
+          "matched_text": "材質證明",
+          "line": 314,
+          "context": "* 註：各項檢驗與測試項目依具體產品圖面、應用環境與客戶專案合約要求執行，出廠可配合提供檢驗與材質證明文件",
+          "reason": "Valid qualifier present for conditional claim 'CLM-006'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-003",
+          "claim_type": "capability",
+          "matched_text": "單色 LSR",
+          "line": 322,
+          "context": "鈞翔實業深耕矽橡膠製造代工超過 30 年，配置單色 LSR 液態射出成型機與真空熱壓成型機，累積豐富的 矽膠包鐵、包鋁合金、包不鏽鋼與包工程塑膠（PC/PA） 模具開發與量產經驗。",
+          "reason": "Verified fact/capability supported by 'Machine_List'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-001",
+          "claim_type": "certification",
+          "matched_text": "ISO 9001",
+          "line": 332,
+          "context": "批量生產與品質管控： 落實進料檢驗、製程品檢與出貨檢驗，全程符合 ISO 9001:2015 體系規範。",
+          "reason": "Verified fact/capability supported by 'TUV_Cert'"
+        }
+      ]
+    },
+    {
       "file": "P:\\tets\\knowledge-silicone-overmolding-bonding.html",
       "counts": {
         "VERIFIED": 15,
@@ -22141,7 +22278,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 3472,
+          "line": 3490,
           "context": "自潤矽膠（出油膠）是透過配方析出矽油、免外加潤滑劑的特殊彈性體。鈞翔實業提供汽車線束防水插塞、醫療密封件、精密O型環等自潤矽膠熱固成型代工，硬度Shore A 30~70可調，符合ISO 9001品質認證。",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -22150,7 +22287,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "FDA",
-          "line": 3491,
+          "line": 3509,
           "context": "尋找台灣專業 LSR 液態矽膠射出工廠？本文提供完整的採購評估指標，包含川連射出設備規格、精密流道模具能力、潔淨室環境、FDA醫療級認證與包膠工藝，協助工程師與採購順利評估液態矽膠代工合作。",
           "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
         },
@@ -22159,7 +22296,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "醫療級",
-          "line": 3491,
+          "line": 3509,
           "context": "尋找台灣專業 LSR 液態矽膠射出工廠？本文提供完整的採購評估指標，包含川連射出設備規格、精密流道模具能力、潔淨室環境、FDA醫療級認證與包膠工藝，協助工程師與採購順利評估液態矽膠代工合作。",
           "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
         },
@@ -22168,7 +22305,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "醫療級",
-          "line": 3551,
+          "line": 3569,
           "context": "典型應用包括嬰兒奶嘴、醫療級仿生皮膚、舒壓玩具及超低回彈力的導熱片",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -22177,7 +22314,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 3551,
+          "line": 3569,
           "context": "在設計客製化矽膠產品時，硬度是決定產品觸感、結構強度與功能表現的首要指標。工業界最常用「蕭氏硬度計 A 型」（Shore A）來量測橡矽膠的軟硬度，數值範圍從 0°（極軟）到 100°（極硬）。選擇正確的硬度，不僅關乎使用者的手感體驗，更能直接影響密封件的防水防塵效果及產品的使用壽命。 一、 Sho",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -22186,7 +22323,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "醫療級",
-          "line": 3552,
+          "line": 3570,
           "context": "典型應用包括嬰兒奶嘴、醫療級仿生皮膚、舒壓玩具及超低回彈力的導熱片",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -22195,7 +22332,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 3552,
+          "line": 3570,
           "context": "在設計客製化矽膠產品時，硬度是決定產品觸感、結構強度與功能表現的首要指標。工業界最常用「蕭氏硬度計 A 型」（Shore A）來量測橡矽膠的軟硬度，數值範圍從 0°（極軟）到 100°（極硬）。選擇正確的硬度，不僅關乎使用者的手感體驗，更能直接影響密封件的防水防塵效果及產品的使用壽命。 一、 Sho",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -22204,7 +22341,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "醫療級",
-          "line": 3558,
+          "line": 3576,
           "context": "典型應用包括嬰兒奶嘴、醫療級仿生皮膚、舒壓玩具及超低回彈力的導熱片",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -22213,7 +22350,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 3597,
+          "line": 3615,
           "context": "需要高品質的矽橡膠客製化服務嗎？ 鈞翔實業擁有超過 30 年代工經驗，提供固態熱壓、LSR 液態射出成型以及多種異材結合工藝，符合 ISO 9001 國際認證。 瀏覽客製化產品清單 → 了解加工服務與常見問答",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -22222,7 +22359,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 3599,
+          "line": 3617,
           "context": "鈞翔實業擁有超過 30 年代工經驗，提供固態熱壓、LSR 液態射出成型以及多種異材結合工藝，符合 ISO 9001 國際認證。",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -22231,7 +22368,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "FDA",
-          "line": 3626,
+          "line": 3644,
           "context": "技術專欄 食品級矽膠認證完整指南：FDA、LFGB、SGS 有什麼差別",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -22240,152 +22377,8 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "LFGB",
-          "line": 3626,
+          "line": 3644,
           "context": "技術專欄 食品級矽膠認證完整指南：FDA、LFGB、SGS 有什麼差別",
-          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
-        },
-        {
-          "level": "INFO",
-          "claim_id": "CLM-004",
-          "claim_type": "material",
-          "matched_text": "FDA",
-          "line": 3627,
-          "context": "技術專欄 食品級矽膠認證完整指南：FDA、LFGB、SGS 有什麼差別",
-          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
-        },
-        {
-          "level": "INFO",
-          "claim_id": "CLM-004",
-          "claim_type": "material",
-          "matched_text": "LFGB",
-          "line": 3627,
-          "context": "技術專欄 食品級矽膠認證完整指南：FDA、LFGB、SGS 有什麼差別",
-          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
-        },
-        {
-          "level": "INFO",
-          "claim_id": "CLM-004",
-          "claim_type": "material",
-          "matched_text": "FDA",
-          "line": 3629,
-          "context": "食品級矽膠認證完整指南：FDA、LFGB、SGS 有什麼差別",
-          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
-        },
-        {
-          "level": "INFO",
-          "claim_id": "CLM-004",
-          "claim_type": "material",
-          "matched_text": "LFGB",
-          "line": 3629,
-          "context": "食品級矽膠認證完整指南：FDA、LFGB、SGS 有什麼差別",
-          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
-        },
-        {
-          "level": "INFO",
-          "claim_id": "CLM-004",
-          "claim_type": "material",
-          "matched_text": "FDA",
-          "line": 3635,
-          "context": "本篇將深度解析 FDA（美國）、LFGB（歐盟德國）、以及 SGS 第三方測試的差異，幫助您在採購或開發食品接觸矽膠製品時，選擇真正符合法規要求的材料與代工廠",
-          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
-        },
-        {
-          "level": "INFO",
-          "claim_id": "CLM-004",
-          "claim_type": "material",
-          "matched_text": "LFGB",
-          "line": 3635,
-          "context": "本篇將深度解析 FDA（美國）、LFGB（歐盟德國）、以及 SGS 第三方測試的差異，幫助您在採購或開發食品接觸矽膠製品時，選擇真正符合法規要求的材料與代工廠",
-          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
-        },
-        {
-          "level": "INFO",
-          "claim_id": "CLM-004",
-          "claim_type": "material",
-          "matched_text": "FDA",
-          "line": 3638,
-          "context": "然而，不同國家和地區對於「食品接觸材料」的檢測標準與嚴格程度有顯著不同，主要以美國的 FDA 與歐盟（尤其是德國）的 LFGB 為代表",
-          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
-        },
-        {
-          "level": "INFO",
-          "claim_id": "CLM-004",
-          "claim_type": "material",
-          "matched_text": "LFGB",
-          "line": 3638,
-          "context": "然而，不同國家和地區對於「食品接觸材料」的檢測標準與嚴格程度有顯著不同，主要以美國的 FDA 與歐盟（尤其是德國）的 LFGB 為代表",
-          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
-        },
-        {
-          "level": "INFO",
-          "claim_id": "CLM-001",
-          "claim_type": "certification",
-          "matched_text": "ISO 9001",
-          "line": 3638,
-          "context": "食品接觸級材料的安全性直接關係到消費者的健康。矽膠因其化學性質穩定、不含雙酚 A（BPA）、耐高溫且不易滋生細菌，被公認為最安全的食品級塑料替代品。然而，不同國家和地區對於「食品接觸材料」的檢測標準與嚴格程度有顯著不同，主要以美國的 FDA 與歐盟（尤其是德國）的 LFGB 為代表。 一、 美國 F",
-          "reason": "Verified fact/capability supported by 'TUV_Cert'"
-        },
-        {
-          "level": "INFO",
-          "claim_id": "CLM-004",
-          "claim_type": "material",
-          "matched_text": "FDA",
-          "line": 3639,
-          "context": "然而，不同國家和地區對於「食品接觸材料」的檢測標準與嚴格程度有顯著不同，主要以美國的 FDA 與歐盟（尤其是德國）的 LFGB 為代表",
-          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
-        },
-        {
-          "level": "INFO",
-          "claim_id": "CLM-004",
-          "claim_type": "material",
-          "matched_text": "LFGB",
-          "line": 3639,
-          "context": "然而，不同國家和地區對於「食品接觸材料」的檢測標準與嚴格程度有顯著不同，主要以美國的 FDA 與歐盟（尤其是德國）的 LFGB 為代表",
-          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
-        },
-        {
-          "level": "INFO",
-          "claim_id": "CLM-001",
-          "claim_type": "certification",
-          "matched_text": "ISO 9001",
-          "line": 3639,
-          "context": "食品接觸級材料的安全性直接關係到消費者的健康。矽膠因其化學性質穩定、不含雙酚 A（BPA）、耐高溫且不易滋生細菌，被公認為最安全的食品級塑料替代品。然而，不同國家和地區對於「食品接觸材料」的檢測標準與嚴格程度有顯著不同，主要以美國的 FDA 與歐盟（尤其是德國）的 LFGB 為代表。 一、 美國 F",
-          "reason": "Verified fact/capability supported by 'TUV_Cert'"
-        },
-        {
-          "level": "INFO",
-          "claim_id": "CLM-004",
-          "claim_type": "material",
-          "matched_text": "FDA",
-          "line": 3640,
-          "context": "然而，不同國家和地區對於「食品接觸材料」的檢測標準與嚴格程度有顯著不同，主要以美國的 FDA 與歐盟（尤其是德國）的 LFGB 為代表",
-          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
-        },
-        {
-          "level": "INFO",
-          "claim_id": "CLM-004",
-          "claim_type": "material",
-          "matched_text": "LFGB",
-          "line": 3640,
-          "context": "然而，不同國家和地區對於「食品接觸材料」的檢測標準與嚴格程度有顯著不同，主要以美國的 FDA 與歐盟（尤其是德國）的 LFGB 為代表",
-          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
-        },
-        {
-          "level": "INFO",
-          "claim_id": "CLM-004",
-          "claim_type": "material",
-          "matched_text": "FDA",
-          "line": 3642,
-          "context": "一、 美國 FDA 與德國 LFGB 認證標準之深度對比",
-          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
-        },
-        {
-          "level": "INFO",
-          "claim_id": "CLM-004",
-          "claim_type": "material",
-          "matched_text": "LFGB",
-          "line": 3642,
-          "context": "一、 美國 FDA 與德國 LFGB 認證標準之深度對比",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
         {
@@ -22394,6 +22387,150 @@
           "claim_type": "material",
           "matched_text": "FDA",
           "line": 3645,
+          "context": "技術專欄 食品級矽膠認證完整指南：FDA、LFGB、SGS 有什麼差別",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "LFGB",
+          "line": 3645,
+          "context": "技術專欄 食品級矽膠認證完整指南：FDA、LFGB、SGS 有什麼差別",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "FDA",
+          "line": 3647,
+          "context": "食品級矽膠認證完整指南：FDA、LFGB、SGS 有什麼差別",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "LFGB",
+          "line": 3647,
+          "context": "食品級矽膠認證完整指南：FDA、LFGB、SGS 有什麼差別",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "FDA",
+          "line": 3653,
+          "context": "本篇將深度解析 FDA（美國）、LFGB（歐盟德國）、以及 SGS 第三方測試的差異，幫助您在採購或開發食品接觸矽膠製品時，選擇真正符合法規要求的材料與代工廠",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "LFGB",
+          "line": 3653,
+          "context": "本篇將深度解析 FDA（美國）、LFGB（歐盟德國）、以及 SGS 第三方測試的差異，幫助您在採購或開發食品接觸矽膠製品時，選擇真正符合法規要求的材料與代工廠",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "FDA",
+          "line": 3656,
+          "context": "然而，不同國家和地區對於「食品接觸材料」的檢測標準與嚴格程度有顯著不同，主要以美國的 FDA 與歐盟（尤其是德國）的 LFGB 為代表",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "LFGB",
+          "line": 3656,
+          "context": "然而，不同國家和地區對於「食品接觸材料」的檢測標準與嚴格程度有顯著不同，主要以美國的 FDA 與歐盟（尤其是德國）的 LFGB 為代表",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-001",
+          "claim_type": "certification",
+          "matched_text": "ISO 9001",
+          "line": 3656,
+          "context": "食品接觸級材料的安全性直接關係到消費者的健康。矽膠因其化學性質穩定、不含雙酚 A（BPA）、耐高溫且不易滋生細菌，被公認為最安全的食品級塑料替代品。然而，不同國家和地區對於「食品接觸材料」的檢測標準與嚴格程度有顯著不同，主要以美國的 FDA 與歐盟（尤其是德國）的 LFGB 為代表。 一、 美國 F",
+          "reason": "Verified fact/capability supported by 'TUV_Cert'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "FDA",
+          "line": 3657,
+          "context": "然而，不同國家和地區對於「食品接觸材料」的檢測標準與嚴格程度有顯著不同，主要以美國的 FDA 與歐盟（尤其是德國）的 LFGB 為代表",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "LFGB",
+          "line": 3657,
+          "context": "然而，不同國家和地區對於「食品接觸材料」的檢測標準與嚴格程度有顯著不同，主要以美國的 FDA 與歐盟（尤其是德國）的 LFGB 為代表",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-001",
+          "claim_type": "certification",
+          "matched_text": "ISO 9001",
+          "line": 3657,
+          "context": "食品接觸級材料的安全性直接關係到消費者的健康。矽膠因其化學性質穩定、不含雙酚 A（BPA）、耐高溫且不易滋生細菌，被公認為最安全的食品級塑料替代品。然而，不同國家和地區對於「食品接觸材料」的檢測標準與嚴格程度有顯著不同，主要以美國的 FDA 與歐盟（尤其是德國）的 LFGB 為代表。 一、 美國 F",
+          "reason": "Verified fact/capability supported by 'TUV_Cert'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "FDA",
+          "line": 3658,
+          "context": "然而，不同國家和地區對於「食品接觸材料」的檢測標準與嚴格程度有顯著不同，主要以美國的 FDA 與歐盟（尤其是德國）的 LFGB 為代表",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "LFGB",
+          "line": 3658,
+          "context": "然而，不同國家和地區對於「食品接觸材料」的檢測標準與嚴格程度有顯著不同，主要以美國的 FDA 與歐盟（尤其是德國）的 LFGB 為代表",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "FDA",
+          "line": 3660,
+          "context": "一、 美國 FDA 與德國 LFGB 認證標準之深度對比",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "LFGB",
+          "line": 3660,
+          "context": "一、 美國 FDA 與德國 LFGB 認證標準之深度對比",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "FDA",
+          "line": 3663,
           "context": "FDA (Food and Drug Administration) 認證： 依據 FDA 21 CFR 177",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -22402,7 +22539,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "LFGB",
-          "line": 3646,
+          "line": 3664,
           "context": "LFGB (Food and Feed Code) 認證： 這是歐盟及德國極為嚴格的食品安全標準",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -22411,7 +22548,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "FDA",
-          "line": 3646,
+          "line": 3664,
           "context": "）的限量要求比 FDA 嚴苛數倍",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -22420,7 +22557,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "LFGB",
-          "line": 3647,
+          "line": 3665,
           "context": "市場差異： 通常通過 LFGB 測試的矽膠材料原料成本較高，但能無阻地在歐洲高階市場銷售",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -22429,7 +22566,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "FDA",
-          "line": 3647,
+          "line": 3665,
           "context": "而普通的 FDA 級矽膠若在歐洲銷售，可能會面臨抽檢不合格的風險",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -22438,7 +22575,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "FDA",
-          "line": 3651,
+          "line": 3669,
           "context": "廠商所說的「通過 SGS 認證」，實際上是指「樣品經由 SGS 實驗室測試，其測試結果符合 FDA 或 LFGB 的檢測指標」",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -22447,7 +22584,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "LFGB",
-          "line": 3651,
+          "line": 3669,
           "context": "廠商所說的「通過 SGS 認證」，實際上是指「樣品經由 SGS 實驗室測試，其測試結果符合 FDA 或 LFGB 的檢測指標」",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -22456,7 +22593,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "FDA",
-          "line": 3656,
+          "line": 3674,
           "context": "若拉伸部位顯著發白或出現白色條紋，說明矽膠中添加了廉價的碳酸鈣或矽灰石等填料，這並非 100% 純矽膠，可能無法通過 FDA/LFGB 認證",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -22465,7 +22602,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "LFGB",
-          "line": 3656,
+          "line": 3674,
           "context": "若拉伸部位顯著發白或出現白色條紋，說明矽膠中添加了廉價的碳酸鈣或矽灰石等填料，這並非 100% 純矽膠，可能無法通過 FDA/LFGB 認證",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -22474,7 +22611,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "FDA",
-          "line": 3661,
+          "line": 3679,
           "context": "鈞翔實業有限公司配合的矽膠原料皆來自信越（Shin-Etsu）、道寧（Dow Corning）等國際一線大廠，出廠均附帶 FDA 與 LFGB 原料合規報告",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -22483,7 +22620,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "LFGB",
-          "line": 3661,
+          "line": 3679,
           "context": "鈞翔實業有限公司配合的矽膠原料皆來自信越（Shin-Etsu）、道寧（Dow Corning）等國際一線大廠，出廠均附帶 FDA 與 LFGB 原料合規報告",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -22492,7 +22629,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 3663,
+          "line": 3681,
           "context": "需要高品質的矽橡膠客製化服務嗎？ 鈞翔實業擁有超過 30 年代工經驗，提供固態熱壓、LSR 液態射出成型以及多種異材結合工藝，符合 ISO 9001 國際認證。 瀏覽客製化產品清單 → 了解加工服務與常見問答",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -22501,7 +22638,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 3665,
+          "line": 3683,
           "context": "鈞翔實業擁有超過 30 年代工經驗，提供固態熱壓、LSR 液態射出成型以及多種異材結合工藝，符合 ISO 9001 國際認證。",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -22510,7 +22647,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "FDA",
-          "line": 3704,
+          "line": 3722,
           "context": " 膠料種類 耐溫範圍 優點與典型特性 不建議使用環境 矽膠 (VMQ) -50°C ~ 200°C 生理惰性、FDA級、低溫彈性佳 強酸、強鹼、有機溶劑、動態密封 三元乙丙膠 (EPDM) -45°C ~ 130°C 極佳的耐臭氧、耐候性及耐熱水 石油類潤滑油、燃油環境 氟橡膠 (FKM/Viton",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -22519,7 +22656,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 3704,
+          "line": 3722,
           "context": "在工程開發中，密封圈的精密度直接影響到整機的防水（IPX7/IPX8）與防塵等級。標準規格的 O 型環固然便宜，但在結構受限、極端耐溫或耐化學性要求的特殊設計中，標準品往往無法完美匹配。此時，客製化開模就是確保產品組裝密封品質的最安全做法。 一、 矽膠 O 型環客製化開模的完整流程 客製化開模主要分",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -22528,7 +22665,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "FDA",
-          "line": 3705,
+          "line": 3723,
           "context": " 膠料種類 耐溫範圍 優點與典型特性 不建議使用環境 矽膠 (VMQ) -50°C ~ 200°C 生理惰性、FDA級、低溫彈性佳 強酸、強鹼、有機溶劑、動態密封 三元乙丙膠 (EPDM) -45°C ~ 130°C 極佳的耐臭氧、耐候性及耐熱水 石油類潤滑油、燃油環境 氟橡膠 (FKM/Viton",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -22537,7 +22674,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 3705,
+          "line": 3723,
           "context": "在工程開發中，密封圈的精密度直接影響到整機的防水（IPX7/IPX8）與防塵等級。標準規格的 O 型環固然便宜，但在結構受限、極端耐溫或耐化學性要求的特殊設計中，標準品往往無法完美匹配。此時，客製化開模就是確保產品組裝密封品質的最安全做法。 一、 矽膠 O 型環客製化開模的完整流程 客製化開模主要分",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -22546,7 +22683,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "FDA",
-          "line": 3732,
+          "line": 3750,
           "context": "生理惰性、FDA級、低溫彈性佳",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -22555,7 +22692,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 3753,
+          "line": 3771,
           "context": "需要高品質的矽橡膠客製化服務嗎？ 鈞翔實業擁有超過 30 年代工經驗，提供固態熱壓、LSR 液態射出成型以及多種異材結合工藝，符合 ISO 9001 國際認證。 瀏覽客製化產品清單 → 了解加工服務與常見問答",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -22564,7 +22701,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 3755,
+          "line": 3773,
           "context": "鈞翔實業擁有超過 30 年代工經驗，提供固態熱壓、LSR 液態射出成型以及多種異材結合工藝，符合 ISO 9001 國際認證。",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -22573,7 +22710,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 3794,
+          "line": 3812,
           "context": "在自動化設備、量測儀器、空氣壓縮機與工業泵浦等機台的運作中，馬達或傳動機構高速運轉產生的頻繁震動，會藉由剛性底座傳遞至地面，產生噪聲甚至干擾周邊精密量測。防震腳墊的任務就是阻斷震動能量的傳遞路徑。在此類重載或高低溫極端環境下，高彈性特種矽膠與合成橡膠具有金屬彈簧無法比擬的阻尼消震性能。 一、 橡矽膠",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -22582,7 +22719,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 3795,
+          "line": 3813,
           "context": "在自動化設備、量測儀器、空氣壓縮機與工業泵浦等機台的運作中，馬達或傳動機構高速運轉產生的頻繁震動，會藉由剛性底座傳遞至地面，產生噪聲甚至干擾周邊精密量測。防震腳墊的任務就是阻斷震動能量的傳遞路徑。在此類重載或高低溫極端環境下，高彈性特種矽膠與合成橡膠具有金屬彈簧無法比擬的阻尼消震性能。 一、 橡矽膠",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -22591,7 +22728,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 3852,
+          "line": 3870,
           "context": "需要高品質的矽橡膠客製化服務嗎？ 鈞翔實業擁有超過 30 年代工經驗，提供固態熱壓、LSR 液態射出成型以及多種異材結合工藝，符合 ISO 9001 國際認證。 瀏覽客製化產品清單 → 了解加工服務與常見問答",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -22600,7 +22737,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 3854,
+          "line": 3872,
           "context": "鈞翔實業擁有超過 30 年代工經驗，提供固態熱壓、LSR 液態射出成型以及多種異材結合工藝，符合 ISO 9001 國際認證。",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -22609,7 +22746,7 @@
           "claim_id": "CLM-008",
           "claim_type": "compliance",
           "matched_text": "RoHS",
-          "line": 3893,
+          "line": 3911,
           "context": "我們的製程原料具備符合 RoHS、REACH 與高化學純度要求",
           "reason": "Valid qualifier present for conditional claim 'CLM-008'"
         },
@@ -22618,7 +22755,7 @@
           "claim_id": "CLM-008",
           "claim_type": "compliance",
           "matched_text": "REACH",
-          "line": 3893,
+          "line": 3911,
           "context": "我們的製程原料具備符合 RoHS、REACH 與高化學純度要求",
           "reason": "Valid qualifier present for conditional claim 'CLM-008'"
         },
@@ -22627,7 +22764,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 3893,
+          "line": 3911,
           "context": "在現代先進晶圓代工與高解析度面板製程中，微米級的空氣粉塵或痕量揮發性雜質，都可能直接造成電路短路，徹底摧毀晶圓良率。密封件作為真空反應腔體（Vacuum Chamber）、化學清洗設備及傳送機構的隔離防線，其材料純度與氣密性對設備穩定運作至關重要。 一、 半導體製程對矽膠密封件的極端要求 相較於一般",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -22636,7 +22773,7 @@
           "claim_id": "CLM-008",
           "claim_type": "compliance",
           "matched_text": "RoHS",
-          "line": 3894,
+          "line": 3912,
           "context": "我們的製程原料具備符合 RoHS、REACH 與高化學純度要求",
           "reason": "Valid qualifier present for conditional claim 'CLM-008'"
         },
@@ -22645,7 +22782,7 @@
           "claim_id": "CLM-008",
           "claim_type": "compliance",
           "matched_text": "REACH",
-          "line": 3894,
+          "line": 3912,
           "context": "我們的製程原料具備符合 RoHS、REACH 與高化學純度要求",
           "reason": "Valid qualifier present for conditional claim 'CLM-008'"
         },
@@ -22654,7 +22791,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 3894,
+          "line": 3912,
           "context": "在現代先進晶圓代工與高解析度面板製程中，微米級的空氣粉塵或痕量揮發性雜質，都可能直接造成電路短路，徹底摧毀晶圓良率。密封件作為真空反應腔體（Vacuum Chamber）、化學清洗設備及傳送機構的隔離防線，其材料純度與氣密性對設備穩定運作至關重要。 一、 半導體製程對矽膠密封件的極端要求 相較於一般",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -22663,7 +22800,7 @@
           "claim_id": "CLM-008",
           "claim_type": "compliance",
           "matched_text": "RoHS",
-          "line": 3913,
+          "line": 3931,
           "context": "我們的製程原料具備符合 RoHS、REACH 與高化學純度要求",
           "reason": "Valid qualifier present for conditional claim 'CLM-008'"
         },
@@ -22672,7 +22809,7 @@
           "claim_id": "CLM-008",
           "claim_type": "compliance",
           "matched_text": "REACH",
-          "line": 3913,
+          "line": 3931,
           "context": "我們的製程原料具備符合 RoHS、REACH 與高化學純度要求",
           "reason": "Valid qualifier present for conditional claim 'CLM-008'"
         },
@@ -22681,7 +22818,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 3915,
+          "line": 3933,
           "context": "需要高品質的矽橡膠客製化服務嗎？ 鈞翔實業擁有超過 30 年代工經驗，提供固態熱壓、LSR 液態射出成型以及多種異材結合工藝，符合 ISO 9001 國際認證。 瀏覽客製化產品清單 → 了解加工服務與常見問答",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -22690,7 +22827,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 3917,
+          "line": 3935,
           "context": "鈞翔實業擁有超過 30 年代工經驗，提供固態熱壓、LSR 液態射出成型以及多種異材結合工藝，符合 ISO 9001 國際認證。",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -22699,7 +22836,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 3959,
+          "line": 3977,
           "context": "在工業精密防護與密封應用中，材料的「化學惰性」與「耐溫能力」直接決定了零部件的壽命。當一般密封材質如丁腈橡膠（NBR）或普通矽膠因接觸強溶劑、燃油而發生溶脹（Swelling）失效時，特種氟彈性體即成為唯一的解決方案。氟橡膠（Viton/FKM）與氟矽橡膠（FVMQ）雖然都含有氟元素，但由於主鏈結構",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -22708,7 +22845,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 3960,
+          "line": 3978,
           "context": "在工業精密防護與密封應用中，材料的「化學惰性」與「耐溫能力」直接決定了零部件的壽命。當一般密封材質如丁腈橡膠（NBR）或普通矽膠因接觸強溶劑、燃油而發生溶脹（Swelling）失效時，特種氟彈性體即成為唯一的解決方案。氟橡膠（Viton/FKM）與氟矽橡膠（FVMQ）雖然都含有氟元素，但由於主鏈結構",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -22717,7 +22854,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 4025,
+          "line": 4043,
           "context": "需要高品質的矽橡膠客製化服務嗎？ 鈞翔實業擁有超過 30 年代工經驗，提供固態熱壓、LSR 液態射出成型以及多種異材結合工藝，符合 ISO 9001 國際認證。 瀏覽客製化產品清單 → 了解加工服務與常見問答",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -22726,7 +22863,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 4027,
+          "line": 4045,
           "context": "鈞翔實業擁有超過 30 年代工經驗，提供固態熱壓、LSR 液態射出成型以及多種異材結合工藝，符合 ISO 9001 國際認證。",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -22735,7 +22872,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 4195,
+          "line": 4213,
           "context": "在無人機（UAV）系統的硬體設計中，飛控晶片、相機雲台以及動力系統對高頻震動與雨水塵埃極度敏感。精密矽橡膠零件雖不起眼，卻是決定無人機能否穩定飛行、防範水分滲漏並減緩降落衝擊的「隱形力學屏障」。以下為您詳解無人機三大核心應用場景下的橡矽膠零件設計指引： 1. 雲台相機避震球與馬達減震墊（阻尼避震設計",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -22744,7 +22881,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 4203,
+          "line": 4221,
           "context": "在無人機（UAV）系統的硬體設計中，飛控晶片、相機雲台以及動力系統對高頻震動與雨水塵埃極度敏感。精密矽橡膠零件雖不起眼，卻是決定無人機能否穩定飛行、防範水分滲漏並減緩降落衝擊的「隱形力學屏障」。以下為您詳解無人機三大核心應用場景下的橡矽膠零件設計指引： 1. 雲台相機避震球與馬達減震墊（阻尼避震設計",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -22753,7 +22890,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 4780,
+          "line": 4798,
           "context": "需要高品質的矽橡膠客製化服務嗎？ 鈞翔實業擁有超過 30 年代工經驗，提供固態熱壓、LSR 液態射出成型以及多種異材結合工藝，符合 ISO 9001 國際認證。 瀏覽客製化產品清單 → 了解加工服務與常見問答",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -22762,7 +22899,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 4782,
+          "line": 4800,
           "context": "鈞翔實業擁有超過 30 年代工經驗，提供固態熱壓、LSR 液態射出成型以及多種異材結合工藝，符合 ISO 9001 國際認證。",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -22771,7 +22908,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 4983,
+          "line": 5001,
           "context": "在人工智慧 (AI) 伺服器與無人載具 (UAV) 系統中，硬體架構的可靠性是演算法能穩定發揮的底氣。面對高壓、高熱、動態震動、電磁波干擾 (EMI) 及全天候嚴酷環境，精密矽膠與橡膠元件提供了完美的解決方案。以下為兩大高成長硬體市場的深度應用分析與材料設計要點： 一、 AI 伺服器與高算力機櫃中的",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -22780,7 +22917,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 4991,
+          "line": 5009,
           "context": "在人工智慧 (AI) 伺服器與無人載具 (UAV) 系統中，硬體架構的可靠性是演算法能穩定發揮的底氣。面對高壓、高熱、動態震動、電磁波干擾 (EMI) 及全天候嚴酷環境，精密矽膠與橡膠元件提供了完美的解決方案。以下為兩大高成長硬體市場的深度應用分析與材料設計要點： 一、 AI 伺服器與高算力機櫃中的",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -22789,7 +22926,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 5704,
+          "line": 5722,
           "context": "需要高品質的矽橡膠客製化服務嗎？ 鈞翔實業擁有超過 30 年代工經驗，提供固態熱壓、LSR 液態射出成型以及多種異材結合工藝，符合 ISO 9001 國際認證。 瀏覽客製化產品清單 → 了解加工服務與常見問答",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -22798,7 +22935,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 5706,
+          "line": 5724,
           "context": "鈞翔實業擁有超過 30 年代工經驗，提供固態熱壓、LSR 液態射出成型以及多種異材結合工藝，符合 ISO 9001 國際認證。",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -22807,7 +22944,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 5907,
+          "line": 5925,
           "context": "在開發矽橡膠製品時，選擇正確的成型工藝不僅關係到產品品質，更直接決定了模具預算與長期量產成本。以下為您深入分析傳統固態熱壓成型與現代自動化液態矽膠射出的差別： 1. 固態矽膠真空熱壓成型 (Solid Silicone Pressing) 這是歷史悠久、技術成熟的成型方式，使用混煉好的固態矽膠原料（",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -22816,7 +22953,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 5915,
+          "line": 5933,
           "context": "在開發矽橡膠製品時，選擇正確的成型工藝不僅關係到產品品質，更直接決定了模具預算與長期量產成本。以下為您深入分析傳統固態熱壓成型與現代自動化液態矽膠射出的差別： 1. 固態矽膠真空熱壓成型 (Solid Silicone Pressing) 這是歷史悠久、技術成熟的成型方式，使用混煉好的固態矽膠原料（",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -22825,7 +22962,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 6388,
+          "line": 6406,
           "context": "需要高品質的矽橡膠客製化服務嗎？ 鈞翔實業擁有超過 30 年代工經驗，提供固態熱壓、LSR 液態射出成型以及多種異材結合工藝，符合 ISO 9001 國際認證。 瀏覽客製化產品清單 → 了解加工服務與常見問答",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -22834,7 +22971,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 6390,
+          "line": 6408,
           "context": "鈞翔實業擁有超過 30 年代工經驗，提供固態熱壓、LSR 液態射出成型以及多種異材結合工藝，符合 ISO 9001 國際認證。",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -22843,7 +22980,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 6591,
+          "line": 6609,
           "context": "在電子防水配件、醫療導管接頭、汽車減震件等設計中，「矽膠包塑膠」與「矽膠包鐵/包金屬」的結構極為常見。此工藝可以省去後段人工黏合組裝，並能實現極佳的 高耐候防水防塵功能。以下是確保兩種不同材質完美架橋結合、絕不脫離的四大核心步驟： 1. 嚴格選擇基材耐溫極限 矽膠的硫化成型溫度通常介於 130°C ",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -22852,7 +22989,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 6599,
+          "line": 6617,
           "context": "在電子防水配件、醫療導管接頭、汽車減震件等設計中，「矽膠包塑膠」與「矽膠包鐵/包金屬」的結構極為常見。此工藝可以省去後段人工黏合組裝，並能實現極佳的 高耐候防水防塵功能。以下是確保兩種不同材質完美架橋結合、絕不脫離的四大核心步驟： 1. 嚴格選擇基材耐溫極限 矽膠的硫化成型溫度通常介於 130°C ",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -22861,7 +22998,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 6728,
+          "line": 6746,
           "context": "需要高品質的矽橡膠客製化服務嗎？ 鈞翔實業擁有超過 30 年代工經驗，提供固態熱壓、LSR 液態射出成型以及多種異材結合工藝，符合 ISO 9001 國際認證。 瀏覽客製化產品清單 → 了解加工服務與常見問答",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -22870,7 +23007,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 6730,
+          "line": 6748,
           "context": "鈞翔實業擁有超過 30 年代工經驗，提供固態熱壓、LSR 液態射出成型以及多種異材結合工藝，符合 ISO 9001 國際認證。",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -22879,7 +23016,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 6931,
+          "line": 6949,
           "context": "矽膠按鍵之所以有「按下去彈上來」的手感，完全依賴其內部的「斜壁（Web）」設計。優良的按鍵設計需要掌握以下三大物理核心數值： 1. 按鍵下壓彈力 (Actuation Force) 與手感比率 (Tactile Ratio) 按下按鍵所需的力道 (F1)。消費級電子（遙控器）為 80g ~ 120g",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -22888,7 +23025,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 6939,
+          "line": 6957,
           "context": "矽膠按鍵之所以有「按下去彈上來」的手感，完全依賴其內部的「斜壁（Web）」設計。優良的按鍵設計需要掌握以下三大物理核心數值： 1. 按鍵下壓彈力 (Actuation Force) 與手感比率 (Tactile Ratio) 按下按鍵所需的力道 (F1)。消費級電子（遙控器）為 80g ~ 120g",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -22897,7 +23034,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 7108,
+          "line": 7126,
           "context": "需要高品質的矽橡膠客製化服務嗎？ 鈞翔實業擁有超過 30 年代工經驗，提供固態熱壓、LSR 液態射出成型以及多種異材結合工藝，符合 ISO 9001 國際認證。 瀏覽客製化產品清單 → 了解加工服務與常見問答",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -22906,7 +23043,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 7110,
+          "line": 7128,
           "context": "鈞翔實業擁有超過 30 年代工經驗，提供固態熱壓、LSR 液態射出成型以及多種異材結合工藝，符合 ISO 9001 國際認證。",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -22915,7 +23052,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "醫療級",
-          "line": 7207,
+          "line": 7225,
           "context": "客戶案例分享 醫療級 LSR 液態矽膠呼吸面罩配件：高品質與精密的量產實踐",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -22924,7 +23061,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "醫療級",
-          "line": 7215,
+          "line": 7233,
           "context": "客戶案例分享 醫療級 LSR 液態矽膠呼吸面罩配件：高品質與精密的量產實踐",
           "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
         },
@@ -22933,7 +23070,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "醫療級",
-          "line": 7231,
+          "line": 7249,
           "context": "醫療級 LSR 液態矽膠呼吸面罩配件：高品質與精密的量產實踐",
           "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
         },
@@ -22942,7 +23079,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "FDA",
-          "line": 7279,
+          "line": 7297,
           "context": "產品要求：必須符合 FDA 食品級與 ISO 10993 生物相容性規範、毛邊控制極佳，達到細緻無瑕的外觀品質，且製程中不能有人為油脂污染",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -22951,7 +23088,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "醫療級",
-          "line": 7311,
+          "line": 7329,
           "context": "▲ 鈞翔實業生產的無塵無污染、通過生物相容性檢測醫療級 LSR 呼吸面罩墊片 【面臨的技術挑戰】 面罩長時間與肌膚接觸，高溫消毒時不能釋放揮發物",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -22960,7 +23097,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "FDA",
-          "line": 7311,
+          "line": 7329,
           "context": "優化硫化參數以排除微量小分子，順利通過 FDA 檢測",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -22969,7 +23106,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 7311,
+          "line": 7329,
           "context": "▲ 鈞翔實業生產的無塵無污染、通過生物相容性檢測醫療級 LSR 呼吸面罩墊片 【面臨的技術挑戰】 面罩長時間與肌膚接觸，高溫消毒時不能釋放揮發物。傳統固態矽膠壓出有人工操作，易夾雜粉塵或人為油脂，且複雜3D構造容易產生毛邊導致肌膚不適。 【鈞翔的技術解決方案】 採用全閉鎖雙液型液態矽膠自動計量系統，",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -22978,7 +23115,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "醫療級",
-          "line": 7319,
+          "line": 7337,
           "context": "▲ 鈞翔實業生產的無塵無污染、通過生物相容性檢測醫療級 LSR 呼吸面罩墊片 【面臨的技術挑戰】 面罩長時間與肌膚接觸，高溫消毒時不能釋放揮發物",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -22987,7 +23124,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "FDA",
-          "line": 7319,
+          "line": 7337,
           "context": "優化硫化參數以排除微量小分子，順利通過 FDA 檢測",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -22996,7 +23133,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 7319,
+          "line": 7337,
           "context": "▲ 鈞翔實業生產的無塵無污染、通過生物相容性檢測醫療級 LSR 呼吸面罩墊片 【面臨的技術挑戰】 面罩長時間與肌膚接觸，高溫消毒時不能釋放揮發物。傳統固態矽膠壓出有人工操作，易夾雜粉塵或人為油脂，且複雜3D構造容易產生毛邊導致肌膚不適。 【鈞翔的技術解決方案】 採用全閉鎖雙液型液態矽膠自動計量系統，",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -23005,7 +23142,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "醫療級",
-          "line": 7327,
+          "line": 7345,
           "context": "▲ 鈞翔實業生產的無塵無污染、通過生物相容性檢測醫療級 LSR 呼吸面罩墊片 【面臨的技術挑戰】 面罩長時間與肌膚接觸，高溫消毒時不能釋放揮發物",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -23014,7 +23151,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "FDA",
-          "line": 7327,
+          "line": 7345,
           "context": "優化硫化參數以排除微量小分子，順利通過 FDA 檢測",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -23023,7 +23160,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "醫療級",
-          "line": 7335,
+          "line": 7353,
           "context": "▲ 鈞翔實業生產的無塵無污染、通過生物相容性檢測醫療級 LSR 呼吸面罩墊片",
           "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
         },
@@ -23032,7 +23169,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "醫療級",
-          "line": 7351,
+          "line": 7369,
           "context": "▲ 鈞翔實業生產的無塵無污染、通過生物相容性檢測醫療級 LSR 呼吸面罩墊片",
           "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
         },
@@ -23041,7 +23178,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "FDA",
-          "line": 7367,
+          "line": 7385,
           "context": "【面臨的技術挑戰】 面罩長時間與肌膚接觸，高溫消毒時不能釋放揮發物。傳統固態矽膠壓出有人工操作，易夾雜粉塵或人為油脂，且複雜3D構造容易產生毛邊導致肌膚不適。 【鈞翔的技術解決方案】 採用全閉鎖雙液型液態矽膠自動計量系統，原料 100% 無空氣暴露與人工接觸。設計精密分模與真空排氣系統，毛邊控制極佳",
           "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
         },
@@ -23050,7 +23187,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "FDA",
-          "line": 7407,
+          "line": 7425,
           "context": "採用全閉鎖雙液型液態矽膠自動計量系統，原料 100% 無空氣暴露與人工接觸。設計精密分模與真空排氣系統，毛邊控制極佳，達到細緻無瑕的外觀品質。優化硫化參數以排除微量小分子，順利通過 FDA 檢測。",
           "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
         },
@@ -23059,7 +23196,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 7456,
+          "line": 7474,
           "context": "需要高品質的矽橡膠客製化服務嗎？ 鈞翔實業擁有超過 30 年代工經驗，提供固態熱壓、LSR 液態射出成型以及多種異材結合工藝，符合 ISO 9001 國際認證。 瀏覽客製化產品清單 → 了解加工服務與常見問答",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -23068,7 +23205,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 7458,
+          "line": 7476,
           "context": "鈞翔實業擁有超過 30 年代工經驗，提供固態熱壓、LSR 液態射出成型以及多種異材結合工藝，符合 ISO 9001 國際認證。",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -23077,7 +23214,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 7659,
+          "line": 7677,
           "context": "【面臨的技術挑戰】 汽車行駛的高頻震動易使傳統套裝的 O型環位移，導致漏水與短路。因此客戶決定採用 Overmolding 一體成型製程。挑戰在於 PA66 與矽膠結合面極小，且需在極高射出壓力下貼合不脫膠。 【鈞翔的技術解決方案】 使用高精度嵌入包膠定位模具以防漏膠溢料。挑選自粘性液態矽膠材料，省",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -23086,7 +23223,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 7667,
+          "line": 7685,
           "context": "【面臨的技術挑戰】 汽車行駛的高頻震動易使傳統套裝的 O型環位移，導致漏水與短路。因此客戶決定採用 Overmolding 一體成型製程。挑戰在於 PA66 與矽膠結合面極小，且需在極高射出壓力下貼合不脫膠。 【鈞翔的技術解決方案】 使用高精度嵌入包膠定位模具以防漏膠溢料。挑選自粘性液態矽膠材料，省",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -23095,7 +23232,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 7804,
+          "line": 7822,
           "context": "需要高品質的矽橡膠客製化服務嗎？ 鈞翔實業擁有超過 30 年代工經驗，提供固態熱壓、LSR 液態射出成型以及多種異材結合工藝，符合 ISO 9001 國際認證。 瀏覽客製化產品清單 → 了解加工服務與常見問答",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -23104,7 +23241,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 7806,
+          "line": 7824,
           "context": "鈞翔實業擁有超過 30 年代工經驗，提供固態熱壓、LSR 液態射出成型以及多種異材結合工藝，符合 ISO 9001 國際認證。",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -23113,7 +23250,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 8007,
+          "line": 8025,
           "context": "【面臨的技術挑戰】 重載避震器的鐵件骨架體積較大，熱傳導效率與矽膠不同，在模具內容易引起受熱不均進而導致局部硫化不足。此外，設備運作時產生持續的高頻震動，結合界面會承受極大的動態剪切力，傳統壓出成型極易使金屬與橡膠剝離，失去避震和緩衝效果。 【鈞翔的技術解決方案】 表面改性噴砂與化學清洗 ：我們對內",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -23122,7 +23259,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 8015,
+          "line": 8033,
           "context": "【面臨的技術挑戰】 重載避震器的鐵件骨架體積較大，熱傳導效率與矽膠不同，在模具內容易引起受熱不均進而導致局部硫化不足。此外，設備運作時產生持續的高頻震動，結合界面會承受極大的動態剪切力，傳統壓出成型極易使金屬與橡膠剝離，失去避震和緩衝效果。 【鈞翔的技術解決方案】 表面改性噴砂與化學清洗 ：我們對內",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -23131,7 +23268,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 8120,
+          "line": 8138,
           "context": "需要高品質的矽橡膠客製化服務嗎？ 鈞翔實業擁有超過 30 年代工經驗，提供固態熱壓、LSR 液態射出成型以及多種異材結合工藝，符合 ISO 9001 國際認證。 瀏覽客製化產品清單 → 了解加工服務與常見問答",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -23140,7 +23277,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 8122,
+          "line": 8140,
           "context": "鈞翔實業擁有超過 30 年代工經驗，提供固態熱壓、LSR 液態射出成型以及多種異材結合工藝，符合 ISO 9001 國際認證。",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -23149,7 +23286,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 8267,
+          "line": 8285,
           "context": "想深入討論您的產品製程？ 我們在新莊擁有30年以上的模具開發與矽橡膠製品成型經驗，ISO 9001品質認證，為您提供最可靠的技術解答。 聯繫技術人員",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -23158,7 +23295,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 8283,
+          "line": 8301,
           "context": "我們在新莊擁有30年以上的模具開發與矽橡膠製品成型經驗，ISO 9001品質認證，為您提供最可靠的技術解答。",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -23167,7 +23304,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 8371,
+          "line": 8389,
           "context": "鈞 鈞翔實業 專業矽橡膠製品客製化代工廠。擁有30年以上工藝傳承與 ISO 9001 認證，提供高品質固態矽膠熱壓與 LSR 液態矽膠射出成型服務，為您打造最可靠的精密矽膠製造方案。 快速連結 關於鈞翔 加工服務 產品目錄 技術知識庫 品質認證 聯絡我們 聯絡資訊 242 新北市新莊區新樹路 345",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -23176,7 +23313,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 8379,
+          "line": 8397,
           "context": "鈞 鈞翔實業 專業矽橡膠製品客製化代工廠。擁有30年以上工藝傳承與 ISO 9001 認證，提供高品質固態矽膠熱壓與 LSR 液態矽膠射出成型服務，為您打造最可靠的精密矽膠製造方案。 快速連結 關於鈞翔 加工服務 產品目錄 技術知識庫 品質認證 聯絡我們 聯絡資訊 242 新北市新莊區新樹路 345",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -23185,7 +23322,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 8387,
+          "line": 8405,
           "context": "鈞 鈞翔實業 專業矽橡膠製品客製化代工廠。擁有30年以上工藝傳承與 ISO 9001 認證，提供高品質固態矽膠熱壓與 LSR 液態矽膠射出成型服務，為您打造最可靠的精密矽膠製造方案。",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -23194,7 +23331,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 8427,
+          "line": 8445,
           "context": "專業矽橡膠製品客製化代工廠。擁有30年以上工藝傳承與 ISO 9001 認證，提供高品質固態矽膠熱壓與 LSR 液態矽膠射出成型服務，為您打造最可靠的精密矽膠製造方案。",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         }
