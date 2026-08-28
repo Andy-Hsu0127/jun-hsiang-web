@@ -99,11 +99,24 @@
         let attr = initAttribution();
         const durationSec = Math.round((Date.now() - (attr.session_start_time || Date.now())) / 1000);
         
+        let formattedJourney = '';
+        if (attr.journey && attr.journey.length > 0) {
+            if (attr.journey.length <= 5) {
+                formattedJourney = attr.journey.join(' -> ');
+            } else {
+                const first = attr.journey[0];
+                const recent = attr.journey.slice(-4);
+                formattedJourney = `${first} -> ...[略過 ${attr.journey.length - 5} 頁] -> ${recent.join(' -> ')}`;
+            }
+        } else {
+            formattedJourney = window.location.pathname;
+        }
+        
         return {
             rfq_first_page: attr.first_page || window.location.pathname,
             rfq_first_source: attr.first_source || 'direct',
-            rfq_first_content: attr.first_content_touch || '(none)',
-            rfq_last_content: attr.last_content_touch || '(none)',
+            rfq_first_content: attr.first_content_touch || '(無)',
+            rfq_last_content: attr.last_content_touch || '(無)',
             rfq_source_cluster: attr.source_cluster || 'general_factory',
             rfq_conversion_page: window.location.pathname,
             rfq_referrer: attr.referrer || '(direct)',
@@ -112,7 +125,7 @@
             rfq_utm_campaign: attr.utm_campaign || '(none)',
             rfq_session_id: attr.session_id || '',
             rfq_session_duration_sec: durationSec,
-            rfq_journey_path: (attr.journey || []).join(' -> '),
+            rfq_journey_path: formattedJourney,
             rfq_attribution_version: attr.version || ATTR_VERSION
         };
     }
