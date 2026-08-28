@@ -1,0 +1,15 @@
+claim_id,claim_pattern,claim_type,status,evidence_source,evidence_updated_at,allowed_scope,required_qualifier,severity,owner
+CLM-001,ISO\s*9001,certification,VERIFIED,TUV_Cert,2026-01-01,global,,PASS,QA_Lead
+CLM-002,創立於\s*1991|Founded\s*in\s*1991|1991\s*年創業|\b\d+\+\s*(?:年|Years|年の),company_fact,VERIFIED,Foundation_1991,2026-01-01,global,,PASS,Management
+CLM-003,單色\s*LSR|單料\s*LSR|Single-material\s*LSR|単色\s*LSR,capability,VERIFIED,Machine_List,2026-01-01,global,,PASS,Plant_Manager
+CLM-004,FDA|LFGB|USP\s*Class\s*VI|醫療級|Medical-grade|医療用,material,CONDITIONAL,Supplier_COA,2026-08-28,material_pages|articles,依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS,WARNING,Engineering
+CLM-005,\bCOA\b|分析證明書|Certificate\s*of\s*Analysis,document_coa,CONDITIONAL,Batch_Record,2026-08-28,global,依專案|依批次|依客戶需求|材料批次|per\s*project|ロット|備索|提供|available|upon\s*request|provided|発行|report|testing|analysis|inspection|verification|certificate|specification|documents?|quality,WARNING,QA_Lead
+CLM-006,材質證明|材料規格書|Material\s*Certificate|材質証明,document_material,CONDITIONAL,Supplier_Doc,2026-08-28,global,原料商|依指定規格|依專案|依需求|supplier|仕様|備索|提供|available|upon\s*request|provided|発行|対応,WARNING,Engineering
+CLM-007,出廠檢驗證明|出貨品檢報告|Outgoing\s*Inspection|出荷検査,document_qc,CONDITIONAL,Factory_QC,2026-08-28,global,依圖面公差|檢驗標準|專案約定|specifications|基準|備索|落實|standard|report|検査|実施,WARNING,QA_Lead
+CLM-008,RoHS|REACH,compliance,CONDITIONAL,Supplier_SGS,2026-08-28,global,依指定材料|客戶需求|符合性確認|環保規範|compliance|歐盟|標準|符合|comply|complies|compliant|standards?|regulations?|適合|対応|規制|指令,WARNING,QA_Lead
+CLM-009,全廠\s*FDA|全產品\s*FDA|FDA\s*認證工廠|FDA-certified\s*factory,false_claim,BLOCKED,Fact_Check,2026-08-28,none,,ERROR,Audit
+CLM-010,零缺陷|出廠零瑕疵|100%\s*良率|Zero\s*defects|欠陥ゼロ,absolute,BLOCKED,Physics_Limit,2026-08-28,none,,ERROR,Audit
+CLM-011,絕不脫膠|永久不脫膠|Never\s*delaminate|剥離ゼロ,absolute,BLOCKED,Physics_Limit,2026-08-28,none,,ERROR,Audit
+CLM-012,冷流道|Cold\s*Runner|コールドランナー,capability,BLOCKED,No_Equipment,2026-08-28,none,,ERROR,Plant_Manager
+CLM-013,雙色射出|雙色\s*LSR|2K\s*Injection|2色成形,capability,BLOCKED,No_Equipment,2026-08-28,none,,ERROR,Plant_Manager
+CLM-014,全自動化|無人化生產|Fully\s*automated|完全自動化,exaggeration,BLOCKED,Factory_Truth,2026-08-28,none,,ERROR,Audit
