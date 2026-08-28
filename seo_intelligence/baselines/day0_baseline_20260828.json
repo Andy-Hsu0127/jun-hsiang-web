@@ -1,0 +1,114 @@
+{
+  "baseline_metadata": {
+    "version": "1.0",
+    "created_at": "2026-08-28T16:30:00+08:00",
+    "checkpoint": "Day_0_Baseline",
+    "domain": "https://www.jun-hsiang.com.tw",
+    "sitemap_url": "https://www.jun-hsiang.com.tw/sitemap.xml",
+    "robots_url": "https://www.jun-hsiang.com.tw/robots.txt"
+  },
+  "site_inventory": {
+    "total_html_files": 114,
+    "sitemap_urls_count": 114,
+    "claim_governance_status": {
+      "verified_count": 1495,
+      "qualified_count": 849,
+      "warning_count": 127,
+      "blocked_error_count": 0,
+      "production_gate": "PASSED"
+    },
+    "rfq_attribution_version": "v1"
+  },
+  "target_articles_baseline": [
+    {
+      "slug": "silicone-metal-bonding-failure",
+      "url": "https://www.jun-hsiang.com.tw/knowledge-silicone-metal-bonding-failure.html",
+      "cluster": "overmolding",
+      "role": "Cluster_B_Diagnostic_MVP",
+      "published_at": "2026-08-28",
+      "title": "矽膠包金屬為什麼會脫膠？常見失效原因、結構設計與結合力驗證方法 | 鈞翔實業 — 新北精密矽膠橡膠代工廠",
+      "target_queries": [
+        "矽膠包鐵脫膠",
+        "矽膠包金屬脫膠原因",
+        "矽膠異材結合脫膠",
+        "矽膠包金屬結合力",
+        "矽膠包鐵"
+      ],
+      "metrics_at_day0": {
+        "indexed_status": "PENDING_DISCOVERY",
+        "impressions": 0,
+        "clicks": 0,
+        "ctr": 0.0,
+        "avg_position": null,
+        "rfq_count": 0,
+        "cad_attached_count": 0,
+        "quoted_count": 0,
+        "won_count": 0
+      },
+      "technical_health": {
+        "http_status": 200,
+        "canonical_valid": true,
+        "og_url_matches_canonical": true,
+        "hreflang_tags_present": true,
+        "schema_types": ["BreadcrumbList", "TechArticle", "FAQPage"],
+        "governance_errors": 0
+      }
+    },
+    {
+      "slug": "silicone-overmolding-bonding",
+      "url": "https://www.jun-hsiang.com.tw/knowledge-silicone-overmolding-bonding.html",
+      "cluster": "overmolding",
+      "role": "Cluster_B_Pillar_Guide",
+      "published_at": "2026-08-19",
+      "metrics_at_day0": {
+        "indexed_status": "INDEXED",
+        "impressions": 0,
+        "clicks": 0,
+        "ctr": 0.0,
+        "avg_position": null,
+        "rfq_count": 0
+      }
+    },
+    {
+      "slug": "self-lubricating-silicone",
+      "url": "https://www.jun-hsiang.com.tw/knowledge-self-lubricating-silicone.html",
+      "cluster": "self_lubricating",
+      "role": "Cluster_SelfLubricating_Pillar",
+      "published_at": "2026-08-12",
+      "metrics_at_day0": {
+        "indexed_status": "INDEXED",
+        "impressions": 0,
+        "clicks": 0,
+        "ctr": 0.0,
+        "avg_position": null,
+        "rfq_count": 0
+      }
+    }
+  ],
+  "cluster_baselines": {
+    "overmolding": {
+      "articles_count": 3,
+      "total_day0_impressions": 0,
+      "total_day0_clicks": 0,
+      "total_day0_rfq": 0
+    },
+    "lsr_injection": {
+      "articles_count": 5,
+      "total_day0_impressions": 0,
+      "total_day0_clicks": 0,
+      "total_day0_rfq": 0
+    },
+    "seals_waterproof": {
+      "articles_count": 4,
+      "total_day0_impressions": 0,
+      "total_day0_clicks": 0,
+      "total_day0_rfq": 0
+    },
+    "conductive_keypad": {
+      "articles_count": 2,
+      "total_day0_impressions": 0,
+      "total_day0_clicks": 0,
+      "total_day0_rfq": 0
+    }
+  }
+}
