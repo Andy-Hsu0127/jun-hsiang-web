@@ -1,6 +1,144 @@
 
 
+/* ============================================================
+   Jun-Hsiang RFQ Attribution Engine v1.0
+   ============================================================ */
+const ATTR_KEY = 'jh_rfq_attribution_v1';
+const ATTR_VERSION = 'v1';
+
+function getClusterFromPath(path) {
+    const p = path.toLowerCase();
+    if (p.includes('overmolding') || p.includes('vibration')) return 'overmolding';
+    if (p.includes('lsr') || p.includes('liquid') || p.includes('service.html')) return 'lsr_injection';
+    if (p.includes('oring') || p.includes('seal') || p.includes('waterproof') || p.includes('viton')) return 'seals_waterproof';
+    if (p.includes('self-lubricating')) return 'self_lubricating';
+    if (p.includes('conductive-keypad') || p.includes('keypad')) return 'conductive_keypad';
+    if (p.includes('medical')) return 'medical_silicone';
+    if (p.includes('food-grade')) return 'food_grade_silicone';
+    if (p.includes('products_list') || p.includes('products')) return 'products_catalog';
+    return 'general_factory';
+}
+
+function getArticleSlugFromPath(path) {
+    const match = path.match(/knowledge-([a-zA-Z0-9_-]+)\.html/);
+    return match ? match[1] : '';
+}
+
+function getTrafficSource(referrer) {
+    if (!referrer) return 'direct';
+    const ref = referrer.toLowerCase();
+    if (ref.includes('google.')) return 'organic_google';
+    if (ref.includes('bing.')) return 'organic_bing';
+    if (ref.includes('yahoo.')) return 'organic_yahoo';
+    if (ref.includes('baidu.')) return 'organic_baidu';
+    if (ref.includes('linkedin.')) return 'social_linkedin';
+    if (ref.includes('facebook.')) return 'social_facebook';
+    try {
+        const host = new URL(referrer).hostname;
+        if (host && !host.includes('jun-hsiang.com.tw') && host !== window.location.hostname) {
+            return 'referral_' + host.replace(/^www\./, '');
+        }
+    } catch (e) {}
+    return 'internal_navigation';
+}
+
+function initAttribution() {
+    const currentPath = window.location.pathname;
+    const currentSlug = getArticleSlugFromPath(currentPath);
+    const currentCluster = getClusterFromPath(currentPath);
+    const urlParams = new URLSearchParams(window.location.search);
+    
+    let attr = null;
+    try {
+        const stored = sessionStorage.getItem(ATTR_KEY);
+        if (stored) attr = JSON.parse(stored);
+    } catch (e) {}
+    
+    const now = Date.now();
+    
+    if (!attr) {
+        const referrer = document.referrer || '';
+        const initialSource = getTrafficSource(referrer);
+        
+        attr = {
+            version: ATTR_VERSION,
+            session_id: 'sess_' + Math.random().toString(36).substring(2, 9) + '_' + Math.floor(now / 1000),
+            session_start_time: now,
+            first_page: currentPath,
+            first_source: initialSource,
+            referrer: referrer,
+            utm_source: urlParams.get('utm_source') || '',
+            utm_medium: urlParams.get('utm_medium') || '',
+            utm_campaign: urlParams.get('utm_campaign') || '',
+            first_content_touch: currentSlug || '',
+            last_content_touch: currentSlug || '',
+            source_cluster: currentCluster,
+            journey: [currentPath]
+        };
+    } else {
+        if (currentSlug) {
+            if (!attr.first_content_touch) attr.first_content_touch = currentSlug;
+            attr.last_content_touch = currentSlug;
+            attr.source_cluster = currentCluster;
+        }
+        if (attr.journey && !attr.journey.includes(currentPath)) {
+            attr.journey.push(currentPath);
+        }
+    }
+    
+    try {
+        sessionStorage.setItem(ATTR_KEY, JSON.stringify(attr));
+    } catch (e) {}
+    
+    return attr;
+}
+
+function getAttributionPayload() {
+    let attr = initAttribution();
+    const durationSec = Math.round((Date.now() - (attr.session_start_time || Date.now())) / 1000);
+    
+    return {
+        rfq_first_page: attr.first_page || window.location.pathname,
+        rfq_first_source: attr.first_source || 'direct',
+        rfq_first_content: attr.first_content_touch || '(none)',
+        rfq_last_content: attr.last_content_touch || '(none)',
+        rfq_source_cluster: attr.source_cluster || 'general_factory',
+        rfq_conversion_page: window.location.pathname,
+        rfq_referrer: attr.referrer || '(direct)',
+        rfq_utm_source: attr.utm_source || '(none)',
+        rfq_utm_medium: attr.utm_medium || '(none)',
+        rfq_utm_campaign: attr.utm_campaign || '(none)',
+        rfq_session_id: attr.session_id || '',
+        rfq_session_duration_sec: durationSec,
+        rfq_journey_path: (attr.journey || []).join(' -> '),
+        rfq_attribution_version: attr.version || ATTR_VERSION
+    };
+}
+
+function populateFormFields() {
+    const payload = getAttributionPayload();
+    const forms = document.querySelectorAll('#contact-form, #general-contact-form');
+    forms.forEach(form => {
+        Object.keys(payload).forEach(key => {
+            let input = form.querySelector(`input[name="${key}"]`);
+            if (!input) {
+                input = document.createElement('input');
+                input.type = 'hidden';
+                input.name = key;
+                form.appendChild(input);
+            }
+            input.value = payload[key];
+        });
+    });
+}
+
+window.JH_Attribution = {
+    getPayload: getAttributionPayload,
+    populateForms: populateFormFields
+};
+
 document.addEventListener('DOMContentLoaded', () => {
+    populateFormFields();
 
     function initFormThirdParties() {
         if (window.formThirdPartiesLoaded) return;
@@ -731,13 +869,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 const tempVal = document.getElementById('rfp-temp') ? document.getElementById('rfp-temp').value || "未填寫" : "未填寫";
                 const msgVal = document.getElementById('rfp-message') ? document.getElementById('rfp-message').value || "無" : "無";
 
+                const attr = window.JH_Attribution ? window.JH_Attribution.getPayload() : {};
+                const attrText = `\n\n【SEO 商業歸因 (v1)】\n首次進站: ${attr.rfq_first_page || '直接'} (${attr.rfq_first_source || 'direct'})\n關鍵內容: ${attr.rfq_first_content || '(無)'} (叢集: ${attr.rfq_source_cluster || 'general'})\n轉換頁面: ${attr.rfq_conversion_page || window.location.pathname}\n停留秒數: ${attr.rfq_session_duration_sec || 0}s\n瀏覽旅程: ${attr.rfq_journey_path || '直接'}`;
+
                 const templateParams = {
                     company: document.getElementById('rfp-company') ? document.getElementById('rfp-company').value : "",
                     name: document.getElementById('rfp-name') ? document.getElementById('rfp-name').value : "",
                     phone: document.getElementById('rfp-phone') ? document.getElementById('rfp-phone').value : "",
                     email: document.getElementById('rfp-email') ? document.getElementById('rfp-email').value : "",
                     product: `應用領域: ${appVal} | 加工製程: ${procVal}`,
-                    message: `預估年產量: ${qtyVal}\n硬度要求: ${hardVal}\n使用溫度: ${tempVal}\n其他補充需求: ${msgVal}`,
+                    message: `預估年產量: ${qtyVal}\n硬度要求: ${hardVal}\n使用溫度: ${tempVal}\n其他補充需求: ${msgVal}${attrText}`,
                     'g-recaptcha-response': captchaToken
                 };
 
@@ -757,7 +898,12 @@ document.addEventListener('DOMContentLoaded', () => {
                             "E-mail": templateParams.email,
                             "需求細節": templateParams.product,
                             "補充說明": templateParams.message,
-                            "_subject": "【鈞翔實業官網】專案需求聯絡 (備援發送)"
+                            "首次進站": attr.rfq_first_page || "直接",
+                            "流量來源": attr.rfq_first_source || "direct",
+                            "關鍵內容": attr.rfq_first_content || "無",
+                            "所屬叢集": attr.rfq_source_cluster || "general",
+                            "瀏覽旅程": attr.rfq_journey_path || "無",
+                            "_subject": "【鈞翔實業官網】專案需求聯絡 (含歸因資訊)"
                         })
                     })
                     .then(res => res.json())
@@ -879,13 +1025,16 @@ document.addEventListener('DOMContentLoaded', () => {
             generalSubmitBtn.innerHTML = `<span style="display:inline-flex;align-items:center;gap:8px;">${t.submitting}</span>`;
             generalSubmitBtn.disabled = true;
 
+            const attr = window.JH_Attribution ? window.JH_Attribution.getPayload() : {};
+            const attrText = `\n\n【SEO 商業歸因 (v1)】\n首次進站: ${attr.rfq_first_page || '直接'} (${attr.rfq_first_source || 'direct'})\n關鍵內容: ${attr.rfq_first_content || '(無)'} (叢集: ${attr.rfq_source_cluster || 'general'})\n轉換頁面: ${attr.rfq_conversion_page || window.location.pathname}\n停留秒數: ${attr.rfq_session_duration_sec || 0}s\n瀏覽旅程: ${attr.rfq_journey_path || '直接'}`;
+
             const templateParams = {
                 company: document.getElementById('general-company') ? document.getElementById('general-company').value : "",
                 name: document.getElementById('general-name') ? document.getElementById('general-name').value : "",
                 phone: document.getElementById('general-phone') ? document.getElementById('general-phone').value : "",
                 email: document.getElementById('general-email') ? document.getElementById('general-email').value : "",
                 product: document.getElementById('general-product-need') ? document.getElementById('general-product-need').value : "",
-                message: document.getElementById('general-message') ? document.getElementById('general-message').value : "",
+                message: (document.getElementById('general-message') ? document.getElementById('general-message').value : "") + attrText,
                 'g-recaptcha-response': captchaToken
             };
 
@@ -910,7 +1059,12 @@ document.addEventListener('DOMContentLoaded', () => {
                         "E-mail": templateParams.email,
                         "需求產品": templateParams.product,
                         "留言內容": templateParams.message,
-                        "_subject": "【鈞翔實業官網】一般聯絡詢問 (備援發送)"
+                        "首次進站": attr.rfq_first_page || "直接",
+                        "流量來源": attr.rfq_first_source || "direct",
+                        "關鍵內容": attr.rfq_first_content || "無",
+                        "所屬叢集": attr.rfq_source_cluster || "general",
+                        "瀏覽旅程": attr.rfq_journey_path || "無",
+                        "_subject": "【鈞翔實業官網】一般聯絡詢問 (含歸因資訊)"
                     })
                 })
                 .then(res => res.json())
