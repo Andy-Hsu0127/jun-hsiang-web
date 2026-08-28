@@ -20,7 +20,7 @@ class CounterAnimation {
                     this.animateCounter(entry.target);
                 }
             });
-        }, { threshold: 0.5 });
+        }, { threshold: 0.15 });
 
         elements.forEach(el => observer.observe(el));
     }
