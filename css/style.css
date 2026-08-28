@@ -387,3 +387,117 @@
 .btn-nav-cta:hover {
     transform: scale(1.05) !important;
 }
+
+/* ==========================================================================
+   Language Switcher & Selector (High Contrast & Clean Visibility)
+   ========================================================================== */
+.lang-switcher {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 3px !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-radius: 9999px !important;
+    padding: 3px 6px !important;
+    margin-left: 6px !important;
+    flex-shrink: 0 !important;
+    vertical-align: middle !important;
+}
+
+.lang-switcher .lang-btn {
+    font-size: 0.8rem !important;
+    font-weight: 600 !important;
+    color: #CBD5E1 !important;
+    padding: 3px 8px !important;
+    border-radius: 9999px !important;
+    text-decoration: none !important;
+    line-height: 1.2 !important;
+    display: inline-block !important;
+    transition: background-color 0.2s ease, color 0.2s ease !important;
+}
+
+.lang-switcher .lang-btn:hover {
+    color: #FFFFFF !important;
+    background: rgba(255, 255, 255, 0.15) !important;
+}
+
+.lang-switcher .lang-btn.active {
+    background: #D4A843 !important;
+    color: #080C14 !important;
+    font-weight: 700 !important;
+    box-shadow: 0 0 10px rgba(212, 168, 67, 0.4) !important;
+}
+
+.lang-selector-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-radius: 9999px !important;
+    padding: 5px 12px !important;
+    color: #F8FAFC !important;
+    font-size: 0.85rem !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease !important;
+}
+
+.lang-selector-btn:hover {
+    background: rgba(255, 255, 255, 0.15) !important;
+    border-color: #D4A843 !important;
+    color: #D4A843 !important;
+}
+
+.lang-dropdown {
+    background: #0E1422 !important;
+    border: 1px solid rgba(212, 168, 67, 0.3) !important;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6) !important;
+}
+
+.lang-dropdown a {
+    color: #CBD5E1 !important;
+    font-size: 0.85rem !important;
+    font-weight: 500 !important;
+}
+
+.lang-dropdown a:hover {
+    background: rgba(212, 168, 67, 0.15) !important;
+    color: #D4A843 !important;
+}
+
+.lang-dropdown a.active {
+    color: #D4A843 !important;
+    font-weight: 700 !important;
+}
+
+.mobile-lang-links {
+    display: flex !important;
+    gap: 8px !important;
+    justify-content: center !important;
+    margin-top: 16px !important;
+}
+
+.mobile-lang-link {
+    color: #CBD5E1 !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-radius: 9999px !important;
+    padding: 6px 14px !important;
+    font-size: 0.85rem !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    transition: background-color 0.2s ease, color 0.2s ease !important;
+}
+
+.mobile-lang-link:hover {
+    color: #FFFFFF !important;
+    background: rgba(255, 255, 255, 0.18) !important;
+}
+
+.mobile-lang-link.active {
+    background: #D4A843 !important;
+    color: #080C14 !important;
+    font-weight: 700 !important;
+}
+
