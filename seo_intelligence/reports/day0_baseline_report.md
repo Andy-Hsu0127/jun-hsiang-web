@@ -1,5 +1,5 @@
 # 📊 Jun-Hsiang Day 0 SEO & Commercial Intelligence Baseline
-**建立時間**: 2026-08-28 16:30:53  
+**建立時間**: 2026-08-31 16:44:02  
 **觀測模式狀態**: 🟢 ACTIVE (Observation Mode)  
 **代碼凍結狀態**: 🔒 Step 1 Governance, Step 2 Attribution, Step 3 MVP Article FROZEN
 
@@ -22,7 +22,7 @@
 ## 3. 💼 商務轉換漏斗基準 (RFQ Commercial Funnel Baseline)
 | 主題叢集 (Cluster) | RFQ 總數 | CAD 附圖率 | 已報價數 (Quoted) | 打樣數 (Sample) | 成交數 (Won) |
 | :--- | :---: | :---: | :---: | :---: | :---: |
-| **overmolding** | 2 | 50% | 1 | 1 | 0 |
+| *(目前處於 Day 0 基準建立期，尚無正式 RFQ)* | - | - | - | - | - |
 
 ---
 ## 4. 🧭 下一階段觀測節點與驗收標準

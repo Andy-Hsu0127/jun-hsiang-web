@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-08-28T16:22:43.979831Z",
+  "timestamp": "2026-08-28T16:37:34.117422Z",
   "files_scanned": 114,
   "status": "PASSED",
   "summary": {
     "error_count": 0,
-    "warning_count": 127,
-    "info_count": 2344,
-    "verified_count": 1495,
+    "warning_count": 128,
+    "info_count": 2347,
+    "verified_count": 1498,
     "conditional_pass_count": 849
   },
   "errors": [],
@@ -259,7 +259,7 @@
       "claim_id": "CLM-004",
       "claim_type": "material",
       "matched_text": "FDA",
-      "line": 441,
+      "line": 440,
       "context": "🏭 Jun-Hsiang 100% Custom OEM Tooling & Elastomer Capabilities ISO 9001 Certified We are a build-to-print custom OEM manufacturer (no off-the-shelf inv",
       "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
     },
@@ -268,8 +268,8 @@
       "claim_id": "CLM-004",
       "claim_type": "material",
       "matched_text": "FDA",
-      "line": 449,
-      "context": "LSR Liquid Injection Molding (Flashless / Medical FDA) Solid Compression Molding (HCR / Vacuum Press) Silicone-to-Metal Overmolding (Iron / Al / Cu In",
+      "line": 442,
+      "context": "🏭 Jun-Hsiang 100% Custom OEM Tooling & Elastomer Capabilities ISO 9001 Certified We are a build-to-print custom OEM manufacturer (no off-the-shelf inv",
       "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
     },
     {
@@ -278,6 +278,15 @@
       "claim_type": "material",
       "matched_text": "FDA",
       "line": 450,
+      "context": "LSR Liquid Injection Molding (Flashless / Medical FDA) Solid Compression Molding (HCR / Vacuum Press) Silicone-to-Metal Overmolding (Iron / Al / Cu In",
+      "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
+    },
+    {
+      "level": "WARNING",
+      "claim_id": "CLM-004",
+      "claim_type": "material",
+      "matched_text": "FDA",
+      "line": 451,
       "context": "LSR Liquid Injection Molding (Flashless / Medical FDA)",
       "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
     },
@@ -8390,9 +8399,9 @@
     {
       "file": "P:\\tets\\en\\products_list.html",
       "counts": {
-        "VERIFIED": 17,
+        "VERIFIED": 18,
         "CONDITIONAL_PASS": 0,
-        "WARNING": 5,
+        "WARNING": 6,
         "ERROR": 0
       },
       "findings": [
@@ -8482,7 +8491,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "FDA",
-          "line": 441,
+          "line": 440,
           "context": "🏭 Jun-Hsiang 100% Custom OEM Tooling & Elastomer Capabilities ISO 9001 Certified We are a build-to-print custom OEM manufacturer (no off-the-shelf inv",
           "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
         },
@@ -8491,7 +8500,25 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 441,
+          "line": 440,
+          "context": "🏭 Jun-Hsiang 100% Custom OEM Tooling & Elastomer Capabilities ISO 9001 Certified We are a build-to-print custom OEM manufacturer (no off-the-shelf inv",
+          "reason": "Verified fact/capability supported by 'TUV_Cert'"
+        },
+        {
+          "level": "WARNING",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "FDA",
+          "line": 442,
+          "context": "🏭 Jun-Hsiang 100% Custom OEM Tooling & Elastomer Capabilities ISO 9001 Certified We are a build-to-print custom OEM manufacturer (no off-the-shelf inv",
+          "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-001",
+          "claim_type": "certification",
+          "matched_text": "ISO 9001",
+          "line": 442,
           "context": "🏭 Jun-Hsiang 100% Custom OEM Tooling & Elastomer Capabilities ISO 9001 Certified We are a build-to-print custom OEM manufacturer (no off-the-shelf inv",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -8500,7 +8527,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 442,
+          "line": 443,
           "context": "🏭 Jun-Hsiang 100% Custom OEM Tooling & Elastomer Capabilities ISO 9001 Certified",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -8509,7 +8536,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 444,
+          "line": 445,
           "context": "ISO 9001 Certified",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -8518,7 +8545,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "FDA",
-          "line": 449,
+          "line": 450,
           "context": "LSR Liquid Injection Molding (Flashless / Medical FDA) Solid Compression Molding (HCR / Vacuum Press) Silicone-to-Metal Overmolding (Iron / Al / Cu In",
           "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
         },
@@ -8527,7 +8554,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "FDA",
-          "line": 450,
+          "line": 451,
           "context": "LSR Liquid Injection Molding (Flashless / Medical FDA)",
           "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
         },
@@ -8536,7 +8563,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 461,
+          "line": 462,
           "context": "Silicone to Aluminum Bonding Overmolding Silicone to Iron Bonding Overmolding Silicone to Copper Bonding Overmolding Silicone to Plastic Overmolding O",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -8545,7 +8572,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 522,
+          "line": 523,
           "context": "LSR Liquid Silicone Rubber Injection Molding Products Jun-Hsiang Enterprise provides custom LSR liquid silicone rubber injection molding OEM services,",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -8554,26 +8581,8 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 524,
+          "line": 525,
           "context": "Jun-Hsiang Enterprise provides custom LSR liquid silicone rubber injection molding OEM services, suitable for medical device seals, precision electron",
-          "reason": "Verified fact/capability supported by 'TUV_Cert'"
-        },
-        {
-          "level": "INFO",
-          "claim_id": "CLM-001",
-          "claim_type": "certification",
-          "matched_text": "ISO 9001",
-          "line": 644,
-          "context": "J Jun-Hsiang Enterprise A professional custom silicone & rubber OEM factory. With over 30 years of manufacturing experience and ISO 9001 certification",
-          "reason": "Verified fact/capability supported by 'TUV_Cert'"
-        },
-        {
-          "level": "INFO",
-          "claim_id": "CLM-001",
-          "claim_type": "certification",
-          "matched_text": "ISO 9001",
-          "line": 645,
-          "context": "J Jun-Hsiang Enterprise A professional custom silicone & rubber OEM factory. With over 30 years of manufacturing experience and ISO 9001 certification",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
         {
@@ -8590,7 +8599,25 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 651,
+          "line": 647,
+          "context": "J Jun-Hsiang Enterprise A professional custom silicone & rubber OEM factory. With over 30 years of manufacturing experience and ISO 9001 certification",
+          "reason": "Verified fact/capability supported by 'TUV_Cert'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-001",
+          "claim_type": "certification",
+          "matched_text": "ISO 9001",
+          "line": 648,
+          "context": "J Jun-Hsiang Enterprise A professional custom silicone & rubber OEM factory. With over 30 years of manufacturing experience and ISO 9001 certification",
+          "reason": "Verified fact/capability supported by 'TUV_Cert'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-001",
+          "claim_type": "certification",
+          "matched_text": "ISO 9001",
+          "line": 653,
           "context": "A professional custom silicone & rubber OEM factory. With over 30 years of manufacturing experience and ISO 9001 certification, we provide high-qualit",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         }
@@ -16443,7 +16470,7 @@
     {
       "file": "P:\\tets\\ja\\products_list.html",
       "counts": {
-        "VERIFIED": 17,
+        "VERIFIED": 18,
         "CONDITIONAL_PASS": 0,
         "WARNING": 0,
         "ERROR": 0
@@ -16517,7 +16544,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 441,
+          "line": 440,
           "context": "🏭 鈞翔実業 100% カスタム受託成形・材料対応能力 ISO 9001 認証取得工場 弊社は図面に基づく完全受託開模・量産工場です（規格既製品の在庫販売はございません）。お客様の2D/3D CAD図面に基づき、幅広いゴム・シリコーン材料に対応可能です： LSR 液体シリコーン射出成形 (LIM 精",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -16527,6 +16554,15 @@
           "claim_type": "certification",
           "matched_text": "ISO 9001",
           "line": 442,
+          "context": "🏭 鈞翔実業 100% カスタム受託成形・材料対応能力 ISO 9001 認証取得工場 弊社は図面に基づく完全受託開模・量産工場です（規格既製品の在庫販売はございません）。お客様の2D/3D CAD図面に基づき、幅広いゴム・シリコーン材料に対応可能です： LSR 液体シリコーン射出成形 (LIM 精",
+          "reason": "Verified fact/capability supported by 'TUV_Cert'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-001",
+          "claim_type": "certification",
+          "matched_text": "ISO 9001",
+          "line": 443,
           "context": "🏭 鈞翔実業 100% カスタム受託成形・材料対応能力 ISO 9001 認証取得工場",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -16535,7 +16571,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 444,
+          "line": 445,
           "context": "ISO 9001 認証取得工場",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -16544,7 +16580,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 461,
+          "line": 462,
           "context": "シリコンとアルミ合金の接合 インサート成形 シリコンと鉄の接合 インサート成形 シリコンと銅の接合 インサート成形 シリコンとプラスチックの接合 インサート成形 シリコンとガラスの接合 インサート成形 固形ガスケット・Oリング オイルシール・防水 LSR 液状シリコーンゴム射出成形・受託製造製品 鈞",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -16553,7 +16589,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 522,
+          "line": 523,
           "context": "LSR 液状シリコーンゴム射出成形・受託製造製品 鈞翔実業はLSR液状シリコーンゴム射出成形の受託製造加工服務を提供しています。医療機器用シール、精密電子機器防水Oリング、車載防水コネクターシール等の高精度用途に対応。ISO 9001認証取得済み。カスタム金型見積はフォームよりご連絡ください。 LS",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -16562,7 +16598,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 524,
+          "line": 525,
           "context": "鈞翔実業はLSR液状シリコーンゴム射出成形の受託製造加工服務を提供しています。医療機器用シール、精密電子機器防水Oリング、車載防水コネクターシール等の高精度用途に対応。ISO 9001認証取得済み。カスタム金型見積はフォームよりご連絡ください。",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -16571,25 +16607,25 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 644,
-          "context": "鈞 鈞翔實業 シリコン・ゴム製品カスタム受託製造の専門工場。30年以上の技術伝承と品質認証 (ISO 9001) を持ち、高品質な固形シリコン圧縮成形およびLSR液状シリコーンゴム射出成形加工服務を提供し、最も信頼できる精密シリコン製造ソリューションを提供します。 クイックリンク 鈞翔について 加工",
-          "reason": "Verified fact/capability supported by 'TUV_Cert'"
-        },
-        {
-          "level": "INFO",
-          "claim_id": "CLM-001",
-          "claim_type": "certification",
-          "matched_text": "ISO 9001",
-          "line": 645,
-          "context": "鈞 鈞翔實業 シリコン・ゴム製品カスタム受託製造の専門工場。30年以上の技術伝承と品質認証 (ISO 9001) を持ち、高品質な固形シリコン圧縮成形およびLSR液状シリコーンゴム射出成形加工服務を提供し、最も信頼できる精密シリコン製造ソリューションを提供します。 クイックリンク 鈞翔について 加工",
-          "reason": "Verified fact/capability supported by 'TUV_Cert'"
-        },
-        {
-          "level": "INFO",
-          "claim_id": "CLM-001",
-          "claim_type": "certification",
-          "matched_text": "ISO 9001",
           "line": 646,
+          "context": "鈞 鈞翔實業 シリコン・ゴム製品カスタム受託製造の専門工場。30年以上の技術伝承と品質認証 (ISO 9001) を持ち、高品質な固形シリコン圧縮成形およびLSR液状シリコーンゴム射出成形加工服務を提供し、最も信頼できる精密シリコン製造ソリューションを提供します。 クイックリンク 鈞翔について 加工",
+          "reason": "Verified fact/capability supported by 'TUV_Cert'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-001",
+          "claim_type": "certification",
+          "matched_text": "ISO 9001",
+          "line": 647,
+          "context": "鈞 鈞翔實業 シリコン・ゴム製品カスタム受託製造の専門工場。30年以上の技術伝承と品質認証 (ISO 9001) を持ち、高品質な固形シリコン圧縮成形およびLSR液状シリコーンゴム射出成形加工服務を提供し、最も信頼できる精密シリコン製造ソリューションを提供します。 クイックリンク 鈞翔について 加工",
+          "reason": "Verified fact/capability supported by 'TUV_Cert'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-001",
+          "claim_type": "certification",
+          "matched_text": "ISO 9001",
+          "line": 648,
           "context": "鈞 鈞翔實業 シリコン・ゴム製品カスタム受託製造の専門工場。30年以上の技術伝承と品質認証 (ISO 9001) を持ち、高品質な固形シリコン圧縮成形およびLSR液状シリコーンゴム射出成形加工服務を提供し、最も信頼できる精密シリコン製造ソリューションを提供します。",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -16598,7 +16634,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 651,
+          "line": 653,
           "context": "シリコン・ゴム製品カスタム受託製造の専門工場。30年以上の技術伝承と品質認証 (ISO 9001) を持ち、高品質な固形シリコン圧縮成形およびLSR液状シリコーンゴム射出成形加工服務を提供し、最も信頼できる精密シリコン製造ソリューションを提供します。",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         }
@@ -23340,7 +23376,7 @@
     {
       "file": "P:\\tets\\products_list.html",
       "counts": {
-        "VERIFIED": 17,
+        "VERIFIED": 18,
         "CONDITIONAL_PASS": 0,
         "WARNING": 0,
         "ERROR": 0
@@ -23414,7 +23450,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 441,
+          "line": 440,
           "context": "🏭 鈞翔實業 100% 客製代工材料與成型能力 ISO 9001 認證廠 本廠為客製化開模代工廠（無庫存現品），依客戶 2D/3D CAD 圖面客製開發模具與量產，支援以下全系列橡膠與矽膠材料： LSR 液態矽膠射出 (LIM 模具/潔淨室標準) 固態矽膠熱壓 (HCR/真空模壓) 矽膠包鐵/包金屬",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -23424,6 +23460,15 @@
           "claim_type": "certification",
           "matched_text": "ISO 9001",
           "line": 442,
+          "context": "🏭 鈞翔實業 100% 客製代工材料與成型能力 ISO 9001 認證廠 本廠為客製化開模代工廠（無庫存現品），依客戶 2D/3D CAD 圖面客製開發模具與量產，支援以下全系列橡膠與矽膠材料： LSR 液態矽膠射出 (LIM 模具/潔淨室標準) 固態矽膠熱壓 (HCR/真空模壓) 矽膠包鐵/包金屬",
+          "reason": "Verified fact/capability supported by 'TUV_Cert'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-001",
+          "claim_type": "certification",
+          "matched_text": "ISO 9001",
+          "line": 443,
           "context": "🏭 鈞翔實業 100% 客製代工材料與成型能力 ISO 9001 認證廠",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -23432,7 +23477,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 444,
+          "line": 445,
           "context": "ISO 9001 認證廠",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -23441,7 +23486,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 461,
+          "line": 462,
           "context": "矽膠結合鋁合金 異材結合 矽膠結合鐵 異材結合 矽膠結合銅 異材結合 矽膠結合塑膠 異材結合 矽膠結合玻璃 異材結合 固態墊圈、O型環 油封防水 LSR 液態矽膠射出成型代工產品 鈞翔實業提供 LSR 液態矽膠射出成型客製代工服務，適用於醫療器材密封件、精密電子防水圈、汽車防水插座密封件等高精度需求",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -23450,7 +23495,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 522,
+          "line": 523,
           "context": "LSR 液態矽膠射出成型代工產品 鈞翔實業提供 LSR 液態矽膠射出成型客製代工服務，適用於醫療器材密封件、精密電子防水圈、汽車防水插座密封件等高精度需求。我們以封閉式自動化製程確保製品品質穩定，並通過 ISO 9001 認證。如需 LSR 客製開模報價，歡迎填寫詢價表單聯繫我們。 了解 LSR 液",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -23459,7 +23504,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 524,
+          "line": 525,
           "context": "鈞翔實業提供 LSR 液態矽膠射出成型客製代工服務，適用於醫療器材密封件、精密電子防水圈、汽車防水插座密封件等高精度需求。我們以封閉式自動化製程確保製品品質穩定，並通過 ISO 9001 認證。如需 LSR 客製開模報價，歡迎填寫詢價表單聯繫我們。",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -23468,25 +23513,25 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 644,
-          "context": "鈞 鈞翔實業 專業矽橡膠製品客製化代工廠。擁有30年以上工藝傳承與 ISO 9001 認證，提供高品質固態矽膠熱壓與 LSR 液態矽膠射出成型服務，為您打造最可靠的精密矽膠製造方案。 快速連結 關於鈞翔 加工服務 產品目錄 技術知識庫 品質認證 聯絡我們 聯絡資訊 242 新北市新莊區新樹路 345",
-          "reason": "Verified fact/capability supported by 'TUV_Cert'"
-        },
-        {
-          "level": "INFO",
-          "claim_id": "CLM-001",
-          "claim_type": "certification",
-          "matched_text": "ISO 9001",
-          "line": 645,
-          "context": "鈞 鈞翔實業 專業矽橡膠製品客製化代工廠。擁有30年以上工藝傳承與 ISO 9001 認證，提供高品質固態矽膠熱壓與 LSR 液態矽膠射出成型服務，為您打造最可靠的精密矽膠製造方案。 快速連結 關於鈞翔 加工服務 產品目錄 技術知識庫 品質認證 聯絡我們 聯絡資訊 242 新北市新莊區新樹路 345",
-          "reason": "Verified fact/capability supported by 'TUV_Cert'"
-        },
-        {
-          "level": "INFO",
-          "claim_id": "CLM-001",
-          "claim_type": "certification",
-          "matched_text": "ISO 9001",
           "line": 646,
+          "context": "鈞 鈞翔實業 專業矽橡膠製品客製化代工廠。擁有30年以上工藝傳承與 ISO 9001 認證，提供高品質固態矽膠熱壓與 LSR 液態矽膠射出成型服務，為您打造最可靠的精密矽膠製造方案。 快速連結 關於鈞翔 加工服務 產品目錄 技術知識庫 品質認證 聯絡我們 聯絡資訊 242 新北市新莊區新樹路 345",
+          "reason": "Verified fact/capability supported by 'TUV_Cert'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-001",
+          "claim_type": "certification",
+          "matched_text": "ISO 9001",
+          "line": 647,
+          "context": "鈞 鈞翔實業 專業矽橡膠製品客製化代工廠。擁有30年以上工藝傳承與 ISO 9001 認證，提供高品質固態矽膠熱壓與 LSR 液態矽膠射出成型服務，為您打造最可靠的精密矽膠製造方案。 快速連結 關於鈞翔 加工服務 產品目錄 技術知識庫 品質認證 聯絡我們 聯絡資訊 242 新北市新莊區新樹路 345",
+          "reason": "Verified fact/capability supported by 'TUV_Cert'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-001",
+          "claim_type": "certification",
+          "matched_text": "ISO 9001",
+          "line": 648,
           "context": "鈞 鈞翔實業 專業矽橡膠製品客製化代工廠。擁有30年以上工藝傳承與 ISO 9001 認證，提供高品質固態矽膠熱壓與 LSR 液態矽膠射出成型服務，為您打造最可靠的精密矽膠製造方案。",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -23495,7 +23540,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 651,
+          "line": 653,
           "context": "專業矽橡膠製品客製化代工廠。擁有30年以上工藝傳承與 ISO 9001 認證，提供高品質固態矽膠熱壓與 LSR 液態矽膠射出成型服務，為您打造最可靠的精密矽膠製造方案。",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         }
