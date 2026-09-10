@@ -23,8 +23,11 @@ When writing or generating new technical articles, products, or services for the
 9. **設計者競爭第一名思維與零奉承原則 (Champion Competitor Mindset & Zero Flattery)**:
    - **嚴禁奉承與廢話**：直接點出技術痛點與實質差距，禁止任何討好或罐頭話術。
    - **以競爭第一名為唯一標準**：SEO 架構、內容深度、轉換路徑必須全方位壓制同業對手（佑祥、定伸、志得、詹輝等），目標鎖定 Google 第一頁前 3 名。
-   - **全關鍵字矩陣平衡覆蓋（Multi-Keyword Protection）**：優化單一詞（如 LSR）時，絕不犧牲其他核心詞（固態矽膠熱壓、異材結合包膠、橡膠代工、自潤矽膠、密封件）。必須透過「專屬 Landing Page 拓撲」讓每個核心工藝都有專屬第一名頁面，避免關鍵字蠶食（Keyword Cannibalization）。
    - **效能零容忍（Zero Performance Degradation）**：任何 SEO 或內容更新，必須確保 PageSpeed 電腦 95-100、手機 90+，嚴禁任何會拖慢速度的代碼。
+10. **絕對講真話與零自嗨原則 (Zero Self-Flattery & Absolute Reality Truth)**:
+    - **做網站不是為了自己爽**：唯一目標是為工廠接單，讓客戶在真實 Google 搜尋中肉眼找得到。
+    - **嚴禁將抽樣雜訊包裝成排名**：曝光次數 < 5 次的關鍵字，一律標註為「⚪ 偶發抽測 (日常查無排名)」，嚴禁列入第一頁或衝刺中自欺欺人。
+    - **誠實揭露真實差距**：直面與老牌對手在網域歷史、外部反向連結上的客觀落後，不畫大餅，每次都必須講冰冷實話。
 
 ---
 
