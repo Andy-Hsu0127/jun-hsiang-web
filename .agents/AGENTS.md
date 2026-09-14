@@ -226,8 +226,75 @@ AI 代理人曾在 `seo_dashboard.html` 中將「過去 90 天僅曝光 1~2 次�
    - **曝光次數 < 5 次**：統計學上屬「演算法偶發抽樣雜訊」，**一律強制標記為「⚪ 偶發抽測 / 尚未進入常態池 (即時查無排名)」**，絕對禁止標示為「第一頁」或「第 2~3 頁衝刺中」！
    - **只有「曝光次數 ≥ 5 次 且 平均位置 ≤ 10.0」**且經真實 SERP 查證確實存在的字詞（如品牌詞、矽膠硬度、LFGB 矽膠），才允許列入「🟢 實戰第一頁」。
 3. **每次對話永遠講冰冷實話**：
-   - 誠實面對與 15 年老牌對手（達豐、志得、瞻輝）在「網域年資」與「外部工商黃頁反向連結 (Backlinks)」上的巨大客觀差距。
-   - 絕不空談程式碼魔法，直接指出需要補充的實體外部動作（Google 商家、B2B 黃頁登錄），以及 Googlebot 重新計算所需的客觀時間週期（2~4 週）。
+   - 誠實面對與同業對手在各客觀維度（Search intent, Landing page, Content depth, Real manufacturing evidence, Internal links, External citations, Brand mentions）上的真實差距，禁止簡化為「老網域」這種不可操作的藉口。
+   - 絕不空談程式碼魔法，直接指出需要補充的實體外部動作（Google 商家、B2B 黃頁登錄），以及 Googlebot 重新計算需以 GSC 實際數據觀察，不設定固定排名生效期限。
+
+---
+
+## 🔴 規則八：No Evidence, No Claim 原則與製造宣稱管治 (Manufacturing Claim Governance)
+
+### ⚠️ 核心原則
+**做 SEO 不能反過來逼工廠生出不存在的實績。** Google 現行指南強調原創、可靠、能證明實際經驗的 People-First Content。沒有做過的製程、沒有驗證過的數據、沒有正式量產過的案例，絕對不能為了 SEO 寫成事實。
+
+### 流程圖 (Claim Governance Protocol)
+```text
+每一個 Manufacturing Claim 
+       ↓ 
+必須有 evidence_source 
+┌───────────────────────────┐
+│ 官網既有資料               │
+│ 公司設備清單               │
+│ ISO / 品質證書            │
+│ 實際產品照片               │
+│ 模具 / 成型紀錄           │
+│ 檢驗報告                  │
+│ 工程師確認                │
+│ 客戶允許公開的 Case       │
+└───────────────────────────┘
+       ↓ 沒有證據
+  【禁止發布】
+```
+
+### ✅ 准許發布 vs ❌ 嚴格禁止
+- **✅ 准許發布（真實能力與工作方式）**：
+  - **能力描述**：「可依產品圖面、材料、硬度、使用環境與裝配需求進行 DFM 評估。」
+  - **流程描述**：「收到 2D/3D 圖面 ➔ 材料與硬度確認 ➔ DFM/脫模/分模/Gate/Vent 評估 ➔ 模具方案 ➔ T1 試模 ➔ 尺寸/外觀/功能確認 ➔ 量產。」
+  - **廠內設備與證書**：真實存在的機台與有效證書（如 ISO 9001）。
+- **❌ 嚴格禁止（未驗證之宣稱）**：
+  - 嚴禁捏造具體數據、尺寸公差、良率、時間秒數（如「edge-peel 從 6N 提升至 15N」）。
+  - 嚴禁將正在討論或未結案之專案寫成已完成實績（例如穿戴式感測器 10N retention 案尚在 engineering discussion 階段，嚴禁包裝為已結案成功案例）。
+  - 嚴禁在未有客戶正式核准書面下宣稱「某產業大廠已採用」。
+
+---
+
+## 🔴 規則九：滾動式 SEO 攻堅與 14 天 Kill Criteria (Rolling SEO Sprint & 14-Day Kill Criteria)
+
+### ⚠️ 核心原則
+**30 天是「月度結算窗口」，不是「30 天什麼都不做」。** 錯誤方向最多容忍 7～14 天。必須建立每 3～4 天 Tactical Review、每 7 天決策、14 天 Kill Criteria 淘汰機制的滾動攻堅節奏。
+
+### 雙軌不衝突平行推進 (Parallel Tracks with Change Log)
+保持變更日誌（Change Log），嚴禁全面停工的 Change Freeze：
+- **Track A (Homepage Intent)**：H1/Hero 已部署 ➔ 建立 GSC Baseline 並主動觀察。
+- **Track B (Technical SEO)**：Canonical、Crawl、Schema、製程語意修正 ➔ 持續修復。
+- **Track C (Internal Link)**：站內拓撲分析 ➔ 準備 ➔ 分批部署。
+- **Track D (Competitor Gap)**：SERP 意圖、內容深度、公會/反向連結差距 ➔ 持續研究。
+- **Track E (External Authority)**：Google 商家檔案 (GBP)、Taiwantrade、B2B 黃頁工商資料 ➔ 同步建立。
+
+### 14 天 Kill Criteria 決策矩陣
+| 觀察訊號 (Signal) | 狀態 | 戰術決策 (Decision) |
+| :--- | :---: | :--- |
+| Google 尚未 recrawl | ⏳ 觀察 | 不評估策略，等待 Googlebot 抓取。 |
+| 已 recrawl，但 Query Cluster 完全無變化 | 🟡 黃燈 | 啟動 SERP Intent Audit，檢視落差。 |
+| 首頁開始取得商業詞 Cluster 曝光 | 🟢 綠燈 | 保留首頁定位，訊號有效。 |
+| Knowledge 頁面大量吃到「矽膠代工」曝光 | 🟡/🔴 黃紅燈 | 檢查意圖衝突，評估是否整合或轉移。 |
+| 首頁 Impressions 上升但 Position 不動 | 🟢/🟡 綠黃燈 | Relevance 有效，開始攻取 Authority。 |
+| Position 上升且 Impressions 同步增加 | 🟢 綠燈 | 正確方向，加碼擴充資源。 |
+| Position 上升但 CTR 極低 | 🟢/🟡 綠黃燈 | 修改 Title / Snippet 提高吸引力。 |
+| 14 天內所有 Cluster 均無任何改善跡象 | 🔴 紅燈 | **觸發 Kill Criteria，推翻或重做假設 (Pivot)**。 |
+
+### 雙層查詢矩陣機制 (Two-Tier Query Cluster)
+- **Tier 1 (Strategic Target)**：Exact Query「矽膠代工」（終極目標）。
+- **Tier 2 (Leading Indicators)**：Commercial Cluster（`矽膠代工`、`矽膠代工廠`、`矽膠工廠`、`矽膠 OEM`、`矽膠製造商`、`矽膠開模`、`客製矽膠`、`LSR 代工`、`液態矽膠代工`）。以 Cluster 整體曝光與收錄作為領先指標。
 
 ---
 
@@ -240,4 +307,5 @@ AI 代理人曾在 `seo_dashboard.html` 中將「過去 90 天僅曝光 1~2 次�
 | 2026-08-12 | 「液態射出」SEO 升級 | 優化 `service.html` Title、H1 與 FAQ 結構，錨點文字集中指向 `service.html`，且全程未捏造數字與「全自動」字樣。 |
 | 2026-08-21 | 寫入設計者競爭第一名思維 | 確立零奉承、多關鍵字矩陣平衡、零效能損耗與全面衝刺 Google 第一名的最高開發準則。 |
 | 2026-09-10 | 確立規則七：絕對講真話與零自嗨 | 徹底清洗 `seo_dashboard.html` 虛浮標籤，嚴禁將 <5 次曝光之抽樣雜訊當作排名，以真實 SERP 與接單為唯一標準。 |
-
+| 2026-09-14 | 確立規則八：No Evidence, No Claim | 建立製造宣稱管治架構，禁止假借 SEO 捏造案例與參數，推行單一變數 GSC 基準觀察法。 |
+| 2026-09-14 | 確立規則九：Rolling Sprint & Kill Criteria | 建立滾動攻堅 5 軌推進機制與 14 天停損矩陣，導入商業 Cluster 雙層指標，拒絕被動死等 30 天。 |
