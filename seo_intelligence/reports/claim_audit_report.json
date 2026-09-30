@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-09-14T09:36:47.004891Z",
+  "timestamp": "2026-09-30T16:00:49.590031Z",
   "files_scanned": 114,
   "status": "PASSED",
   "summary": {
     "error_count": 0,
-    "warning_count": 130,
-    "info_count": 2355,
-    "verified_count": 1503,
-    "conditional_pass_count": 852
+    "warning_count": 142,
+    "info_count": 2388,
+    "verified_count": 1508,
+    "conditional_pass_count": 880
   },
   "errors": [],
   "warnings": [
@@ -1159,7 +1159,7 @@
       "claim_id": "CLM-004",
       "claim_type": "material",
       "matched_text": "LFGB",
-      "line": 229,
+      "line": 276,
       "context": "真實穩定第一頁 (實測可驗證) 4 組核心 曝光≥5次 且 位置≤10 (品牌/硬度/LFGB)",
       "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
     },
@@ -1168,7 +1168,7 @@
       "claim_id": "CLM-004",
       "claim_type": "material",
       "matched_text": "LFGB",
-      "line": 232,
+      "line": 279,
       "context": "曝光≥5次 且 位置≤10 (品牌/硬度/LFGB)",
       "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
     },
@@ -1177,8 +1177,116 @@
       "claim_id": "CLM-004",
       "claim_type": "material",
       "matched_text": "醫療級",
-      "line": 304,
+      "line": 340,
       "context": "醫療級",
+      "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
+    },
+    {
+      "level": "WARNING",
+      "claim_id": "CLM-004",
+      "claim_type": "material",
+      "matched_text": "USP Class VI",
+      "line": 598,
+      "context": "Industries & Applications 涵蓋多元關鍵領域的 客製矽膠代工實績 針對不同產業嚴苛的環境耐候、機械應力與國際法規標準，提供量身定制的材料配方與精密開模成型方案。 📱 電子科技零組件 高精度防水氣密圈、導電按鍵、耳機耳塞套、精密外殼微型緩衝襯墊。 製程：LSR 液態射出 · 異",
+      "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
+    },
+    {
+      "level": "WARNING",
+      "claim_id": "CLM-004",
+      "claim_type": "material",
+      "matched_text": "FDA",
+      "line": 598,
+      "context": "Industries & Applications 涵蓋多元關鍵領域的 客製矽膠代工實績 針對不同產業嚴苛的環境耐候、機械應力與國際法規標準，提供量身定制的材料配方與精密開模成型方案。 📱 電子科技零組件 高精度防水氣密圈、導電按鍵、耳機耳塞套、精密外殼微型緩衝襯墊。 製程：LSR 液態射出 · 異",
+      "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
+    },
+    {
+      "level": "WARNING",
+      "claim_id": "CLM-004",
+      "claim_type": "material",
+      "matched_text": "LFGB",
+      "line": 598,
+      "context": "Industries & Applications 涵蓋多元關鍵領域的 客製矽膠代工實績 針對不同產業嚴苛的環境耐候、機械應力與國際法規標準，提供量身定制的材料配方與精密開模成型方案。 📱 電子科技零組件 高精度防水氣密圈、導電按鍵、耳機耳塞套、精密外殼微型緩衝襯墊。 製程：LSR 液態射出 · 異",
+      "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
+    },
+    {
+      "level": "WARNING",
+      "claim_id": "CLM-004",
+      "claim_type": "material",
+      "matched_text": "USP Class VI",
+      "line": 605,
+      "context": "📱 電子科技零組件 高精度防水氣密圈、導電按鍵、耳機耳塞套、精密外殼微型緩衝襯墊。 製程：LSR 液態射出 · 異材包膠 🩺 醫療器材與生醫配件 呼吸面罩人體接觸矽膠墊、醫療活塞自潤密封塞、生醫級管路接頭零組件。 合規：USP Class VI · 生物相容性原料 🚗 車用防水與線束插塞 汽車線束低",
+      "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
+    },
+    {
+      "level": "WARNING",
+      "claim_id": "CLM-004",
+      "claim_type": "material",
+      "matched_text": "FDA",
+      "line": 605,
+      "context": "📱 電子科技零組件 高精度防水氣密圈、導電按鍵、耳機耳塞套、精密外殼微型緩衝襯墊。 製程：LSR 液態射出 · 異材包膠 🩺 醫療器材與生醫配件 呼吸面罩人體接觸矽膠墊、醫療活塞自潤密封塞、生醫級管路接頭零組件。 合規：USP Class VI · 生物相容性原料 🚗 車用防水與線束插塞 汽車線束低",
+      "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
+    },
+    {
+      "level": "WARNING",
+      "claim_id": "CLM-004",
+      "claim_type": "material",
+      "matched_text": "LFGB",
+      "line": 605,
+      "context": "📱 電子科技零組件 高精度防水氣密圈、導電按鍵、耳機耳塞套、精密外殼微型緩衝襯墊。 製程：LSR 液態射出 · 異材包膠 🩺 醫療器材與生醫配件 呼吸面罩人體接觸矽膠墊、醫療活塞自潤密封塞、生醫級管路接頭零組件。 合規：USP Class VI · 生物相容性原料 🚗 車用防水與線束插塞 汽車線束低",
+      "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
+    },
+    {
+      "level": "WARNING",
+      "claim_id": "CLM-004",
+      "claim_type": "material",
+      "matched_text": "USP Class VI",
+      "line": 615,
+      "context": "🩺 醫療器材與生醫配件 呼吸面罩人體接觸矽膠墊、醫療活塞自潤密封塞、生醫級管路接頭零組件。 合規：USP Class VI · 生物相容性原料",
+      "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
+    },
+    {
+      "level": "WARNING",
+      "claim_id": "CLM-004",
+      "claim_type": "material",
+      "matched_text": "USP Class VI",
+      "line": 619,
+      "context": "合規：USP Class VI · 生物相容性原料",
+      "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
+    },
+    {
+      "level": "WARNING",
+      "claim_id": "CLM-004",
+      "claim_type": "material",
+      "matched_text": "FDA",
+      "line": 647,
+      "context": "🥣 食品接觸容器與生活餐廚 保溫瓶氣密止水圈、食品級烘焙模具刮刀、嬰幼兒矽膠吸管與固齒器配件。 認證：FDA 21 CFR 177.2600 · LFGB",
+      "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
+    },
+    {
+      "level": "WARNING",
+      "claim_id": "CLM-004",
+      "claim_type": "material",
+      "matched_text": "LFGB",
+      "line": 647,
+      "context": "🥣 食品接觸容器與生活餐廚 保溫瓶氣密止水圈、食品級烘焙模具刮刀、嬰幼兒矽膠吸管與固齒器配件。 認證：FDA 21 CFR 177.2600 · LFGB",
+      "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
+    },
+    {
+      "level": "WARNING",
+      "claim_id": "CLM-004",
+      "claim_type": "material",
+      "matched_text": "FDA",
+      "line": 651,
+      "context": "認證：FDA 21 CFR 177.2600 · LFGB",
+      "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
+    },
+    {
+      "level": "WARNING",
+      "claim_id": "CLM-004",
+      "claim_type": "material",
+      "matched_text": "LFGB",
+      "line": 651,
+      "context": "認證：FDA 21 CFR 177.2600 · LFGB",
       "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
     }
   ],
@@ -18069,7 +18177,7 @@
           "claim_type": "material",
           "matched_text": "醫療級",
           "line": 2746,
-          "context": " 💡 延伸閱讀與相關技術指南 📌 醫療級 LSR 面罩與衛生防護矽膠器材代工 📌 LSR 液態矽膠射出成型無塵室與食品級應用 📌 肖氏硬度 Shore 硬度對食品容器封圈密封性之影響 📌 專業矽膠廠採購與開模代工評估指標 需要高品質的矽橡膠客製化服務嗎",
+          "context": " 💡 延伸閱讀與相關技術指南 📌 醫療級 LSR 面罩與衛生防護矽膠器材代工 📌 LSR 液態矽膠射出成型無塵室與食品級應用 📌 肖氏硬度 Shore 硬度對食品容器封圈密封性之影響 📌 專業矽膠代工廠採購選型與開模製造全解析 需要高品質的矽橡膠客製化代工服務嗎",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
         {
@@ -18105,7 +18213,7 @@
           "claim_type": "material",
           "matched_text": "醫療級",
           "line": 2755,
-          "context": " 💡 延伸閱讀與相關技術指南 📌 醫療級 LSR 面罩與衛生防護矽膠器材代工 📌 LSR 液態矽膠射出成型無塵室與食品級應用 📌 肖氏硬度 Shore 硬度對食品容器封圈密封性之影響 📌 專業矽膠廠採購與開模代工評估指標 需要高品質的矽橡膠客製化服務嗎",
+          "context": " 💡 延伸閱讀與相關技術指南 📌 醫療級 LSR 面罩與衛生防護矽膠器材代工 📌 LSR 液態矽膠射出成型無塵室與食品級應用 📌 肖氏硬度 Shore 硬度對食品容器封圈密封性之影響 📌 專業矽膠代工廠採購選型與開模製造全解析 需要高品質的矽橡膠客製化代工服務嗎",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
         {
@@ -18141,7 +18249,7 @@
           "claim_type": "material",
           "matched_text": "醫療級",
           "line": 2756,
-          "context": " 💡 延伸閱讀與相關技術指南 📌 醫療級 LSR 面罩與衛生防護矽膠器材代工 📌 LSR 液態矽膠射出成型無塵室與食品級應用 📌 肖氏硬度 Shore 硬度對食品容器封圈密封性之影響 📌 專業矽膠廠採購與開模代工評估指標 需要高品質的矽橡膠客製化服務嗎",
+          "context": " 💡 延伸閱讀與相關技術指南 📌 醫療級 LSR 面罩與衛生防護矽膠器材代工 📌 LSR 液態矽膠射出成型無塵室與食品級應用 📌 肖氏硬度 Shore 硬度對食品容器封圈密封性之影響 📌 專業矽膠代工廠採購選型與開模製造全解析 需要高品質的矽橡膠客製化代工服務嗎",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
         {
@@ -18177,7 +18285,7 @@
           "claim_type": "material",
           "matched_text": "醫療級",
           "line": 2757,
-          "context": " 💡 延伸閱讀與相關技術指南 📌 醫療級 LSR 面罩與衛生防護矽膠器材代工 📌 LSR 液態矽膠射出成型無塵室與食品級應用 📌 肖氏硬度 Shore 硬度對食品容器封圈密封性之影響 📌 專業矽膠廠採購與開模代工評估指標 需要高品質的矽橡膠客製化服務嗎",
+          "context": " 💡 延伸閱讀與相關技術指南 📌 醫療級 LSR 面罩與衛生防護矽膠器材代工 📌 LSR 液態矽膠射出成型無塵室與食品級應用 📌 肖氏硬度 Shore 硬度對食品容器封圈密封性之影響 📌 專業矽膠代工廠採購選型與開模製造全解析 需要高品質的矽橡膠客製化代工服務嗎",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
         {
@@ -18213,7 +18321,7 @@
           "claim_type": "material",
           "matched_text": "醫療級",
           "line": 2763,
-          "context": " 💡 延伸閱讀與相關技術指南 📌 醫療級 LSR 面罩與衛生防護矽膠器材代工 📌 LSR 液態矽膠射出成型無塵室與食品級應用 📌 肖氏硬度 Shore 硬度對食品容器封圈密封性之影響 📌 專業矽膠廠採購與開模代工評估指標 需要高品質的矽橡膠客製化服務嗎",
+          "context": " 💡 延伸閱讀與相關技術指南 📌 醫療級 LSR 面罩與衛生防護矽膠器材代工 📌 LSR 液態矽膠射出成型無塵室與食品級應用 📌 肖氏硬度 Shore 硬度對食品容器封圈密封性之影響 📌 專業矽膠代工廠採購選型與開模製造全解析 需要高品質的矽橡膠客製化代工服務嗎",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
         {
@@ -18321,7 +18429,7 @@
           "claim_type": "material",
           "matched_text": "醫療級",
           "line": 2777,
-          "context": " 💡 延伸閱讀與相關技術指南 📌 醫療級 LSR 面罩與衛生防護矽膠器材代工 📌 LSR 液態矽膠射出成型無塵室與食品級應用 📌 肖氏硬度 Shore 硬度對食品容器封圈密封性之影響 📌 專業矽膠廠採購與開模代工評估指標 需要高品質的矽橡膠客製化服務嗎",
+          "context": " 💡 延伸閱讀與相關技術指南 📌 醫療級 LSR 面罩與衛生防護矽膠器材代工 📌 LSR 液態矽膠射出成型無塵室與食品級應用 📌 肖氏硬度 Shore 硬度對食品容器封圈密封性之影響 📌 專業矽膠代工廠採購選型與開模製造全解析 需要高品質的矽橡膠客製化代工服務嗎",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
         {
@@ -18357,7 +18465,7 @@
           "claim_type": "material",
           "matched_text": "醫療級",
           "line": 2778,
-          "context": " 💡 延伸閱讀與相關技術指南 📌 醫療級 LSR 面罩與衛生防護矽膠器材代工 📌 LSR 液態矽膠射出成型無塵室與食品級應用 📌 肖氏硬度 Shore 硬度對食品容器封圈密封性之影響 📌 專業矽膠廠採購與開模代工評估指標 需要高品質的矽橡膠客製化服務嗎",
+          "context": " 💡 延伸閱讀與相關技術指南 📌 醫療級 LSR 面罩與衛生防護矽膠器材代工 📌 LSR 液態矽膠射出成型無塵室與食品級應用 📌 肖氏硬度 Shore 硬度對食品容器封圈密封性之影響 📌 專業矽膠代工廠採購選型與開模製造全解析 需要高品質的矽橡膠客製化代工服務嗎",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
         {
@@ -18519,7 +18627,7 @@
           "claim_type": "certification",
           "matched_text": "ISO 9001",
           "line": 2813,
-          "context": "需要高品質的矽橡膠客製化服務嗎？ 鈞翔實業擁有超過 30 年代工經驗，提供固態熱壓、LSR 液態射出成型以及多種異材結合工藝，符合 ISO 9001 國際認證。 瀏覽客製化產品清單 → 了解加工服務與常見問答",
+          "context": "需要高品質的矽橡膠客製化代工服務嗎？ 鈞翔實業擁有超過 30 年代工經驗，提供固態熱壓、LSR 液態射出成型以及多種異材結合工藝，符合 ISO 9001 國際認證。 瀏覽客製化產品清單 → 查看矽膠代工與開模服務流程 →",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
         {
@@ -20885,7 +20993,7 @@
           "claim_type": "certification",
           "matched_text": "ISO 9001",
           "line": 2810,
-          "context": "需要高品質的矽橡膠客製化服務嗎？ 鈞翔實業擁有超過 30 年代工經驗，提供固態熱壓、LSR 液態射出成型以及多種異材結合工藝，符合 ISO 9001 國際認證。 瀏覽客製化產品清單 → 了解加工服務與常見問答",
+          "context": "需要高品質的矽橡膠客製化代工服務嗎？ 鈞翔實業擁有超過 30 年代工經驗，提供固態熱壓、LSR 液態射出成型以及多種異材結合工藝，符合 ISO 9001 國際認證。 瀏覽客製化產品清單 → 查看矽膠代工與開模服務流程 →",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
         {
@@ -21706,7 +21814,7 @@
           "claim_type": "certification",
           "matched_text": "ISO 9001",
           "line": 2876,
-          "context": "在開發矽橡膠製品時，選擇正確的成型工藝不僅關係到產品品質，更直接決定了模具預算與長期量產成本。以下為您深入分析傳統固態熱壓成型與現代自動化液態矽膠射出的差別： 1. 固態矽膠真空熱壓成型 (Solid Silicone Pressing) 這是歷史悠久、技術成熟的成型方式，使用混煉好的固態矽膠原料（",
+          "context": "在規劃 矽膠成型代工服務 時，選擇正確的成型工藝不僅關係到產品品質，更直接決定了模具預算與長期量產成本。以下為您深入分析傳統固態熱壓成型與現代自動化液態矽膠射出的差別： 1. 固態矽膠真空熱壓成型 (Solid Silicone Pressing) 這是歷史悠久、技術成熟的成型方式，使用混煉好的固態",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
         {
@@ -21715,7 +21823,7 @@
           "claim_type": "certification",
           "matched_text": "ISO 9001",
           "line": 2884,
-          "context": "在開發矽橡膠製品時，選擇正確的成型工藝不僅關係到產品品質，更直接決定了模具預算與長期量產成本。以下為您深入分析傳統固態熱壓成型與現代自動化液態矽膠射出的差別： 1. 固態矽膠真空熱壓成型 (Solid Silicone Pressing) 這是歷史悠久、技術成熟的成型方式，使用混煉好的固態矽膠原料（",
+          "context": "在規劃 矽膠成型代工服務 時，選擇正確的成型工藝不僅關係到產品品質，更直接決定了模具預算與長期量產成本。以下為您深入分析傳統固態熱壓成型與現代自動化液態矽膠射出的差別： 1. 固態矽膠真空熱壓成型 (Solid Silicone Pressing) 這是歷史悠久、技術成熟的成型方式，使用混煉好的固態",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
         {
@@ -23677,7 +23785,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "LFGB",
-          "line": 218,
+          "line": 265,
           "context": "78%) 真實穩定第一頁 (實測可驗證) 4 組核心 曝光≥5次 且 位置≤10 (品牌/硬度/LFGB) 大詞常態常駐第2~3頁 0 組 (尚未入常態池) 矽膠代工/橡膠代工 目前為偶發抽測",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -23686,7 +23794,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "LFGB",
-          "line": 229,
+          "line": 276,
           "context": "真實穩定第一頁 (實測可驗證) 4 組核心 曝光≥5次 且 位置≤10 (品牌/硬度/LFGB)",
           "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
         },
@@ -23695,7 +23803,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "LFGB",
-          "line": 232,
+          "line": 279,
           "context": "曝光≥5次 且 位置≤10 (品牌/硬度/LFGB)",
           "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
         },
@@ -23704,7 +23812,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "lfgb",
-          "line": 338,
+          "line": 385,
           "context": "55% 🟢 第 1 頁 (Top 10) lfgb 矽膠 knowledge-food-grade-silicone-fda",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -23713,7 +23821,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "fda",
-          "line": 338,
+          "line": 385,
           "context": "55% 🟢 第 1 頁 (Top 10) lfgb 矽膠 knowledge-food-grade-silicone-fda",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -23722,7 +23830,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "lfgb",
-          "line": 374,
+          "line": 421,
           "context": "lfgb 矽膠",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -23731,7 +23839,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "fda",
-          "line": 375,
+          "line": 422,
           "context": "knowledge-food-grade-silicone-fda",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -23740,7 +23848,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "lfgb",
-          "line": 404,
+          "line": 451,
           "context": "lfgb認證",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -23749,7 +23857,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "fda",
-          "line": 405,
+          "line": 452,
           "context": "knowledge-food-grade-silicone-fda",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -23758,7 +23866,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "fda",
-          "line": 464,
+          "line": 511,
           "context": "fda food grade silicone",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -23767,7 +23875,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "fda",
-          "line": 465,
+          "line": 512,
           "context": "en/knowledge-food-grade-silicone-fda",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -23776,7 +23884,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "lfgb",
-          "line": 474,
+          "line": 521,
           "context": "lfgb certified",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -23785,7 +23893,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "fda",
-          "line": 475,
+          "line": 522,
           "context": "ja/knowledge-food-grade-silicone-fda",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -23794,7 +23902,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "lfgb",
-          "line": 544,
+          "line": 591,
           "context": "what is lfgb certified",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -23803,7 +23911,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "fda",
-          "line": 545,
+          "line": 592,
           "context": "en/knowledge-food-grade-silicone-fda",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -23812,7 +23920,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "fda",
-          "line": 595,
+          "line": 642,
           "context": "ja/knowledge-food-grade-silicone-fda",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -23821,7 +23929,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "lfgb",
-          "line": 624,
+          "line": 671,
           "context": "lfgb silicone",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -23830,7 +23938,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "fda",
-          "line": 625,
+          "line": 672,
           "context": "en/knowledge-food-grade-silicone-fda",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -23839,7 +23947,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "lfgb",
-          "line": 664,
+          "line": 711,
           "context": "lfgb certification meaning",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -23848,7 +23956,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "fda",
-          "line": 665,
+          "line": 712,
           "context": "en/knowledge-food-grade-silicone-fda",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -23857,7 +23965,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "lfgb",
-          "line": 674,
+          "line": 721,
           "context": "lfgb meaning",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -23866,7 +23974,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "fda",
-          "line": 675,
+          "line": 722,
           "context": "en/knowledge-food-grade-silicone-fda",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -23875,7 +23983,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "lfgb",
-          "line": 684,
+          "line": 731,
           "context": "lfgb standard",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -23884,7 +23992,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "fda",
-          "line": 685,
+          "line": 732,
           "context": "en/knowledge-food-grade-silicone-fda",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -23893,7 +24001,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "lfgb",
-          "line": 694,
+          "line": 741,
           "context": "test lfgb",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -23902,7 +24010,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "fda",
-          "line": 695,
+          "line": 742,
           "context": "en/knowledge-food-grade-silicone-fda",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -23911,7 +24019,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "lfgb",
-          "line": 704,
+          "line": 751,
           "context": "lfgb certified",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -23920,7 +24028,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "fda",
-          "line": 705,
+          "line": 752,
           "context": "en/knowledge-food-grade-silicone-fda",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -23929,7 +24037,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "lfgb",
-          "line": 714,
+          "line": 761,
           "context": "lfgb certified silicone",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -23938,7 +24046,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "fda",
-          "line": 715,
+          "line": 762,
           "context": "en/knowledge-food-grade-silicone-fda",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -23947,7 +24055,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "lfgb",
-          "line": 724,
+          "line": 771,
           "context": "what is lfgb",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -23956,7 +24064,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "fda",
-          "line": 725,
+          "line": 772,
           "context": "en/knowledge-food-grade-silicone-fda",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -23965,7 +24073,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "fda",
-          "line": 795,
+          "line": 842,
           "context": "en/knowledge-food-grade-silicone-fda",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -23974,7 +24082,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "fda",
-          "line": 1015,
+          "line": 1062,
           "context": "knowledge-food-grade-silicone-fda",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -23983,7 +24091,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "fda",
-          "line": 1035,
+          "line": 1082,
           "context": "ja/knowledge-food-grade-silicone-fda",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -23992,7 +24100,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "fda",
-          "line": 1185,
+          "line": 1232,
           "context": "knowledge-food-grade-silicone-fda",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -24001,7 +24109,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "fda",
-          "line": 1395,
+          "line": 1442,
           "context": "en/knowledge-food-grade-silicone-fda",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         }
@@ -24190,9 +24298,9 @@
     {
       "file": "P:\\tets\\service.html",
       "counts": {
-        "VERIFIED": 19,
-        "CONDITIONAL_PASS": 43,
-        "WARNING": 1,
+        "VERIFIED": 24,
+        "CONDITIONAL_PASS": 71,
+        "WARNING": 13,
         "ERROR": 0
       },
       "findings": [
@@ -24201,35 +24309,8 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 171,
+          "line": 179,
           "context": "ISO 9001 專業認證 · 專營熱固壓模成形 & LSR 液態矽膠射出成型 · 各類矽膠製品 & 特殊矽膠橡膠材料製品 & 防水制震止滑矽膠 · ISO 9001 專業認證 · 專營熱固壓模成形 & LSR 液態矽膠射出成型 · 各類矽膠製品 & 特殊矽膠橡膠材料製品 & 防水制震止滑矽膠 ·",
-          "reason": "Verified fact/capability supported by 'TUV_Cert'"
-        },
-        {
-          "level": "INFO",
-          "claim_id": "CLM-001",
-          "claim_type": "certification",
-          "matched_text": "ISO 9001",
-          "line": 172,
-          "context": "ISO 9001 專業認證 · 專營熱固壓模成形 & LSR 液態矽膠射出成型 · 各類矽膠製品 & 特殊矽膠橡膠材料製品 & 防水制震止滑矽膠 · ISO 9001 專業認證 · 專營熱固壓模成形 & LSR 液態矽膠射出成型 · 各類矽膠製品 & 特殊矽膠橡膠材料製品 & 防水制震止滑矽膠 ·",
-          "reason": "Verified fact/capability supported by 'TUV_Cert'"
-        },
-        {
-          "level": "INFO",
-          "claim_id": "CLM-001",
-          "claim_type": "certification",
-          "matched_text": "ISO 9001",
-          "line": 173,
-          "context": "ISO 9001 專業認證 · 專營熱固壓模成形 & LSR 液態矽膠射出成型 · 各類矽膠製品 & 特殊矽膠橡膠材料製品 & 防水制震止滑矽膠 · ISO 9001 專業認證 · 專營熱固壓模成形 & LSR 液態矽膠射出成型 · 各類矽膠製品 & 特殊矽膠橡膠材料製品 & 防水制震止滑矽膠 ·",
-          "reason": "Verified fact/capability supported by 'TUV_Cert'"
-        },
-        {
-          "level": "INFO",
-          "claim_id": "CLM-001",
-          "claim_type": "certification",
-          "matched_text": "ISO 9001",
-          "line": 174,
-          "context": "ISO 9001 專業認證",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
         {
@@ -24238,15 +24319,69 @@
           "claim_type": "certification",
           "matched_text": "ISO 9001",
           "line": 180,
+          "context": "ISO 9001 專業認證 · 專營熱固壓模成形 & LSR 液態矽膠射出成型 · 各類矽膠製品 & 特殊矽膠橡膠材料製品 & 防水制震止滑矽膠 · ISO 9001 專業認證 · 專營熱固壓模成形 & LSR 液態矽膠射出成型 · 各類矽膠製品 & 特殊矽膠橡膠材料製品 & 防水制震止滑矽膠 ·",
+          "reason": "Verified fact/capability supported by 'TUV_Cert'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-001",
+          "claim_type": "certification",
+          "matched_text": "ISO 9001",
+          "line": 181,
+          "context": "ISO 9001 專業認證 · 專營熱固壓模成形 & LSR 液態矽膠射出成型 · 各類矽膠製品 & 特殊矽膠橡膠材料製品 & 防水制震止滑矽膠 · ISO 9001 專業認證 · 專營熱固壓模成形 & LSR 液態矽膠射出成型 · 各類矽膠製品 & 特殊矽膠橡膠材料製品 & 防水制震止滑矽膠 ·",
+          "reason": "Verified fact/capability supported by 'TUV_Cert'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-001",
+          "claim_type": "certification",
+          "matched_text": "ISO 9001",
+          "line": 182,
           "context": "ISO 9001 專業認證",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
         {
           "level": "INFO",
+          "claim_id": "CLM-001",
+          "claim_type": "certification",
+          "matched_text": "ISO 9001",
+          "line": 188,
+          "context": "ISO 9001 專業認證",
+          "reason": "Verified fact/capability supported by 'TUV_Cert'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-001",
+          "claim_type": "certification",
+          "matched_text": "ISO 9001",
+          "line": 249,
+          "context": "首頁 / 矽膠代工服務 台灣專業矽膠代工廠｜從圖面到量產 一站式開模製造 專精於 LSR 液態矽膠射出成型 、 固態矽膠真空熱壓 與 矽膠包鐵／包塑膠異材結合（Overmolding） 代工。支援 2D / 3D CAD 工程圖檔 DFM 評估、模具自主開發、T1 試樣到批量生產。 🔒 雙向保密協議",
+          "reason": "Verified fact/capability supported by 'TUV_Cert'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-001",
+          "claim_type": "certification",
+          "matched_text": "ISO 9001",
+          "line": 261,
+          "context": "🔒 雙向保密協議 (Mutual NDA) 保證 ISO 9001:2015 品質認證 30年工藝經驗 · 自主模具中心",
+          "reason": "Verified fact/capability supported by 'TUV_Cert'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-001",
+          "claim_type": "certification",
+          "matched_text": "ISO 9001",
+          "line": 266,
+          "context": "ISO 9001:2015 品質認證",
+          "reason": "Verified fact/capability supported by 'TUV_Cert'"
+        },
+        {
+          "level": "INFO",
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "醫療級",
-          "line": 252,
+          "line": 288,
           "context": " 液態射出代工 LSR 液態矽膠 高精密度 醫療級 電子零件 精密液態射出 (LSR) 技術特色： 核心製程： 雙組份精密計量混料射出",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -24255,7 +24390,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "USP Class VI",
-          "line": 252,
+          "line": 288,
           "context": " 材料優勢： 無毒耐高低溫、符合醫療級 (USP Class VI) 與食品級 (FDA) 規範",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -24264,7 +24399,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "FDA",
-          "line": 252,
+          "line": 288,
           "context": " 材料優勢： 無毒耐高低溫、符合醫療級 (USP Class VI) 與食品級 (FDA) 規範",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -24273,8 +24408,8 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 252,
-          "context": "💡 鈞翔實業矽橡膠代工技術總覽（AI 快讀） 鈞翔實業為新北新莊 30 年 ISO 9001 認證專業矽橡膠代工廠。核心提供 LSR 液態矽膠射出成型（液態射出） 、 固態矽膠熱壓成型 、 自潤矽膠（出油膠）低摩擦成型 ，以及 矽膠結合金屬與塑膠之異材包膠（Overmolding） 服務。專為醫療器",
+          "line": 288,
+          "context": "💡 鈞翔實業矽橡膠代工技術總覽（AI 快讀） 鈞翔實業為新北新莊 30 年 ISO 9001 認證專業 矽膠代工廠 。核心提供 客製化矽膠開模 、 LSR 液態矽膠射出成型 、 固態矽膠真空熱壓成型 、 自潤矽膠（出油膠）低摩擦成型 ，以及 矽膠包鐵／包塑膠異材結合（Silicone Overmol",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
         {
@@ -24282,8 +24417,8 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 255,
-          "context": "💡 鈞翔實業矽橡膠代工技術總覽（AI 快讀） 鈞翔實業為新北新莊 30 年 ISO 9001 認證專業矽橡膠代工廠。核心提供 LSR 液態矽膠射出成型（液態射出） 、 固態矽膠熱壓成型 、 自潤矽膠（出油膠）低摩擦成型 ，以及 矽膠結合金屬與塑膠之異材包膠（Overmolding） 服務。專為醫療器",
+          "line": 291,
+          "context": "💡 鈞翔實業矽橡膠代工技術總覽（AI 快讀） 鈞翔實業為新北新莊 30 年 ISO 9001 認證專業 矽膠代工廠 。核心提供 客製化矽膠開模 、 LSR 液態矽膠射出成型 、 固態矽膠真空熱壓成型 、 自潤矽膠（出油膠）低摩擦成型 ，以及 矽膠包鐵／包塑膠異材結合（Silicone Overmol",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
         {
@@ -24291,8 +24426,8 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 259,
-          "context": "鈞翔實業為新北新莊 30 年 ISO 9001 認證專業矽橡膠代工廠。核心提供 LSR 液態矽膠射出成型（液態射出） 、 固態矽膠熱壓成型 、 自潤矽膠（出油膠）低摩擦成型 ，以及 矽膠結合金屬與塑膠之異材包膠（Overmolding） 服務。專為醫療器材、電子防水件、車用接頭與工業避震件提供客製化",
+          "line": 295,
+          "context": "鈞翔實業為新北新莊 30 年 ISO 9001 認證專業 矽膠代工廠 。核心提供 客製化矽膠開模 、 LSR 液態矽膠射出成型 、 固態矽膠真空熱壓成型 、 自潤矽膠（出油膠）低摩擦成型 ，以及 矽膠包鐵／包塑膠異材結合（Silicone Overmolding） 代工服務。專為醫療器材、電子防水件",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
         {
@@ -24300,7 +24435,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "醫療級",
-          "line": 292,
+          "line": 328,
           "context": " 液態射出代工 LSR 液態矽膠 高精密度 醫療級 電子零件 精密液態射出 (LSR) 技術特色： 核心製程： 雙組份精密計量混料射出",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -24309,7 +24444,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "USP Class VI",
-          "line": 292,
+          "line": 328,
           "context": " 材料優勢： 無毒耐高低溫、符合醫療級 (USP Class VI) 與食品級 (FDA) 規範",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -24318,7 +24453,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "FDA",
-          "line": 292,
+          "line": 328,
           "context": " 材料優勢： 無毒耐高低溫、符合醫療級 (USP Class VI) 與食品級 (FDA) 規範",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -24327,7 +24462,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "醫療級",
-          "line": 296,
+          "line": 332,
           "context": " 液態射出代工 LSR 液態矽膠 高精密度 醫療級 電子零件 精密液態射出 (LSR) 技術特色： 核心製程： 雙組份精密計量混料射出",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -24336,7 +24471,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "USP Class VI",
-          "line": 296,
+          "line": 332,
           "context": " 材料優勢： 無毒耐高低溫、符合醫療級 (USP Class VI) 與食品級 (FDA) 規範",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -24345,7 +24480,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "FDA",
-          "line": 296,
+          "line": 332,
           "context": " 材料優勢： 無毒耐高低溫、符合醫療級 (USP Class VI) 與食品級 (FDA) 規範",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -24354,7 +24489,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "醫療級",
-          "line": 300,
+          "line": 336,
           "context": "液態射出代工 LSR 液態矽膠 高精密度 醫療級 電子零件",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -24363,7 +24498,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "醫療級",
-          "line": 304,
+          "line": 340,
           "context": "醫療級",
           "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
         },
@@ -24372,7 +24507,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "醫療級",
-          "line": 307,
+          "line": 343,
           "context": " 材料優勢： 無毒耐高低溫、符合醫療級 (USP Class VI) 與食品級 (FDA) 規範",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -24381,7 +24516,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "USP Class VI",
-          "line": 307,
+          "line": 343,
           "context": " 材料優勢： 無毒耐高低溫、符合醫療級 (USP Class VI) 與食品級 (FDA) 規範",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -24390,7 +24525,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "FDA",
-          "line": 307,
+          "line": 343,
           "context": " 材料優勢： 無毒耐高低溫、符合醫療級 (USP Class VI) 與食品級 (FDA) 規範",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -24399,7 +24534,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "醫療級",
-          "line": 312,
+          "line": 348,
           "context": "材料優勢： 無毒耐高低溫、符合醫療級 (USP Class VI) 與食品級 (FDA) 規範",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -24408,7 +24543,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "USP Class VI",
-          "line": 312,
+          "line": 348,
           "context": "材料優勢： 無毒耐高低溫、符合醫療級 (USP Class VI) 與食品級 (FDA) 規範",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -24417,7 +24552,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "FDA",
-          "line": 312,
+          "line": 348,
           "context": "材料優勢： 無毒耐高低溫、符合醫療級 (USP Class VI) 與食品級 (FDA) 規範",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -24426,7 +24561,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "醫療級",
-          "line": 315,
+          "line": 351,
           "context": " LSR 製程比較與成本分析 👉 醫療級 LSR 呼吸面罩配件精密製造案例",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -24435,8 +24570,17 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "醫療級",
-          "line": 319,
+          "line": 355,
           "context": "醫療級 LSR 呼吸面罩配件精密製造案例",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "醫療級",
+          "line": 421,
+          "context": " 02 Material Selection 材料選型與硬度物性確認 依產品耐溫範圍、耐油耐候、食品醫療級認證需求，協助選定最佳 Shore A 硬度配方（自潤膠、耐溫矽膠、氟矽膠或固態橡膠）",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
         {
@@ -24444,8 +24588,53 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 365,
-          "context": "OEM / ODM Workflow 標準客製代工與 開模試樣流程 從 2D/3D 圖檔 DFM 評估、模具自主開發到 T1 試模簽樣，落實嚴謹 SOP，樣品確認滿意後才投入量產。 01 CAD & NDA 2D/3D 圖檔審查與保密協議 支援 .STEP, .IGES, .DWG, .PDF 等主",
+          "line": 421,
+          "context": "OEM / ODM Workflow SOP 標準矽膠代工與 客製開模試樣流程 從 2D/3D 圖檔 DFM 評估、模具自主開發到 T1 試模簽樣，落實嚴格 7 步工程 SOP，樣品經客戶工程端確認滿意後才投入量產。 01 CAD & NDA 2D/3D 圖檔審查與保密協議 支援 .STEP, .I",
+          "reason": "Verified fact/capability supported by 'TUV_Cert'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "醫療級",
+          "line": 428,
+          "context": " 02 Material Selection 材料選型與硬度物性確認 依產品耐溫範圍、耐油耐候、食品醫療級認證需求，協助選定最佳 Shore A 硬度配方（自潤膠、耐溫矽膠、氟矽膠或固態橡膠）",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-001",
+          "claim_type": "certification",
+          "matched_text": "ISO 9001",
+          "line": 428,
+          "context": "01 CAD & NDA 2D/3D 圖檔審查與保密協議 支援 .STEP, .IGS, .DWG, .PDF 等主流工程圖檔。審閱圖檔前可先行簽署雙向 NDA 商業保密協議，全力保護客戶智慧財產權。 02 Material Selection 材料選型與硬度物性確認 依產品耐溫範圍、耐油耐候、食品",
+          "reason": "Verified fact/capability supported by 'TUV_Cert'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "醫療級",
+          "line": 440,
+          "context": "02 Material Selection 材料選型與硬度物性確認 依產品耐溫範圍、耐油耐候、食品醫療級認證需求，協助選定最佳 Shore A 硬度配方（自潤膠、耐溫矽膠、氟矽膠或固態橡膠）",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "醫療級",
+          "line": 446,
+          "context": "依產品耐溫範圍、耐油耐候、食品醫療級認證需求，協助選定最佳 Shore A 硬度配方（自潤膠、耐溫矽膠、氟矽膠或固態橡膠）",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-001",
+          "claim_type": "certification",
+          "matched_text": "ISO 9001",
+          "line": 490,
+          "context": "07 Mass Production ISO 9001 批量生產與安心交付 依 ISO 9001:2015 標準作業程序生產，涵蓋首件檢驗、製程巡檢、二次加硫與出貨檢驗，提供穩定可靠的批次量產交付。",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
         {
@@ -24453,25 +24642,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 372,
-          "context": "01 CAD & NDA 2D/3D 圖檔審查與保密協議 支援 .STEP, .IGES, .DWG, .PDF 等主流工程圖檔。審閱圖檔前可先行簽署雙向 NDA 保密協議，嚴格保護客戶智財權。 02 DFM Analysis DFM 可製造性評估與材料選型 評估分模線（Parting Line）、",
-          "reason": "Verified fact/capability supported by 'TUV_Cert'"
-        },
-        {
-          "level": "INFO",
-          "claim_id": "CLM-001",
-          "claim_type": "certification",
-          "matched_text": "ISO 9001",
-          "line": 424,
-          "context": "06 Mass Production ISO 9001 批量生產與安心交付 依 ISO 9001:2015 標準作業程序生產，涵蓋首件檢驗、巡檢與出貨全檢抽驗，提供可靠、交期穩定的批次出貨。",
-          "reason": "Verified fact/capability supported by 'TUV_Cert'"
-        },
-        {
-          "level": "INFO",
-          "claim_id": "CLM-001",
-          "claim_type": "certification",
-          "matched_text": "ISO 9001",
-          "line": 429,
+          "line": 495,
           "context": "ISO 9001 批量生產與安心交付",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -24480,16 +24651,124 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 430,
-          "context": "依 ISO 9001:2015 標準作業程序生產，涵蓋首件檢驗、巡檢與出貨全檢抽驗，提供可靠、交期穩定的批次出貨。",
+          "line": 496,
+          "context": "依 ISO 9001:2015 標準作業程序生產，涵蓋首件檢驗、製程巡檢、二次加硫與出貨檢驗，提供穩定可靠的批次量產交付。",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
         {
+          "level": "WARNING",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "USP Class VI",
+          "line": 598,
+          "context": "Industries & Applications 涵蓋多元關鍵領域的 客製矽膠代工實績 針對不同產業嚴苛的環境耐候、機械應力與國際法規標準，提供量身定制的材料配方與精密開模成型方案。 📱 電子科技零組件 高精度防水氣密圈、導電按鍵、耳機耳塞套、精密外殼微型緩衝襯墊。 製程：LSR 液態射出 · 異",
+          "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "WARNING",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "FDA",
+          "line": 598,
+          "context": "Industries & Applications 涵蓋多元關鍵領域的 客製矽膠代工實績 針對不同產業嚴苛的環境耐候、機械應力與國際法規標準，提供量身定制的材料配方與精密開模成型方案。 📱 電子科技零組件 高精度防水氣密圈、導電按鍵、耳機耳塞套、精密外殼微型緩衝襯墊。 製程：LSR 液態射出 · 異",
+          "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "WARNING",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "LFGB",
+          "line": 598,
+          "context": "Industries & Applications 涵蓋多元關鍵領域的 客製矽膠代工實績 針對不同產業嚴苛的環境耐候、機械應力與國際法規標準，提供量身定制的材料配方與精密開模成型方案。 📱 電子科技零組件 高精度防水氣密圈、導電按鍵、耳機耳塞套、精密外殼微型緩衝襯墊。 製程：LSR 液態射出 · 異",
+          "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "WARNING",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "USP Class VI",
+          "line": 605,
+          "context": "📱 電子科技零組件 高精度防水氣密圈、導電按鍵、耳機耳塞套、精密外殼微型緩衝襯墊。 製程：LSR 液態射出 · 異材包膠 🩺 醫療器材與生醫配件 呼吸面罩人體接觸矽膠墊、醫療活塞自潤密封塞、生醫級管路接頭零組件。 合規：USP Class VI · 生物相容性原料 🚗 車用防水與線束插塞 汽車線束低",
+          "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "WARNING",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "FDA",
+          "line": 605,
+          "context": "📱 電子科技零組件 高精度防水氣密圈、導電按鍵、耳機耳塞套、精密外殼微型緩衝襯墊。 製程：LSR 液態射出 · 異材包膠 🩺 醫療器材與生醫配件 呼吸面罩人體接觸矽膠墊、醫療活塞自潤密封塞、生醫級管路接頭零組件。 合規：USP Class VI · 生物相容性原料 🚗 車用防水與線束插塞 汽車線束低",
+          "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "WARNING",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "LFGB",
+          "line": 605,
+          "context": "📱 電子科技零組件 高精度防水氣密圈、導電按鍵、耳機耳塞套、精密外殼微型緩衝襯墊。 製程：LSR 液態射出 · 異材包膠 🩺 醫療器材與生醫配件 呼吸面罩人體接觸矽膠墊、醫療活塞自潤密封塞、生醫級管路接頭零組件。 合規：USP Class VI · 生物相容性原料 🚗 車用防水與線束插塞 汽車線束低",
+          "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "WARNING",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "USP Class VI",
+          "line": 615,
+          "context": "🩺 醫療器材與生醫配件 呼吸面罩人體接觸矽膠墊、醫療活塞自潤密封塞、生醫級管路接頭零組件。 合規：USP Class VI · 生物相容性原料",
+          "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "WARNING",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "USP Class VI",
+          "line": 619,
+          "context": "合規：USP Class VI · 生物相容性原料",
+          "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "WARNING",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "FDA",
+          "line": 647,
+          "context": "🥣 食品接觸容器與生活餐廚 保溫瓶氣密止水圈、食品級烘焙模具刮刀、嬰幼兒矽膠吸管與固齒器配件。 認證：FDA 21 CFR 177.2600 · LFGB",
+          "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "WARNING",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "LFGB",
+          "line": 647,
+          "context": "🥣 食品接觸容器與生活餐廚 保溫瓶氣密止水圈、食品級烘焙模具刮刀、嬰幼兒矽膠吸管與固齒器配件。 認證：FDA 21 CFR 177.2600 · LFGB",
+          "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "WARNING",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "FDA",
+          "line": 651,
+          "context": "認證：FDA 21 CFR 177.2600 · LFGB",
+          "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "WARNING",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "LFGB",
+          "line": 651,
+          "context": "認證：FDA 21 CFR 177.2600 · LFGB",
+          "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
+        },
+        {
           "level": "INFO",
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "FDA",
-          "line": 532,
+          "line": 675,
           "context": " 第一步：勾選材料物性需求 (可複選) 耐極低溫/極高溫 (-40℃ ~ 220℃+) 食品級認證 (符合 FDA 規範) 醫療器材級 (符合 USP Class VI / 生物相容性) 耐溶劑 / 耐油污 / 阻燃要求 高透明度 / 優良透光性 防震耐磨 / 高彈性抗撕裂 低摩擦 / 免塗油脂 /",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -24498,7 +24777,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "USP Class VI",
-          "line": 532,
+          "line": 675,
           "context": " 第一步：勾選材料物性需求 (可複選) 耐極低溫/極高溫 (-40℃ ~ 220℃+) 食品級認證 (符合 FDA 規範) 醫療器材級 (符合 USP Class VI / 生物相容性) 耐溶劑 / 耐油污 / 阻燃要求 高透明度 / 優良透光性 防震耐磨 / 高彈性抗撕裂 低摩擦 / 免塗油脂 /",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -24507,7 +24786,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "LFGB",
-          "line": 532,
+          "line": 675,
           "context": " 食品級固態矽膠 (FDA Solid Silicone) 符合FDA 傳統熱壓 主要用於製造與食品直接接觸的矽膠按鍵、生活矽膠製品及餐具密封件，符合美國FDA與德國LFGB標準",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -24516,7 +24795,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "FDA",
-          "line": 539,
+          "line": 682,
           "context": "第一步：勾選材料物性需求 (可複選) 耐極低溫/極高溫 (-40℃ ~ 220℃+) 食品級認證 (符合 FDA 規範) 醫療器材級 (符合 USP Class VI / 生物相容性) 耐溶劑 / 耐油污 / 阻燃要求 高透明度 / 優良透光性 防震耐磨 / 高彈性抗撕裂 低摩擦 / 免塗油脂 / ",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -24525,7 +24804,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "USP Class VI",
-          "line": 539,
+          "line": 682,
           "context": "第一步：勾選材料物性需求 (可複選) 耐極低溫/極高溫 (-40℃ ~ 220℃+) 食品級認證 (符合 FDA 規範) 醫療器材級 (符合 USP Class VI / 生物相容性) 耐溶劑 / 耐油污 / 阻燃要求 高透明度 / 優良透光性 防震耐磨 / 高彈性抗撕裂 低摩擦 / 免塗油脂 / ",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -24534,7 +24813,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "LFGB",
-          "line": 539,
+          "line": 682,
           "context": " 食品級固態矽膠 (FDA Solid Silicone) 符合FDA 傳統熱壓 主要用於製造與食品直接接觸的矽膠按鍵、生活矽膠製品及餐具密封件，符合美國FDA與德國LFGB標準",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -24543,7 +24822,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "FDA",
-          "line": 540,
+          "line": 683,
           "context": "第一步：勾選材料物性需求 (可複選) 耐極低溫/極高溫 (-40℃ ~ 220℃+) 食品級認證 (符合 FDA 規範) 醫療器材級 (符合 USP Class VI / 生物相容性) 耐溶劑 / 耐油污 / 阻燃要求 高透明度 / 優良透光性 防震耐磨 / 高彈性抗撕裂 低摩擦 / 免塗油脂 / ",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -24552,7 +24831,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "USP Class VI",
-          "line": 540,
+          "line": 683,
           "context": "第一步：勾選材料物性需求 (可複選) 耐極低溫/極高溫 (-40℃ ~ 220℃+) 食品級認證 (符合 FDA 規範) 醫療器材級 (符合 USP Class VI / 生物相容性) 耐溶劑 / 耐油污 / 阻燃要求 高透明度 / 優良透光性 防震耐磨 / 高彈性抗撕裂 低摩擦 / 免塗油脂 / ",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -24561,7 +24840,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "LFGB",
-          "line": 540,
+          "line": 683,
           "context": " 食品級固態矽膠 (FDA Solid Silicone) 符合FDA 傳統熱壓 主要用於製造與食品直接接觸的矽膠按鍵、生活矽膠製品及餐具密封件，符合美國FDA與德國LFGB標準",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -24570,7 +24849,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "FDA",
-          "line": 542,
+          "line": 685,
           "context": "第一步：勾選材料物性需求 (可複選) 耐極低溫/極高溫 (-40℃ ~ 220℃+) 食品級認證 (符合 FDA 規範) 醫療器材級 (符合 USP Class VI / 生物相容性) 耐溶劑 / 耐油污 / 阻燃要求 高透明度 / 優良透光性 防震耐磨 / 高彈性抗撕裂 低摩擦 / 免塗油脂 / ",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -24579,7 +24858,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "USP Class VI",
-          "line": 542,
+          "line": 685,
           "context": "第一步：勾選材料物性需求 (可複選) 耐極低溫/極高溫 (-40℃ ~ 220℃+) 食品級認證 (符合 FDA 規範) 醫療器材級 (符合 USP Class VI / 生物相容性) 耐溶劑 / 耐油污 / 阻燃要求 高透明度 / 優良透光性 防震耐磨 / 高彈性抗撕裂 低摩擦 / 免塗油脂 / ",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -24588,7 +24867,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "FDA",
-          "line": 558,
+          "line": 701,
           "context": "食品級認證 (符合 FDA 規範)",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -24597,7 +24876,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "USP Class VI",
-          "line": 566,
+          "line": 709,
           "context": "醫療器材級 (符合 USP Class VI / 生物相容性)",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -24606,7 +24885,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "FDA",
-          "line": 603,
+          "line": 746,
           "context": " 食品級固態矽膠 (FDA Solid Silicone) 符合FDA 傳統熱壓 主要用於製造與食品直接接觸的矽膠按鍵、生活矽膠製品及餐具密封件，符合美國FDA與德國LFGB標準",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -24615,7 +24894,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "LFGB",
-          "line": 603,
+          "line": 746,
           "context": " 食品級固態矽膠 (FDA Solid Silicone) 符合FDA 傳統熱壓 主要用於製造與食品直接接觸的矽膠按鍵、生活矽膠製品及餐具密封件，符合美國FDA與德國LFGB標準",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -24624,7 +24903,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "FDA",
-          "line": 605,
+          "line": 748,
           "context": " 食品級固態矽膠 (FDA Solid Silicone) 符合FDA 傳統熱壓 主要用於製造與食品直接接觸的矽膠按鍵、生活矽膠製品及餐具密封件，符合美國FDA與德國LFGB標準",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -24633,7 +24912,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "LFGB",
-          "line": 605,
+          "line": 748,
           "context": " 食品級固態矽膠 (FDA Solid Silicone) 符合FDA 傳統熱壓 主要用於製造與食品直接接觸的矽膠按鍵、生活矽膠製品及餐具密封件，符合美國FDA與德國LFGB標準",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -24642,7 +24921,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "FDA",
-          "line": 657,
+          "line": 800,
           "context": "食品級固態矽膠 (FDA Solid Silicone) 符合FDA 傳統熱壓 主要用於製造與食品直接接觸的矽膠按鍵、生活矽膠製品及餐具密封件，符合美國FDA與德國LFGB標準",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -24651,7 +24930,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "LFGB",
-          "line": 657,
+          "line": 800,
           "context": "食品級固態矽膠 (FDA Solid Silicone) 符合FDA 傳統熱壓 主要用於製造與食品直接接觸的矽膠按鍵、生活矽膠製品及餐具密封件，符合美國FDA與德國LFGB標準",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -24660,7 +24939,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "FDA",
-          "line": 658,
+          "line": 801,
           "context": "食品級固態矽膠 (FDA Solid Silicone) 符合FDA 傳統熱壓",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -24669,7 +24948,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "FDA",
-          "line": 659,
+          "line": 802,
           "context": "食品級固態矽膠 (FDA Solid Silicone)",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -24678,7 +24957,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "FDA",
-          "line": 660,
+          "line": 803,
           "context": "符合FDA 傳統熱壓",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -24687,7 +24966,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "FDA",
-          "line": 661,
+          "line": 804,
           "context": "符合FDA",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -24696,7 +24975,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "FDA",
-          "line": 665,
+          "line": 808,
           "context": "主要用於製造與食品直接接觸的矽膠按鍵、生活矽膠製品及餐具密封件，符合美國FDA與德國LFGB標準",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -24705,17 +24984,260 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "LFGB",
-          "line": 665,
+          "line": 808,
           "context": "主要用於製造與食品直接接觸的矽膠按鍵、生活矽膠製品及餐具密封件，符合美國FDA與德國LFGB標準",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
         {
           "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "FDA",
+          "line": 849,
+          "context": "在原料選用方面，可依專案需求選配符合美國 FDA 21 CFR 177",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "LFGB",
+          "line": 849,
+          "context": "2600 食品級、歐盟 LFGB、醫療級 USP Class VI 生物相容性、RoHS 及 REACH 等合規材料，並提供原廠出廠證明與檢驗報告",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "醫療級",
+          "line": 849,
+          "context": "2600 食品級、歐盟 LFGB、醫療級 USP Class VI 生物相容性、RoHS 及 REACH 等合規材料，並提供原廠出廠證明與檢驗報告",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "USP Class VI",
+          "line": 849,
+          "context": "2600 食品級、歐盟 LFGB、醫療級 USP Class VI 生物相容性、RoHS 及 REACH 等合規材料，並提供原廠出廠證明與檢驗報告",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-008",
+          "claim_type": "compliance",
+          "matched_text": "RoHS",
+          "line": 849,
+          "context": "2600 食品級、歐盟 LFGB、醫療級 USP Class VI 生物相容性、RoHS 及 REACH 等合規材料，並提供原廠出廠證明與檢驗報告",
+          "reason": "Valid qualifier present for conditional claim 'CLM-008'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-008",
+          "claim_type": "compliance",
+          "matched_text": "REACH",
+          "line": 849,
+          "context": "2600 食品級、歐盟 LFGB、醫療級 USP Class VI 生物相容性、RoHS 及 REACH 等合規材料，並提供原廠出廠證明與檢驗報告",
+          "reason": "Valid qualifier present for conditional claim 'CLM-008'"
+        },
+        {
+          "level": "INFO",
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 738,
-          "context": "對我們的技術有興趣？ 我們擁有30年以上的矽橡膠專業生產經驗，ISO 9001品質認證，為您提供最可靠的模具研發與代工服務。 聯絡我們",
+          "line": 849,
+          "context": "OEM / ODM FAQ 客製化矽膠代工與開模製造 常見問題 整理採購經理與機構工程師在評估矽膠代工廠、開模試樣、MOQ與材料認證時最常詢問的關鍵解答。 Q1：矽膠代工開模需要提供哪些圖面格式？ 支援常見 2D 與 3D 工程圖檔格式，包含 STEP (.step / .stp)、IGES (.i",
+          "reason": "Verified fact/capability supported by 'TUV_Cert'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "FDA",
+          "line": 855,
+          "context": "在原料選用方面，可依專案需求選配符合美國 FDA 21 CFR 177",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "LFGB",
+          "line": 855,
+          "context": "2600 食品級、歐盟 LFGB、醫療級 USP Class VI 生物相容性、RoHS 及 REACH 等合規材料，並提供原廠出廠證明與檢驗報告",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "醫療級",
+          "line": 855,
+          "context": "2600 食品級、歐盟 LFGB、醫療級 USP Class VI 生物相容性、RoHS 及 REACH 等合規材料，並提供原廠出廠證明與檢驗報告",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "USP Class VI",
+          "line": 855,
+          "context": "2600 食品級、歐盟 LFGB、醫療級 USP Class VI 生物相容性、RoHS 及 REACH 等合規材料，並提供原廠出廠證明與檢驗報告",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-008",
+          "claim_type": "compliance",
+          "matched_text": "RoHS",
+          "line": 855,
+          "context": "2600 食品級、歐盟 LFGB、醫療級 USP Class VI 生物相容性、RoHS 及 REACH 等合規材料，並提供原廠出廠證明與檢驗報告",
+          "reason": "Valid qualifier present for conditional claim 'CLM-008'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-008",
+          "claim_type": "compliance",
+          "matched_text": "REACH",
+          "line": 855,
+          "context": "2600 食品級、歐盟 LFGB、醫療級 USP Class VI 生物相容性、RoHS 及 REACH 等合規材料，並提供原廠出廠證明與檢驗報告",
+          "reason": "Valid qualifier present for conditional claim 'CLM-008'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-001",
+          "claim_type": "certification",
+          "matched_text": "ISO 9001",
+          "line": 855,
+          "context": "Q1：矽膠代工開模需要提供哪些圖面格式？ 支援常見 2D 與 3D 工程圖檔格式，包含 STEP (.step / .stp)、IGES (.iges / .igs)、AutoCAD (.dwg / .dxf) 以及工程 PDF 圖面。若僅有實體樣品，亦可提供樣品由我們進行逆向測繪與工程評估。 Q2",
+          "reason": "Verified fact/capability supported by 'TUV_Cert'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "FDA",
+          "line": 876,
+          "context": "在原料選用方面，可依專案需求選配符合美國 FDA 21 CFR 177",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "LFGB",
+          "line": 876,
+          "context": "2600 食品級、歐盟 LFGB、醫療級 USP Class VI 生物相容性、RoHS 及 REACH 等合規材料，並提供原廠出廠證明與檢驗報告",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "醫療級",
+          "line": 876,
+          "context": "2600 食品級、歐盟 LFGB、醫療級 USP Class VI 生物相容性、RoHS 及 REACH 等合規材料，並提供原廠出廠證明與檢驗報告",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "USP Class VI",
+          "line": 876,
+          "context": "2600 食品級、歐盟 LFGB、醫療級 USP Class VI 生物相容性、RoHS 及 REACH 等合規材料，並提供原廠出廠證明與檢驗報告",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-008",
+          "claim_type": "compliance",
+          "matched_text": "RoHS",
+          "line": 876,
+          "context": "2600 食品級、歐盟 LFGB、醫療級 USP Class VI 生物相容性、RoHS 及 REACH 等合規材料，並提供原廠出廠證明與檢驗報告",
+          "reason": "Valid qualifier present for conditional claim 'CLM-008'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-008",
+          "claim_type": "compliance",
+          "matched_text": "REACH",
+          "line": 876,
+          "context": "2600 食品級、歐盟 LFGB、醫療級 USP Class VI 生物相容性、RoHS 及 REACH 等合規材料，並提供原廠出廠證明與檢驗報告",
+          "reason": "Valid qualifier present for conditional claim 'CLM-008'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-001",
+          "claim_type": "certification",
+          "matched_text": "ISO 9001",
+          "line": 876,
+          "context": "Q6：矽膠代工材料能提供哪些法規認證？ 鈞翔通過 ISO 9001:2015 品質管理體系認證。在原料選用方面，可依專案需求選配符合美國 FDA 21 CFR 177.2600 食品級、歐盟 LFGB、醫療級 USP Class VI 生物相容性、RoHS 及 REACH 等合規材料，並提供原廠出廠",
+          "reason": "Verified fact/capability supported by 'TUV_Cert'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "FDA",
+          "line": 878,
+          "context": "在原料選用方面，可依專案需求選配符合美國 FDA 21 CFR 177",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "LFGB",
+          "line": 878,
+          "context": "2600 食品級、歐盟 LFGB、醫療級 USP Class VI 生物相容性、RoHS 及 REACH 等合規材料，並提供原廠出廠證明與檢驗報告",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "醫療級",
+          "line": 878,
+          "context": "2600 食品級、歐盟 LFGB、醫療級 USP Class VI 生物相容性、RoHS 及 REACH 等合規材料，並提供原廠出廠證明與檢驗報告",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "USP Class VI",
+          "line": 878,
+          "context": "2600 食品級、歐盟 LFGB、醫療級 USP Class VI 生物相容性、RoHS 及 REACH 等合規材料，並提供原廠出廠證明與檢驗報告",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-008",
+          "claim_type": "compliance",
+          "matched_text": "RoHS",
+          "line": 878,
+          "context": "2600 食品級、歐盟 LFGB、醫療級 USP Class VI 生物相容性、RoHS 及 REACH 等合規材料，並提供原廠出廠證明與檢驗報告",
+          "reason": "Valid qualifier present for conditional claim 'CLM-008'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-008",
+          "claim_type": "compliance",
+          "matched_text": "REACH",
+          "line": 878,
+          "context": "2600 食品級、歐盟 LFGB、醫療級 USP Class VI 生物相容性、RoHS 及 REACH 等合規材料，並提供原廠出廠證明與檢驗報告",
+          "reason": "Valid qualifier present for conditional claim 'CLM-008'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-001",
+          "claim_type": "certification",
+          "matched_text": "ISO 9001",
+          "line": 878,
+          "context": "鈞翔通過 ISO 9001:2015 品質管理體系認證。在原料選用方面，可依專案需求選配符合美國 FDA 21 CFR 177.2600 食品級、歐盟 LFGB、醫療級 USP Class VI 生物相容性、RoHS 及 REACH 等合規材料，並提供原廠出廠證明與檢驗報告。",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
         {
@@ -24723,16 +25245,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 740,
-          "context": "我們擁有30年以上的矽橡膠專業生產經驗，ISO 9001品質認證，為您提供最可靠的模具研發與代工服務。",
-          "reason": "Verified fact/capability supported by 'TUV_Cert'"
-        },
-        {
-          "level": "INFO",
-          "claim_id": "CLM-001",
-          "claim_type": "certification",
-          "matched_text": "ISO 9001",
-          "line": 748,
+          "line": 913,
           "context": "鈞 鈞翔實業 專業矽橡膠製品客製化代工廠。擁有30年以上工藝傳承與 ISO 9001 認證，提供高品質固態矽膠熱壓與 LSR 液態矽膠射出成型服務，為您打造最可靠的精密矽膠製造方案。 快速連結 關於鈞翔 加工服務 產品目錄 技術知識庫 品質認證 聯絡我們 聯絡資訊 242 新北市新莊區新樹路 345",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -24741,7 +25254,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 749,
+          "line": 914,
           "context": "鈞 鈞翔實業 專業矽橡膠製品客製化代工廠。擁有30年以上工藝傳承與 ISO 9001 認證，提供高品質固態矽膠熱壓與 LSR 液態矽膠射出成型服務，為您打造最可靠的精密矽膠製造方案。 快速連結 關於鈞翔 加工服務 產品目錄 技術知識庫 品質認證 聯絡我們 聯絡資訊 242 新北市新莊區新樹路 345",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -24750,7 +25263,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 750,
+          "line": 915,
           "context": "鈞 鈞翔實業 專業矽橡膠製品客製化代工廠。擁有30年以上工藝傳承與 ISO 9001 認證，提供高品質固態矽膠熱壓與 LSR 液態矽膠射出成型服務，為您打造最可靠的精密矽膠製造方案。",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -24759,7 +25272,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 755,
+          "line": 920,
           "context": "專業矽橡膠製品客製化代工廠。擁有30年以上工藝傳承與 ISO 9001 認證，提供高品質固態矽膠熱壓與 LSR 液態矽膠射出成型服務，為您打造最可靠的精密矽膠製造方案。",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         }
