@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-09-30T16:00:49.590031Z",
+  "timestamp": "2026-09-30T16:37:09.658722Z",
   "files_scanned": 114,
   "status": "PASSED",
   "summary": {
     "error_count": 0,
-    "warning_count": 142,
-    "info_count": 2388,
-    "verified_count": 1508,
-    "conditional_pass_count": 880
+    "warning_count": 143,
+    "info_count": 2485,
+    "verified_count": 1527,
+    "conditional_pass_count": 958
   },
   "errors": [],
   "warnings": [
@@ -288,6 +288,15 @@
       "matched_text": "FDA",
       "line": 451,
       "context": "LSR Liquid Injection Molding (Flashless / Medical FDA)",
+      "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
+    },
+    {
+      "level": "WARNING",
+      "claim_id": "CLM-004",
+      "claim_type": "material",
+      "matched_text": "USP Class VI",
+      "line": 554,
+      "context": "Compliance: USP Class VI · Biocompatible Compounds",
       "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
     },
     {
@@ -700,25 +709,7 @@
       "claim_id": "CLM-004",
       "claim_type": "material",
       "matched_text": "USP Class VI",
-      "line": 211,
-      "context": "固形シリコン圧縮成形技術 伝統的かつ成熟したシリコン成形技術であり、真空熱圧（圧縮成形）方式を用いて固形シリコン原料を金型内で加熱・硫化成形します。大量生産に適しており、金型費用が比較的安価なため、シリコン製品の量産における第一候補となります。 当社の主な技術は、純シリコン・ゴム製品、シリコンと異材",
-      "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
-    },
-    {
-      "level": "WARNING",
-      "claim_id": "CLM-004",
-      "claim_type": "material",
-      "matched_text": "FDA",
-      "line": 211,
-      "context": "固形シリコン圧縮成形技術 伝統的かつ成熟したシリコン成形技術であり、真空熱圧（圧縮成形）方式を用いて固形シリコン原料を金型内で加熱・硫化成形します。大量生産に適しており、金型費用が比較的安価なため、シリコン製品の量産における第一候補となります。 当社の主な技術は、純シリコン・ゴム製品、シリコンと異材",
-      "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
-    },
-    {
-      "level": "WARNING",
-      "claim_id": "CLM-004",
-      "claim_type": "material",
-      "matched_text": "USP Class VI",
-      "line": 231,
+      "line": 333,
       "context": "LSR 液状シリコーンゴム射出成形技術 市場の精密なニーズと品質要求に応え、さらなる向上を目指して、鈞翔はLSR液状シリコーンゴム射出成形技術を導入しました。LSR技術は、高精度、高度な自動化、優れた生産効率などの特長を持っています。 この技術はお客様の精密な要求を高度に実現し、医療機器、電子部品、",
       "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
     },
@@ -727,7 +718,7 @@
       "claim_id": "CLM-004",
       "claim_type": "material",
       "matched_text": "FDA",
-      "line": 231,
+      "line": 333,
       "context": "LSR 液状シリコーンゴム射出成形技術 市場の精密なニーズと品質要求に応え、さらなる向上を目指して、鈞翔はLSR液状シリコーンゴム射出成形技術を導入しました。LSR技術は、高精度、高度な自動化、優れた生産効率などの特長を持っています。 この技術はお客様の精密な要求を高度に実現し、医療機器、電子部品、",
       "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
     },
@@ -736,25 +727,7 @@
       "claim_id": "CLM-004",
       "claim_type": "material",
       "matched_text": "USP Class VI",
-      "line": 235,
-      "context": "LSR 液状シリコーンゴム射出成形技術 市場の精密なニーズと品質要求に応え、さらなる向上を目指して、鈞翔はLSR液状シリコーンゴム射出成形技術を導入しました。LSR技術は、高精度、高度な自動化、優れた生産効率などの特長を持っています。 この技術はお客様の精密な要求を高度に実現し、医療機器、電子部品、",
-      "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
-    },
-    {
-      "level": "WARNING",
-      "claim_id": "CLM-004",
-      "claim_type": "material",
-      "matched_text": "FDA",
-      "line": 235,
-      "context": "LSR 液状シリコーンゴム射出成形技術 市場の精密なニーズと品質要求に応え、さらなる向上を目指して、鈞翔はLSR液状シリコーンゴム射出成形技術を導入しました。LSR技術は、高精度、高度な自動化、優れた生産効率などの特長を持っています。 この技術はお客様の精密な要求を高度に実現し、医療機器、電子部品、",
-      "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
-    },
-    {
-      "level": "WARNING",
-      "claim_id": "CLM-004",
-      "claim_type": "material",
-      "matched_text": "USP Class VI",
-      "line": 246,
+      "line": 344,
       "context": "精密LSR液状射出成形技術の特長： コアプロセス： 2液型自動計量混合射出。 高精度： ミクロンレベルの精密金型排気と射出により、製品と金型設計に応じた厳格な寸法公差管理。 材料の優位性： 無毒で極温耐性があり、医療規格（USP Class VI）および食品規格（FDA）に準拠。 インサート成形： ",
       "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
     },
@@ -763,7 +736,7 @@
       "claim_id": "CLM-004",
       "claim_type": "material",
       "matched_text": "FDA",
-      "line": 246,
+      "line": 344,
       "context": "精密LSR液状射出成形技術の特長： コアプロセス： 2液型自動計量混合射出。 高精度： ミクロンレベルの精密金型排気と射出により、製品と金型設計に応じた厳格な寸法公差管理。 材料の優位性： 無毒で極温耐性があり、医療規格（USP Class VI）および食品規格（FDA）に準拠。 インサート成形： ",
       "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
     },
@@ -772,7 +745,7 @@
       "claim_id": "CLM-004",
       "claim_type": "material",
       "matched_text": "USP Class VI",
-      "line": 251,
+      "line": 349,
       "context": "材料の優位性： 無毒で極温耐性があり、医療規格（USP Class VI）および食品規格（FDA）に準拠。",
       "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
     },
@@ -781,8 +754,35 @@
       "claim_id": "CLM-004",
       "claim_type": "material",
       "matched_text": "FDA",
-      "line": 251,
+      "line": 349,
       "context": "材料の優位性： 無毒で極温耐性があり、医療規格（USP Class VI）および食品規格（FDA）に準拠。",
+      "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
+    },
+    {
+      "level": "WARNING",
+      "claim_id": "CLM-004",
+      "claim_type": "material",
+      "matched_text": "FDA",
+      "line": 600,
+      "context": "各業界の過酷な環境耐候性、機械的応力、および国際安全規格（FDA/LFGB/USP Class VI）に応じた最適な配合と精密金型成形を提供します。",
+      "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
+    },
+    {
+      "level": "WARNING",
+      "claim_id": "CLM-004",
+      "claim_type": "material",
+      "matched_text": "LFGB",
+      "line": 600,
+      "context": "各業界の過酷な環境耐候性、機械的応力、および国際安全規格（FDA/LFGB/USP Class VI）に応じた最適な配合と精密金型成形を提供します。",
+      "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
+    },
+    {
+      "level": "WARNING",
+      "claim_id": "CLM-004",
+      "claim_type": "material",
+      "matched_text": "USP Class VI",
+      "line": 600,
+      "context": "各業界の過酷な環境耐候性、機械的応力、および国際安全規格（FDA/LFGB/USP Class VI）に応じた最適な配合と精密金型成形を提供します。",
       "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
     },
     {
@@ -790,7 +790,7 @@
       "claim_id": "CLM-004",
       "claim_type": "material",
       "matched_text": "医療用",
-      "line": 547,
+      "line": 755,
       "context": "配合されたシリコーンオイルが成形後に表面へゆっくりと析出し、極薄の長効潤滑膜を自動形成。自動車用ワイヤーシール、医療用プランジャーガスケットに最適。",
       "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
     },
@@ -799,7 +799,7 @@
       "claim_id": "CLM-004",
       "claim_type": "material",
       "matched_text": "FDA",
-      "line": 588,
+      "line": 796,
       "context": "食品グレード固形シリコン (FDA Solid Silicone) FDA準拠 従来型熱圧",
       "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
     },
@@ -808,7 +808,7 @@
       "claim_id": "CLM-004",
       "claim_type": "material",
       "matched_text": "FDA",
-      "line": 589,
+      "line": 797,
       "context": "食品グレード固形シリコン (FDA Solid Silicone)",
       "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
     },
@@ -817,7 +817,7 @@
       "claim_id": "CLM-004",
       "claim_type": "material",
       "matched_text": "FDA",
-      "line": 590,
+      "line": 798,
       "context": "FDA準拠 従来型熱圧",
       "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
     },
@@ -826,7 +826,7 @@
       "claim_id": "CLM-004",
       "claim_type": "material",
       "matched_text": "FDA",
-      "line": 591,
+      "line": 799,
       "context": "FDA準拠",
       "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
     },
@@ -835,7 +835,7 @@
       "claim_id": "CLM-004",
       "claim_type": "material",
       "matched_text": "FDA",
-      "line": 595,
+      "line": 803,
       "context": "主に食品に直接接触するシリコンキーパッド、家庭用シリコン製品、および食器用シールの製造に使用され、米国FDAおよびドイツLFGB規格に準拠しています。",
       "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
     },
@@ -844,9 +844,18 @@
       "claim_id": "CLM-004",
       "claim_type": "material",
       "matched_text": "LFGB",
-      "line": 595,
+      "line": 803,
       "context": "主に食品に直接接触するシリコンキーパッド、家庭用シリコン製品、および食器用シールの製造に使用され、米国FDAおよびドイツLFGB規格に準拠しています。",
       "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
+    },
+    {
+      "level": "WARNING",
+      "claim_id": "CLM-005",
+      "claim_type": "document_coa",
+      "matched_text": "COA",
+      "line": 872,
+      "context": "鈞翔実業はISO 9001:2015認証工場です。案件要件に応じ、米国FDA 21 CFR 177.2600食品規格、欧州LFGB、USP Class VI生体適合性、RoHS、REACH等に適合する原料を選定し、分析証明書（COA）や試験報告書をご提出可能です。",
+      "reason": "Missing required qualifier '依專案|依批次|依客戶需求|材料批次|per\\s*project|ロット|備索|提供|available|upon\\s*request|provided|発行|report|testing|analysis|inspection|verification|certificate|specification|documents?|quality' for conditional claim 'CLM-005'"
     },
     {
       "level": "WARNING",
@@ -8833,9 +8842,9 @@
     {
       "file": "P:\\tets\\en\\service.html",
       "counts": {
-        "VERIFIED": 18,
-        "CONDITIONAL_PASS": 45,
-        "WARNING": 0,
+        "VERIFIED": 27,
+        "CONDITIONAL_PASS": 76,
+        "WARNING": 1,
         "ERROR": 0
       },
       "findings": [
@@ -8844,7 +8853,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 146,
+          "line": 134,
           "context": "ISO 9001 Certified Factory · Specializing in Compression Molding & LSR Liquid Silicone Rubber Injection Molding · Silicone Products & Special Rubber/S",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -8853,7 +8862,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 147,
+          "line": 135,
           "context": "ISO 9001 Certified Factory · Specializing in Compression Molding & LSR Liquid Silicone Rubber Injection Molding · Silicone Products & Special Rubber/S",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -8862,7 +8871,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 148,
+          "line": 136,
           "context": "ISO 9001 Certified Factory · Specializing in Compression Molding & LSR Liquid Silicone Rubber Injection Molding · Silicone Products & Special Rubber/S",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -8871,7 +8880,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 149,
+          "line": 137,
           "context": "ISO 9001 Certified Factory",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -8880,16 +8889,70 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 155,
+          "line": 143,
           "context": "ISO 9001 Certified Factory",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
         {
           "level": "INFO",
+          "claim_id": "CLM-001",
+          "claim_type": "certification",
+          "matched_text": "ISO 9001",
+          "line": 204,
+          "context": "Home / Silicone OEM Services Custom Silicone OEM Manufacturer in Taiwan｜From CAD to Mass Production Specializing in LSR Liquid Silicone Rubber Injecti",
+          "reason": "Verified fact/capability supported by 'TUV_Cert'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-002",
+          "claim_type": "company_fact",
+          "matched_text": "30+ Years",
+          "line": 204,
+          "context": "Home / Silicone OEM Services Custom Silicone OEM Manufacturer in Taiwan｜From CAD to Mass Production Specializing in LSR Liquid Silicone Rubber Injecti",
+          "reason": "Verified fact/capability supported by 'Foundation_1991'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-001",
+          "claim_type": "certification",
+          "matched_text": "ISO 9001",
+          "line": 216,
+          "context": "🔒 Mutual NDA Protected ISO 9001:2015 Certified 30+ Years Tooling & Molding Expertise",
+          "reason": "Verified fact/capability supported by 'TUV_Cert'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-002",
+          "claim_type": "company_fact",
+          "matched_text": "30+ Years",
+          "line": 216,
+          "context": "🔒 Mutual NDA Protected ISO 9001:2015 Certified 30+ Years Tooling & Molding Expertise",
+          "reason": "Verified fact/capability supported by 'Foundation_1991'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-001",
+          "claim_type": "certification",
+          "matched_text": "ISO 9001",
+          "line": 221,
+          "context": "ISO 9001:2015 Certified",
+          "reason": "Verified fact/capability supported by 'TUV_Cert'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-002",
+          "claim_type": "company_fact",
+          "matched_text": "30+ Years",
+          "line": 225,
+          "context": "30+ Years Tooling & Molding Expertise",
+          "reason": "Verified fact/capability supported by 'Foundation_1991'"
+        },
+        {
+          "level": "INFO",
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "medical-grade",
-          "line": 227,
+          "line": 243,
           "context": " Material Advantages: Non-toxic, resistant to extreme temperatures, complying with medical-grade (USP Class VI) and food-grade (FDA) standards",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -8898,7 +8961,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "USP Class VI",
-          "line": 227,
+          "line": 243,
           "context": " Material Advantages: Non-toxic, resistant to extreme temperatures, complying with medical-grade (USP Class VI) and food-grade (FDA) standards",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -8907,16 +8970,43 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "FDA",
-          "line": 227,
+          "line": 243,
           "context": " Material Advantages: Non-toxic, resistant to extreme temperatures, complying with medical-grade (USP Class VI) and food-grade (FDA) standards",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-001",
+          "claim_type": "certification",
+          "matched_text": "ISO 9001",
+          "line": 243,
+          "context": "💡 Jun-Hsiang Silicone OEM Manufacturing Overview (Executive Summary) Jun-Hsiang Enterprise is an ISO 9001 certified custom silicone OEM manufacturer b",
+          "reason": "Verified fact/capability supported by 'TUV_Cert'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-001",
+          "claim_type": "certification",
+          "matched_text": "ISO 9001",
+          "line": 246,
+          "context": "💡 Jun-Hsiang Silicone OEM Manufacturing Overview (Executive Summary) Jun-Hsiang Enterprise is an ISO 9001 certified custom silicone OEM manufacturer b",
+          "reason": "Verified fact/capability supported by 'TUV_Cert'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-001",
+          "claim_type": "certification",
+          "matched_text": "ISO 9001",
+          "line": 250,
+          "context": "Jun-Hsiang Enterprise is an ISO 9001 certified custom silicone OEM manufacturer based in Taiwan with over 30 years of tooling and manufacturing experi",
+          "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
         {
           "level": "INFO",
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "medical-grade",
-          "line": 247,
+          "line": 273,
           "context": " Material Advantages: Non-toxic, resistant to extreme temperatures, complying with medical-grade (USP Class VI) and food-grade (FDA) standards",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -8925,7 +9015,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "USP Class VI",
-          "line": 247,
+          "line": 273,
           "context": " Material Advantages: Non-toxic, resistant to extreme temperatures, complying with medical-grade (USP Class VI) and food-grade (FDA) standards",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -8934,7 +9024,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "FDA",
-          "line": 247,
+          "line": 273,
           "context": " Material Advantages: Non-toxic, resistant to extreme temperatures, complying with medical-grade (USP Class VI) and food-grade (FDA) standards",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -8943,7 +9033,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "medical-grade",
-          "line": 251,
+          "line": 277,
           "context": " Material Advantages: Non-toxic, resistant to extreme temperatures, complying with medical-grade (USP Class VI) and food-grade (FDA) standards",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -8952,7 +9042,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "USP Class VI",
-          "line": 251,
+          "line": 277,
           "context": " Material Advantages: Non-toxic, resistant to extreme temperatures, complying with medical-grade (USP Class VI) and food-grade (FDA) standards",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -8961,7 +9051,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "FDA",
-          "line": 251,
+          "line": 277,
           "context": " Material Advantages: Non-toxic, resistant to extreme temperatures, complying with medical-grade (USP Class VI) and food-grade (FDA) standards",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -8970,7 +9060,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "medical-grade",
-          "line": 262,
+          "line": 288,
           "context": " Material Advantages: Non-toxic, resistant to extreme temperatures, complying with medical-grade (USP Class VI) and food-grade (FDA) standards",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -8979,7 +9069,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "USP Class VI",
-          "line": 262,
+          "line": 288,
           "context": " Material Advantages: Non-toxic, resistant to extreme temperatures, complying with medical-grade (USP Class VI) and food-grade (FDA) standards",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -8988,7 +9078,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "FDA",
-          "line": 262,
+          "line": 288,
           "context": " Material Advantages: Non-toxic, resistant to extreme temperatures, complying with medical-grade (USP Class VI) and food-grade (FDA) standards",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -8997,7 +9087,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "medical-grade",
-          "line": 267,
+          "line": 293,
           "context": "Material Advantages: Non-toxic, resistant to extreme temperatures, complying with medical-grade (USP Class VI) and food-grade (FDA) standards",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -9006,7 +9096,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "USP Class VI",
-          "line": 267,
+          "line": 293,
           "context": "Material Advantages: Non-toxic, resistant to extreme temperatures, complying with medical-grade (USP Class VI) and food-grade (FDA) standards",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -9015,7 +9105,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "FDA",
-          "line": 267,
+          "line": 293,
           "context": "Material Advantages: Non-toxic, resistant to extreme temperatures, complying with medical-grade (USP Class VI) and food-grade (FDA) standards",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -9024,8 +9114,8 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 313,
-          "context": "OEM / ODM Workflow Standard 6-Step Custom Tooling & OEM Process From 2D/3D CAD DFM evaluation, in-house tooling to T1 sample approval, we follow stric",
+          "line": 360,
+          "context": "OEM / ODM Workflow SOP Standard 7-Step Custom Tooling & OEM Process From 2D/3D CAD DFM evaluation, in-house mold making to T1 sample inspection, we en",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
         {
@@ -9033,8 +9123,8 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 314,
-          "context": "OEM / ODM Workflow Standard 6-Step Custom Tooling & OEM Process From 2D/3D CAD DFM evaluation, in-house tooling to T1 sample approval, we follow stric",
+          "line": 367,
+          "context": "01 CAD & NDA CAD Review & Mutual NDA Accepting .STEP, .IGES, .DWG, and .PDF formats. Mutual NDAs are executed prior to proprietary drawing review to s",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
         {
@@ -9042,8 +9132,8 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 317,
-          "context": "From 2D/3D CAD DFM evaluation, in-house tooling to T1 sample approval, we follow strict ISO 9001 SOP. Mass production begins only after client sample ",
+          "line": 429,
+          "context": "07 Mass Production ISO 9001 Mass Production & Delivery Executed under ISO 9001:2015 standards, including in-process patrol inspections, post-curing ba",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
         {
@@ -9051,25 +9141,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 320,
-          "context": "01 CAD & NDA CAD Review & NDA Execution Accepting .STEP, .IGES, .DWG, and .PDF formats. Mutual NDAs are executed prior to proprietary drawing review t",
-          "reason": "Verified fact/capability supported by 'TUV_Cert'"
-        },
-        {
-          "level": "INFO",
-          "claim_id": "CLM-001",
-          "claim_type": "certification",
-          "matched_text": "ISO 9001",
-          "line": 372,
-          "context": "06 Mass Production ISO 9001 Mass Production & Delivery Executed under ISO 9001:2015 standards, including in-process patrol inspections, final lot samp",
-          "reason": "Verified fact/capability supported by 'TUV_Cert'"
-        },
-        {
-          "level": "INFO",
-          "claim_id": "CLM-001",
-          "claim_type": "certification",
-          "matched_text": "ISO 9001",
-          "line": 377,
+          "line": 434,
           "context": "ISO 9001 Mass Production & Delivery",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -9078,16 +9150,124 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 378,
-          "context": "Executed under ISO 9001:2015 standards, including in-process patrol inspections, final lot sampling, and secure packaging for global shipment.",
+          "line": 435,
+          "context": "Executed under ISO 9001:2015 standards, including in-process patrol inspections, post-curing baking, final lot sampling, and secure packaging for glob",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
         {
           "level": "INFO",
           "claim_id": "CLM-004",
           "claim_type": "material",
+          "matched_text": "USP Class VI",
+          "line": 533,
+          "context": " Compliance: USP Class VI · Biocompatible Compounds 🚗 Automotive Harness & Powertrain Self-lubricating wire harness grommets, weatherproof cable boots",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
           "matched_text": "FDA",
-          "line": 473,
+          "line": 533,
+          "context": " Certifications: FDA 21 CFR 177",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "LFGB",
+          "line": 533,
+          "context": "2600 · LFGB Compliant 🖥️ AI Servers & Liquid Cooling Systems Liquid cooling quick-disconnect O-rings, cold plate sealing gaskets, and high-power modul",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "USP Class VI",
+          "line": 540,
+          "context": " Compliance: USP Class VI · Biocompatible Compounds 🚗 Automotive Harness & Powertrain Self-lubricating wire harness grommets, weatherproof cable boots",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "FDA",
+          "line": 540,
+          "context": " Certifications: FDA 21 CFR 177",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "LFGB",
+          "line": 540,
+          "context": "2600 · LFGB Compliant 🖥️ AI Servers & Liquid Cooling Systems Liquid cooling quick-disconnect O-rings, cold plate sealing gaskets, and high-power modul",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "USP Class VI",
+          "line": 550,
+          "context": " Compliance: USP Class VI · Biocompatible Compounds",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "WARNING",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "USP Class VI",
+          "line": 554,
+          "context": "Compliance: USP Class VI · Biocompatible Compounds",
+          "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "FDA",
+          "line": 582,
+          "context": " Certifications: FDA 21 CFR 177",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "LFGB",
+          "line": 582,
+          "context": "2600 · LFGB Compliant",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "FDA",
+          "line": 586,
+          "context": "Certifications: FDA 21 CFR 177",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "LFGB",
+          "line": 586,
+          "context": "2600 · LFGB Compliant",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "FDA",
+          "line": 610,
           "context": " Step 1: Check your material property requirements (multiple selections allowed) Extreme Temp Resistance (-40°C ~ 220°C+) Food-Grade Certification (Co",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -9096,7 +9276,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "Medical-Grade",
-          "line": 473,
+          "line": 610,
           "context": " Step 1: Check your material property requirements (multiple selections allowed) Extreme Temp Resistance (-40°C ~ 220°C+) Food-Grade Certification (Co",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -9105,7 +9285,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "USP Class VI",
-          "line": 473,
+          "line": 610,
           "context": " Step 1: Check your material property requirements (multiple selections allowed) Extreme Temp Resistance (-40°C ~ 220°C+) Food-Grade Certification (Co",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -9114,7 +9294,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "LFGB",
-          "line": 473,
+          "line": 610,
           "context": " Food Grade Solid Silicone (FDA Solid Silicone) FDA Compliant Compression Molding Primarily used to manufacture silicone keypads, consumer goods, and ",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -9123,7 +9303,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "FDA",
-          "line": 479,
+          "line": 616,
           "context": "Step 1: Check your material property requirements (multiple selections allowed) Extreme Temp Resistance (-40°C ~ 220°C+) Food-Grade Certification (Com",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -9132,7 +9312,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "Medical-Grade",
-          "line": 479,
+          "line": 616,
           "context": "Step 1: Check your material property requirements (multiple selections allowed) Extreme Temp Resistance (-40°C ~ 220°C+) Food-Grade Certification (Com",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -9141,7 +9321,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "USP Class VI",
-          "line": 479,
+          "line": 616,
           "context": "Step 1: Check your material property requirements (multiple selections allowed) Extreme Temp Resistance (-40°C ~ 220°C+) Food-Grade Certification (Com",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -9150,7 +9330,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "LFGB",
-          "line": 479,
+          "line": 616,
           "context": " Food Grade Solid Silicone (FDA Solid Silicone) FDA Compliant Compression Molding Primarily used to manufacture silicone keypads, consumer goods, and ",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -9159,7 +9339,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "FDA",
-          "line": 480,
+          "line": 617,
           "context": "Step 1: Check your material property requirements (multiple selections allowed) Extreme Temp Resistance (-40°C ~ 220°C+) Food-Grade Certification (Com",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -9168,7 +9348,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "Medical-Grade",
-          "line": 480,
+          "line": 617,
           "context": "Step 1: Check your material property requirements (multiple selections allowed) Extreme Temp Resistance (-40°C ~ 220°C+) Food-Grade Certification (Com",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -9177,7 +9357,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "USP Class VI",
-          "line": 480,
+          "line": 617,
           "context": "Step 1: Check your material property requirements (multiple selections allowed) Extreme Temp Resistance (-40°C ~ 220°C+) Food-Grade Certification (Com",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -9186,7 +9366,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "LFGB",
-          "line": 480,
+          "line": 617,
           "context": " Food Grade Solid Silicone (FDA Solid Silicone) FDA Compliant Compression Molding Primarily used to manufacture silicone keypads, consumer goods, and ",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -9195,7 +9375,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "FDA",
-          "line": 482,
+          "line": 619,
           "context": "Step 1: Check your material property requirements (multiple selections allowed) Extreme Temp Resistance (-40°C ~ 220°C+) Food-Grade Certification (Com",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -9204,7 +9384,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "Medical-Grade",
-          "line": 482,
+          "line": 619,
           "context": "Step 1: Check your material property requirements (multiple selections allowed) Extreme Temp Resistance (-40°C ~ 220°C+) Food-Grade Certification (Com",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -9213,7 +9393,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "USP Class VI",
-          "line": 482,
+          "line": 619,
           "context": "Step 1: Check your material property requirements (multiple selections allowed) Extreme Temp Resistance (-40°C ~ 220°C+) Food-Grade Certification (Com",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -9222,7 +9402,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "FDA",
-          "line": 496,
+          "line": 633,
           "context": "Food-Grade Certification (Compliant with FDA)",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -9231,7 +9411,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "Medical-Grade",
-          "line": 503,
+          "line": 640,
           "context": "Medical-Grade (Compliant with USP Class VI / Biocompatibility)",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -9240,7 +9420,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "USP Class VI",
-          "line": 503,
+          "line": 640,
           "context": "Medical-Grade (Compliant with USP Class VI / Biocompatibility)",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -9249,7 +9429,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "FDA",
-          "line": 528,
+          "line": 665,
           "context": " Food Grade Solid Silicone (FDA Solid Silicone) FDA Compliant Compression Molding Primarily used to manufacture silicone keypads, consumer goods, and ",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -9258,7 +9438,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "LFGB",
-          "line": 528,
+          "line": 665,
           "context": " Food Grade Solid Silicone (FDA Solid Silicone) FDA Compliant Compression Molding Primarily used to manufacture silicone keypads, consumer goods, and ",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -9267,7 +9447,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "FDA",
-          "line": 530,
+          "line": 667,
           "context": " Food Grade Solid Silicone (FDA Solid Silicone) FDA Compliant Compression Molding Primarily used to manufacture silicone keypads, consumer goods, and ",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -9276,7 +9456,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "LFGB",
-          "line": 530,
+          "line": 667,
           "context": " Food Grade Solid Silicone (FDA Solid Silicone) FDA Compliant Compression Molding Primarily used to manufacture silicone keypads, consumer goods, and ",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -9285,7 +9465,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "FDA",
-          "line": 577,
+          "line": 714,
           "context": "Food Grade Solid Silicone (FDA Solid Silicone) FDA Compliant Compression Molding Primarily used to manufacture silicone keypads, consumer goods, and t",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -9294,7 +9474,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "LFGB",
-          "line": 577,
+          "line": 714,
           "context": "Food Grade Solid Silicone (FDA Solid Silicone) FDA Compliant Compression Molding Primarily used to manufacture silicone keypads, consumer goods, and t",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -9303,7 +9483,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "FDA",
-          "line": 578,
+          "line": 715,
           "context": "Food Grade Solid Silicone (FDA Solid Silicone) FDA Compliant Compression Molding",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -9312,7 +9492,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "FDA",
-          "line": 579,
+          "line": 716,
           "context": "Food Grade Solid Silicone (FDA Solid Silicone)",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -9321,7 +9501,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "FDA",
-          "line": 580,
+          "line": 717,
           "context": "FDA Compliant Compression Molding",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -9330,7 +9510,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "FDA",
-          "line": 581,
+          "line": 718,
           "context": "FDA Compliant",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -9339,7 +9519,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "FDA",
-          "line": 585,
+          "line": 722,
           "context": "Primarily used to manufacture silicone keypads, consumer goods, and tableware seals in direct contact with food, complying with FDA and LFGB standards",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -9348,17 +9528,224 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "LFGB",
-          "line": 585,
+          "line": 722,
           "context": "Primarily used to manufacture silicone keypads, consumer goods, and tableware seals in direct contact with food, complying with FDA and LFGB standards",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
         {
           "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "FDA",
+          "line": 758,
+          "context": " Depending on your project requirements, we source and mold materials compliant with FDA 21 CFR 177",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "LFGB",
+          "line": 758,
+          "context": "2600 food-grade standards, European LFGB, USP Class VI medical biocompatibility, RoHS, and REACH regulations, accompanied by material test reports and",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "USP Class VI",
+          "line": 758,
+          "context": "2600 food-grade standards, European LFGB, USP Class VI medical biocompatibility, RoHS, and REACH regulations, accompanied by material test reports and",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-008",
+          "claim_type": "compliance",
+          "matched_text": "RoHS",
+          "line": 758,
+          "context": "2600 food-grade standards, European LFGB, USP Class VI medical biocompatibility, RoHS, and REACH regulations, accompanied by material test reports and",
+          "reason": "Valid qualifier present for conditional claim 'CLM-008'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-008",
+          "claim_type": "compliance",
+          "matched_text": "REACH",
+          "line": 758,
+          "context": "2600 food-grade standards, European LFGB, USP Class VI medical biocompatibility, RoHS, and REACH regulations, accompanied by material test reports and",
+          "reason": "Valid qualifier present for conditional claim 'CLM-008'"
+        },
+        {
+          "level": "INFO",
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 621,
-          "context": "Interested in our technology? We possess over 30 years of professional silicone and rubber manufacturing experience, backed by ISO 9001 certification ",
+          "line": 758,
+          "context": "OEM / ODM FAQ Custom Silicone OEM & Tooling Manufacturing FAQ Key answers for procurement managers and mechanical engineers evaluating silicone OEM fa",
+          "reason": "Verified fact/capability supported by 'TUV_Cert'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "FDA",
+          "line": 764,
+          "context": " Depending on your project requirements, we source and mold materials compliant with FDA 21 CFR 177",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "LFGB",
+          "line": 764,
+          "context": "2600 food-grade standards, European LFGB, USP Class VI medical biocompatibility, RoHS, and REACH regulations, accompanied by material test reports and",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "USP Class VI",
+          "line": 764,
+          "context": "2600 food-grade standards, European LFGB, USP Class VI medical biocompatibility, RoHS, and REACH regulations, accompanied by material test reports and",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-008",
+          "claim_type": "compliance",
+          "matched_text": "RoHS",
+          "line": 764,
+          "context": "2600 food-grade standards, European LFGB, USP Class VI medical biocompatibility, RoHS, and REACH regulations, accompanied by material test reports and",
+          "reason": "Valid qualifier present for conditional claim 'CLM-008'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-008",
+          "claim_type": "compliance",
+          "matched_text": "REACH",
+          "line": 764,
+          "context": "2600 food-grade standards, European LFGB, USP Class VI medical biocompatibility, RoHS, and REACH regulations, accompanied by material test reports and",
+          "reason": "Valid qualifier present for conditional claim 'CLM-008'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-001",
+          "claim_type": "certification",
+          "matched_text": "ISO 9001",
+          "line": 764,
+          "context": "Q1: What CAD drawing formats are required for silicone tooling evaluation? We support standard 2D and 3D engineering CAD formats, including STEP (.ste",
+          "reason": "Verified fact/capability supported by 'TUV_Cert'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "FDA",
+          "line": 785,
+          "context": " Depending on your project requirements, we source and mold materials compliant with FDA 21 CFR 177",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "LFGB",
+          "line": 785,
+          "context": "2600 food-grade standards, European LFGB, USP Class VI medical biocompatibility, RoHS, and REACH regulations, accompanied by material test reports and",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "USP Class VI",
+          "line": 785,
+          "context": "2600 food-grade standards, European LFGB, USP Class VI medical biocompatibility, RoHS, and REACH regulations, accompanied by material test reports and",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-008",
+          "claim_type": "compliance",
+          "matched_text": "RoHS",
+          "line": 785,
+          "context": "2600 food-grade standards, European LFGB, USP Class VI medical biocompatibility, RoHS, and REACH regulations, accompanied by material test reports and",
+          "reason": "Valid qualifier present for conditional claim 'CLM-008'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-008",
+          "claim_type": "compliance",
+          "matched_text": "REACH",
+          "line": 785,
+          "context": "2600 food-grade standards, European LFGB, USP Class VI medical biocompatibility, RoHS, and REACH regulations, accompanied by material test reports and",
+          "reason": "Valid qualifier present for conditional claim 'CLM-008'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-001",
+          "claim_type": "certification",
+          "matched_text": "ISO 9001",
+          "line": 785,
+          "context": "Q6: What regulatory and compliance certifications do your materials meet? Jun-Hsiang is ISO 9001:2015 certified. Depending on your project requirement",
+          "reason": "Verified fact/capability supported by 'TUV_Cert'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "FDA",
+          "line": 787,
+          "context": " Depending on your project requirements, we source and mold materials compliant with FDA 21 CFR 177",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "LFGB",
+          "line": 787,
+          "context": "2600 food-grade standards, European LFGB, USP Class VI medical biocompatibility, RoHS, and REACH regulations, accompanied by material test reports and",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "USP Class VI",
+          "line": 787,
+          "context": "2600 food-grade standards, European LFGB, USP Class VI medical biocompatibility, RoHS, and REACH regulations, accompanied by material test reports and",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-008",
+          "claim_type": "compliance",
+          "matched_text": "RoHS",
+          "line": 787,
+          "context": "2600 food-grade standards, European LFGB, USP Class VI medical biocompatibility, RoHS, and REACH regulations, accompanied by material test reports and",
+          "reason": "Valid qualifier present for conditional claim 'CLM-008'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-008",
+          "claim_type": "compliance",
+          "matched_text": "REACH",
+          "line": 787,
+          "context": "2600 food-grade standards, European LFGB, USP Class VI medical biocompatibility, RoHS, and REACH regulations, accompanied by material test reports and",
+          "reason": "Valid qualifier present for conditional claim 'CLM-008'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-001",
+          "claim_type": "certification",
+          "matched_text": "ISO 9001",
+          "line": 787,
+          "context": "Jun-Hsiang is ISO 9001:2015 certified. Depending on your project requirements, we source and mold materials compliant with FDA 21 CFR 177.2600 food-gr",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
         {
@@ -9366,16 +9753,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 623,
-          "context": "We possess over 30 years of professional silicone and rubber manufacturing experience, backed by ISO 9001 certification to provide you with the most r",
-          "reason": "Verified fact/capability supported by 'TUV_Cert'"
-        },
-        {
-          "level": "INFO",
-          "claim_id": "CLM-001",
-          "claim_type": "certification",
-          "matched_text": "ISO 9001",
-          "line": 631,
+          "line": 820,
           "context": "J Jun-Hsiang Enterprise A professional custom silicone & rubber OEM factory. With over 30 years of manufacturing experience and ISO 9001 certification",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -9384,7 +9762,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 632,
+          "line": 821,
           "context": "J Jun-Hsiang Enterprise A professional custom silicone & rubber OEM factory. With over 30 years of manufacturing experience and ISO 9001 certification",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -9393,7 +9771,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 633,
+          "line": 822,
           "context": "J Jun-Hsiang Enterprise A professional custom silicone & rubber OEM factory. With over 30 years of manufacturing experience and ISO 9001 certification",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -9402,7 +9780,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 638,
+          "line": 827,
           "context": "A professional custom silicone & rubber OEM factory. With over 30 years of manufacturing experience and ISO 9001 certification, we provide high-qualit",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         }
@@ -10363,7 +10741,7 @@
           "claim_type": "certification",
           "matched_text": "ISO 9001",
           "line": 353,
-          "context": "Jun-Hsiang Enterprise Co., Ltd. 鈞翔実業 | LSR 液状射出成形のエキスパート プロフェッショナルなシリコン・ゴム製品 ‧ 30年受け継がれた職人技 品質認証 (ISO 9001) ─ LSR液状シリコーンゴム射出成形 ‧ 圧縮成形 ‧ インサート成形 詳細を見る ",
+          "context": "Jun-Hsiang Enterprise Co., Ltd. 鈞翔実業 | LSR 液状射出成形のエキスパート プロフェッショナルなシリコン・ゴム製品 ‧ 30年受け継がれた職人技 品質認証 (ISO 9001) ─ LSR液状シリコーンゴム射出成形 ‧ 圧縮成形 ‧ インサート成形 シリコン受託",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
         {
@@ -10372,7 +10750,7 @@
           "claim_type": "certification",
           "matched_text": "ISO 9001",
           "line": 355,
-          "context": "Jun-Hsiang Enterprise Co., Ltd. 鈞翔実業 | LSR 液状射出成形のエキスパート プロフェッショナルなシリコン・ゴム製品 ‧ 30年受け継がれた職人技 品質認証 (ISO 9001) ─ LSR液状シリコーンゴム射出成形 ‧ 圧縮成形 ‧ インサート成形 詳細を見る ",
+          "context": "Jun-Hsiang Enterprise Co., Ltd. 鈞翔実業 | LSR 液状射出成形のエキスパート プロフェッショナルなシリコン・ゴム製品 ‧ 30年受け継がれた職人技 品質認証 (ISO 9001) ─ LSR液状シリコーンゴム射出成形 ‧ 圧縮成形 ‧ インサート成形 シリコン受託",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
         {
@@ -10381,7 +10759,7 @@
           "claim_type": "certification",
           "matched_text": "ISO 9001",
           "line": 359,
-          "context": "Jun-Hsiang Enterprise Co., Ltd. 鈞翔実業 | LSR 液状射出成形のエキスパート プロフェッショナルなシリコン・ゴム製品 ‧ 30年受け継がれた職人技 品質認証 (ISO 9001) ─ LSR液状シリコーンゴム射出成形 ‧ 圧縮成形 ‧ インサート成形 詳細を見る ",
+          "context": "Jun-Hsiang Enterprise Co., Ltd. 鈞翔実業 | LSR 液状射出成形のエキスパート プロフェッショナルなシリコン・ゴム製品 ‧ 30年受け継がれた職人技 品質認証 (ISO 9001) ─ LSR液状シリコーンゴム射出成形 ‧ 圧縮成形 ‧ インサート成形 シリコン受託",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
         {
@@ -16814,8 +17192,8 @@
     {
       "file": "P:\\tets\\ja\\service.html",
       "counts": {
-        "VERIFIED": 18,
-        "CONDITIONAL_PASS": 25,
+        "VERIFIED": 28,
+        "CONDITIONAL_PASS": 72,
         "WARNING": 17,
         "ERROR": 0
       },
@@ -16825,7 +17203,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 130,
+          "line": 177,
           "context": "品質認証 (ISO 9001) 取得 · 圧縮成形＆LSR液状シリコーンゴム射出成形専門 · 各種シリコン製品＆特殊シリコンゴム材料製品＆防水・防振・滑り止めシリコン · 品質認証 (ISO 9001) 取得 · 圧縮成形＆LSR液状シリコーンゴム射出成形専門 · 各種シリコン製品＆特殊シリコンゴム",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -16834,7 +17212,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 131,
+          "line": 178,
           "context": "品質認証 (ISO 9001) 取得 · 圧縮成形＆LSR液状シリコーンゴム射出成形専門 · 各種シリコン製品＆特殊シリコンゴム材料製品＆防水・防振・滑り止めシリコン · 品質認証 (ISO 9001) 取得 · 圧縮成形＆LSR液状シリコーンゴム射出成形専門 · 各種シリコン製品＆特殊シリコンゴム",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -16843,7 +17221,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 132,
+          "line": 179,
           "context": "品質認証 (ISO 9001) 取得 · 圧縮成形＆LSR液状シリコーンゴム射出成形専門 · 各種シリコン製品＆特殊シリコンゴム材料製品＆防水・防振・滑り止めシリコン · 品質認証 (ISO 9001) 取得 · 圧縮成形＆LSR液状シリコーンゴム射出成形専門 · 各種シリコン製品＆特殊シリコンゴム",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -16852,7 +17230,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 133,
+          "line": 180,
           "context": "品質認証 (ISO 9001) 取得",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
@@ -16861,52 +17239,169 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 139,
+          "line": 186,
           "context": "品質認証 (ISO 9001) 取得",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
         {
-          "level": "WARNING",
+          "level": "INFO",
+          "claim_id": "CLM-001",
+          "claim_type": "certification",
+          "matched_text": "ISO 9001",
+          "line": 247,
+          "context": "ホーム / シリコン受託加工・OEM加工 Custom Silicone OEM / ODM Manufacturing 精密シリコン受託加工・金型成形｜ LSR液状射出＆固形真空圧縮・インサート成形 30年以上の工芸実績、ISO 9001:2015認証。自社金型製作・2D/3D図面対応（.STEP",
+          "reason": "Verified fact/capability supported by 'TUV_Cert'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-001",
+          "claim_type": "certification",
+          "matched_text": "ISO 9001",
+          "line": 254,
+          "context": "Custom Silicone OEM / ODM Manufacturing 精密シリコン受託加工・金型成形｜ LSR液状射出＆固形真空圧縮・インサート成形 30年以上の工芸実績、ISO 9001:2015認証。自社金型製作・2D/3D図面対応（.STEP / .IGS / .DWG / .PDF",
+          "reason": "Verified fact/capability supported by 'TUV_Cert'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-001",
+          "claim_type": "certification",
+          "matched_text": "ISO 9001",
+          "line": 259,
+          "context": "30年以上の工芸実績、ISO 9001:2015認証。自社金型製作・2D/3D図面対応（.STEP / .IGS / .DWG / .PDF）。最短24時間以内に成形性（DFM）評価およびお見積りをご案内します。",
+          "reason": "Verified fact/capability supported by 'TUV_Cert'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-001",
+          "claim_type": "certification",
+          "matched_text": "ISO 9001",
+          "line": 264,
+          "context": "ISO 9001:2015 認証工場 秘密保持契約 (Mutual NDA) 対応 2.5D 光学測定機による精密検査 最短24時間以内技術回答",
+          "reason": "Verified fact/capability supported by 'TUV_Cert'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-001",
+          "claim_type": "certification",
+          "matched_text": "ISO 9001",
+          "line": 265,
+          "context": "ISO 9001:2015 認証工場",
+          "reason": "Verified fact/capability supported by 'TUV_Cert'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-001",
+          "claim_type": "certification",
+          "matched_text": "ISO 9001",
+          "line": 296,
+          "context": "⚡ 鈞翔実業（Jun-Hsiang）受託加工のコアケイパビリティ 鈞翔実業は台湾新北市のISO 9001認証シリコンゴム受託製造工場です。 LSR（液状シリコーンゴム）射出成形、固形真空熱圧圧縮成形、インサート成形（金属・樹脂一体成形）、自潤シリコン などのコア技術を備えています。試作用簡易型から大",
+          "reason": "Verified fact/capability supported by 'TUV_Cert'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-001",
+          "claim_type": "certification",
+          "matched_text": "ISO 9001",
+          "line": 300,
+          "context": "鈞翔実業は台湾新北市のISO 9001認証シリコンゴム受託製造工場です。 LSR（液状シリコーンゴム）射出成形、固形真空熱圧圧縮成形、インサート成形（金属・樹脂一体成形）、自潤シリコン などのコア技術を備えています。試作用簡易型から大ロット量産型まで、自社金型製作による精密な品質管理と迅速なT1試作",
+          "reason": "Verified fact/capability supported by 'TUV_Cert'"
+        },
+        {
+          "level": "INFO",
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "USP Class VI",
-          "line": 211,
+          "line": 309,
+          "context": " 材料の優位性： 無毒で極温耐性があり、医療規格（USP Class VI）および食品規格（FDA）に準拠",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "FDA",
+          "line": 309,
+          "context": " 材料の優位性： 無毒で極温耐性があり、医療規格（USP Class VI）および食品規格（FDA）に準拠",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "LFGB",
+          "line": 309,
+          "context": "5D 投影測定機 荷重曲線測定機 シリコンゴム寿命試験機 (キー打鍵試験機) 耐摩耗試験機 高精度手動荷重計 放大檢視鏡 / 顯微鏡 デュロメータ硬度計 游標卡尺 / 數位厚薄規 Industries & Applications 多様な先端産業を支える カスタムシリコン受託加工実績 各業界の過酷な",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "医療用",
+          "line": 309,
+          "context": "自動車用ワイヤーシール、医療用プランジャーガスケットに最適",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-005",
+          "claim_type": "document_coa",
+          "matched_text": "COA",
+          "line": 309,
+          "context": "2600食品規格、欧州LFGB、USP Class VI生体適合性、RoHS、REACH等に適合する原料を選定し、分析証明書（COA）や試験報告書をご提出可能です",
+          "reason": "Valid qualifier present for conditional claim 'CLM-005'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-008",
+          "claim_type": "compliance",
+          "matched_text": "RoHS",
+          "line": 309,
+          "context": "2600食品規格、欧州LFGB、USP Class VI生体適合性、RoHS、REACH等に適合する原料を選定し、分析証明書（COA）や試験報告書をご提出可能です",
+          "reason": "Valid qualifier present for conditional claim 'CLM-008'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-008",
+          "claim_type": "compliance",
+          "matched_text": "REACH",
+          "line": 309,
+          "context": "2600食品規格、欧州LFGB、USP Class VI生体適合性、RoHS、REACH等に適合する原料を選定し、分析証明書（COA）や試験報告書をご提出可能です",
+          "reason": "Valid qualifier present for conditional claim 'CLM-008'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-001",
+          "claim_type": "certification",
+          "matched_text": "ISO 9001",
+          "line": 309,
           "context": "固形シリコン圧縮成形技術 伝統的かつ成熟したシリコン成形技術であり、真空熱圧（圧縮成形）方式を用いて固形シリコン原料を金型内で加熱・硫化成形します。大量生産に適しており、金型費用が比較的安価なため、シリコン製品の量産における第一候補となります。 当社の主な技術は、純シリコン・ゴム製品、シリコンと異材",
-          "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
+          "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
         {
-          "level": "WARNING",
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "USP Class VI",
+          "line": 329,
+          "context": " 材料の優位性： 無毒で極温耐性があり、医療規格（USP Class VI）および食品規格（FDA）に準拠",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "FDA",
-          "line": 211,
-          "context": "固形シリコン圧縮成形技術 伝統的かつ成熟したシリコン成形技術であり、真空熱圧（圧縮成形）方式を用いて固形シリコン原料を金型内で加熱・硫化成形します。大量生産に適しており、金型費用が比較的安価なため、シリコン製品の量産における第一候補となります。 当社の主な技術は、純シリコン・ゴム製品、シリコンと異材",
-          "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
+          "line": 329,
+          "context": " 材料の優位性： 無毒で極温耐性があり、医療規格（USP Class VI）および食品規格（FDA）に準拠",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
         {
           "level": "WARNING",
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "USP Class VI",
-          "line": 231,
-          "context": "LSR 液状シリコーンゴム射出成形技術 市場の精密なニーズと品質要求に応え、さらなる向上を目指して、鈞翔はLSR液状シリコーンゴム射出成形技術を導入しました。LSR技術は、高精度、高度な自動化、優れた生産効率などの特長を持っています。 この技術はお客様の精密な要求を高度に実現し、医療機器、電子部品、",
-          "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
-        },
-        {
-          "level": "WARNING",
-          "claim_id": "CLM-004",
-          "claim_type": "material",
-          "matched_text": "FDA",
-          "line": 231,
-          "context": "LSR 液状シリコーンゴム射出成形技術 市場の精密なニーズと品質要求に応え、さらなる向上を目指して、鈞翔はLSR液状シリコーンゴム射出成形技術を導入しました。LSR技術は、高精度、高度な自動化、優れた生産効率などの特長を持っています。 この技術はお客様の精密な要求を高度に実現し、医療機器、電子部品、",
-          "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
-        },
-        {
-          "level": "WARNING",
-          "claim_id": "CLM-004",
-          "claim_type": "material",
-          "matched_text": "USP Class VI",
-          "line": 235,
+          "line": 333,
           "context": "LSR 液状シリコーンゴム射出成形技術 市場の精密なニーズと品質要求に応え、さらなる向上を目指して、鈞翔はLSR液状シリコーンゴム射出成形技術を導入しました。LSR技術は、高精度、高度な自動化、優れた生産効率などの特長を持っています。 この技術はお客様の精密な要求を高度に実現し、医療機器、電子部品、",
           "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
         },
@@ -16915,7 +17410,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "FDA",
-          "line": 235,
+          "line": 333,
           "context": "LSR 液状シリコーンゴム射出成形技術 市場の精密なニーズと品質要求に応え、さらなる向上を目指して、鈞翔はLSR液状シリコーンゴム射出成形技術を導入しました。LSR技術は、高精度、高度な自動化、優れた生産効率などの特長を持っています。 この技術はお客様の精密な要求を高度に実現し、医療機器、電子部品、",
           "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
         },
@@ -16924,7 +17419,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "USP Class VI",
-          "line": 246,
+          "line": 344,
           "context": "精密LSR液状射出成形技術の特長： コアプロセス： 2液型自動計量混合射出。 高精度： ミクロンレベルの精密金型排気と射出により、製品と金型設計に応じた厳格な寸法公差管理。 材料の優位性： 無毒で極温耐性があり、医療規格（USP Class VI）および食品規格（FDA）に準拠。 インサート成形： ",
           "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
         },
@@ -16933,7 +17428,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "FDA",
-          "line": 246,
+          "line": 344,
           "context": "精密LSR液状射出成形技術の特長： コアプロセス： 2液型自動計量混合射出。 高精度： ミクロンレベルの精密金型排気と射出により、製品と金型設計に応じた厳格な寸法公差管理。 材料の優位性： 無毒で極温耐性があり、医療規格（USP Class VI）および食品規格（FDA）に準拠。 インサート成形： ",
           "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
         },
@@ -16942,7 +17437,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "USP Class VI",
-          "line": 251,
+          "line": 349,
           "context": "材料の優位性： 無毒で極温耐性があり、医療規格（USP Class VI）および食品規格（FDA）に準拠。",
           "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
         },
@@ -16951,7 +17446,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "FDA",
-          "line": 251,
+          "line": 349,
           "context": "材料の優位性： 無毒で極温耐性があり、医療規格（USP Class VI）および食品規格（FDA）に準拠。",
           "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
         },
@@ -16960,8 +17455,8 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 298,
-          "context": "OEM / ODM Workflow 受託加工・金型開発の 標準6ステップフロー 2D/3D図面のDFM成形性評価から自社金型加工、T1試作サンプル確認まで、ISO 9001に準拠した厳格なSOPで量産へ移行します。 01 CAD & NDA 2D/3D図面確認・秘密保持契約（NDA） .STEP,",
+          "line": 419,
+          "context": "Engineering SOP 図面受領から量産納品まで 7段階標準受託エンジニアリングSOP 2D/3D図面の成形性（DFM）事前評価から金型自社製作、初品T1検査、ISO 9001量産まで、厳格な品質マイルストーンを運用しています。 01 CAD & NDA 2D/3D図面受領・秘密保持契約（N",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
         {
@@ -16969,8 +17464,8 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 299,
-          "context": "OEM / ODM Workflow 受託加工・金型開発の 標準6ステップフロー 2D/3D図面のDFM成形性評価から自社金型加工、T1試作サンプル確認まで、ISO 9001に準拠した厳格なSOPで量産へ移行します。",
+          "line": 420,
+          "context": "Engineering SOP 図面受領から量産納品まで 7段階標準受託エンジニアリングSOP 2D/3D図面の成形性（DFM）事前評価から金型自社製作、初品T1検査、ISO 9001量産まで、厳格な品質マイルストーンを運用しています。",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
         {
@@ -16978,8 +17473,8 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 302,
-          "context": "2D/3D図面のDFM成形性評価から自社金型加工、T1試作サンプル確認まで、ISO 9001に準拠した厳格なSOPで量産へ移行します。",
+          "line": 423,
+          "context": "2D/3D図面の成形性（DFM）事前評価から金型自社製作、初品T1検査、ISO 9001量産まで、厳格な品質マイルストーンを運用しています。",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
         {
@@ -16987,8 +17482,8 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 305,
-          "context": "01 CAD & NDA 2D/3D図面確認・秘密保持契約（NDA） .STEP, .IGES, .DWG, .PDF形式に対応。お客様の知的財産を保護するため、図面確認前に秘密保持契約（NDA）の締結が可能です。 02 DFM Analysis DFM成形性評価・材料選定 パーティングライン（PL",
+          "line": 426,
+          "context": "01 CAD & NDA 2D/3D図面受領・秘密保持契約（NDA） STEP, IGES, DWG, PDF形式に対応。技術協議・図面評価前に双務秘密保持契約（Mutual NDA）を締結し、お客様の知的財産を保護します。 02 Material Selection 材料選定・硬度調合エンジニアリ",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
         {
@@ -16996,8 +17491,8 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 357,
-          "context": "06 Mass Production ISO 9001量産成形・安心の出荷管理 ISO 9001:2015に基づき、初品検査・巡回検査・出荷前検査を徹底。安定した品質と確実な納期で製品をお届けします。",
+          "line": 488,
+          "context": "07 Mass Production ISO 9001量産成形・二次加硫・出荷管理 ISO 9001:2015管理体系に基づき、工程巡回検査、オーブン二次加硫脱気、出荷前ロット抜取検査、厳重梱包を経て納期通りに納品します。",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
         {
@@ -17005,8 +17500,8 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 362,
-          "context": "ISO 9001量産成形・安心の出荷管理",
+          "line": 493,
+          "context": "ISO 9001量産成形・二次加硫・出荷管理",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
         {
@@ -17014,8 +17509,8 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 363,
-          "context": "ISO 9001:2015に基づき、初品検査・巡回検査・出荷前検査を徹底。安定した品質と確実な納期で製品をお届けします。",
+          "line": 494,
+          "context": "ISO 9001:2015管理体系に基づき、工程巡回検査、オーブン二次加硫脱気、出荷前ロット抜取検査、厳重梱包を経て納期通りに納品します。",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
         {
@@ -17023,7 +17518,169 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "FDA",
-          "line": 465,
+          "line": 596,
+          "context": "Industries & Applications 多様な先端産業を支える カスタムシリコン受託加工実績 各業界の過酷な環境耐候性、機械的応力、および国際安全規格（FDA/LFGB/USP Class VI）に応じた最適な配合と精密金型成形を提供します",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "LFGB",
+          "line": 596,
+          "context": "Industries & Applications 多様な先端産業を支える カスタムシリコン受託加工実績 各業界の過酷な環境耐候性、機械的応力、および国際安全規格（FDA/LFGB/USP Class VI）に応じた最適な配合と精密金型成形を提供します",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "USP Class VI",
+          "line": 596,
+          "context": "Industries & Applications 多様な先端産業を支える カスタムシリコン受託加工実績 各業界の過酷な環境耐候性、機械的応力、および国際安全規格（FDA/LFGB/USP Class VI）に応じた最適な配合と精密金型成形を提供します",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "FDA",
+          "line": 597,
+          "context": "Industries & Applications 多様な先端産業を支える カスタムシリコン受託加工実績 各業界の過酷な環境耐候性、機械的応力、および国際安全規格（FDA/LFGB/USP Class VI）に応じた最適な配合と精密金型成形を提供します",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "LFGB",
+          "line": 597,
+          "context": "Industries & Applications 多様な先端産業を支える カスタムシリコン受託加工実績 各業界の過酷な環境耐候性、機械的応力、および国際安全規格（FDA/LFGB/USP Class VI）に応じた最適な配合と精密金型成形を提供します",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "USP Class VI",
+          "line": 597,
+          "context": "Industries & Applications 多様な先端産業を支える カスタムシリコン受託加工実績 各業界の過酷な環境耐候性、機械的応力、および国際安全規格（FDA/LFGB/USP Class VI）に応じた最適な配合と精密金型成形を提供します",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "WARNING",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "FDA",
+          "line": 600,
+          "context": "各業界の過酷な環境耐候性、機械的応力、および国際安全規格（FDA/LFGB/USP Class VI）に応じた最適な配合と精密金型成形を提供します。",
+          "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "WARNING",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "LFGB",
+          "line": 600,
+          "context": "各業界の過酷な環境耐候性、機械的応力、および国際安全規格（FDA/LFGB/USP Class VI）に応じた最適な配合と精密金型成形を提供します。",
+          "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "WARNING",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "USP Class VI",
+          "line": 600,
+          "context": "各業界の過酷な環境耐候性、機械的応力、および国際安全規格（FDA/LFGB/USP Class VI）に応じた最適な配合と精密金型成形を提供します。",
+          "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "USP Class VI",
+          "line": 603,
+          "context": " 適合：USP Class VI・生体適合性シリコーン 🚗 自動車ハーネス・パワートレイン 自潤オイルブリード防水ワイヤーグロメット、耐熱耐候ブーツ、エンジン周辺耐油性Oリング",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "FDA",
+          "line": 603,
+          "context": " 適合：FDA 21 CFR 177",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "LFGB",
+          "line": 603,
+          "context": "2600・LFGB適合 🖥️ AIサーバー・液冷データセンター 水冷クイック継手用耐熱Oリング、コールドプレート液密ガスケット、高出力モジュール絶縁緩衝シート",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "USP Class VI",
+          "line": 613,
+          "context": " 適合：USP Class VI・生体適合性シリコーン",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "USP Class VI",
+          "line": 617,
+          "context": "適合：USP Class VI・生体適合性シリコーン",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "FDA",
+          "line": 645,
+          "context": " 適合：FDA 21 CFR 177",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "LFGB",
+          "line": 645,
+          "context": "2600・LFGB適合",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "FDA",
+          "line": 649,
+          "context": "適合：FDA 21 CFR 177",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "LFGB",
+          "line": 649,
+          "context": "2600・LFGB適合",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "FDA",
+          "line": 673,
           "context": " ステップ1：必要な材料物性要件をチェック（複数選択可） 極低温・極高温耐性 (-40℃ ~ 220℃+) 食品グレード認証 (FDA規制準拠) 医療機器グレード (USP Class VI / 生物適合性準拠) 耐溶剤 / 耐油 / 難燃要件 高透明度 / 優れた透光性 防振・耐摩耗 / 高弾性・",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -17032,7 +17689,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "USP Class VI",
-          "line": 465,
+          "line": 673,
           "context": " ステップ1：必要な材料物性要件をチェック（複数選択可） 極低温・極高温耐性 (-40℃ ~ 220℃+) 食品グレード認証 (FDA規制準拠) 医療機器グレード (USP Class VI / 生物適合性準拠) 耐溶剤 / 耐油 / 難燃要件 高透明度 / 優れた透光性 防振・耐摩耗 / 高弾性・",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -17041,7 +17698,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "医療用",
-          "line": 465,
+          "line": 673,
           "context": "自動車用ワイヤーシール、医療用プランジャーガスケットに最適",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -17050,7 +17707,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "LFGB",
-          "line": 465,
+          "line": 673,
           "context": " 食品グレード固形シリコン (FDA Solid Silicone) FDA準拠 従来型熱圧 主に食品に直接接触するシリコンキーパッド、家庭用シリコン製品、および食器用シールの製造に使用され、米国FDAおよびドイツLFGB規格に準拠しています",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -17059,7 +17716,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "FDA",
-          "line": 472,
+          "line": 680,
           "context": "ステップ1：必要な材料物性要件をチェック（複数選択可） 極低温・極高温耐性 (-40℃ ~ 220℃+) 食品グレード認証 (FDA規制準拠) 医療機器グレード (USP Class VI / 生物適合性準拠) 耐溶剤 / 耐油 / 難燃要件 高透明度 / 優れた透光性 防振・耐摩耗 / 高弾性・高",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -17068,7 +17725,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "USP Class VI",
-          "line": 472,
+          "line": 680,
           "context": "ステップ1：必要な材料物性要件をチェック（複数選択可） 極低温・極高温耐性 (-40℃ ~ 220℃+) 食品グレード認証 (FDA規制準拠) 医療機器グレード (USP Class VI / 生物適合性準拠) 耐溶剤 / 耐油 / 難燃要件 高透明度 / 優れた透光性 防振・耐摩耗 / 高弾性・高",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -17077,7 +17734,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "医療用",
-          "line": 472,
+          "line": 680,
           "context": "自動車用ワイヤーシール、医療用プランジャーガスケットに最適",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -17086,7 +17743,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "LFGB",
-          "line": 472,
+          "line": 680,
           "context": " 食品グレード固形シリコン (FDA Solid Silicone) FDA準拠 従来型熱圧 主に食品に直接接触するシリコンキーパッド、家庭用シリコン製品、および食器用シールの製造に使用され、米国FDAおよびドイツLFGB規格に準拠しています",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -17095,7 +17752,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "FDA",
-          "line": 473,
+          "line": 681,
           "context": "ステップ1：必要な材料物性要件をチェック（複数選択可） 極低温・極高温耐性 (-40℃ ~ 220℃+) 食品グレード認証 (FDA規制準拠) 医療機器グレード (USP Class VI / 生物適合性準拠) 耐溶剤 / 耐油 / 難燃要件 高透明度 / 優れた透光性 防振・耐摩耗 / 高弾性・高",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -17104,7 +17761,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "USP Class VI",
-          "line": 473,
+          "line": 681,
           "context": "ステップ1：必要な材料物性要件をチェック（複数選択可） 極低温・極高温耐性 (-40℃ ~ 220℃+) 食品グレード認証 (FDA規制準拠) 医療機器グレード (USP Class VI / 生物適合性準拠) 耐溶剤 / 耐油 / 難燃要件 高透明度 / 優れた透光性 防振・耐摩耗 / 高弾性・高",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -17113,7 +17770,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "医療用",
-          "line": 473,
+          "line": 681,
           "context": "自動車用ワイヤーシール、医療用プランジャーガスケットに最適",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -17122,7 +17779,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "LFGB",
-          "line": 473,
+          "line": 681,
           "context": " 食品グレード固形シリコン (FDA Solid Silicone) FDA準拠 従来型熱圧 主に食品に直接接触するシリコンキーパッド、家庭用シリコン製品、および食器用シールの製造に使用され、米国FDAおよびドイツLFGB規格に準拠しています",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -17131,7 +17788,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "FDA",
-          "line": 475,
+          "line": 683,
           "context": "ステップ1：必要な材料物性要件をチェック（複数選択可） 極低温・極高温耐性 (-40℃ ~ 220℃+) 食品グレード認証 (FDA規制準拠) 医療機器グレード (USP Class VI / 生物適合性準拠) 耐溶剤 / 耐油 / 難燃要件 高透明度 / 優れた透光性 防振・耐摩耗 / 高弾性・高",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -17140,7 +17797,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "USP Class VI",
-          "line": 475,
+          "line": 683,
           "context": "ステップ1：必要な材料物性要件をチェック（複数選択可） 極低温・極高温耐性 (-40℃ ~ 220℃+) 食品グレード認証 (FDA規制準拠) 医療機器グレード (USP Class VI / 生物適合性準拠) 耐溶剤 / 耐油 / 難燃要件 高透明度 / 優れた透光性 防振・耐摩耗 / 高弾性・高",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -17149,7 +17806,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "FDA",
-          "line": 491,
+          "line": 699,
           "context": "食品グレード認証 (FDA規制準拠)",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -17158,7 +17815,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "USP Class VI",
-          "line": 499,
+          "line": 707,
           "context": "医療機器グレード (USP Class VI / 生物適合性準拠)",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -17167,7 +17824,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "医療用",
-          "line": 535,
+          "line": 743,
           "context": "自動車用ワイヤーシール、医療用プランジャーガスケットに最適",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -17176,7 +17833,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "FDA",
-          "line": 535,
+          "line": 743,
           "context": " 食品グレード固形シリコン (FDA Solid Silicone) FDA準拠 従来型熱圧 主に食品に直接接触するシリコンキーパッド、家庭用シリコン製品、および食器用シールの製造に使用され、米国FDAおよびドイツLFGB規格に準拠しています",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -17185,7 +17842,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "LFGB",
-          "line": 535,
+          "line": 743,
           "context": " 食品グレード固形シリコン (FDA Solid Silicone) FDA準拠 従来型熱圧 主に食品に直接接触するシリコンキーパッド、家庭用シリコン製品、および食器用シールの製造に使用され、米国FDAおよびドイツLFGB規格に準拠しています",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -17194,7 +17851,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "医療用",
-          "line": 537,
+          "line": 745,
           "context": "自動車用ワイヤーシール、医療用プランジャーガスケットに最適",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -17203,7 +17860,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "FDA",
-          "line": 537,
+          "line": 745,
           "context": " 食品グレード固形シリコン (FDA Solid Silicone) FDA準拠 従来型熱圧 主に食品に直接接触するシリコンキーパッド、家庭用シリコン製品、および食器用シールの製造に使用され、米国FDAおよびドイツLFGB規格に準拠しています",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -17212,7 +17869,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "LFGB",
-          "line": 537,
+          "line": 745,
           "context": " 食品グレード固形シリコン (FDA Solid Silicone) FDA準拠 従来型熱圧 主に食品に直接接触するシリコンキーパッド、家庭用シリコン製品、および食器用シールの製造に使用され、米国FDAおよびドイツLFGB規格に準拠しています",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -17221,7 +17878,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "医療用",
-          "line": 538,
+          "line": 746,
           "context": "自動車用ワイヤーシール、医療用プランジャーガスケットに最適",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -17230,7 +17887,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "医療用",
-          "line": 547,
+          "line": 755,
           "context": "配合されたシリコーンオイルが成形後に表面へゆっくりと析出し、極薄の長効潤滑膜を自動形成。自動車用ワイヤーシール、医療用プランジャーガスケットに最適。",
           "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
         },
@@ -17239,7 +17896,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "FDA",
-          "line": 587,
+          "line": 795,
           "context": "食品グレード固形シリコン (FDA Solid Silicone) FDA準拠 従来型熱圧 主に食品に直接接触するシリコンキーパッド、家庭用シリコン製品、および食器用シールの製造に使用され、米国FDAおよびドイツLFGB規格に準拠しています",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -17248,7 +17905,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "LFGB",
-          "line": 587,
+          "line": 795,
           "context": "食品グレード固形シリコン (FDA Solid Silicone) FDA準拠 従来型熱圧 主に食品に直接接触するシリコンキーパッド、家庭用シリコン製品、および食器用シールの製造に使用され、米国FDAおよびドイツLFGB規格に準拠しています",
           "reason": "Valid qualifier present for conditional claim 'CLM-004'"
         },
@@ -17257,7 +17914,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "FDA",
-          "line": 588,
+          "line": 796,
           "context": "食品グレード固形シリコン (FDA Solid Silicone) FDA準拠 従来型熱圧",
           "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
         },
@@ -17266,7 +17923,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "FDA",
-          "line": 589,
+          "line": 797,
           "context": "食品グレード固形シリコン (FDA Solid Silicone)",
           "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
         },
@@ -17275,7 +17932,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "FDA",
-          "line": 590,
+          "line": 798,
           "context": "FDA準拠 従来型熱圧",
           "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
         },
@@ -17284,7 +17941,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "FDA",
-          "line": 591,
+          "line": 799,
           "context": "FDA準拠",
           "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
         },
@@ -17293,7 +17950,7 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "FDA",
-          "line": 595,
+          "line": 803,
           "context": "主に食品に直接接触するシリコンキーパッド、家庭用シリコン製品、および食器用シールの製造に使用され、米国FDAおよびドイツLFGB規格に準拠しています。",
           "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
         },
@@ -17302,17 +17959,260 @@
           "claim_id": "CLM-004",
           "claim_type": "material",
           "matched_text": "LFGB",
-          "line": 595,
+          "line": 803,
           "context": "主に食品に直接接触するシリコンキーパッド、家庭用シリコン製品、および食器用シールの製造に使用され、米国FDAおよびドイツLFGB規格に準拠しています。",
           "reason": "Missing required qualifier '依指定材料|客戶指定|客戶需求|特定規格|用途確認|選材評估|專案需求|依專案|可配合|選用|Upon\\s*request|要件|選定|符合|comply|complies|compliant|requirements?|specification|適合|対応|輸出|欧米|export|Europe|America|standards?|SGS' for conditional claim 'CLM-004'"
         },
         {
           "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "FDA",
+          "line": 843,
+          "context": "案件要件に応じ、米国FDA 21 CFR 177",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "LFGB",
+          "line": 843,
+          "context": "2600食品規格、欧州LFGB、USP Class VI生体適合性、RoHS、REACH等に適合する原料を選定し、分析証明書（COA）や試験報告書をご提出可能です",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "USP Class VI",
+          "line": 843,
+          "context": "2600食品規格、欧州LFGB、USP Class VI生体適合性、RoHS、REACH等に適合する原料を選定し、分析証明書（COA）や試験報告書をご提出可能です",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-005",
+          "claim_type": "document_coa",
+          "matched_text": "COA",
+          "line": 843,
+          "context": "2600食品規格、欧州LFGB、USP Class VI生体適合性、RoHS、REACH等に適合する原料を選定し、分析証明書（COA）や試験報告書をご提出可能です",
+          "reason": "Valid qualifier present for conditional claim 'CLM-005'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-008",
+          "claim_type": "compliance",
+          "matched_text": "RoHS",
+          "line": 843,
+          "context": "2600食品規格、欧州LFGB、USP Class VI生体適合性、RoHS、REACH等に適合する原料を選定し、分析証明書（COA）や試験報告書をご提出可能です",
+          "reason": "Valid qualifier present for conditional claim 'CLM-008'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-008",
+          "claim_type": "compliance",
+          "matched_text": "REACH",
+          "line": 843,
+          "context": "2600食品規格、欧州LFGB、USP Class VI生体適合性、RoHS、REACH等に適合する原料を選定し、分析証明書（COA）や試験報告書をご提出可能です",
+          "reason": "Valid qualifier present for conditional claim 'CLM-008'"
+        },
+        {
+          "level": "INFO",
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 635,
-          "context": "当社の技術に興味をお持ちですか？ 当社は30年以上のシリコンゴム専門生産経験と品質認証 (ISO 9001) を持ち、最も信頼性の高い金型開発および受託製造加工服務を提供します。 お問い合わせ",
+          "line": 843,
+          "context": "OEM / ODM FAQ カスタムシリコン受託加工・金型成形 よくあるご質問 調達部門・機構設計エンジニアの皆様から頻繁に寄せられる、金型試作、MOQ、量産、材料認証に関する重要回答をまとめました。 Q1：シリコン受託加工や金型製作の評価にはどのような図面フォーマットが必要ですか？ STEP (.",
+          "reason": "Verified fact/capability supported by 'TUV_Cert'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "FDA",
+          "line": 849,
+          "context": "案件要件に応じ、米国FDA 21 CFR 177",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "LFGB",
+          "line": 849,
+          "context": "2600食品規格、欧州LFGB、USP Class VI生体適合性、RoHS、REACH等に適合する原料を選定し、分析証明書（COA）や試験報告書をご提出可能です",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "USP Class VI",
+          "line": 849,
+          "context": "2600食品規格、欧州LFGB、USP Class VI生体適合性、RoHS、REACH等に適合する原料を選定し、分析証明書（COA）や試験報告書をご提出可能です",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-005",
+          "claim_type": "document_coa",
+          "matched_text": "COA",
+          "line": 849,
+          "context": "2600食品規格、欧州LFGB、USP Class VI生体適合性、RoHS、REACH等に適合する原料を選定し、分析証明書（COA）や試験報告書をご提出可能です",
+          "reason": "Valid qualifier present for conditional claim 'CLM-005'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-008",
+          "claim_type": "compliance",
+          "matched_text": "RoHS",
+          "line": 849,
+          "context": "2600食品規格、欧州LFGB、USP Class VI生体適合性、RoHS、REACH等に適合する原料を選定し、分析証明書（COA）や試験報告書をご提出可能です",
+          "reason": "Valid qualifier present for conditional claim 'CLM-008'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-008",
+          "claim_type": "compliance",
+          "matched_text": "REACH",
+          "line": 849,
+          "context": "2600食品規格、欧州LFGB、USP Class VI生体適合性、RoHS、REACH等に適合する原料を選定し、分析証明書（COA）や試験報告書をご提出可能です",
+          "reason": "Valid qualifier present for conditional claim 'CLM-008'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-001",
+          "claim_type": "certification",
+          "matched_text": "ISO 9001",
+          "line": 849,
+          "context": "Q1：シリコン受託加工や金型製作の評価にはどのような図面フォーマットが必要ですか？ STEP (.step / .stp)、IGES (.iges / .igs)、AutoCAD (.dwg / .dxf)、およびPDFエンジニアリング図面など、標準的な2Dおよび3D CADデータに対応しています。",
+          "reason": "Verified fact/capability supported by 'TUV_Cert'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "FDA",
+          "line": 870,
+          "context": "案件要件に応じ、米国FDA 21 CFR 177",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "LFGB",
+          "line": 870,
+          "context": "2600食品規格、欧州LFGB、USP Class VI生体適合性、RoHS、REACH等に適合する原料を選定し、分析証明書（COA）や試験報告書をご提出可能です",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "USP Class VI",
+          "line": 870,
+          "context": "2600食品規格、欧州LFGB、USP Class VI生体適合性、RoHS、REACH等に適合する原料を選定し、分析証明書（COA）や試験報告書をご提出可能です",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-005",
+          "claim_type": "document_coa",
+          "matched_text": "COA",
+          "line": 870,
+          "context": "2600食品規格、欧州LFGB、USP Class VI生体適合性、RoHS、REACH等に適合する原料を選定し、分析証明書（COA）や試験報告書をご提出可能です",
+          "reason": "Valid qualifier present for conditional claim 'CLM-005'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-008",
+          "claim_type": "compliance",
+          "matched_text": "RoHS",
+          "line": 870,
+          "context": "2600食品規格、欧州LFGB、USP Class VI生体適合性、RoHS、REACH等に適合する原料を選定し、分析証明書（COA）や試験報告書をご提出可能です",
+          "reason": "Valid qualifier present for conditional claim 'CLM-008'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-008",
+          "claim_type": "compliance",
+          "matched_text": "REACH",
+          "line": 870,
+          "context": "2600食品規格、欧州LFGB、USP Class VI生体適合性、RoHS、REACH等に適合する原料を選定し、分析証明書（COA）や試験報告書をご提出可能です",
+          "reason": "Valid qualifier present for conditional claim 'CLM-008'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-001",
+          "claim_type": "certification",
+          "matched_text": "ISO 9001",
+          "line": 870,
+          "context": "Q6：シリコン原料はどのような国際規制や認証に対応していますか？ 鈞翔実業はISO 9001:2015認証工場です。案件要件に応じ、米国FDA 21 CFR 177.2600食品規格、欧州LFGB、USP Class VI生体適合性、RoHS、REACH等に適合する原料を選定し、分析証明書（COA）",
+          "reason": "Verified fact/capability supported by 'TUV_Cert'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "FDA",
+          "line": 872,
+          "context": "案件要件に応じ、米国FDA 21 CFR 177",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "LFGB",
+          "line": 872,
+          "context": "2600食品規格、欧州LFGB、USP Class VI生体適合性、RoHS、REACH等に適合する原料を選定し、分析証明書（COA）や試験報告書をご提出可能です",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-004",
+          "claim_type": "material",
+          "matched_text": "USP Class VI",
+          "line": 872,
+          "context": "2600食品規格、欧州LFGB、USP Class VI生体適合性、RoHS、REACH等に適合する原料を選定し、分析証明書（COA）や試験報告書をご提出可能です",
+          "reason": "Valid qualifier present for conditional claim 'CLM-004'"
+        },
+        {
+          "level": "WARNING",
+          "claim_id": "CLM-005",
+          "claim_type": "document_coa",
+          "matched_text": "COA",
+          "line": 872,
+          "context": "鈞翔実業はISO 9001:2015認証工場です。案件要件に応じ、米国FDA 21 CFR 177.2600食品規格、欧州LFGB、USP Class VI生体適合性、RoHS、REACH等に適合する原料を選定し、分析証明書（COA）や試験報告書をご提出可能です。",
+          "reason": "Missing required qualifier '依專案|依批次|依客戶需求|材料批次|per\\s*project|ロット|備索|提供|available|upon\\s*request|provided|発行|report|testing|analysis|inspection|verification|certificate|specification|documents?|quality' for conditional claim 'CLM-005'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-008",
+          "claim_type": "compliance",
+          "matched_text": "RoHS",
+          "line": 872,
+          "context": "2600食品規格、欧州LFGB、USP Class VI生体適合性、RoHS、REACH等に適合する原料を選定し、分析証明書（COA）や試験報告書をご提出可能です",
+          "reason": "Valid qualifier present for conditional claim 'CLM-008'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-008",
+          "claim_type": "compliance",
+          "matched_text": "REACH",
+          "line": 872,
+          "context": "2600食品規格、欧州LFGB、USP Class VI生体適合性、RoHS、REACH等に適合する原料を選定し、分析証明書（COA）や試験報告書をご提出可能です",
+          "reason": "Valid qualifier present for conditional claim 'CLM-008'"
+        },
+        {
+          "level": "INFO",
+          "claim_id": "CLM-001",
+          "claim_type": "certification",
+          "matched_text": "ISO 9001",
+          "line": 872,
+          "context": "鈞翔実業はISO 9001:2015認証工場です。案件要件に応じ、米国FDA 21 CFR 177.2600食品規格、欧州LFGB、USP Class VI生体適合性、RoHS、REACH等に適合する原料を選定し、分析証明書（COA）や試験報告書をご提出可能です。",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
         {
@@ -17320,8 +18220,8 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 637,
-          "context": "当社は30年以上のシリコンゴム専門生産経験と品質認証 (ISO 9001) を持ち、最も信頼性の高い金型開発および受託製造加工服務を提供します。",
+          "line": 905,
+          "context": "鈞 鈞翔実業 シリコン・ゴム製品カスタム受託製造の専門工場。30年以上の技術伝承と品質認証 (ISO 9001) を持ち、高品質な固形シリコン圧縮成形およびLSR液状シリコーンゴム射出成形加工服務を提供し、最も信頼できる精密シリコン製造ソリューションを提供します。 クイックリンク 鈞翔について 加工",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
         {
@@ -17329,8 +18229,8 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 645,
-          "context": "鈞 鈞翔實業 シリコン・ゴム製品カスタム受託製造の専門工場。30年以上の技術伝承と品質認証 (ISO 9001) を持ち、高品質な固形シリコン圧縮成形およびLSR液状シリコーンゴム射出成形加工服務を提供し、最も信頼できる精密シリコン製造ソリューションを提供します。 クイックリンク 鈞翔について 加工",
+          "line": 906,
+          "context": "鈞 鈞翔実業 シリコン・ゴム製品カスタム受託製造の専門工場。30年以上の技術伝承と品質認証 (ISO 9001) を持ち、高品質な固形シリコン圧縮成形およびLSR液状シリコーンゴム射出成形加工服務を提供し、最も信頼できる精密シリコン製造ソリューションを提供します。 クイックリンク 鈞翔について 加工",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
         {
@@ -17338,8 +18238,8 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 646,
-          "context": "鈞 鈞翔實業 シリコン・ゴム製品カスタム受託製造の専門工場。30年以上の技術伝承と品質認証 (ISO 9001) を持ち、高品質な固形シリコン圧縮成形およびLSR液状シリコーンゴム射出成形加工服務を提供し、最も信頼できる精密シリコン製造ソリューションを提供します。 クイックリンク 鈞翔について 加工",
+          "line": 907,
+          "context": "鈞 鈞翔実業 シリコン・ゴム製品カスタム受託製造の専門工場。30年以上の技術伝承と品質認証 (ISO 9001) を持ち、高品質な固形シリコン圧縮成形およびLSR液状シリコーンゴム射出成形加工服務を提供し、最も信頼できる精密シリコン製造ソリューションを提供します。",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         },
         {
@@ -17347,16 +18247,7 @@
           "claim_id": "CLM-001",
           "claim_type": "certification",
           "matched_text": "ISO 9001",
-          "line": 647,
-          "context": "鈞 鈞翔實業 シリコン・ゴム製品カスタム受託製造の専門工場。30年以上の技術伝承と品質認証 (ISO 9001) を持ち、高品質な固形シリコン圧縮成形およびLSR液状シリコーンゴム射出成形加工服務を提供し、最も信頼できる精密シリコン製造ソリューションを提供します。",
-          "reason": "Verified fact/capability supported by 'TUV_Cert'"
-        },
-        {
-          "level": "INFO",
-          "claim_id": "CLM-001",
-          "claim_type": "certification",
-          "matched_text": "ISO 9001",
-          "line": 652,
+          "line": 912,
           "context": "シリコン・ゴム製品カスタム受託製造の専門工場。30年以上の技術伝承と品質認証 (ISO 9001) を持ち、高品質な固形シリコン圧縮成形およびLSR液状シリコーンゴム射出成形加工服務を提供し、最も信頼できる精密シリコン製造ソリューションを提供します。",
           "reason": "Verified fact/capability supported by 'TUV_Cert'"
         }
