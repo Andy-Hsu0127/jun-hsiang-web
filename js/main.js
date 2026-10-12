@@ -1125,5 +1125,29 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // Language Dropdown Click & Touch Toggle
+    const langSelectors = document.querySelectorAll('.lang-selector');
+    langSelectors.forEach(selector => {
+        const btn = selector.querySelector('.lang-selector-btn');
+        if (btn) {
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const isOpen = selector.classList.contains('is-open');
+                // Close all other open selectors
+                langSelectors.forEach(s => s.classList.remove('is-open'));
+                if (!isOpen) {
+                    selector.classList.add('is-open');
+                }
+            });
+        }
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.lang-selector')) {
+            langSelectors.forEach(s => s.classList.remove('is-open'));
+        }
+    });
 });
+
 
