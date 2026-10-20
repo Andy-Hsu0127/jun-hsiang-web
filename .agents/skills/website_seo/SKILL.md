@@ -272,7 +272,26 @@ large-shot-lsr-molding
 [ ] <link rel="alternate" hreflang="ja" href="..."/> 日文對應 URL
 [ ] <link rel="alternate" hreflang="x-default" href="..."/> 指向繁中 URL
 [ ] 頁面 <head> 內沒有任何 window.location.href 自動重定向腳本
+[ ] 頁面 <head> 內禁止引入 Noto+Sans+TC 或 Noto+Sans+JP Google Fonts
 [ ] JSON-LD @id 和 url 欄位指向正確文章 URL（非 knowledge.html）
 [ ] JSON-LD inLanguage 與頁面語言一致（zh-TW / en / ja）
+[ ] 新文章已同步掛載至 knowledge.html / en/knowledge.html / ja/knowledge.html 的 #article-list（禁止產生孤島頁）
+[ ] 修改完成後必須執行 python tools/fast_audit.py 與 python seo_intelligence/claim_validator.py 確保 0 錯誤
 ```
+
+---
+
+## 🧠 GEO (Generative Engine Optimization) & CORE-EEAT 規範（擷取自 `aaron-he-zhu/seo-geo-claude-skills`）
+
+針對 Google AI Overviews (SGE)、ChatGPT Search 與 Perplexity 等生成式搜尋引擎的引用優化（CITE / CORE-EEAT 框架），所有核心服務頁與技術知識庫文章必須滿足以下結構：
+
+1. **Direct Answer Lead / AI 快讀摘要（前 150 字直球定義）**：
+   - 在文章首段或服務頁頂部提供「定義＋適用製程＋材料範圍＋鈞翔實體能力（新北新莊 30 年模具自主開發、ISO 9001）」的高密度摘要，方便 LLM 直接擷取為答案首段。
+2. **結構化對比表（HTML `<table>`）**：
+   - AI 引擎極度偏好引用結構化表格。凡涉及製程選型（如 LSR 液態射出 vs 固態熱壓、EPDM vs NBR vs FKM、自黏 LSR vs 底塗包膠），必須提供清晰的 HTML `<table>` 比較維度。
+3. **語意實體與 Schema 綁定（`DefinedTerm` / `TechArticle` / `FAQPage`）**：
+   - 每個核心技術專頁應具備 `TechArticle` 與 `FAQPage` JSON-LD；核心落地頁（如 `service.html`）應包含 `DefinedTermSet` 明確定義工程專有名詞（如「自潤矽膠（出油膠）」、「LSR液態矽膠射出成型」）。
+4. **No Evidence, No Claim 鐵律約束**：
+   - GEO 優化嚴禁違背 `AGENTS.md` 規則五與規則八：所有 E-E-A-T 經驗證明必須來自真實工廠工藝（如排氣槽設計、真空熱壓、二次加硫烘烤、機械互鎖設計），嚴禁捏造未經驗證之公差數字、良率百分比或交期天數。
+
 
