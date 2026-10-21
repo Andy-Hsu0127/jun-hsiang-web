@@ -64,8 +64,8 @@ def audit():
         for idx, line in enumerate(lines, 1):
             if 'hreflang="zh-TW"' in line or 'lang="zh-TW"' in line or 'JSON-LD' in line or 'maps.google.com' in line:
                 continue
-            if '加工服務' in line or '鈞翔' in line:
-                print(f"⚠️ [英文版中文殘留] {f}:{idx} -> {line.strip()[:60]}")
+            if '加工服務' in line or '鈞翔' in line or '高規格防水密封' in line or 'OEM OEM' in line:
+                print(f"⚠️ [英文版中文/語法殘留] {f}:{idx} -> {line.strip()[:60]}")
                 warnings += 1
 
     # 4. [Agentic-SEO-Skill] 孤島頁面檢測 (Orphan Knowledge Article Detector)
