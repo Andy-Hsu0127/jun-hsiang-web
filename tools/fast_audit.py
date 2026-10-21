@@ -47,6 +47,7 @@ def audit():
     ja_forbidden = [
         ("加工服務", "請替換為 '加工サービス'"),
         ("鈞翔實業", "日文請使用日文漢字 '鈞翔実業'"),
+        ("高規格防水密封", "請替換為日文 '高気密防水シール'"),
     ]
     for f in ja_html:
         with open(f, "r", encoding="utf-8") as fp:
