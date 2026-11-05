@@ -120,8 +120,28 @@
             </button>
         </div>
     </div>
+        <div aria-label="Open Menu" class="hamburger" id="hamburger" role="button" tabindex="0">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        </div>
 </nav>
-
+<div class="mobile-menu" id="mobile-menu">
+    <a class="nav-link" href="index.html#about">会社概要</a>
+    <a class="nav-link" href="service.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'ja')">加工サービス</a>
+    <a class="nav-link" href="products_list.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'ja')">製品一覧</a>
+    <a class="nav-link active" href="knowledge.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'ja')">技術知識</a>
+    <a class="nav-link" href="index.html#quality">品質管理</a>
+    <a class="nav-link" href="index.html#contact">お問い合わせ</a>
+    <div class="mobile-lang-links">
+        <a href="../knowledge-silicone-overmolding-bonding.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'zh-TW')" class="mobile-lang-link">繁中</a>
+        <span style="color: rgba(255,255,255,0.2);">|</span>
+        <a href="../en/knowledge-silicone-overmolding-bonding.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'en')" class="mobile-lang-link">EN</a>
+        <span style="color: rgba(255,255,255,0.2);">|</span>
+        <a href="knowledge-silicone-overmolding-bonding.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'ja')" class="mobile-lang-link active">日本語</a>
+    </div>
+</div>
 <section class="page-hero">
     <div class="container">
         <nav class="breadcrumb" aria-label="breadcrumb">

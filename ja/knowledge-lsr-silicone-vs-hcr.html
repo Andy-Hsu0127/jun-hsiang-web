@@ -71,14 +71,34 @@
         <div class="nav-links" id="nav-links">
             <a class="nav-link" href="index.html">ホーム</a>
             <a class="nav-link" href="products_list.html">製品一覧</a>
-            <a class="nav-link" href="service.html">加工加工サービス</a>
+            <a class="nav-link" href="service.html">加工サービス</a>
             <a class="nav-link active" href="knowledge.html">技術知識</a>
             <a class="nav-link" href="index.html#contact">お問い合わせ</a>
             <a class="btn-nav-cta" href="index.html#contact">お見積り</a>
 </div>
     </div>
+        <div aria-label="Open Menu" class="hamburger" id="hamburger" role="button" tabindex="0">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        </div>
 </nav>
-
+<div class="mobile-menu" id="mobile-menu">
+    <a class="nav-link" href="index.html#about">会社概要</a>
+    <a class="nav-link" href="service.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'ja')">加工サービス</a>
+    <a class="nav-link" href="products_list.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'ja')">製品一覧</a>
+    <a class="nav-link active" href="knowledge.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'ja')">技術知識</a>
+    <a class="nav-link" href="index.html#quality">品質管理</a>
+    <a class="nav-link" href="index.html#contact">お問い合わせ</a>
+    <div class="mobile-lang-links">
+        <a href="../knowledge-lsr-silicone-vs-hcr.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'zh-TW')" class="mobile-lang-link">繁中</a>
+        <span style="color: rgba(255,255,255,0.2);">|</span>
+        <a href="../en/knowledge-lsr-silicone-vs-hcr.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'en')" class="mobile-lang-link">EN</a>
+        <span style="color: rgba(255,255,255,0.2);">|</span>
+        <a href="knowledge-lsr-silicone-vs-hcr.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'ja')" class="mobile-lang-link active">日本語</a>
+    </div>
+</div>
 <main class="main-content container" style="padding-top: var(--space-8); padding-bottom: var(--space-12);">
     <article class="article-detail" style="max-width: 900px; margin: 0 auto;">
         <header class="article-header-hero" style="margin-bottom: var(--space-6);">
@@ -100,16 +120,111 @@
                 <p><strong>自己潤滑性シリコーン、LSR液状射出成形、熱プレス成形、異材結合インサート成形</strong>に対応。</p>
             </div>
             <div class="article-service-cta-buttons">
-                <a href="service.html" class="btn btn-primary btn-sm">加工加工サービス →</a>
+                <a href="service.html" class="btn btn-primary btn-sm">加工サービス →</a>
                 <a href="index.html#contact" class="btn btn-outline btn-sm">図面でお見積り 📥</a>
             </div>
         </div>
 
 
+                <section class="article-section">
+            <h2>1. はじめに：LSRとHCRの選定課題と工法比較</h2>
+            <p>高精密エラストマー部品の開発において、製品設計者や調達担当者は<strong>LSR（液状シリコーンゴム：Liquid Silicone Rubber）</strong>と<strong>HCR（熱加硫固形シリコーンゴム：High Consistency Rubber）</strong>の選定に直面します。両材料は同一のシロキサンポリマー主鎖（-Si-O-Si-）を有していますが、原料の粘度、架橋硬化機構、金型設計構造、そして量産コストの分岐点において決定的な相違が存在します。</p>
+            <p>用途に応じた最適な工法を選択することは、金型イニシャルコスト（NRE）、部品単価、寸法公差の安定性、そして安全規格認証（FDA / 食品衛生法）を両立させる上で極めて重要です。<strong>鈞翔実業</strong>は台湾自社工場にて熱プレス圧縮成形機とLIM液状射出成形機の両方を自社保有しており、客観的な技術視点から受託製造ソリューションをご提案しています。</p>
+        </section>
+
         <section class="article-section">
-            <h2>1. はじめに：LSRとHCRの選定課題</h2>
-            <p>シリコーン部品の開発において、<strong>LSR（液状シリコーンゴム）</strong>と<strong>HCR（熱硫化固形シリコーン）</strong>のどちらを採用すべきかは重要です。材料粘度、加硫機構、量産自動化速度において大きな違いがあります。</p>
-            <p><strong>鈞翔実業</strong>は熱プレス成形とLSR液状射出成形の両工法に対応しており、製品用途に応じた最適ソリューションをご提案いたします。</p>
+            <h2>2. 原料の流動性と物性粘度の相違</h2>
+            <p>LSRとHCRの最大の違いは、成形前の物理的性状と分子量分布にあります：</p>
+            <ul>
+                <li><strong>LSR（液状シリコーンゴム）：</strong> A液（主剤＋白金触媒）とB液（架橋剤＋反応抑制剤）の2液ペースト状で供給されます。常温での粘度は約 100,000〜1,000,000 mPa・s と極めて流動性が高く、1:1の精密スタティックミキサーで動的混合された後、加冷されたランナーから高温金型キャビティ内へ射出充填されます。微細リブや薄肉構造、複雑な3Dアンダーカット形状への追従性に優れています。</li>
+                <li><strong>HCR（熱加硫固形シリコーンゴム）：</strong> 高重合度の固形生ゴムとして供給されます。成形前にオープンロール機等を用いて、加硫剤（有機過酸化物または白金系）、顔料、各種補強充填剤（シリカ）を混練・可塑化する必要があります。混練後のゴムシートを一定重量のプリフォーム（予備成形品）に切断し、金型キャビティ内へ手作業で投入します。</li>
+            </ul>
+        </section>
+
+        <section class="article-section">
+            <h2>3. 加硫架橋反応：白金付加重合 vs. 有機過酸化物ラジカル加硫</h2>
+            <p>加硫機構の違いは、成形品のクリーン性、寸法収縮率、および二次加硫の要否に直結します：</p>
+            <ul>
+                <li><strong>白金付加架橋（LSRの標準、HCRの高級仕様）：</strong> ビニル基とケイ素水素基（Si-H）が白金化合物を触媒として付加反応を起こします。反応過程で<em>揮発性副生成物が一切発生しない</em>ため、硬化収縮が極めて小さく、高透明性と優れた生体適合性を発揮します。医療用具（USP Class VI）や食品接触用途（FDA 21 CFR 177.2600、LFGB）に最適です。</li>
+                <li><strong>有機過酸化物加硫（HCRの一般的仕様）：</strong> 熱分解によって生成するフリーラジカルにより架橋を形成します。加硫反応時に酸性分解残渣（分解ガスや揮発成分）が発生するため、成形後に高温（約 200℃ で 2〜4 時間）の二次加硫（ポストキュア）を実施し、残留物を揮発除去する必要があります。</li>
+            </ul>
+        </section>
+
+        <section class="article-section">
+            <h2>4. 金型構造と成形プロセスの詳細比較</h2>
+            <p>成形機と金型構造における主な技術仕様の比較は以下の通りです：</p>
+            <div style="overflow-x: auto; margin: var(--space-4) 0;">
+                <table style="width: 100%; border-collapse: collapse; font-size: 0.92rem; text-align: left;">
+                    <thead>
+                        <tr style="background: rgba(255,255,255,0.06); border-bottom: 2px solid var(--color-border);">
+                            <th style="padding: 12px; border: 1px solid var(--color-border);">技術評価項目</th>
+                            <th style="padding: 12px; border: 1px solid var(--color-border); color: var(--color-accent);">LSR 液状シリコーン射出成形</th>
+                            <th style="padding: 12px; border: 1px solid var(--color-border);">HCR 固形シリコーン圧縮成形</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 10px; border: 1px solid var(--color-border); font-weight: 600;">金型構造方式</td>
+                            <td style="padding: 10px; border: 1px solid var(--color-border);">コールドランナーシステム＋高温電気加熱キャビティ、真空排気スリット構造。</td>
+                            <td style="padding: 10px; border: 1px solid var(--color-border);">上下熱盤加熱型、オーバーフロー（逃げ溝）およびバリ切りライン構造。</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px; border: 1px solid var(--color-border); font-weight: 600;">バリ（Flash）と寸法精度</td>
+                            <td style="padding: 10px; border: 1px solid var(--color-border);">精密な型締め見切りによりバリレス／微小バリ成形が可能。後加工工数を大幅低減。</td>
+                            <td style="padding: 10px; border: 1px solid var(--color-border);">パーティングラインにバリが発生するため、手作業または冷凍バリ取り工程が必要。</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px; border: 1px solid var(--color-border); font-weight: 600;">成形サイクルと自動化</td>
+                            <td style="padding: 10px; border: 1px solid var(--color-border);">短時間急速加硫。ロボットアームやエアーブローによる完全自動離型に対応。</td>
+                            <td style="padding: 10px; border: 1px solid var(--color-border);">材料投入と製品取り出しを手作業で行うため、中〜少量生産向け。</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px; border: 1px solid var(--color-border); font-weight: 600;">金型初期投資（NRE）</td>
+                            <td style="padding: 10px; border: 1px solid var(--color-border);">コールドランナーや高硬度金型鋼材を使用するため、初期金型費用は高め。</td>
+                            <td style="padding: 10px; border: 1px solid var(--color-border);">金型構造がシンプルで初期イニシャル費用を低く抑えられる。</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px; border: 1px solid var(--color-border); font-weight: 600;">異材質インサート成形</td>
+                            <td style="padding: 10px; border: 1px solid var(--color-border);">熱可塑性樹脂（PC, PA, PBT）や金属端子へのプライマーレス自己接着複合成形に最適。</td>
+                            <td style="padding: 10px; border: 1px solid var(--color-border);">高温・高型締め圧に耐えうる金属インサート品に好適。</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px; border: 1px solid var(--color-border); font-weight: 600;">対応硬度範囲</td>
+                            <td style="padding: 10px; border: 1px solid var(--color-border);">Shore A 5°〜80°（20°〜70°が最も汎用的）。</td>
+                            <td style="padding: 10px; border: 1px solid var(--color-border);">Shore A 20°〜90°（高硬度品・導電性ゴム等の特殊配合に対応）。</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="article-section">
+            <h2>5. 調達判断基準：LSRとHCRの選択ガイド</h2>
+            <p>量産数量と求められる製品仕様から、以下の基準で工法をご検討ください：</p>
+            <ul>
+                <li><strong>LSR 液状射出成形を推奨するケース：</strong>
+                    <ul>
+                        <li>年間予定数量が多く、自動化サイクルによる加工費削減効果が大きい場合。</li>
+                        <li>薄肉製品、微細構造、複雑な立体形状で欠肉やボイドを防止したい場合。</li>
+                        <li>樹脂成形品への二色射出やインサート一体成形を検討している場合。</li>
+                        <li>医療用（USP Class VI）や高透明光学レンズ部品等、クリーン度を最優先する場合。</li>
+                    </ul>
+                </li>
+                <li><strong>HCR 熱プレス圧縮成形を推奨するケース：</strong>
+                    <ul>
+                        <li>開発初期段階の試作、または年間数量が1万個未満の小〜中ロット生産の場合。</li>
+                        <li>金型イニシャル投資予算を最小限に抑えたい場合。</li>
+                        <li>大重量・厚肉製品（大型防振ゴム、産業機械用大型ガスケットなど）。</li>
+                        <li>超高硬度（Shore A 80°以上）や特殊導電性・耐油性配合（FVMQ等）が必要な場合。</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section class="article-section">
+            <h2>6. 鈞翔実業の技術サポートと受託製造サービス</h2>
+            <p>鈞翔実業では、お客様からいただいた図面（2D/3D CAD）をもとに、製品機能とコスト目標に最適な工法をご提案いたします。金型設計製作から試作T1、量産成形まで自社一貫体制で承ります：</p>
+            <p>👉 弊社の加工能力詳細は <a href="service.html" style="color:var(--color-accent);font-weight:700;">シリコーン加工サービス・LSR射出成形技術</a>、または <a href="knowledge-solid-vs-lsr.html" style="color:var(--color-accent);font-weight:700;">固形圧縮成形 vs LSR射出成形 コスト比較解説</a> をご覧ください。</p>
         </section>
 
                 <!-- 関連技術ガイド -->

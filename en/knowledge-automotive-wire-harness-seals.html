@@ -120,8 +120,28 @@
             </button>
         </div>
     </div>
+        <div aria-label="Open Menu" class="hamburger" id="hamburger" role="button" tabindex="0">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        </div>
 </nav>
-
+<div class="mobile-menu" id="mobile-menu">
+    <a class="nav-link" href="index.html#about">About Us</a>
+    <a class="nav-link" href="service.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'en')">OEM Services</a>
+    <a class="nav-link" href="products_list.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'en')">Products</a>
+    <a class="nav-link active" href="knowledge.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'en')">Knowledge Base</a>
+    <a class="nav-link" href="index.html#quality">Quality Certification</a>
+    <a class="nav-link" href="index.html#contact">Contact Us</a>
+    <div class="mobile-lang-links">
+        <a href="../knowledge-automotive-wire-harness-seals.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'zh-TW')" class="mobile-lang-link">繁中</a>
+        <span style="color: rgba(255,255,255,0.2);">|</span>
+        <a href="knowledge-automotive-wire-harness-seals.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'en')" class="mobile-lang-link active">EN</a>
+        <span style="color: rgba(255,255,255,0.2);">|</span>
+        <a href="../ja/knowledge-automotive-wire-harness-seals.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'ja')" class="mobile-lang-link">日本語</a>
+    </div>
+</div>
 <section class="page-hero">
     <div class="container">
         <nav class="breadcrumb" aria-label="breadcrumb">

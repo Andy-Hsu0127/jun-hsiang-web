@@ -861,6 +861,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 fetch(actionUrl, {
                     method: "POST",
+                    headers: { "Accept": "application/json" },
                     body: formData
                 })
                 .then(response => {
@@ -1038,6 +1039,39 @@ document.addEventListener('DOMContentLoaded', () => {
             const originalContent = generalSubmitBtn.innerHTML;
             generalSubmitBtn.innerHTML = `<span style="display:inline-flex;align-items:center;gap:8px;">${t.submitting}</span>`;
             generalSubmitBtn.disabled = true;
+
+            const genFileInput = document.getElementById('general-file');
+            const hasGenFile = genFileInput && genFileInput.files && genFileInput.files.length > 0;
+            if (hasGenFile) {
+                const formData = new FormData(generalForm);
+                const actionUrl = generalForm.getAttribute('action') || "https://formsubmit.co/jojo.li888@msa.hinet.net";
+                fetch(actionUrl, {
+                    method: "POST",
+                    headers: { "Accept": "application/json" },
+                    body: formData
+                })
+                .then(response => {
+                    if (response.ok) {
+                        showStatusModal(true);
+                        generalForm.reset();
+                        generalSubmitBtn.innerHTML = originalContent;
+                        generalSubmitBtn.disabled = false;
+                        if (typeof grecaptcha !== 'undefined') grecaptcha.reset();
+                        if (typeof lucide !== 'undefined') lucide.createIcons();
+                    } else {
+                        throw new Error("Form submission failed");
+                    }
+                })
+                .catch(error => {
+                    console.error(error);
+                    showStatusModal(false);
+                    generalSubmitBtn.innerHTML = originalContent;
+                    generalSubmitBtn.disabled = false;
+                    if (typeof grecaptcha !== 'undefined') grecaptcha.reset();
+                    if (typeof lucide !== 'undefined') lucide.createIcons();
+                });
+                return;
+            }
 
             const attr = window.JH_Attribution ? window.JH_Attribution.getPayload() : {};
             const attrText = `\n\n【SEO 商業歸因 (v1)】\n首次進站: ${attr.rfq_first_page || '直接'} (${attr.rfq_first_source || 'direct'})\n首次內容: ${attr.rfq_first_content || '(無)'}\n最後內容: ${attr.rfq_last_content || '(無)'} (叢集: ${attr.rfq_source_cluster || 'general'})\n轉換頁面: ${attr.rfq_conversion_page || window.location.pathname}\n停留秒數: ${attr.rfq_session_duration_sec || 0}s\n瀏覽旅程: ${attr.rfq_journey_path || '直接'}`;

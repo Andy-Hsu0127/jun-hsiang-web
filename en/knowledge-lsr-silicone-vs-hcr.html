@@ -77,8 +77,28 @@
             <a class="btn-nav-cta" href="index.html#contact">Get Quote</a>
 </div>
     </div>
+        <div aria-label="Open Menu" class="hamburger" id="hamburger" role="button" tabindex="0">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        </div>
 </nav>
-
+<div class="mobile-menu" id="mobile-menu">
+    <a class="nav-link" href="index.html#about">About Us</a>
+    <a class="nav-link" href="service.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'en')">OEM Services</a>
+    <a class="nav-link" href="products_list.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'en')">Products</a>
+    <a class="nav-link active" href="knowledge.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'en')">Knowledge Base</a>
+    <a class="nav-link" href="index.html#quality">Quality Certification</a>
+    <a class="nav-link" href="index.html#contact">Contact Us</a>
+    <div class="mobile-lang-links">
+        <a href="../knowledge-lsr-silicone-vs-hcr.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'zh-TW')" class="mobile-lang-link">繁中</a>
+        <span style="color: rgba(255,255,255,0.2);">|</span>
+        <a href="knowledge-lsr-silicone-vs-hcr.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'en')" class="mobile-lang-link active">EN</a>
+        <span style="color: rgba(255,255,255,0.2);">|</span>
+        <a href="../ja/knowledge-lsr-silicone-vs-hcr.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'ja')" class="mobile-lang-link">日本語</a>
+    </div>
+</div>
 <main class="main-content container" style="padding-top: var(--space-8); padding-bottom: var(--space-12);">
     <article class="article-detail" style="max-width: 900px; margin: 0 auto;">
         <header class="article-header-hero" style="margin-bottom: var(--space-6);">
@@ -106,16 +126,105 @@
         </div>
 
 
-        <section class="article-section">
+                <section class="article-section">
             <h2>1. Overview: Choosing Between LSR and HCR Silicone</h2>
-            <p>Engineers often face the choice between <strong>LSR (Liquid Silicone Rubber)</strong> and <strong>HCR (High Consistency Rubber)</strong>. While both share a siloxane polymer backbone, they differ fundamentally in viscosity, curing mechanism, manufacturing process, and economic scalability.</p>
-            <p><strong>Jun-Hsiang Enterprise</strong> operates both compression molding and LIM liquid injection equipment, helping customers choose the ideal process.</p>
+            <p>When developing precision elastomeric components, design engineers frequently evaluate the choice between <strong>LSR (Liquid Silicone Rubber)</strong> and <strong>HCR (High Consistency Rubber, also known as solid silicone gum)</strong>. While both materials feature the same durable polysiloxane molecular backbone, their molecular weight, physical viscosity, curing mechanism, and tooling architectures differ substantially.</p>
+            <p>Selecting the optimal material and process directly impacts tooling budget (NRE), unit production cost, dimensional repeatability, and regulatory compliance. <strong>Jun-Hsiang Enterprise</strong> operates both precision LIM liquid injection presses and vacuum compression molding machinery in Taiwan, providing transparent, non-biased engineering evaluations for global OEM buyers.</p>
         </section>
 
         <section class="article-section">
-            <h2>2. Key Process & Material Differences</h2>
-            <p>• <strong>LSR</strong>: Liquid A/B system, platinum-cured with zero byproducts. High fluidity ideal for micro-details, medical compliance, and automated fast cycle injection.</p>
-            <p>• <strong>HCR</strong>: High viscosity gum, milled with peroxide or platinum agents. Suitable for compression molding, extrusions, and lower initial tooling costs.</p>
+            <h2>2. Raw Material Rheology & Viscosity Characteristics</h2>
+            <p>The primary physical distinction between LSR and HCR lies in their raw material state and viscosity:</p>
+            <ul>
+                <li><strong>Liquid Silicone Rubber (LSR):</strong> Supplied as a two-component pumpable paste (Part A and Part B) with a paste-like viscosity typically between 100,000 and 1,000,000 mPa·s. It is mixed dynamically at a 1:1 ratio at ambient temperature and pumped directly into a chilled runner system before entering heated cavities. Its low viscosity allows effortless filling of micro-features, thin walls, and complex core geometries.</li>
+                <li><strong>High Consistency Rubber (HCR):</strong> Supplied as high-molecular-weight solid gum stock. It must be plasticized, compounded, and milled on open two-roll mills with curing catalysts, pigments, and functional fillers. The uncured compound is rolled or pre-formed into specific pre-weighed slugs or strips prior to mold placement.</li>
+            </ul>
+        </section>
+
+        <section class="article-section">
+            <h2>3. Cross-Linking Chemistry: Platinum Addition vs. Peroxide Radical Cure</h2>
+            <p>Curing kinetics fundamentally dictate part cleanliness, biocompatibility, and volatile byproducts:</p>
+            <ul>
+                <li><strong>Platinum Addition Cure (Standard in LSR, Optional in HCR):</strong> Operates via hydrosilylation between vinyl groups and silicon-hydride cross-linkers catalyzed by platinum complexes. This reaction produces <em>zero volatile organic byproducts</em>, exhibits minimal shrinkage during cure, and offers superior optical clarity and biocompatibility. It complies seamlessly with medical (USP Class VI) and food-contact (FDA 21 CFR 177.2600, LFGB) regulations.</li>
+                <li><strong>Organic Peroxide Cure (Common in HCR):</strong> Utilizes organic peroxides (e.g., DCBP, DBPH) to initiate free-radical crosslinking under heat and pressure. The reaction releases acidic decomposition byproducts that typically require a secondary post-cure baking (e.g., 200°C for 2–4 hours) to eliminate volatile organic residues and prevent yellowing or blooming.</li>
+            </ul>
+        </section>
+
+        <section class="article-section">
+            <h2>4. Tooling Architecture & Molding Process: LIM Injection vs. Compression</h2>
+            <p>The tooling and equipment philosophies between the two processes represent distinct manufacturing disciplines:</p>
+            <div style="overflow-x: auto; margin: var(--space-4) 0;">
+                <table style="width: 100%; border-collapse: collapse; font-size: 0.92rem; text-align: left;">
+                    <thead>
+                        <tr style="background: rgba(255,255,255,0.06); border-bottom: 2px solid var(--color-border);">
+                            <th style="padding: 12px; border: 1px solid var(--color-border);">Engineering Parameter</th>
+                            <th style="padding: 12px; border: 1px solid var(--color-border); color: var(--color-accent);">LSR (Liquid Injection Molding)</th>
+                            <th style="padding: 12px; border: 1px solid var(--color-border);">HCR (Compression / Transfer Molding)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 10px; border: 1px solid var(--color-border); font-weight: 600;">Tooling Architecture</td>
+                            <td style="padding: 10px; border: 1px solid var(--color-border);">Cold runner system with electric heated cavity; precision vacuum venting channels.</td>
+                            <td style="padding: 10px; border: 1px solid var(--color-border);">Heated platen molds with overflow grooves and tear-trim flash lands.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px; border: 1px solid var(--color-border); font-weight: 600;">Flash & Parting Line Control</td>
+                            <td style="padding: 10px; border: 1px solid var(--color-border);">Flashless or minimal flash capability due to precision mold shut-offs; reduced post-processing.</td>
+                            <td style="padding: 10px; border: 1px solid var(--color-border);">Requires manual or cryogenic deburring to remove parting line overflow flash.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px; border: 1px solid var(--color-border); font-weight: 600;">Cycle Time & Automation</td>
+                            <td style="padding: 10px; border: 1px solid var(--color-border);">Fast vulcanization cycle; automated demolding via robotic arm or air blow.</td>
+                            <td style="padding: 10px; border: 1px solid var(--color-border);">Longer vulcanization cycle; requires manual loading of preforms and manual demolding.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px; border: 1px solid var(--color-border); font-weight: 600;">Tooling Investment (NRE)</td>
+                            <td style="padding: 10px; border: 1px solid var(--color-border);">Higher initial investment due to cold runner complexity, vacuum sealing, and high-grade tool steel.</td>
+                            <td style="padding: 10px; border: 1px solid var(--color-border);">Lower initial investment; economical for prototyping, pilot runs, and medium batches.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px; border: 1px solid var(--color-border); font-weight: 600;">Overmolding Suitability</td>
+                            <td style="padding: 10px; border: 1px solid var(--color-border);">Excellent for 2-shot or insert overmolding on engineering thermoplastics (PC, PA, PBT) and metals.</td>
+                            <td style="padding: 10px; border: 1px solid var(--color-border);">Best suited for metal inserts capable of withstanding prolonged compression heat and clamp pressure.</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px; border: 1px solid var(--color-border); font-weight: 600;">Hardness Range Available</td>
+                            <td style="padding: 10px; border: 1px solid var(--color-border);">Shore A 5° to 80° (optimal between 20° and 70°).</td>
+                            <td style="padding: 10px; border: 1px solid var(--color-border);">Shore A 20° to 90° (can reach higher durometer levels).</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="article-section">
+            <h2>5. Procurement Decision Framework: When to Choose LSR vs. HCR</h2>
+            <p>To maximize cost-efficiency and part performance, global buyers should balance production volume against precision requirements:</p>
+            <ul>
+                <li><strong>Choose LSR Liquid Silicone Injection if:</strong>
+                    <ul>
+                        <li>Your project demands high annual volume where automated rapid cycling offsets tooling capital costs.</li>
+                        <li>The component features micro-fluidic channels, thin cross-sections, or complex 3D undercut features.</li>
+                        <li>You require primerless self-bonding onto delicate thermoplastics without thermal distortion.</li>
+                        <li>Strict medical compliance (USP Class VI) or high-transparency optical clarity is required.</li>
+                    </ul>
+                </li>
+                <li><strong>Choose HCR Solid Compression Molding if:</strong>
+                    <ul>
+                        <li>The project is in early-stage development, prototyping, or annual volumes remain modest (< 10,000 pcs).</li>
+                        <li>Initial tooling budget (NRE) is tightly constrained.</li>
+                        <li>The part is large, heavy, or has a thick wall cross-section (e.g., industrial vibration dampeners, large gaskets).</li>
+                        <li>Very high durometer silicone (Shore A 75°–90°) or heavy specialty fillers (conductive carbon, magnetic particles) are necessary.</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section class="article-section">
+            <h2>6. Engineering Collaboration & Custom Tooling at Jun-Hsiang</h2>
+            <p>At Jun-Hsiang Enterprise, our engineering team assists customers at the design stage by reviewing 2D/3D CAD models, recommending gate locations, parting lines, and material hardness formulations. Explore our dedicated OEM service pages to review equipment capabilities and submit RFQs:</p>
+            <p>👉 Learn more about our <a href="service.html" style="color:var(--color-accent);font-weight:700;">Custom Silicone OEM Services & LSR Injection Capabilities</a>, or review our <a href="knowledge-solid-vs-lsr.html" style="color:var(--color-accent);font-weight:700;">Detailed Compression vs LSR Cost Analysis Guide</a>.</p>
         </section>
 
                 <!-- Related Reading -->
