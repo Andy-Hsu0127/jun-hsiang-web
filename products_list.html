@@ -633,7 +633,7 @@
 </div>
 </div>
 <div class="modal-cta">
-<a class="btn btn-primary" href="./#contact" onclick="closeModal()">
+<a class="btn btn-primary" href="#rfq-section" onclick="closeModal()">
 <svg class="lucide lucide-mail" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:18px;height:18px;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect height="16" rx="2" width="20" x="2" y="4"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
                             填寫詢問單
                         </a>
@@ -642,6 +642,96 @@
 </div>
 </div>
 </div>
+<!-- Zone 7: Bottom RFQ Conversion Section -->
+<section class="section service-cta" id="rfq-section" style="background: var(--color-bg-secondary); border-top: 1px solid var(--color-border); padding: clamp(4rem, 7vh, 6rem) 0;">
+    <div class="container" style="max-width: 900px; margin: 0 auto;">
+        <div style="text-align: center; margin-bottom: var(--space-6);">
+            <span class="section-label" style="display: inline-block; margin-bottom: var(--space-2);">Start Your Project</span>
+            <h2 style="font-family: var(--font-heading); font-size: clamp(1.75rem, 3.2vw, 2.3rem); font-weight: 700; color: var(--color-text-primary); margin-bottom: 1rem;">
+                啟動您的矽膠代工專案｜立即提供圖面，<span class="accent">專人盡快回覆</span>
+            </h2>
+            <p style="color: var(--color-text-secondary); max-width: 720px; margin: 0 auto; line-height: 1.6; font-size: 0.98rem;">
+                支援 2D / 3D CAD 工程圖檔（.STEP, .STP, .IGS, .DWG, .PDF）或實體樣品評估。正式圖面審查前可先行簽署雙向 NDA 保密協議，全力保障您的研發智財。
+            </p>
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 1.25rem;">
+                <span style="display: inline-flex; align-items: center; gap: 6px; background: rgba(16, 185, 129, 0.12); border: 1px solid rgba(16, 185, 129, 0.3); color: #34D399; font-size: 0.82rem; font-weight: 600; padding: 4px 12px; border-radius: 999px;">
+                    🔒 可簽署雙向 NDA 保密協議
+                </span>
+                <span style="display: inline-flex; align-items: center; gap: 6px; background: rgba(212, 168, 67, 0.12); border: 1px solid rgba(212, 168, 67, 0.3); color: var(--color-accent); font-size: 0.82rem; font-weight: 600; padding: 4px 12px; border-radius: 999px;">
+                    ISO 9001:2015 新莊實體工廠直營
+                </span>
+                <span style="display: inline-flex; align-items: center; gap: 6px; background: rgba(255, 255, 255, 0.05); border: 1px solid var(--color-border); color: var(--color-text-secondary); font-size: 0.82rem; font-weight: 600; padding: 4px 12px; border-radius: 999px;">
+                    歡迎提供 2D/3D 圖檔或樣品照片
+                </span>
+            </div>
+        </div>
+
+        <div class="contact-form glow-card" style="background: var(--color-bg-card); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: clamp(1.5rem, 4vw, 2.5rem); margin-bottom: var(--space-6);">
+            <div class="direct-contact-bar" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px;background:rgba(13,148,136,0.1);border:1px solid rgba(13,148,136,0.35);border-radius:var(--radius-md);padding:12px 16px;margin-bottom:var(--space-5);font-size:0.9rem;">
+                <div style="display:flex;flex-wrap:wrap;align-items:center;gap:14px;">
+                    <a href="tel:0222039918" style="color:var(--color-text-primary);font-weight:700;text-decoration:none;display:inline-flex;align-items:center;gap:6px;">📞 工廠直撥：<span style="color:var(--color-accent);text-decoration:underline;">(02) 2203-9918</span></a>
+                    <span style="color:var(--color-border);">|</span>
+                    <a href="mailto:jojo.li888@msa.hinet.net" style="color:var(--color-text-primary);font-weight:700;text-decoration:none;display:inline-flex;align-items:center;gap:6px;">✉️ 傳圖信箱：<span style="color:var(--color-accent);">jojo.li888@msa.hinet.net</span></a>
+                </div>
+                <button type="button" data-copy-email="jojo.li888@msa.hinet.net" style="background:var(--color-accent);color:#fff;border:none;border-radius:6px;padding:6px 12px;font-size:0.82rem;font-weight:700;cursor:pointer;">📋 點擊複製信箱</button>
+            </div>
+            <form id="general-contact-form" action="https://formsubmit.co/jojo.li888@msa.hinet.net" method="POST" enctype="multipart/form-data" novalidate>
+                <input type="hidden" name="_subject" value="【鈞翔實業】製程服務頁快速詢價通知">
+                <input type="hidden" name="_captcha" value="false">
+
+                <div class="form-row" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: var(--space-4);">
+                    <div class="form-group">
+                        <label for="general-company">公司名稱</label>
+                        <input id="general-company" name="company" placeholder="請輸入貴公司名稱" type="text"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="general-name">聯絡人姓名 *</label>
+                        <input id="general-name" name="name" placeholder="您的姓名" type="text" required/>
+                    </div>
+                </div>
+
+                <div class="form-row" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: var(--space-4);">
+                    <div class="form-group">
+                        <label for="general-phone">聯絡電話 *</label>
+                        <input id="general-phone" name="phone" placeholder="市話或手機號碼" type="tel"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="general-email">E-mail 信箱 *</label>
+                        <input id="general-email" name="email" placeholder="your@company.com" type="email"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="general-product-need">預計需求製程或產品</label>
+                    <select id="general-product-need" name="product_need">
+                        <option value="LSR 液態矽膠射出">LSR 液態矽膠射出成型</option>
+                        <option value="固態矽膠熱壓成型">固態矽膠熱壓成型 (HTV)</option>
+                        <option value="異材結合包膠">矽膠包金屬 / 包塑膠 (異材結合 Overmolding)</option>
+                        <option value="自潤出油矽膠">自潤矽膠 (出油膠 / 線束防水塞)</option>
+                        <option value="防水密封與防震件">O型環、防水密封圈與工業防震件</option>
+                        <option value="其他客製矽橡膠">其他客製化矽橡膠零件</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="general-file">📎 上傳工程圖面或產品照片（選填 · 支援 STEP, STP, IGES, DWG, PDF, JPG, PNG）</label>
+                    <input type="file" id="general-file" name="attachment" accept=".pdf,.dwg,.step,.stp,.iges,.igs,.png,.jpg,.jpeg">
+                </div>
+
+                <div class="form-group">
+                    <label for="general-message">需求說明（如：目標硬度 Shore A、預估數量、應用環境或特殊規範）</label>
+                    <textarea id="general-message" name="message" placeholder="請簡述您的產品需求，或直接附上圖檔，我們將盡快與您聯繫..." rows="4"></textarea>
+                </div>
+
+                <div class="g-recaptcha" data-sitekey="6LfAl0gtAAAAAJ31oGDiXewOcu5SI7XBB4K3hO8t" style="margin-bottom: 15px;"></div>
+                <button class="btn btn-primary btn-submit" id="general-submit-btn" type="submit" style="width: 100%; justify-content: center; font-weight: 700; padding: 14px 24px;">
+                    <svg class="lucide" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:18px;height:18px;margin-right:8px;vertical-align:middle;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><line x1="22" x2="11" y1="2" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                    立即送出詢價需求
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
 <footer class="footer">
 <div class="container">
 <div class="footer-grid">

@@ -122,12 +122,29 @@
                 <a class="lang-btn" href="en/knowledge-large-shot-lsr-molding.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'en')">EN</a>
                 <a class="lang-btn" href="ja/knowledge-large-shot-lsr-molding.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'ja')">日本語</a>
             </div>
-            <button class="nav-toggle" id="nav-toggle">
-                <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><line x1="3" x2="21" y1="6" y2="6"/><line x1="3" x2="21" y1="12" y2="12"/><line x1="3" x2="21" y1="18" y2="18"/></svg>
-            </button>
+        </div>
+        <div aria-label="開啟選單" class="hamburger" id="hamburger" role="button" tabindex="0">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
     </div>
 </nav>
+<div class="mobile-menu" id="mobile-menu">
+    <a class="nav-link" href="./#about">關於鈞翔</a>
+    <a class="nav-link" href="service.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'zh-TW')">加工服務</a>
+    <a class="nav-link" href="products_list.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'zh-TW')">產品目錄</a>
+    <a class="nav-link active" href="knowledge.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'zh-TW')">技術知識</a>
+    <a class="nav-link" href="./#quality">品質認證</a>
+    <a class="nav-link" href="#rfq-section">聯絡我們</a>
+    <div class="mobile-lang-links">
+        <a href="knowledge-large-shot-lsr-molding.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'zh-TW')" class="mobile-lang-link active">繁中</a>
+        <span style="color: rgba(255,255,255,0.2);">|</span>
+        <a href="en/knowledge-large-shot-lsr-molding.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'en')" class="mobile-lang-link">EN</a>
+        <span style="color: rgba(255,255,255,0.2);">|</span>
+        <a href="ja/knowledge-large-shot-lsr-molding.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'ja')" class="mobile-lang-link">日本語</a>
+    </div>
+</div>
 
 <!-- ===== PAGE HERO ===== -->
 <section class="page-hero">
@@ -156,7 +173,8 @@
             </div>
             <div class="article-service-cta-buttons">
                 <a href="service.html" class="btn btn-primary btn-sm">查看 LSR 加工服務 →</a>
-                <a href="./#contact" class="btn btn-outline btn-sm">帶圖快速詢價 📥</a>
+                <a href="#rfq-section" class="btn btn-outline btn-sm">帶圖快速詢價 📥</a>
+                <a href="tel:0222039918" class="btn btn-outline btn-sm">📞 (02) 2203-9918</a>
             </div>
         </div>
     </div>

@@ -633,7 +633,7 @@
 </div>
 </div>
 <div class="modal-cta">
-<a class="btn btn-primary" href="index.html#contact" onclick="closeModal()">
+<a class="btn btn-primary" href="#rfq-section" onclick="closeModal()">
 <svg class="lucide lucide-mail" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:18px;height:18px;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect height="16" rx="2" width="20" x="2" y="4"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
                             Request a Quote
                         </a>
@@ -642,6 +642,99 @@
 </div>
 </div>
 </div>
+<!-- Zone 7: Bottom RFQ Conversion Section -->
+<section class="section service-cta" id="rfq-section" style="background: var(--color-bg-secondary); border-top: 1px solid var(--color-border); padding: clamp(4rem, 7vh, 6rem) 0;">
+    <div class="container" style="max-width: 900px; margin: 0 auto;">
+        <div style="text-align: center; margin-bottom: var(--space-6);">
+            <span class="section-label" style="display: inline-block; margin-bottom: var(--space-2);">Direct OEM Consultation</span>
+            <h2 style="font-family: var(--font-heading); font-size: clamp(1.75rem, 3.2vw, 2.3rem); font-weight: 700; color: var(--color-text-primary); margin-bottom: 1rem;">
+                Launch Your Custom Silicone Project | Direct Engineering RFQ
+            </h2>
+            <p style="color: var(--color-text-secondary); max-width: 720px; margin: 0 auto; line-height: 1.6; font-size: 0.98rem;">
+                Submit your 2D / 3D CAD files (.STEP, .STP, .IGS, .DWG, .PDF) or product specifications directly to our engineering team for mold feasibility and unit price estimation.
+            </p>
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 1.25rem;">
+                <span style="display: inline-flex; align-items: center; gap: 6px; background: rgba(16, 185, 129, 0.12); border: 1px solid rgba(16, 185, 129, 0.3); color: #34D399; font-size: 0.82rem; font-weight: 600; padding: 4px 12px; border-radius: 999px;">
+                    🔒 Mutual NDA Protected
+                </span>
+                <span style="display: inline-flex; align-items: center; gap: 6px; background: rgba(212, 168, 67, 0.12); border: 1px solid rgba(212, 168, 67, 0.3); color: var(--color-accent); font-size: 0.82rem; font-weight: 600; padding: 4px 12px; border-radius: 999px;">
+                    ISO 9001:2015 Direct Taiwan Factory
+                </span>
+                <span style="display: inline-flex; align-items: center; gap: 6px; background: rgba(255, 255, 255, 0.05); border: 1px solid var(--color-border); color: var(--color-text-secondary); font-size: 0.82rem; font-weight: 600; padding: 4px 12px; border-radius: 999px;">
+                    2D/3D Drawings & Specs Welcome
+                </span>
+            </div>
+        </div>
+
+        <div class="contact-form glow-card" style="background: var(--color-bg-card); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: clamp(1.5rem, 4vw, 2.5rem); margin-bottom: var(--space-8);">
+            <form id="general-contact-form" action="https://formsubmit.co/jojo.li888@msa.hinet.net" method="POST" enctype="multipart/form-data" novalidate>
+                <input type="hidden" name="_subject" value="[Jun-Hsiang Service RFQ] Engineering Inquiry">
+                <input type="hidden" name="_captcha" value="false">
+
+                <div class="form-row" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: var(--space-4);">
+                    <div class="form-group">
+                        <label for="general-company">Company Name</label>
+                        <input id="general-company" name="company" placeholder="e.g. Acme Medical Corp." type="text"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="general-name">Contact Person *</label>
+                        <input id="general-name" name="name" placeholder="Your Name" type="text" required/>
+                    </div>
+                </div>
+
+                <div class="form-row" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: var(--space-4);">
+                    <div class="form-group">
+                        <label for="general-email">Work Email *</label>
+                        <input id="general-email" name="email" placeholder="engineer@company.com" type="email" required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="general-phone">Phone / WhatsApp</label>
+                        <input id="general-phone" name="phone" placeholder="+1 (555) 000-0000" type="tel"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="general-product-need">Process of Interest</label>
+                    <select id="general-product-need" name="product_need">
+                        <option value="LSR Liquid Silicone Injection">LSR Liquid Silicone Injection Molding</option>
+                        <option value="Solid Silicone Compression">Solid Silicone Compression Molding</option>
+                        <option value="Silicone Overmolding">Silicone Overmolding (Plastic/Metal Bonding)</option>
+                        <option value="Self-Lubricating Silicone">Self-Lubricating / Low-Friction Silicone</option>
+                        <option value="Precision Seals & Gaskets">Precision Seals, O-Rings & Gaskets</option>
+                        <option value="Other Custom Molded Parts">Other Custom Molded Parts</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="general-file">Attach CAD Drawings / Specifications (Optional · STEP, STP, IGES, DWG, PDF)</label>
+                    <input type="file" id="general-file" name="attachment" accept=".pdf,.dwg,.step,.stp,.iges,.igs,.png,.jpg,.jpeg">
+                </div>
+
+                <div class="form-group">
+                    <label for="general-message">Project Requirements (Hardness, Estimated Annual Quantity, Operating Temp, etc.)</label>
+                    <textarea id="general-message" name="message" placeholder="Please describe target hardness (Shore A), quantity, application environment, or specific compliance needs..." rows="4"></textarea>
+                </div>
+
+                <div class="g-recaptcha" data-sitekey="6LfAl0gtAAAAAJ31oGDiXewOcu5SI7XBB4K3hO8t" style="margin-bottom: 15px;"></div>
+                <button class="btn btn-primary btn-submit" id="general-submit-btn" type="submit" style="width: 100%; justify-content: center; font-weight: 700; padding: 14px 24px;">
+                    <svg class="lucide" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:18px;height:18px;margin-right:8px;vertical-align:middle;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><line x1="22" x2="11" y1="2" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                    Send Direct RFQ to Engineering Team
+                </button>
+            </form>
+        </div>
+
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; font-size: 0.9rem;">
+            <a href="tel:+886222039918" style="color: var(--color-text-secondary); text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+                📞 Phone: +886-2-2203-9918
+            </a>
+            <span style="color: var(--color-border);">|</span>
+            <a href="mailto:jojo.li888@msa.hinet.net?subject=%E3%80%9BJun-Hsiang%20RFQ%E3%80%9D%20Engineering%20Inquiry" style="color: var(--color-accent); text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+                ✉️ Direct Email: jojo.li888@msa.hinet.net
+            </a>
+            <button type="button" data-copy-email="jojo.li888@msa.hinet.net" style="background:var(--color-accent);color:#fff;border:none;border-radius:6px;padding:4px 10px;font-size:0.8rem;font-weight:700;cursor:pointer;">📋 Copy Email</button>
+        </div>
+    </div>
+</section>
 <footer class="footer">
 <div class="container">
 <div class="footer-grid">

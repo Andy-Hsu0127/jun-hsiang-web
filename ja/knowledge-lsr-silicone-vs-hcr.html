@@ -238,10 +238,63 @@
             </ul>
         </section>
 
-        <section class="article-cta" style="background:var(--gradient-card);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:var(--space-8);text-align:center;margin-top:var(--space-8);">
-            <h2 style="font-size:1.5rem;margin-bottom:var(--space-3);">シリコーン材料の選定に関するご相談</h2>
-            <p style="color:var(--color-text-secondary);margin-bottom:var(--space-5);">鈞翔実業の技術チームが、最適材料と金型コスト評価をサポートいたします。</p>
-            <a class="btn btn-primary" href="index.html#contact">技術エンジニアに相談する →</a>
+                <section class="article-cta" id="rfq-section" style="background:var(--gradient-card);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:clamp(1.5rem, 4vw, 2.5rem);margin-top:var(--space-8);">
+            <div style="text-align:center;margin-bottom:var(--space-5);">
+                <h2 style="font-size:1.5rem;margin-bottom:var(--space-2);">シリコーン製品のカスタム受託製造・お見積もり</h2>
+                <p style="color:var(--color-text-secondary);margin-bottom:var(--space-4);">鈞翔実業有限公司は、金型開発、精密な試作、および量産加工サービスをワンストップで提供します。2D/3D図面を下記フォームより添付いただくか、直通メールアドレスまで直接お送りください。</p>
+                <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px;background:rgba(13,148,136,0.1);border:1px solid rgba(13,148,136,0.35);border-radius:var(--radius-md);padding:12px 16px;">
+                    <a href="tel:+886222039918" style="color:var(--color-text-primary);font-weight:700;text-decoration:none;display:inline-flex;align-items:center;gap:6px;">📞 工場直通電話：<span style="color:var(--color-accent);text-decoration:underline;">+886-2-2203-9918</span></a>
+                    <span style="color:var(--color-border);">|</span>
+                    <a href="mailto:jojo.li888@msa.hinet.net" style="color:var(--color-text-primary);font-weight:700;text-decoration:none;display:inline-flex;align-items:center;gap:6px;">✉️ 図面送付先：<span style="color:var(--color-accent);">jojo.li888@msa.hinet.net</span></a>
+                    <button type="button" data-copy-email="jojo.li888@msa.hinet.net" style="background:var(--color-accent);color:#fff;border:none;border-radius:6px;padding:5px 12px;font-size:0.82rem;font-weight:700;cursor:pointer;">📋 メールをコピー</button>
+                </div>
+            </div>
+            <form id="general-contact-form" action="https://formsubmit.co/jojo.li888@msa.hinet.net" method="POST" enctype="multipart/form-data" novalidate style="text-align:left;">
+                <input type="hidden" name="_subject" value="【鈞翔実業】技術コラムページからのお問い合わせ">
+                <input type="hidden" name="_captcha" value="false">
+                <div class="form-row" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:var(--space-4);">
+                    <div class="form-group">
+                        <label for="general-company">貴社名</label>
+                        <input id="general-company" name="company" placeholder="例：〇〇株式会社" type="text"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="general-name">ご担当者名 *</label>
+                        <input id="general-name" name="name" placeholder="お名前" type="text" required/>
+                    </div>
+                </div>
+                <div class="form-row" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:var(--space-4);">
+                    <div class="form-group">
+                        <label for="general-email">メールアドレス *</label>
+                        <input id="general-email" name="email" placeholder="your@company.co.jp" type="email" required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="general-phone">お電話番号</label>
+                        <input id="general-phone" name="phone" placeholder="+81-3-0000-0000" type="tel"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="general-product-need">ご希望の成形プロセス・製品</label>
+                    <select id="general-product-need" name="product_need">
+                        <option value="LSR 液状シリコーン射出成形">LSR 液状シリコーン射出成形</option>
+                        <option value="固形シリコーン圧縮成形">固形シリコーン圧縮成形 (HTV)</option>
+                        <option value="異種材複合成形">インサート・異種材複合成形 (Overmolding)</option>
+                        <option value="自己潤滑性シリコーン">自己潤滑性（オイルブリード）シリコーン</option>
+                        <option value="精密シール・Oリング">精密防水シール・Oリング・防振ゴム</option>
+                        <option value="その他カスタム成形品">その他カスタム成形品</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="general-file">📎 2D/3D図面・仕様書の添付（任意 · STEP, STP, IGES, DWG, PDF対応）</label>
+                    <input type="file" id="general-file" name="attachment" accept=".pdf,.dwg,.step,.stp,.iges,.igs,.png,.jpg,.jpeg">
+                </div>
+                <div class="form-group">
+                    <label for="general-message">ご要望・仕様詳細（目標硬度、予定数量、用途など）</label>
+                    <textarea id="general-message" name="message" placeholder="ご要望や仕様をご記入ください。担当者より折り返しご連絡いたします..." rows="3"></textarea>
+                </div>
+                <button class="btn btn-primary btn-submit" id="general-submit-btn" type="submit" style="width:100%;justify-content:center;font-weight:700;padding:12px 24px;">
+                    技術チームへ見積もりを依頼する →
+                </button>
+            </form>
         </section>
 
         <div style="text-align:center;margin-top:var(--space-8);">
@@ -251,15 +304,46 @@
 </main>
 
 <footer class="footer">
-    <div class="container">
-        <div class="footer-brand">
-            <a class="footer-logo" href="index.html">鈞翔<span class="accent">実業</span></a>
-            <p class="footer-tagline">新北市新荘区 | 高精密シリコーン・ゴムOEM受託製造工場</p>
-        </div>
-        <div class="footer-bottom">
-            <p>© 2026 鈞翔実業有限公司 Jun-Hsiang Enterprise Co., Ltd. All rights reserved.</p>
-        </div>
-    </div>
+<div class="container">
+<div class="footer-grid">
+<div class="footer-brand">
+<div class="footer-logo">
+<div class="logo-icon">鈞</div>
+<span>鈞翔実業</span>
+</div>
+<p>台湾の専門シリコーン・ゴム製品カスタム受託製造メーカー（OEM/ODM）。30年以上の製造実績とISO 9001認証に基づき、高品質な固形シリコーン圧縮成形およびLSR液状シリコーン射出成形サービスを提供いたします。</p>
+</div>
+<div class="footer-nav">
+<h4>クイックリンク</h4>
+<ul class="footer-links">
+<li><a href="index.html#about">会社概要</a></li>
+<li><a href="service.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'ja')">製造サービス</a></li>
+<li><a href="products_list.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'ja')">製品一覧</a></li>
+<li><a href="knowledge.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'ja')">技術コラム</a></li>
+<li><a href="index.html#quality">品質認証</a></li>
+<li><a href="index.html#contact">お問い合わせ</a></li>
+</ul>
+</div>
+<div class="footer-contact">
+<h4>連絡先情報</h4>
+<div class="contact-item">
+<svg class="lucide lucide-map-pin" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:16px;height:16px;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+<span>242 台湾新北市新荘区新樹路345巷3号</span>
+</div>
+<div class="contact-item">
+<svg class="lucide lucide-phone" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:16px;height:16px;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+<a href="tel:+886222039918">+886-2-2203-9918</a>
+</div>
+<div class="contact-item">
+<svg class="lucide lucide-mail" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:16px;height:16px;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect height="16" rx="2" width="20" x="2" y="4"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+<a href="mailto:jojo.li888@msa.hinet.net">jojo.li888@msa.hinet.net</a>
+</div>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 鈞翔実業有限公司 Jun-Hsiang Enterprise Co., Ltd. All Rights Reserved.</span>
+</div>
+</div>
 </footer>
 <script src="../js/main.js?v=1.0.1"></script>
 </body>

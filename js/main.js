@@ -132,6 +132,15 @@ function populateFormFields() {
     const payload = getAttributionPayload();
     const forms = document.querySelectorAll('#contact-form, #general-contact-form');
     forms.forEach(form => {
+        if (!form.querySelector('input[name="_honey"]')) {
+            const honey = document.createElement('input');
+            honey.type = 'text';
+            honey.name = '_honey';
+            honey.style.display = 'none';
+            honey.tabIndex = -1;
+            honey.autocomplete = 'off';
+            form.appendChild(honey);
+        }
         Object.keys(payload).forEach(key => {
             let input = form.querySelector(`input[name="${key}"]`);
             if (!input) {
@@ -152,6 +161,40 @@ window.JH_Attribution = {
 
 document.addEventListener('DOMContentLoaded', () => {
     populateFormFields();
+
+    document.addEventListener('click', (e) => {
+        const copyBtn = e.target.closest('[data-copy-email]');
+        if (!copyBtn) return;
+        e.preventDefault();
+        const emailToCopy = copyBtn.getAttribute('data-copy-email') || 'jojo.li888@msa.hinet.net';
+        const origHtml = copyBtn.innerHTML;
+        const copiedLabel = window.location.pathname.includes('/en/')
+            ? '✅ Email Copied!'
+            : (window.location.pathname.includes('/ja/') ? '✅ コピーしました！' : '✅ 已複製信箱！');
+        const showCopied = () => {
+            copyBtn.innerHTML = copiedLabel;
+            setTimeout(() => { copyBtn.innerHTML = origHtml; }, 2500);
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(emailToCopy).then(showCopied).catch(() => {
+                const ta = document.createElement('textarea');
+                ta.value = emailToCopy;
+                document.body.appendChild(ta);
+                ta.select();
+                try { document.execCommand('copy'); } catch (err) {}
+                document.body.removeChild(ta);
+                showCopied();
+            });
+        } else {
+            const ta = document.createElement('textarea');
+            ta.value = emailToCopy;
+            document.body.appendChild(ta);
+            ta.select();
+            try { document.execCommand('copy'); } catch (err) {}
+            document.body.removeChild(ta);
+            showCopied();
+        }
+    });
 
     function initFormThirdParties() {
         if (window.formThirdPartiesLoaded) return;
@@ -179,7 +222,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.appendChild(s2);
     }
 
-    const contactSection = document.getElementById('contact');
+    const contactSection = document.getElementById('contact') || document.getElementById('rfq-section') || document.getElementById('general-contact-form');
     if (contactSection) {
         const contactObserver = new IntersectionObserver((entries) => {
             if (entries[0].isIntersecting) {
@@ -811,12 +854,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
+            const honeyEl = rfpForm.querySelector('input[name="_honey"]');
+            if (honeyEl && honeyEl.value) return;
             const captchaEl = rfpForm.querySelector('[name="g-recaptcha-response"]');
             const captchaToken = captchaEl ? captchaEl.value : "";
-            if (!captchaToken) {
-                alert(window.location.pathname.includes('/en/') ? "Please complete the CAPTCHA verification!" : (window.location.pathname.includes('/ja/') ? "セキュリティ検証を完了してください！" : "請先完成安全驗證！"));
-                return;
-            }
 
             const originalContent = rfpSubmitBtn.innerHTML;
             rfpSubmitBtn.innerHTML = `<span style="display:inline-flex;align-items:center;gap:8px;">${t.submitting}</span>`;
@@ -896,12 +937,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     'g-recaptcha-response': captchaToken
                 };
 
-                emailjs.send("service_941qf5m", "template_xd47fdq", templateParams, { publicKey: "x4U1bJa_bowbuMl3r" })
-                .then(() => {
-                    handleRFPSuccess();
-                })
-                .catch(error => {
-                    console.warn("EmailJS failed, trying FormSubmit fallback...", error);
+                const sendRFPFormSubmitFallback = (error) => {
                     fetch("https://formsubmit.co/ajax/jojo.li888@msa.hinet.net", {
                         method: "POST",
                         headers: { "Content-Type": "application/json", "Accept": "application/json" },
@@ -930,7 +966,20 @@ document.addEventListener('DOMContentLoaded', () => {
                         }
                     })
                     .catch(() => handleRFPError(error));
-                });
+                };
+
+                if (captchaToken && typeof emailjs !== 'undefined') {
+                    emailjs.send("service_941qf5m", "template_xd47fdq", templateParams, { publicKey: "x4U1bJa_bowbuMl3r" })
+                    .then(() => {
+                        handleRFPSuccess();
+                    })
+                    .catch(error => {
+                        console.warn("EmailJS failed, trying FormSubmit fallback...", error);
+                        sendRFPFormSubmitFallback(error);
+                    });
+                } else {
+                    sendRFPFormSubmitFallback(new Error("Direct FormSubmit"));
+                }
             }
         });
     }
@@ -1029,12 +1078,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
+            const honeyEl = generalForm.querySelector('input[name="_honey"]');
+            if (honeyEl && honeyEl.value) return;
             const captchaEl = generalForm.querySelector('[name="g-recaptcha-response"]');
             const captchaToken = captchaEl ? captchaEl.value : "";
-            if (!captchaToken) {
-                alert(window.location.pathname.includes('/en/') ? "Please complete the CAPTCHA verification!" : (window.location.pathname.includes('/ja/') ? "セキュリティ検証を完了してください！" : "請先完成安全驗證！"));
-                return;
-            }
 
             const originalContent = generalSubmitBtn.innerHTML;
             generalSubmitBtn.innerHTML = `<span style="display:inline-flex;align-items:center;gap:8px;">${t.submitting}</span>`;
@@ -1086,17 +1133,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 'g-recaptcha-response': captchaToken
             };
 
-            emailjs.send("service_941qf5m", "template_xd47fdq", templateParams, { publicKey: "x4U1bJa_bowbuMl3r" })
-            .then(() => {
-                showStatusModal(true);
-                generalForm.reset();
-                generalSubmitBtn.innerHTML = originalContent;
-                generalSubmitBtn.disabled = false;
-                if (typeof grecaptcha !== 'undefined') grecaptcha.reset();
-                if (typeof lucide !== 'undefined') lucide.createIcons();
-            })
-            .catch(error => {
-                console.warn("EmailJS failed, trying FormSubmit fallback...", error);
+            const sendGenFormSubmitFallback = () => {
                 fetch("https://formsubmit.co/ajax/jojo.li888@msa.hinet.net", {
                     method: "POST",
                     headers: { "Content-Type": "application/json", "Accept": "application/json" },
@@ -1134,7 +1171,25 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (typeof grecaptcha !== 'undefined') grecaptcha.reset();
                     if (typeof lucide !== 'undefined') lucide.createIcons();
                 });
-            });
+            };
+
+            if (captchaToken && typeof emailjs !== 'undefined') {
+                emailjs.send("service_941qf5m", "template_xd47fdq", templateParams, { publicKey: "x4U1bJa_bowbuMl3r" })
+                .then(() => {
+                    showStatusModal(true);
+                    generalForm.reset();
+                    generalSubmitBtn.innerHTML = originalContent;
+                    generalSubmitBtn.disabled = false;
+                    if (typeof grecaptcha !== 'undefined') grecaptcha.reset();
+                    if (typeof lucide !== 'undefined') lucide.createIcons();
+                })
+                .catch(error => {
+                    console.warn("EmailJS failed, trying FormSubmit fallback...", error);
+                    sendGenFormSubmitFallback();
+                });
+            } else {
+                sendGenFormSubmitFallback();
+            }
         });
     }
 
