@@ -58,13 +58,26 @@ def audit():
         ("收起文章", "日文版請使用 '記事を閉じる'"),
         ("游標卡尺", "日文版請使用 'ノギス'"),
     ]
+    # 日文未採用之繁體專用字集（排除 HTML 註解、data-value、_subject、繁中）
+    strictly_tc_chars = set("灣莊區號權閱讀關實產證們錄專營壓體國廠處擊傳檔詢價擇發應變學與對為從還經點當將樣氣齒龍龜數游")
     for f in ja_html:
         with open(f, "r", encoding="utf-8") as fp:
-            content = fp.read()
+            lines = fp.readlines()
+        content = "".join(lines)
         for term, suggestion in ja_forbidden:
             count = content.count(term)
             if count > 0:
                 print(f"❌ [日文版語言污染] {f} 出現 {count} 次 '{term}' -> {suggestion}")
+                errors += 1
+        for idx, line in enumerate(lines, 1):
+            if "<!--" in line and "-->" in line:
+                continue
+            if 'data-value=' in line or '_subject' in line or 'hreflang="zh-TW"' in line:
+                continue
+            clean = line.replace("繁中", "")
+            found = sorted(set(ch for ch in clean if ch in strictly_tc_chars))
+            if found:
+                print(f"❌ [日文版繁體字元殘留] {f}:{idx} 發現繁體字 {found} -> {line.strip()[:60]}")
                 errors += 1
 
     # 3. 檢查英文頁面中的中文字元殘留與台灣市話區碼
@@ -77,9 +90,34 @@ def audit():
             if '(02)' in line or 'tel:02' in line:
                 print(f"❌ [英文版台灣市話殘留] {f}:{idx} 出現 '(02)' 或 'tel:02' -> 請改用 '+886-2-'")
                 errors += 1
-            if '加工服務' in line or '鈞翔' in line or '高規格防水密封' in line or '閱讀全文' in line or '收起文章' in line or 'OEM OEM' in line:
-                print(f"⚠️ [英文版中文/語法殘留] {f}:{idx} -> {line.strip()[:60]}")
+            clean = line.replace("繁中", "").replace("日本語", "")
+            if re.search(r'[\u4e00-\u9fff]', clean):
+                print(f"❌ [英文版中文字元殘留] {f}:{idx} -> {line.strip()[:60]}")
+                errors += 1
+            if 'OEM OEM' in line:
+                print(f"⚠️ [英文版語法殘留] {f}:{idx} -> {line.strip()[:60]}")
                 warnings += 1
+
+    # 4. [Zero-Friction RFQ] 全站轉單四件套完整性檢查 (Phone / Email / Mobile Menu / RFQ Form)
+    for f in all_html:
+        if not is_public_page(f):
+            continue
+        with open(f, "r", encoding="utf-8") as fp:
+            c = fp.read()
+        if 'http-equiv="refresh"' in c:
+            continue
+        if "2203-9918" not in c and "22039918" not in c:
+            print(f"❌ [轉單缺漏: 電話] {f} 缺少電話號碼 2203-9918")
+            errors += 1
+        if "jojo.li888@msa.hinet.net" not in c:
+            print(f"❌ [轉單缺漏: 信箱] {f} 缺少聯絡信箱 jojo.li888@msa.hinet.net")
+            errors += 1
+        if 'id="mobile-menu"' not in c:
+            print(f"❌ [轉單缺漏: 手機選單] {f} 缺少 id=\"mobile-menu\"")
+            errors += 1
+        if 'id="nav-toggle"' in c:
+            print(f"❌ [過期選單代碼] {f} 仍使用已廢棄之 id=\"nav-toggle\"，請替換為標準 hamburger")
+            errors += 1
 
     # 4. [Agentic-SEO-Skill] 孤島頁面檢測 (Orphan Knowledge Article Detector)
     hub_files = {
