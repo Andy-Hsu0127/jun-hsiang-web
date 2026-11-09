@@ -118,6 +118,27 @@ def audit():
         if 'id="nav-toggle"' in c:
             print(f"❌ [過期選單代碼] {f} 仍使用已廢棄之 id=\"nav-toggle\"，請替換為標準 hamburger")
             errors += 1
+        m_nav = re.search(r'<nav\b[^>]*>.*?</nav>', c, re.S)
+        if m_nav:
+            nav = m_nav.group(0)
+            if len(re.findall(r'<div\b', nav)) != len(re.findall(r'</div>', nav)):
+                print(f"❌ [DOM 標籤不對稱] {f} 的 <nav> 內 <div> 開閉數量不一致")
+                errors += 1
+            if 'class="lang-switcher"' not in nav and 'class="lang-selector"' not in nav:
+                print(f"❌ [缺漏電腦版語言切換器] {f} 的 <nav> 缺少 .lang-switcher 或 .lang-selector")
+                errors += 1
+        m_foot = re.search(r'<footer\b[^>]*>.*?</footer>', c, re.S)
+        if m_foot:
+            foot = m_foot.group(0)
+            if len(re.findall(r'<div\b', foot)) != len(re.findall(r'</div>', foot)):
+                print(f"❌ [DOM 標籤不對稱] {f} 的 <footer> 內 <div> 開閉數量不一致")
+                errors += 1
+        base = os.path.basename(f)
+        if base.startswith("knowledge-"):
+            for m_lang in re.finditer(r'<div class="(?:lang-dropdown|lang-switcher|mobile-lang-links)">(.*?)</div>', c, re.S):
+                if base not in m_lang.group(1):
+                    print(f"❌ [跨語系切換錯誤] {f} 的語言切換器未精準指向 {base}（禁止指向總覽頁 knowledge.html）")
+                    errors += 1
 
     # 4. [Agentic-SEO-Skill] 孤島頁面檢測 (Orphan Knowledge Article Detector)
     hub_files = {
