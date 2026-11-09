@@ -43,11 +43,20 @@ def audit():
         print(f"⚠️ [CWV 效能警告] 共 {len(noto_pages)} 個頁面仍引入 Google Fonts 中文字型 (Noto Sans TC/JP)，將拖慢行動版 FCP/LCP：{noto_pages[:5]} ...")
         warnings += len(noto_pages)
 
-    # 2. 檢查日文頁面中的繁中殘留 (i18n leakage)
+    # 2. 檢查日文頁面中的繁中殘留與台灣市話區碼 (i18n leakage)
     ja_forbidden = [
         ("加工服務", "請替換為 '加工サービス'"),
         ("鈞翔實業", "日文請使用日文漢字 '鈞翔実業'"),
         ("高規格防水密封", "請替換為日文 '高気密防水シール'"),
+        ("(02)", "外語版電話/傳真請一律使用國際區碼 '+886-2-'"),
+        ("tel:02", "外語版 tel: 連結請一律使用 'tel:+8862'"),
+        ("台灣", "日文版請使用日文漢字 '台湾'"),
+        ("新莊", "日文版請使用日文漢字 '新荘'"),
+        ("版權所有", "日文版請使用 'All Rights Reserved.'"),
+        ("技術知識庫", "日文版請使用 '技術知識ベース'"),
+        ("閱讀全文", "日文版請使用 '全文を読む'"),
+        ("收起文章", "日文版請使用 '記事を閉じる'"),
+        ("游標卡尺", "日文版請使用 'ノギス'"),
     ]
     for f in ja_html:
         with open(f, "r", encoding="utf-8") as fp:
@@ -58,14 +67,17 @@ def audit():
                 print(f"❌ [日文版語言污染] {f} 出現 {count} 次 '{term}' -> {suggestion}")
                 errors += 1
 
-    # 3. 檢查英文頁面中的中文字元殘留
+    # 3. 檢查英文頁面中的中文字元殘留與台灣市話區碼
     for f in en_html:
         with open(f, "r", encoding="utf-8") as fp:
             lines = fp.readlines()
         for idx, line in enumerate(lines, 1):
             if 'hreflang="zh-TW"' in line or 'lang="zh-TW"' in line or 'JSON-LD' in line or 'maps.google.com' in line:
                 continue
-            if '加工服務' in line or '鈞翔' in line or '高規格防水密封' in line or 'OEM OEM' in line:
+            if '(02)' in line or 'tel:02' in line:
+                print(f"❌ [英文版台灣市話殘留] {f}:{idx} 出現 '(02)' 或 'tel:02' -> 請改用 '+886-2-'")
+                errors += 1
+            if '加工服務' in line or '鈞翔' in line or '高規格防水密封' in line or '閱讀全文' in line or '收起文章' in line or 'OEM OEM' in line:
                 print(f"⚠️ [英文版中文/語法殘留] {f}:{idx} -> {line.strip()[:60]}")
                 warnings += 1
 
