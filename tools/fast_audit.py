@@ -206,9 +206,29 @@ def audit():
             print(f"⚠️ [GEO 引用缺漏] {f} 缺少 TechArticle 或 FAQPage 結構化資料")
             warnings += 1
 
+    # 8. [Zero-Friction RFQ] 外語商業頁與獨立文章 100% 表單與一鍵複製信箱覆蓋檢查
+    for f in en_html + ja_html:
+        if not is_public_page(f):
+            continue
+        with open(f, "r", encoding="utf-8") as fp:
+            c = fp.read()
+        if 'http-equiv="refresh"' in c:
+            continue
+        if 'data-copy-email="jojo.li888@msa.hinet.net"' not in c:
+            print(f"❌ [轉單缺漏: 一鍵複製信箱] {f} 缺少 data-copy-email=\"jojo.li888@msa.hinet.net\"")
+            errors += 1
+        if "contact.html" in c:
+            print(f"❌ [死連結 404] {f} 包含不存在的 contact.html 連結（請改用 #rfq-section 或 index.html#contact）")
+            errors += 1
+        if os.path.basename(f) == "knowledge.html":
+            continue
+        if "formsubmit.co/jojo.li888@msa.hinet.net" not in c or 'type="file"' not in c:
+            print(f"❌ [轉單缺漏: 內嵌帶圖詢價表單] {f} 缺少 formsubmit.co 內嵌表單或 type=\"file\" 上傳欄位")
+            errors += 1
+
     print("------------------------------------------")
     if errors == 0 and warnings == 0:
-        print(f"✅ 檢查完成！全站 {len(all_html)} 個頁面無語言污染、無孤島頁、無 H1 互搶、無 CWV 字型阻塞。")
+        print(f"🎉 檢查完成！全站 {len(all_html)} 個頁面 100% 通過極速審計（0 錯誤、0 警告）！")
     else:
         print(f"檢測結果：{errors} 個錯誤，{warnings} 個警告。")
 
