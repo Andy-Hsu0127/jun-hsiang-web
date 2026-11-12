@@ -226,6 +226,21 @@ def audit():
             print(f"❌ [轉單缺漏: 內嵌帶圖詢價表單] {f} 缺少 formsubmit.co 內嵌表單或 type=\"file\" 上傳欄位")
             errors += 1
 
+    # 9. [GSC Indexing Guard] 外語版標準首頁連結統一與空白膨脹檢查
+    for f in en_html + ja_html:
+        if not is_public_page(f):
+            continue
+        with open(f, "r", encoding="utf-8") as fp:
+            c = fp.read()
+        if 'http-equiv="refresh"' in c:
+            continue
+        if re.search(r'href="(?:index\.html(?:#[^"]*)?|\.\./(?:en|ja)/index\.html(?:#[^"]*)?)"', c):
+            print(f"❌ [Canonical 網址分裂] {f} 仍使用非標準首頁連結 href=\"index.html\"，請改為 \"./\" 或 \"../en/\" / \"../ja/\"")
+            errors += 1
+        if re.search(r'\n(?:[ \t]*\n){5,}', c):
+            print(f"❌ [HTML 空白行膨脹] {f} 包含連續超過 5 行的空白換行，會稀釋 Code-to-Text Ratio")
+            errors += 1
+
     print("------------------------------------------")
     if errors == 0 and warnings == 0:
         print(f"🎉 檢查完成！全站 {len(all_html)} 個頁面 100% 通過極速審計（0 錯誤、0 警告）！")

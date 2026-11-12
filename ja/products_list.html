@@ -25,7 +25,6 @@
 <meta content="https://www.jun-hsiang.com.tw/images/og-image.png" property="og:image"/>
 <meta content="#0A0F1C" name="theme-color"/>
 
-
 <link href="../images/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
 <link href="../css/style.css?v=1.2.0" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
@@ -362,18 +361,18 @@
 </div>
 <nav class="navbar" id="navbar">
 <div class="container">
-<a class="nav-logo" href="index.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'ja')" id="nav-logo">
+<a class="nav-logo" href="./" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'ja')" id="nav-logo">
 <div class="logo-icon">鈞</div>
 <span>鈞翔実業</span>
 </a>
 <div class="nav-links" id="nav-links">
-<a class="nav-link" href="index.html#about">会社概要</a>
+<a class="nav-link" href="./#about">会社概要</a>
 <a class="nav-link" href="service.html">加工サービス</a>
 <a class="nav-link" href="products_list.html">製品一覧</a>
 <a class="nav-link" href="knowledge.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'ja')">技術知識</a>
-<a class="nav-link" href="index.html#quality">品質認証</a>
-<a class="nav-link" href="index.html#contact">お問い合わせ</a>
-<a class="btn-nav-cta" href="index.html#contact"><svg class="lucide lucide-mail" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:14px;height:14px;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect height="16" rx="2" width="20" x="2" y="4"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg> お見積り</a>
+<a class="nav-link" href="./#quality">品質認証</a>
+<a class="nav-link" href="./#contact">お問い合わせ</a>
+<a class="btn-nav-cta" href="./#contact"><svg class="lucide lucide-mail" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:14px;height:14px;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect height="16" rx="2" width="20" x="2" y="4"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg> お見積り</a>
 <div class="lang-selector">
 <button class="lang-selector-btn" aria-label="Select Language">
 <svg class="lucide lucide-globe" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" style="width:16px;height:16px;margin-right:4px;" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
@@ -400,7 +399,7 @@
 <a class="nav-link active" href="products_list.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'ja')">製品紹介</a>
 <a class="nav-link" href="knowledge.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'ja')">技術知識</a>
 <a class="nav-link" href="./#quality">品質認証</a>
-<a class="nav-link" href="index.html#contact">お問い合わせ</a>
+<a class="nav-link" href="./#contact">お問い合わせ</a>
 <div class="mobile-lang-links">
 <a href="../products_list.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'zh-TW')" class="mobile-lang-link">繁中</a>
 <span style="color: rgba(255,255,255,0.2);">|</span>
@@ -733,6 +732,15 @@
             </a>
             <button type="button" data-copy-email="jojo.li888@msa.hinet.net" style="background:var(--color-accent);color:#fff;border:none;border-radius:6px;padding:4px 10px;font-size:0.8rem;font-weight:700;cursor:pointer;">📋 メールをコピー</button>
         </div>
+
+        <div style="margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--color-border); text-align: left;">
+            <p style="font-size: 0.9rem; font-weight: 700; color: var(--color-text-primary); margin-bottom: 0.75rem;">関連技術ガイド：</p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0.6rem; font-size: 0.85rem;">
+                <a href="knowledge-silicone-factory-guide.html" style="color: var(--color-accent); text-decoration: underline;">シリコーン受託製造・OEM工場の選定ガイド</a>
+                <a href="knowledge-uav-silicone-parts.html" style="color: var(--color-accent); text-decoration: underline;">ドローン（UAV）精密シリコーン防振・防水設計ガイド</a>
+                <a href="knowledge-lsr-liquid-silicone.html" style="color: var(--color-accent); text-decoration: underline;">LSR（液状シリコーンゴム）射出成形ガイド</a>
+            </div>
+        </div>
     </div>
 </section>
 <footer class="footer">
@@ -753,7 +761,7 @@
 <li><a href="products_list.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'ja')">製品紹介</a></li>
 <li><a href="knowledge.html" onclick="localStorage.setItem('jun_hsiang_lang_pref', 'ja')">技術知識ベース</a></li>
 <li><a href="./#quality">品質認証</a></li>
-<li><a href="index.html#contact">お問い合わせ</a></li>
+<li><a href="./#contact">お問い合わせ</a></li>
 </ul>
 </div>
 <div class="footer-contact">
