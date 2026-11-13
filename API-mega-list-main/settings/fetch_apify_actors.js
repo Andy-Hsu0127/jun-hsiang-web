@@ -133,11 +133,25 @@ async function fetchAllActors(limit = 100) {
     return allActors;
 }
 
+const BASE_OUTPUT_DIR = path.resolve(__dirname, '..');
+
+function resolveSafeOutputPath(filename) {
+    const baseName = path.basename(String(filename || ''));
+    if (!baseName || baseName === '.' || baseName === '..') {
+        throw new Error(`Invalid output filename: ${filename}`);
+    }
+    const resolved = path.resolve(BASE_OUTPUT_DIR, baseName);
+    if (!resolved.startsWith(BASE_OUTPUT_DIR + path.sep)) {
+        throw new Error(`Unsafe output path: ${resolved}`);
+    }
+    return resolved;
+}
+
 /**
  * Save actors data to JSON file
  */
 function saveToJSON(actors, filename = 'apify_actors.json') {
-    const filePath = path.join(__dirname, '..', filename);
+    const filePath = resolveSafeOutputPath(filename);
     fs.writeFileSync(filePath, JSON.stringify(actors, null, 2), 'utf-8');
     console.log(`Saved ${actors.length} actors to ${filename}`);
 }
@@ -215,7 +229,7 @@ function generateMarkdownList(actors, filename = 'APIFY_ACTORS.md') {
     content += `*Total: ${actors.length} Actors*\n`;
     content += `*Last updated: ${new Date().toISOString().split('T')[0]} ${new Date().toTimeString().split(' ')[0]}*\n`;
 
-    const filePath = path.join(__dirname, '..', filename);
+    const filePath = resolveSafeOutputPath(filename);
     fs.writeFileSync(filePath, content, 'utf-8');
     console.log(`Generated markdown list: ${filename}`);
 }
@@ -234,7 +248,7 @@ function generateSimpleList(actors, filename = 'apify_actors_simple.txt') {
         return `${title}|${affiliateUrl}`;
     });
 
-    const filePath = path.join(__dirname, '..', filename);
+    const filePath = resolveSafeOutputPath(filename);
     fs.writeFileSync(filePath, lines.join('\n'), 'utf-8');
     console.log(`Generated simple list: ${filename}`);
 }

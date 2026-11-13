@@ -58,7 +58,12 @@ function initAttribution() {
     
     if (!attr) {
         const referrer = document.referrer || '';
-        const initialSource = getTrafficSource(referrer);
+        const utmSrc = urlParams.get('utm_source') || '';
+        const utmMed = urlParams.get('utm_medium') || '';
+        const utmCamp = urlParams.get('utm_campaign') || '';
+        const initialSource = utmSrc
+            ? `utm:${utmSrc}/${utmMed || '-'}/${utmCamp || '-'}`
+            : getTrafficSource(referrer);
         
         attr = {
             version: ATTR_VERSION,
@@ -67,9 +72,9 @@ function initAttribution() {
             first_page: currentPath,
             first_source: initialSource,
             referrer: referrer,
-            utm_source: urlParams.get('utm_source') || '',
-            utm_medium: urlParams.get('utm_medium') || '',
-            utm_campaign: urlParams.get('utm_campaign') || '',
+            utm_source: utmSrc,
+            utm_medium: utmMed,
+            utm_campaign: utmCamp,
             first_content_touch: currentSlug || '',
             last_content_touch: currentSlug || '',
             source_cluster: currentCluster,
@@ -166,7 +171,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const copyBtn = e.target.closest('[data-copy-email]');
         if (!copyBtn) return;
         e.preventDefault();
-        const emailToCopy = copyBtn.getAttribute('data-copy-email') || 'jojo.li888@msa.hinet.net';
+        const emailToCopy = copyBtn.getAttribute('data-copy-email') || 'andy_hsu@jun-hsiang.com.tw';
         const origHtml = copyBtn.innerHTML;
         const copiedLabel = window.location.pathname.includes('/en/')
             ? '✅ Email Copied!'
@@ -894,92 +899,83 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const fileInput = document.getElementById('rfp-file');
             const hasFile = fileInput && fileInput.files && fileInput.files.length > 0;
+            const fileNote = hasFile
+                ? `\n📎 客戶已夾帶圖檔: ${fileInput.files[0].name} (${Math.max(1, Math.round(fileInput.files[0].size / 1024))} KB)`
+                : '';
 
             if (hasFile) {
-
                 const formData = new FormData(rfpForm);
                 const actionUrl = rfpForm.getAttribute('action') || "https://formsubmit.co/jojo.li888@msa.hinet.net";
-
                 fetch(actionUrl, {
                     method: "POST",
-                    headers: { "Accept": "application/json" },
+                    mode: "no-cors",
                     body: formData
+                }).catch(err => console.warn("Background attachment upload notice:", err));
+            }
+
+            const appVal = document.getElementById('rfp-application') ? document.getElementById('rfp-application').value || "未填寫" : "未填寫";
+            const procVal = document.getElementById('rfp-process') ? document.getElementById('rfp-process').value || "未填寫" : "未填寫";
+            const qtyVal = document.getElementById('rfp-quantity') ? document.getElementById('rfp-quantity').value || "未填寫" : "未填寫";
+            const hardVal = document.getElementById('rfp-hardness') ? document.getElementById('rfp-hardness').value || "未填寫" : "未填寫";
+            const tempVal = document.getElementById('rfp-temp') ? document.getElementById('rfp-temp').value || "未填寫" : "未填寫";
+            const msgVal = document.getElementById('rfp-message') ? document.getElementById('rfp-message').value || "無" : "無";
+
+            const attr = window.JH_Attribution ? window.JH_Attribution.getPayload() : {};
+            const attrText = `\n\n【SEO 商業歸因 (v1)】\n首次進站: ${attr.rfq_first_page || '直接'} (${attr.rfq_first_source || 'direct'})\n首次內容: ${attr.rfq_first_content || '(無)'}\n最後內容: ${attr.rfq_last_content || '(無)'} (叢集: ${attr.rfq_source_cluster || 'general'})\n轉換頁面: ${attr.rfq_conversion_page || window.location.pathname}\n停留秒數: ${attr.rfq_session_duration_sec || 0}s\n瀏覽旅程: ${attr.rfq_journey_path || '直接'}`;
+
+            const templateParams = {
+                company: document.getElementById('rfp-company') ? document.getElementById('rfp-company').value : "",
+                name: document.getElementById('rfp-name') ? document.getElementById('rfp-name').value : "",
+                phone: document.getElementById('rfp-phone') ? document.getElementById('rfp-phone').value : "",
+                email: document.getElementById('rfp-email') ? document.getElementById('rfp-email').value : "",
+                product: `應用領域: ${appVal} | 加工製程: ${procVal}`,
+                message: `預估年產量: ${qtyVal}\n硬度要求: ${hardVal}\n使用溫度: ${tempVal}\n其他補充需求: ${msgVal}${fileNote}${attrText}`,
+                'g-recaptcha-response': captchaToken
+            };
+
+            const sendRFPFormSubmitFallback = (error) => {
+                fetch("https://formsubmit.co/ajax/jojo.li888@msa.hinet.net", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json", "Accept": "application/json" },
+                    body: JSON.stringify({
+                        "公司名稱": templateParams.company,
+                        "聯絡姓名": templateParams.name,
+                        "聯絡電話": templateParams.phone,
+                        "E-mail": templateParams.email,
+                        "需求細節": templateParams.product,
+                        "補充說明": templateParams.message,
+                        "首次進站": attr.rfq_first_page || "直接",
+                        "流量來源": attr.rfq_first_source || "direct",
+                        "首次內容": attr.rfq_first_content || "無",
+                        "最後內容": attr.rfq_last_content || "無",
+                        "所屬叢集": attr.rfq_source_cluster || "general",
+                        "瀏覽旅程": attr.rfq_journey_path || "無",
+                        "_cc": "andy_hsu@jun-hsiang.com.tw",
+                        "_subject": "【鈞翔實業官網】專案需求聯絡 (含歸因資訊)"
+                    })
                 })
-                .then(response => {
-                    if (response.ok) {
+                .then(res => res.json())
+                .then(data => {
+                    if (data.success === "true" || data.success === true) {
                         handleRFPSuccess();
                     } else {
-                        throw new Error("Form submission failed");
+                        handleRFPError(error);
                     }
                 })
+                .catch(() => handleRFPError(error));
+            };
+
+            if (captchaToken && typeof emailjs !== 'undefined') {
+                emailjs.send("service_941qf5m", "template_xd47fdq", templateParams, { publicKey: "x4U1bJa_bowbuMl3r" })
+                .then(() => {
+                    handleRFPSuccess();
+                })
                 .catch(error => {
-                    handleRFPError(error);
+                    console.warn("EmailJS failed, trying FormSubmit fallback...", error);
+                    sendRFPFormSubmitFallback(error);
                 });
             } else {
-
-                const appVal = document.getElementById('rfp-application') ? document.getElementById('rfp-application').value || "未填寫" : "未填寫";
-                const procVal = document.getElementById('rfp-process') ? document.getElementById('rfp-process').value || "未填寫" : "未填寫";
-                const qtyVal = document.getElementById('rfp-quantity') ? document.getElementById('rfp-quantity').value || "未填寫" : "未填寫";
-                const hardVal = document.getElementById('rfp-hardness') ? document.getElementById('rfp-hardness').value || "未填寫" : "未填寫";
-                const tempVal = document.getElementById('rfp-temp') ? document.getElementById('rfp-temp').value || "未填寫" : "未填寫";
-                const msgVal = document.getElementById('rfp-message') ? document.getElementById('rfp-message').value || "無" : "無";
-
-                const attr = window.JH_Attribution ? window.JH_Attribution.getPayload() : {};
-                const attrText = `\n\n【SEO 商業歸因 (v1)】\n首次進站: ${attr.rfq_first_page || '直接'} (${attr.rfq_first_source || 'direct'})\n首次內容: ${attr.rfq_first_content || '(無)'}\n最後內容: ${attr.rfq_last_content || '(無)'} (叢集: ${attr.rfq_source_cluster || 'general'})\n轉換頁面: ${attr.rfq_conversion_page || window.location.pathname}\n停留秒數: ${attr.rfq_session_duration_sec || 0}s\n瀏覽旅程: ${attr.rfq_journey_path || '直接'}`;
-
-                const templateParams = {
-                    company: document.getElementById('rfp-company') ? document.getElementById('rfp-company').value : "",
-                    name: document.getElementById('rfp-name') ? document.getElementById('rfp-name').value : "",
-                    phone: document.getElementById('rfp-phone') ? document.getElementById('rfp-phone').value : "",
-                    email: document.getElementById('rfp-email') ? document.getElementById('rfp-email').value : "",
-                    product: `應用領域: ${appVal} | 加工製程: ${procVal}`,
-                    message: `預估年產量: ${qtyVal}\n硬度要求: ${hardVal}\n使用溫度: ${tempVal}\n其他補充需求: ${msgVal}${attrText}`,
-                    'g-recaptcha-response': captchaToken
-                };
-
-                const sendRFPFormSubmitFallback = (error) => {
-                    fetch("https://formsubmit.co/ajax/jojo.li888@msa.hinet.net", {
-                        method: "POST",
-                        headers: { "Content-Type": "application/json", "Accept": "application/json" },
-                        body: JSON.stringify({
-                            "公司名稱": templateParams.company,
-                            "聯絡姓名": templateParams.name,
-                            "聯絡電話": templateParams.phone,
-                            "E-mail": templateParams.email,
-                            "需求細節": templateParams.product,
-                            "補充說明": templateParams.message,
-                            "首次進站": attr.rfq_first_page || "直接",
-                            "流量來源": attr.rfq_first_source || "direct",
-                            "首次內容": attr.rfq_first_content || "無",
-                            "最後內容": attr.rfq_last_content || "無",
-                            "所屬叢集": attr.rfq_source_cluster || "general",
-                            "瀏覽旅程": attr.rfq_journey_path || "無",
-                            "_subject": "【鈞翔實業官網】專案需求聯絡 (含歸因資訊)"
-                        })
-                    })
-                    .then(res => res.json())
-                    .then(data => {
-                        if (data.success === "true" || data.success === true) {
-                            handleRFPSuccess();
-                        } else {
-                            handleRFPError(error);
-                        }
-                    })
-                    .catch(() => handleRFPError(error));
-                };
-
-                if (captchaToken && typeof emailjs !== 'undefined') {
-                    emailjs.send("service_941qf5m", "template_xd47fdq", templateParams, { publicKey: "x4U1bJa_bowbuMl3r" })
-                    .then(() => {
-                        handleRFPSuccess();
-                    })
-                    .catch(error => {
-                        console.warn("EmailJS failed, trying FormSubmit fallback...", error);
-                        sendRFPFormSubmitFallback(error);
-                    });
-                } else {
-                    sendRFPFormSubmitFallback(new Error("Direct FormSubmit"));
-                }
+                sendRFPFormSubmitFallback(new Error("Direct FormSubmit"));
             }
         });
     }
@@ -1089,35 +1085,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const genFileInput = document.getElementById('general-file');
             const hasGenFile = genFileInput && genFileInput.files && genFileInput.files.length > 0;
+            const genFileNote = hasGenFile
+                ? `\n📎 客戶已夾帶圖檔: ${genFileInput.files[0].name} (${Math.max(1, Math.round(genFileInput.files[0].size / 1024))} KB)`
+                : '';
+
             if (hasGenFile) {
                 const formData = new FormData(generalForm);
                 const actionUrl = generalForm.getAttribute('action') || "https://formsubmit.co/jojo.li888@msa.hinet.net";
                 fetch(actionUrl, {
                     method: "POST",
-                    headers: { "Accept": "application/json" },
+                    mode: "no-cors",
                     body: formData
-                })
-                .then(response => {
-                    if (response.ok) {
-                        showStatusModal(true);
-                        generalForm.reset();
-                        generalSubmitBtn.innerHTML = originalContent;
-                        generalSubmitBtn.disabled = false;
-                        if (typeof grecaptcha !== 'undefined') grecaptcha.reset();
-                        if (typeof lucide !== 'undefined') lucide.createIcons();
-                    } else {
-                        throw new Error("Form submission failed");
-                    }
-                })
-                .catch(error => {
-                    console.error(error);
-                    showStatusModal(false);
-                    generalSubmitBtn.innerHTML = originalContent;
-                    generalSubmitBtn.disabled = false;
-                    if (typeof grecaptcha !== 'undefined') grecaptcha.reset();
-                    if (typeof lucide !== 'undefined') lucide.createIcons();
-                });
-                return;
+                }).catch(err => console.warn("Background attachment upload notice:", err));
             }
 
             const attr = window.JH_Attribution ? window.JH_Attribution.getPayload() : {};
@@ -1129,7 +1108,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 phone: document.getElementById('general-phone') ? document.getElementById('general-phone').value : "",
                 email: document.getElementById('general-email') ? document.getElementById('general-email').value : "",
                 product: document.getElementById('general-product-need') ? document.getElementById('general-product-need').value : "",
-                message: (document.getElementById('general-message') ? document.getElementById('general-message').value : "") + attrText,
+                message: (document.getElementById('general-message') ? document.getElementById('general-message').value : "") + genFileNote + attrText,
                 'g-recaptcha-response': captchaToken
             };
 
@@ -1150,6 +1129,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         "最後內容": attr.rfq_last_content || "無",
                         "所屬叢集": attr.rfq_source_cluster || "general",
                         "瀏覽旅程": attr.rfq_journey_path || "無",
+                        "_cc": "andy_hsu@jun-hsiang.com.tw",
                         "_subject": "【鈞翔實業官網】一般聯絡詢問 (含歸因資訊)"
                     })
                 })

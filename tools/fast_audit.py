@@ -109,8 +109,8 @@ def audit():
         if "2203-9918" not in c and "22039918" not in c:
             print(f"❌ [轉單缺漏: 電話] {f} 缺少電話號碼 2203-9918")
             errors += 1
-        if "jojo.li888@msa.hinet.net" not in c:
-            print(f"❌ [轉單缺漏: 信箱] {f} 缺少聯絡信箱 jojo.li888@msa.hinet.net")
+        if "andy_hsu@jun-hsiang.com.tw" not in c:
+            print(f"❌ [轉單缺漏: 信箱] {f} 缺少聯絡信箱 andy_hsu@jun-hsiang.com.tw")
             errors += 1
         if 'id="mobile-menu"' not in c:
             print(f"❌ [轉單缺漏: 手機選單] {f} 缺少 id=\"mobile-menu\"")
@@ -214,8 +214,8 @@ def audit():
             c = fp.read()
         if 'http-equiv="refresh"' in c:
             continue
-        if 'data-copy-email="jojo.li888@msa.hinet.net"' not in c:
-            print(f"❌ [轉單缺漏: 一鍵複製信箱] {f} 缺少 data-copy-email=\"jojo.li888@msa.hinet.net\"")
+        if 'data-copy-email="andy_hsu@jun-hsiang.com.tw"' not in c:
+            print(f"❌ [轉單缺漏: 一鍵複製信箱] {f} 缺少 data-copy-email=\"andy_hsu@jun-hsiang.com.tw\"")
             errors += 1
         if "contact.html" in c:
             print(f"❌ [死連結 404] {f} 包含不存在的 contact.html 連結（請改用 #rfq-section 或 index.html#contact）")
@@ -239,6 +239,20 @@ def audit():
             errors += 1
         if re.search(r'\n(?:[ \t]*\n){5,}', c):
             print(f"❌ [HTML 空白行膨脹] {f} 包含連續超過 5 行的空白換行，會稀釋 Code-to-Text Ratio")
+            errors += 1
+
+    # 10. [Resend / reCAPTCHA 必達保證] 所有知識庫文章表單必須掛載 g-recaptcha
+    for f in all_html:
+        if not is_public_page(f):
+            continue
+        if not os.path.basename(f).startswith("knowledge-"):
+            continue
+        with open(f, "r", encoding="utf-8") as fp:
+            c = fp.read()
+        if 'http-equiv="refresh"' in c:
+            continue
+        if 'id="general-submit-btn"' in c and 'g-recaptcha' not in c:
+            print(f"❌ [發信斷路: 缺漏 reCAPTCHA] {f} 缺少 g-recaptcha，將跳過 EmailJS/Resend 發信")
             errors += 1
 
     print("------------------------------------------")

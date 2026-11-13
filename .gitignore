@@ -30,4 +30,10 @@ extracted_ppt_images/
 skills-lock.json
 temp/
 
+# 排除機密金鑰與暫存
+**/credentials/*.json
+*.pem
+*.key
+scratch/fb_reel.txt
+
 

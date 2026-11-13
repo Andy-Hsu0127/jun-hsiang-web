@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <a href="https://line.me" target="_blank" class="float-item line" title="LINE 客服">
             <i data-lucide="message-circle" style="width:22px;height:22px;"></i>
         </a>
-        <a href="mailto:jojo.li888@msa.hinet.net" class="float-item email" title="發送郵件">
+        <a href="mailto:andy_hsu@jun-hsiang.com.tw" class="float-item email" title="發送郵件">
             <i data-lucide="mail" style="width:22px;height:22px;"></i>
         </a>
         <div class="float-item back-to-top" title="回到頂部" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
