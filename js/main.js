@@ -859,22 +859,20 @@ document.addEventListener('DOMContentLoaded', () => {
         } catch (err) {}
     }
 
-    function shouldPromptCaptchaOnce(form, captchaToken) {
-        if (captchaToken || typeof grecaptcha === 'undefined') return false;
-        const box = form.querySelector('.g-recaptcha');
-        if (!box || box.offsetParent === null || box.innerHTML.trim() === '') return false;
-        if (form.dataset.captchaWarned === '1') return false;
-        form.dataset.captchaWarned = '1';
-        let hint = form.querySelector('.captcha-soft-hint');
-        if (!hint) {
-            hint = document.createElement('div');
-            hint.className = 'captcha-soft-hint';
-            hint.style.cssText = 'color:#f59e0b;background:rgba(245,158,11,0.1);border:1px solid rgba(245,158,11,0.35);border-radius:6px;padding:8px 12px;margin-bottom:10px;font-size:0.86rem;font-weight:600;';
-            box.parentNode.insertBefore(hint, box);
-        }
-        hint.textContent = t.captchaHint;
-        box.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        return true;
+    function sendViaEmailJS(templateParams) {
+        return fetch("https://api.emailjs.com/api/v1.0/email/send", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                service_id: "service_941qf5m",
+                template_id: "template_xd47fdq",
+                user_id: "x4U1bJa_bowbuMl3r",
+                template_params: templateParams
+            })
+        }).then(res => {
+            if (!res.ok) throw new Error("EmailJS HTTP " + res.status);
+            return res;
+        });
     }
 
     function showStatusModal(isSuccess, attachmentInfo) {
@@ -966,9 +964,6 @@ document.addEventListener('DOMContentLoaded', () => {
             if (honeyEl && honeyEl.value) return;
             const captchaEl = rfpForm.querySelector('[name="g-recaptcha-response"]');
             const captchaToken = captchaEl ? captchaEl.value : "";
-            if (shouldPromptCaptchaOnce(rfpForm, captchaToken)) {
-                return;
-            }
 
             const originalContent = rfpSubmitBtn.innerHTML;
             rfpSubmitBtn.innerHTML = `<span style="display:inline-flex;align-items:center;gap:8px;">${t.submitting}</span>`;
@@ -1077,18 +1072,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 .catch(() => handleRFPError(error));
             };
 
-            if (typeof emailjs !== 'undefined') {
-                emailjs.send("service_941qf5m", "template_xd47fdq", templateParams, { publicKey: "x4U1bJa_bowbuMl3r" })
-                .then(() => {
-                    handleRFPSuccess();
-                })
-                .catch(error => {
-                    console.warn("EmailJS failed, trying FormSubmit fallback...", error);
-                    sendRFPFormSubmitFallback(error);
-                });
-            } else {
-                sendRFPFormSubmitFallback(new Error("EmailJS unavailable"));
-            }
+            sendViaEmailJS(templateParams)
+            .then(() => {
+                handleRFPSuccess();
+            })
+            .catch(error => {
+                console.warn("EmailJS failed, trying FormSubmit fallback...", error);
+                sendRFPFormSubmitFallback(error);
+            });
         });
     }
 
@@ -1196,9 +1187,6 @@ document.addEventListener('DOMContentLoaded', () => {
             if (honeyEl && honeyEl.value) return;
             const captchaEl = generalForm.querySelector('[name="g-recaptcha-response"]');
             const captchaToken = captchaEl ? captchaEl.value : "";
-            if (shouldPromptCaptchaOnce(generalForm, captchaToken)) {
-                return;
-            }
 
             const originalContent = generalSubmitBtn.innerHTML;
             generalSubmitBtn.innerHTML = `<span style="display:inline-flex;align-items:center;gap:8px;">${t.submitting}</span>`;
@@ -1283,24 +1271,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             };
 
-            if (typeof emailjs !== 'undefined') {
-                emailjs.send("service_941qf5m", "template_xd47fdq", templateParams, { publicKey: "x4U1bJa_bowbuMl3r" })
-                .then(() => {
-                    showStatusModal(true, genAttachInfo);
-                    generalForm.reset();
-                    delete generalForm.dataset.captchaWarned;
-                    generalSubmitBtn.innerHTML = originalContent;
-                    generalSubmitBtn.disabled = false;
-                    resetAllRecaptchas();
-                    if (typeof lucide !== 'undefined') lucide.createIcons();
-                })
-                .catch(error => {
-                    console.warn("EmailJS failed, trying FormSubmit fallback...", error);
-                    sendGenFormSubmitFallback();
-                });
-            } else {
+            sendViaEmailJS(templateParams)
+            .then(() => {
+                showStatusModal(true, genAttachInfo);
+                generalForm.reset();
+                delete generalForm.dataset.captchaWarned;
+                generalSubmitBtn.innerHTML = originalContent;
+                generalSubmitBtn.disabled = false;
+                resetAllRecaptchas();
+                if (typeof lucide !== 'undefined') lucide.createIcons();
+            })
+            .catch(error => {
+                console.warn("EmailJS failed, trying FormSubmit fallback...", error);
                 sendGenFormSubmitFallback();
-            }
+            });
         });
     }
 
