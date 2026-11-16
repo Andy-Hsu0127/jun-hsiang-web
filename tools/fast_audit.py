@@ -206,8 +206,8 @@ def audit():
             print(f"⚠️ [GEO 引用缺漏] {f} 缺少 TechArticle 或 FAQPage 結構化資料")
             warnings += 1
 
-    # 8. [Zero-Friction RFQ] 外語商業頁與獨立文章 100% 表單與一鍵複製信箱覆蓋檢查
-    for f in en_html + ja_html:
+    # 8. [Zero-Friction RFQ] 全站三語商業頁與獨立文章 100% 表單、一鍵複製信箱與死錨點檢查
+    for f in all_html:
         if not is_public_page(f):
             continue
         with open(f, "r", encoding="utf-8") as fp:
@@ -218,23 +218,31 @@ def audit():
             print(f"❌ [轉單缺漏: 一鍵複製信箱] {f} 缺少 data-copy-email=\"andy_hsu@jun-hsiang.com.tw\"")
             errors += 1
         if "contact.html" in c:
-            print(f"❌ [死連結 404] {f} 包含不存在的 contact.html 連結（請改用 #rfq-section 或 index.html#contact）")
+            print(f"❌ [死連結 404] {f} 包含不存在的 contact.html 連結（請改用 #rfq-section 或 ./#contact）")
             errors += 1
+        if "DFM" in c:
+            print(f"❌ [禁用詞 DFM] {f} 包含 AGENTS.md 禁用字樣 'DFM'，請改為工程評估／模具結構設計")
+            errors += 1
+        for m_anch in re.finditer(r'href=["\']#([a-zA-Z0-9_-]+)["\']', c):
+            anch = m_anch.group(1)
+            if f'id="{anch}"' not in c and f"id='{anch}'" not in c:
+                print(f"❌ [死錨點按鈕 Dead Anchor] {f} 的 #{anch} 在頁面中找不到對應 id=\"{anch}\"")
+                errors += 1
         if os.path.basename(f) == "knowledge.html":
             continue
         if "formsubmit.co/jojo.li888@msa.hinet.net" not in c or 'type="file"' not in c:
             print(f"❌ [轉單缺漏: 內嵌帶圖詢價表單] {f} 缺少 formsubmit.co 內嵌表單或 type=\"file\" 上傳欄位")
             errors += 1
 
-    # 9. [GSC Indexing Guard] 外語版標準首頁連結統一與空白膨脹檢查
-    for f in en_html + ja_html:
+    # 9. [GSC Indexing Guard] 全站三語標準首頁連結統一與空白膨脹檢查
+    for f in all_html:
         if not is_public_page(f):
             continue
         with open(f, "r", encoding="utf-8") as fp:
             c = fp.read()
         if 'http-equiv="refresh"' in c:
             continue
-        if re.search(r'href="(?:index\.html(?:#[^"]*)?|\.\./(?:en|ja)/index\.html(?:#[^"]*)?)"', c):
+        if f in (en_html + ja_html) and re.search(r'href="(?:index\.html(?:#[^"]*)?|\.\./(?:en|ja)/index\.html(?:#[^"]*)?)"', c):
             print(f"❌ [Canonical 網址分裂] {f} 仍使用非標準首頁連結 href=\"index.html\"，請改為 \"./\" 或 \"../en/\" / \"../ja/\"")
             errors += 1
         if re.search(r'\n(?:[ \t]*\n){5,}', c):
@@ -254,6 +262,36 @@ def audit():
         if 'id="general-submit-btn"' in c and 'g-recaptcha' not in c:
             print(f"❌ [發信斷路: 缺漏 reCAPTCHA] {f} 缺少 g-recaptcha，將跳過 EmailJS/Resend 發信")
             errors += 1
+
+    # 11. [GSC Indexing Guard] 知識庫文章站內連入權重檢查 (同語系 In-links >= 3，防範「已檢索-尚未建立索引」)
+    for lang_prefix in ("", "en/", "ja/"):
+        lang_files = sorted(glob.glob(lang_prefix + "*.html"))
+        inlinks = {os.path.basename(p): set() for p in lang_files}
+        for p in lang_files:
+            if not is_public_page(p):
+                continue
+            with open(p, "r", encoding="utf-8") as fp:
+                c = fp.read()
+            if 'http-equiv="refresh"' in c:
+                continue
+            src = os.path.basename(p)
+            for m_href in re.finditer(r'href=["\']([^"\'#?]+)', c):
+                href = m_href.group(1)
+                if "/" in href or not href.endswith(".html"):
+                    continue
+                if href in inlinks and href != src:
+                    inlinks[href].add(src)
+        for p in lang_files:
+            base = os.path.basename(p)
+            if not is_public_page(p) or not base.startswith("knowledge-"):
+                continue
+            with open(p, "r", encoding="utf-8") as fp:
+                c = fp.read()
+            if 'http-equiv="refresh"' in c:
+                continue
+            if len(inlinks[base]) < 3:
+                print(f"⚠️ [低連入權重警告 Low In-links] {p} 同語系站內連入僅 {len(inlinks[base])} 個（須 ≥ 3），易掉入「已檢索-尚未建立索引」")
+                warnings += 1
 
     print("------------------------------------------")
     if errors == 0 and warnings == 0:

@@ -159,19 +159,58 @@ function populateFormFields() {
     });
 }
 
+function trackB2BConversion(actionType, label) {
+    try {
+        const payload = getAttributionPayload();
+        const path = window.location.pathname || '';
+        const lang = path.includes('/en/') ? 'en' : (path.includes('/ja/') ? 'ja' : 'zh-TW');
+        const eventData = {
+            event: 'b2b_conversion_action',
+            action_type: actionType,
+            action_label: label || '',
+            page_lang: lang,
+            article_slug: getArticleSlugFromPath(path) || 'non_article',
+            utm_source: payload.rfq_utm_source,
+            first_source: payload.rfq_first_source
+        };
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push(eventData);
+        if (typeof window.gtag === 'function') {
+            window.gtag('event', actionType, {
+                event_category: 'B2B_Conversion',
+                event_label: label || eventData.article_slug,
+                page_lang: lang,
+                utm_source: payload.rfq_utm_source
+            });
+        }
+    } catch (e) {}
+}
+
 window.JH_Attribution = {
     getPayload: getAttributionPayload,
-    populateForms: populateFormFields
+    populateForms: populateFormFields,
+    trackConversion: trackB2BConversion
 };
 
 document.addEventListener('DOMContentLoaded', () => {
     populateFormFields();
 
     document.addEventListener('click', (e) => {
+        const mailLink = e.target.closest('a[href^="mailto:"]');
+        if (mailLink) {
+            trackB2BConversion(mailLink.getAttribute('data-track-action') || 'click_email_cta', mailLink.getAttribute('href').split('?')[0]);
+        }
+
+        const pdfLink = e.target.closest('a[data-track-action="download_pdf"]');
+        if (pdfLink) {
+            trackB2BConversion('download_pdf', pdfLink.getAttribute('href'));
+        }
+
         const copyBtn = e.target.closest('[data-copy-email]');
         if (!copyBtn) return;
         e.preventDefault();
         const emailToCopy = copyBtn.getAttribute('data-copy-email') || 'andy_hsu@jun-hsiang.com.tw';
+        trackB2BConversion('copy_email', emailToCopy);
         const origHtml = copyBtn.innerHTML;
         const copiedLabel = window.location.pathname.includes('/en/')
             ? '✅ Email Copied!'
@@ -198,6 +237,13 @@ document.addEventListener('DOMContentLoaded', () => {
             try { document.execCommand('copy'); } catch (err) {}
             document.body.removeChild(ta);
             showCopied();
+        }
+    });
+
+    document.addEventListener('submit', (e) => {
+        const form = e.target.closest('#contact-form, #general-contact-form');
+        if (form) {
+            trackB2BConversion('submit_rfq_form', form.id);
         }
     });
 
@@ -640,6 +686,10 @@ document.addEventListener('DOMContentLoaded', () => {
             submitSuccessDesc: '感謝您的來信，我們將盡速安排專人與您聯絡。',
             submitFailTitle: '傳送失敗',
             submitFailDesc: '抱歉，系統目前無法處理您的請求，請直接來電或稍後重試。',
+            captchaHint: '💡 請勾選上方「我不是機器人」安全驗證以立即送出（若無法顯示驗證框，再點一次送出按鈕即可直接傳送）。',
+            attachFollowupDesc: '為確保您的工程圖檔（{file}）完整送達不被濾除，請點擊下方按鈕直接開啟信箱夾帶原檔寄出：',
+            attachBtnText: '📎 開啟信箱夾帶原檔寄至 andy_hsu@jun-hsiang.com.tw',
+            floatingRfq: '✉️ 傳圖詢價',
             close: '關閉'
         },
         en: {
@@ -651,7 +701,11 @@ document.addEventListener('DOMContentLoaded', () => {
             submitSuccessTitle: 'Message Sent Successfully!',
             submitSuccessDesc: 'Thank you for your message. Our representative will contact you as soon as possible.',
             submitFailTitle: 'Submission Failed',
-            submitFailDesc: 'Sorry, we are unable to process your request at this time. Please call us directly or try again later.',
+            submitFailDesc: 'Sorry, we are unable to process your request at this time. Please email us directly at andy_hsu@jun-hsiang.com.tw or try again later.',
+            captchaHint: '💡 Please check the "I am not a robot" box above to send (or click Submit once more to send directly if the widget is blocked).',
+            attachFollowupDesc: 'To ensure your CAD/drawing file ({file}) arrives intact without mail-server size/type filtering, please click below to attach and email it directly:',
+            attachBtnText: '📎 Attach & Email File to andy_hsu@jun-hsiang.com.tw',
+            floatingRfq: '✉️ Send CAD / RFQ',
             close: 'Close'
         },
         ja: {
@@ -663,7 +717,11 @@ document.addEventListener('DOMContentLoaded', () => {
             submitSuccessTitle: '送信が完了しました！',
             submitSuccessDesc: 'お問い合わせいただきありがとうございます。担当者より折り返しご連絡いたします。',
             submitFailTitle: '送信失敗',
-            submitFailDesc: '申し訳ありませんが、現在リクエストを処理できません。お電話いただくか、時間をおいて再度お試しください。',
+            submitFailDesc: '申し訳ありませんが、現在リクエストを処理できません。andy_hsu@jun-hsiang.com.tw へ直接メールをお送りいただくか、時間をおいて再度お試しください。',
+            captchaHint: '💡 上の「私はロボットではありません」にチェックを入れて送信してください（表示されない場合はもう一度送信ボタンを押してください）。',
+            attachFollowupDesc: '図面ファイル（{file}）を確実にお受け取りするため、下のボタンからメールソフトを開き、原図ファイルを添付して直接ご送付ください：',
+            attachBtnText: '📎 メールを開いて図面を添付送付 (andy_hsu@jun-hsiang.com.tw)',
+            floatingRfq: '✉️ 図面見積り',
             close: '閉じる'
         }
     };
@@ -791,7 +849,35 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    function showStatusModal(isSuccess) {
+    function resetAllRecaptchas() {
+        if (typeof grecaptcha === 'undefined') return;
+        try {
+            const widgets = document.querySelectorAll('.g-recaptcha');
+            widgets.forEach((_, idx) => {
+                try { grecaptcha.reset(idx); } catch (err) {}
+            });
+        } catch (err) {}
+    }
+
+    function shouldPromptCaptchaOnce(form, captchaToken) {
+        if (captchaToken || typeof grecaptcha === 'undefined') return false;
+        const box = form.querySelector('.g-recaptcha');
+        if (!box || box.offsetParent === null || box.innerHTML.trim() === '') return false;
+        if (form.dataset.captchaWarned === '1') return false;
+        form.dataset.captchaWarned = '1';
+        let hint = form.querySelector('.captcha-soft-hint');
+        if (!hint) {
+            hint = document.createElement('div');
+            hint.className = 'captcha-soft-hint';
+            hint.style.cssText = 'color:#f59e0b;background:rgba(245,158,11,0.1);border:1px solid rgba(245,158,11,0.35);border-radius:6px;padding:8px 12px;margin-bottom:10px;font-size:0.86rem;font-weight:600;';
+            box.parentNode.insertBefore(hint, box);
+        }
+        hint.textContent = t.captchaHint;
+        box.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        return true;
+    }
+
+    function showStatusModal(isSuccess, attachmentInfo) {
         const title = isSuccess ? t.submitSuccessTitle : t.submitFailTitle;
         const desc = isSuccess ? t.submitSuccessDesc : t.submitFailDesc;
         
@@ -804,6 +890,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div class="success-modal-icon"></div>
                     <h3 class="success-modal-title"></h3>
                     <p class="success-modal-message"></p>
+                    <div class="success-modal-attach-box" style="display:none;margin-bottom:18px;padding:12px;background:rgba(13,148,136,0.1);border:1px solid rgba(13,148,136,0.35);border-radius:8px;">
+                        <p class="success-modal-attach-desc" style="font-size:0.86rem;margin:0 0 10px 0;color:var(--color-text-secondary);"></p>
+                        <a class="success-modal-attach-btn" href="#" style="display:inline-block;background:var(--color-accent);color:#fff;padding:8px 14px;border-radius:6px;font-size:0.85rem;font-weight:700;text-decoration:none;"></a>
+                    </div>
                     <button class="success-modal-btn"></button>
                 </div>
             `;
@@ -836,6 +926,19 @@ document.addEventListener('DOMContentLoaded', () => {
         overlay.querySelector('.success-modal-title').textContent = title;
         overlay.querySelector('.success-modal-message').textContent = desc;
         overlay.querySelector('.success-modal-btn').textContent = t.close;
+
+        const attachBox = overlay.querySelector('.success-modal-attach-box');
+        if (isSuccess && attachmentInfo && attachmentInfo.fileName) {
+            const subj = encodeURIComponent(`[Jun-Hsiang CAD Attachment] ${attachmentInfo.company || attachmentInfo.name || 'RFQ'} - ${attachmentInfo.fileName}`);
+            const body = encodeURIComponent(`Contact: ${attachmentInfo.name || ''}\nCompany: ${attachmentInfo.company || ''}\nEmail: ${attachmentInfo.email || ''}\nPhone: ${attachmentInfo.phone || ''}\nProduct/Process: ${attachmentInfo.product || ''}\nSelected File: ${attachmentInfo.fileName}\n\n(Please attach ${attachmentInfo.fileName} to this email and click Send.)`);
+            attachBox.querySelector('.success-modal-attach-desc').textContent = t.attachFollowupDesc.replace('{file}', attachmentInfo.fileName);
+            const btn = attachBox.querySelector('.success-modal-attach-btn');
+            btn.textContent = t.attachBtnText;
+            btn.href = `mailto:andy_hsu@jun-hsiang.com.tw?subject=${subj}&body=${body}`;
+            attachBox.style.display = 'block';
+        } else if (attachBox) {
+            attachBox.style.display = 'none';
+        }
         
         requestAnimationFrame(() => {
             overlay.classList.add('active');
@@ -863,22 +966,35 @@ document.addEventListener('DOMContentLoaded', () => {
             if (honeyEl && honeyEl.value) return;
             const captchaEl = rfpForm.querySelector('[name="g-recaptcha-response"]');
             const captchaToken = captchaEl ? captchaEl.value : "";
+            if (shouldPromptCaptchaOnce(rfpForm, captchaToken)) {
+                return;
+            }
 
             const originalContent = rfpSubmitBtn.innerHTML;
             rfpSubmitBtn.innerHTML = `<span style="display:inline-flex;align-items:center;gap:8px;">${t.submitting}</span>`;
             rfpSubmitBtn.disabled = true;
 
+            const fileInput = document.getElementById('rfp-file');
+            const hasFile = fileInput && fileInput.files && fileInput.files.length > 0;
+            const rfpAttachInfo = hasFile ? {
+                fileName: fileInput.files[0].name,
+                company: document.getElementById('rfp-company') ? document.getElementById('rfp-company').value : "",
+                name: document.getElementById('rfp-name') ? document.getElementById('rfp-name').value : "",
+                phone: document.getElementById('rfp-phone') ? document.getElementById('rfp-phone').value : "",
+                email: document.getElementById('rfp-email') ? document.getElementById('rfp-email').value : "",
+                product: document.getElementById('rfp-process') ? document.getElementById('rfp-process').value : ""
+            } : null;
+
             const handleRFPSuccess = () => {
-                showStatusModal(true);
+                showStatusModal(true, rfpAttachInfo);
                 rfpForm.reset();
+                delete rfpForm.dataset.captchaWarned;
                 document.querySelectorAll('.rfp-option-card').forEach(c => c.classList.remove('selected'));
                 rfpCurrentStep = 1;
                 updateRFPWizard();
                 rfpSubmitBtn.innerHTML = originalContent;
                 rfpSubmitBtn.disabled = false;
-                if (typeof grecaptcha !== 'undefined') {
-                    grecaptcha.reset();
-                }
+                resetAllRecaptchas();
                 if (typeof lucide !== 'undefined') {
                     lucide.createIcons();
                 }
@@ -889,16 +1005,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 showStatusModal(false);
                 rfpSubmitBtn.innerHTML = originalContent;
                 rfpSubmitBtn.disabled = false;
-                if (typeof grecaptcha !== 'undefined') {
-                    grecaptcha.reset();
-                }
+                resetAllRecaptchas();
                 if (typeof lucide !== 'undefined') {
                     lucide.createIcons();
                 }
             };
 
-            const fileInput = document.getElementById('rfp-file');
-            const hasFile = fileInput && fileInput.files && fileInput.files.length > 0;
             const fileNote = hasFile
                 ? `\n📎 客戶已夾帶圖檔: ${fileInput.files[0].name} (${Math.max(1, Math.round(fileInput.files[0].size / 1024))} KB)`
                 : '';
@@ -965,7 +1077,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 .catch(() => handleRFPError(error));
             };
 
-            if (captchaToken && typeof emailjs !== 'undefined') {
+            if (typeof emailjs !== 'undefined') {
                 emailjs.send("service_941qf5m", "template_xd47fdq", templateParams, { publicKey: "x4U1bJa_bowbuMl3r" })
                 .then(() => {
                     handleRFPSuccess();
@@ -975,7 +1087,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     sendRFPFormSubmitFallback(error);
                 });
             } else {
-                sendRFPFormSubmitFallback(new Error("Direct FormSubmit"));
+                sendRFPFormSubmitFallback(new Error("EmailJS unavailable"));
             }
         });
     }
@@ -1052,6 +1164,12 @@ document.addEventListener('DOMContentLoaded', () => {
             if (targetContent) {
                 targetContent.style.display = 'block';
                 targetContent.classList.add('active');
+                const hiddenRecaptcha = targetContent.querySelector('.g-recaptcha');
+                if (hiddenRecaptcha && hiddenRecaptcha.innerHTML.trim() === '' && typeof grecaptcha !== 'undefined' && typeof grecaptcha.render === 'function') {
+                    try {
+                        grecaptcha.render(hiddenRecaptcha, { sitekey: hiddenRecaptcha.getAttribute('data-sitekey') });
+                    } catch (err) {}
+                }
             }
         });
     });
@@ -1078,6 +1196,9 @@ document.addEventListener('DOMContentLoaded', () => {
             if (honeyEl && honeyEl.value) return;
             const captchaEl = generalForm.querySelector('[name="g-recaptcha-response"]');
             const captchaToken = captchaEl ? captchaEl.value : "";
+            if (shouldPromptCaptchaOnce(generalForm, captchaToken)) {
+                return;
+            }
 
             const originalContent = generalSubmitBtn.innerHTML;
             generalSubmitBtn.innerHTML = `<span style="display:inline-flex;align-items:center;gap:8px;">${t.submitting}</span>`;
@@ -1085,6 +1206,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const genFileInput = document.getElementById('general-file');
             const hasGenFile = genFileInput && genFileInput.files && genFileInput.files.length > 0;
+            const genAttachInfo = hasGenFile ? {
+                fileName: genFileInput.files[0].name,
+                company: document.getElementById('general-company') ? document.getElementById('general-company').value : "",
+                name: document.getElementById('general-name') ? document.getElementById('general-name').value : "",
+                phone: document.getElementById('general-phone') ? document.getElementById('general-phone').value : "",
+                email: document.getElementById('general-email') ? document.getElementById('general-email').value : "",
+                product: document.getElementById('general-product-need') ? document.getElementById('general-product-need').value : ""
+            } : null;
             const genFileNote = hasGenFile
                 ? `\n📎 客戶已夾帶圖檔: ${genFileInput.files[0].name} (${Math.max(1, Math.round(genFileInput.files[0].size / 1024))} KB)`
                 : '';
@@ -1136,8 +1265,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 .then(res => res.json())
                 .then(data => {
                     if (data.success === "true" || data.success === true) {
-                        showStatusModal(true);
+                        showStatusModal(true, genAttachInfo);
                         generalForm.reset();
+                        delete generalForm.dataset.captchaWarned;
                     } else {
                         showStatusModal(false);
                     }
@@ -1148,19 +1278,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 .finally(() => {
                     generalSubmitBtn.innerHTML = originalContent;
                     generalSubmitBtn.disabled = false;
-                    if (typeof grecaptcha !== 'undefined') grecaptcha.reset();
+                    resetAllRecaptchas();
                     if (typeof lucide !== 'undefined') lucide.createIcons();
                 });
             };
 
-            if (captchaToken && typeof emailjs !== 'undefined') {
+            if (typeof emailjs !== 'undefined') {
                 emailjs.send("service_941qf5m", "template_xd47fdq", templateParams, { publicKey: "x4U1bJa_bowbuMl3r" })
                 .then(() => {
-                    showStatusModal(true);
+                    showStatusModal(true, genAttachInfo);
                     generalForm.reset();
+                    delete generalForm.dataset.captchaWarned;
                     generalSubmitBtn.innerHTML = originalContent;
                     generalSubmitBtn.disabled = false;
-                    if (typeof grecaptcha !== 'undefined') grecaptcha.reset();
+                    resetAllRecaptchas();
                     if (typeof lucide !== 'undefined') lucide.createIcons();
                 })
                 .catch(error => {
@@ -1217,6 +1348,31 @@ document.addEventListener('DOMContentLoaded', () => {
             langSelectors.forEach(s => s.classList.remove('is-open'));
         }
     });
+
+    const rfqTarget = document.getElementById('rfq-section');
+    if (rfqTarget) {
+        const floatBtn = document.createElement('a');
+        floatBtn.href = '#rfq-section';
+        floatBtn.textContent = t.floatingRfq;
+        floatBtn.style.cssText = 'position:fixed;right:20px;bottom:84px;z-index:990;background:var(--color-accent,#0D9488);color:#fff;padding:10px 16px;border-radius:999px;font-size:0.86rem;font-weight:700;text-decoration:none;box-shadow:0 8px 24px rgba(13,148,136,0.35);opacity:0;pointer-events:none;transition:opacity 0.25s ease,transform 0.25s ease;transform:translateY(8px);';
+        floatBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            rfqTarget.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+        document.body.appendChild(floatBtn);
+        let floatTick = false;
+        window.addEventListener('scroll', () => {
+            if (floatTick) return;
+            floatTick = true;
+            requestAnimationFrame(() => {
+                const show = window.scrollY > 400;
+                floatBtn.style.opacity = show ? '1' : '0';
+                floatBtn.style.pointerEvents = show ? 'auto' : 'none';
+                floatBtn.style.transform = show ? 'translateY(0)' : 'translateY(8px)';
+                floatTick = false;
+            });
+        }, { passive: true });
+    }
 });
 
 
