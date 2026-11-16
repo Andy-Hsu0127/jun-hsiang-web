@@ -223,6 +223,9 @@ def audit():
         if "DFM" in c:
             print(f"❌ [禁用詞 DFM] {f} 包含 AGENTS.md 禁用字樣 'DFM'，請改為工程評估／模具結構設計")
             errors += 1
+        if 'src=\\"' in c or 'href=\\"' in c:
+            print(f"❌ [語法損毀] {f} 包含多餘反斜線跳脫引號 (src=\\\" 或 href=\\\")")
+            errors += 1
         for m_anch in re.finditer(r'href=["\']#([a-zA-Z0-9_-]+)["\']', c):
             anch = m_anch.group(1)
             if f'id="{anch}"' not in c and f"id='{anch}'" not in c:
