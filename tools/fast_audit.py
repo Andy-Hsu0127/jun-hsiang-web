@@ -178,6 +178,27 @@ def audit():
             print("❌ [關鍵字互搶 Cannibalization] index.html 與 service.html 的 <h1> 同時強攻『矽膠代工廠』，將導致排名互食！")
             errors += 1
 
+    # 5b. [Export SEO Guard] 外語版 (EN/JA) 商業意圖、Taiwan 地理信號與防互搶檢查
+    for lang, kw in (("en", "taiwan"), ("ja", "台湾")):
+        lang_files = sorted(glob.glob(f"{lang}/*.html"))
+        for f in lang_files:
+            if not is_public_page(f):
+                continue
+            with open(f, "r", encoding="utf-8") as fp:
+                c = fp.read()
+            if 'http-equiv="refresh"' in c:
+                continue
+            tm = re.search(r"<title>(.*?)</title>", c, re.S)
+            hm = re.search(r"<h1[^>]*>(.*?)</h1>", c, re.S)
+            t_txt = re.sub(r"\s+", " ", tm.group(1)).strip() if tm else ""
+            h_txt = re.sub(r"<[^>]+>", "", hm.group(1)).strip() if hm else ""
+            if kw not in t_txt.lower() or kw not in h_txt.lower():
+                print(f"❌ [外銷地理信號缺漏] {f} 的 <title> 或 <h1> 缺少 '{kw}' 製造商定位")
+                errors += 1
+            if h_txt in ("Products Realization", "製品紹介"):
+                print(f"❌ [空洞 H1] {f} 的 <h1> 不可使用無關鍵字的 '{h_txt}'")
+                errors += 1
+
     # 6. [Agentic-SEO-Skill] Canonical 與 og:url 一致性檢查
     for f in all_html:
         if not is_public_page(f):
