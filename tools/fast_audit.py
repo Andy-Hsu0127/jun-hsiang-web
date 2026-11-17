@@ -177,6 +177,9 @@ def audit():
         if "矽膠代工廠" in h1_map["index.html"] and "矽膠代工廠" in h1_map["service.html"]:
             print("❌ [關鍵字互搶 Cannibalization] index.html 與 service.html 的 <h1> 同時強攻『矽膠代工廠』，將導致排名互食！")
             errors += 1
+    if h1_map.get("products_list.html") == "產品實現":
+        print("❌ [空洞 H1] products_list.html 的 <h1> 不可使用無關鍵字的 '產品實現'")
+        errors += 1
 
     # 5b. [Export SEO Guard] 外語版 (EN/JA) 商業意圖、Taiwan 地理信號與防互搶檢查
     for lang, kw in (("en", "taiwan"), ("ja", "台湾")):
@@ -223,8 +226,8 @@ def audit():
             content = fp.read()
         if 'http-equiv="refresh"' in content:
             continue
-        if '"FAQPage"' not in content and '"TechArticle"' not in content:
-            print(f"⚠️ [GEO 引用缺漏] {f} 缺少 TechArticle 或 FAQPage 結構化資料")
+        if '"FAQPage"' not in content:
+            print(f"⚠️ [GEO 引用缺漏] {f} 缺少 FAQPage 結構化資料")
             warnings += 1
 
     # 8. [Zero-Friction RFQ] 全站三語商業頁與獨立文章 100% 表單、一鍵複製信箱與死錨點檢查
