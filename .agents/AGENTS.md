@@ -98,9 +98,10 @@
 [ ] <link rel="canonical" href="https://www.jun-hsiang.com.tw/[該頁完整路徑]"/>
 [ ] <meta property="og:url" content="..."/> 與 canonical 相同
 [ ] <link rel="alternate" hreflang="zh-TW" href="..."/> 繁中對應 URL
+[ ] <link rel="alternate" hreflang="zh-Hant" href="..."/> 繁中對應 URL（保護台灣／香港／海外華人）
 [ ] <link rel="alternate" hreflang="en" href="..."/> 英文對應 URL
 [ ] <link rel="alternate" hreflang="ja" href="..."/> 日文對應 URL
-[ ] <link rel="alternate" hreflang="x-default" href="..."/> 指向繁中 URL
+[ ] <link rel="alternate" hreflang="x-default" href="..."/> 必須指向英文版 URL (/en/...)（供歐洲德/法/義/西等非中英語系退回英文版）
 [ ] 頁面 <head> 內沒有任何 window.location.href 自動重定向腳本
 [ ] 三語版本（繁中/英文/日文）對應的 URL 均已加入 sitemap.xml
 [ ] JSON-LD structured data 的 @id 和 url 欄位指向正確文章 URL
@@ -358,6 +359,21 @@ AI 代理人在處理「日文版導覽列誤植中文『加工服務』」的�
 
 ---
 
+## 🔴 規則十三：國際多語系 `hreflang="x-default"` 必須指向英文版 (`/en/`) 與歐美 `areaServed` Schema 規範
+
+### ⚠️ 歷史經驗與重大錯誤教訓（2026-11-18 發現）
+過去本文件舊版 Checklist 誤寫 `hreflang="x-default"` 指向繁中 URL（`/`），導致全站 92 頁與 `sitemap.xml` 的 `x-default` 全指回繁體中文版。當德國（`de`）、法國（`fr`）、義大利（`it`）、荷蘭（`nl`）、西班牙（`es`）等歐盟買家搜尋時，因當地瀏覽器語系不屬於 `zh-TW`/`en`/`ja`，Google 退回讀取 `x-default` 而向歐洲買家展示繁體中文網頁，嚴重阻礙歐美點擊；同時英文版 `/en/` 缺少 `areaServed` 宣告，導致 `.com.tw` 網域被 Google 誤判僅服務台灣本地。
+
+### ✅ 強制執行規則
+1. **全球退回語言 (`x-default`) 一律指向英文版 (`/en/...`)**：
+   - 每個頁面與 `sitemap.xml` 必須同時配置 `zh-TW` 與 `zh-Hant` 指向繁中頁（100% 鎖定台灣、香港與海外華人），並將 `x-default` 指向對應之 `/en/` 英文頁。
+   - **絕對禁止**再將 `x-default` 指向繁中首頁或繁中文章。
+2. **英文版 (`/en/`) 外銷地理宣告 (`areaServed`)**：
+   - `en/index.html` 與 `en/service.html` 的 `Organization` / `Service` JSON-LD 必須包含歐美出口目標國家代碼（`US, CA, GB, DE, FR, NL, IT, CZ, PL, SE, CH, AT, AU`）與 `contactPoint`（`andy_hsu@jun-hsiang.com.tw`）。
+3. **寫入 `tools/fast_audit.py` 自動化防呆**：全站任何頁面若 `x-default` 未指向 `/en/` 或缺少 `zh-Hant` 即自動報錯攔截。
+
+---
+
 ## 📜 歷史變更與新增紀錄
 
 | 日期 | 修改/新增項目 | 說明與記錄 |
@@ -372,3 +388,4 @@ AI 代理人在處理「日文版導覽列誤植中文『加工服務』」的�
 | 2026-10-12 | 全站移除 DFM 服務宣稱與回覆時限 | 客戶決策：不對外提供 DFM（客戶要求時再個案處理）；報價前評估不收費。三語 50+ 頁 DFM 字樣改為「評估報價／模具結構設計」；「24 小時內回覆」「1–3／3–5 營業日」等未驗證時限一律改為「盡快回覆」。**禁止再於文案、CTA、Schema 中加入 DFM 服務或具體回覆時限。** |
 | 2026-11-05 | 外語版 SEO 權重閉環與內容擴充 | 修復 EN/JA 跨語系 `../index.html` 權重洩漏、修正標題拼字（Jun-Hsiang / 鈞翔実業）、擴充 4 篇過短外語專欄至 8,000+ 字元。 |
 | 2026-11-09 | 確立規則十一與十二：全站轉單急救與外語 (02) 清洗 | 修復繁中主力頁缺電話/信箱/上傳欄與手機選單死當問題、移除 reCAPTCHA 硬阻斷、全面清洗 EN/JA 殘留之 `(02)` 台灣市話與繁中地址字元，並將防呆規則寫入 `fast_audit.py`。 |
+| 2026-11-18 | 確立規則十三：修正 `x-default` 指回繁中錯誤與補齊歐美 `areaServed` | 修正舊版 Checklist 誤將 `x-default` 指向繁中頁的歷史錯誤，全站與 `sitemap.xml` 改為 `zh-TW` + `zh-Hant` 鎖定繁中、`x-default` 指向 `/en/` 英文版，並於英文版補齊歐美 `areaServed` 與 `Offer.availability`。 |

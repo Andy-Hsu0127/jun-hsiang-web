@@ -320,6 +320,26 @@ def audit():
                 print(f"⚠️ [低連入權重警告 Low In-links] {p} 同語系站內連入僅 {len(inlinks[base])} 個（須 ≥ 3），易掉入「已檢索-尚未建立索引」")
                 warnings += 1
 
+    # 12. [Global Export Guard] 規則十三：hreflang="x-default" 必須指向 /en/、具備 zh-Hant、且英文核心頁宣告 areaServed
+    for f in all_html:
+        if not is_public_page(f):
+            continue
+        with open(f, "r", encoding="utf-8") as fp:
+            c = fp.read()
+        if 'hreflang="zh-TW"' in c and 'hreflang="zh-Hant"' not in c:
+            print(f"❌ [多語系缺漏] {f} 缺少 hreflang=\"zh-Hant\"")
+            errors += 1
+        m_xd = re.search(r'<link[^>]+hreflang="x-default"[^>]+href="([^"]+)"|<link[^>]+href="([^"]+)"[^>]+hreflang="x-default"', c)
+        if m_xd:
+            xd_url = m_xd.group(1) or m_xd.group(2)
+            if "/en/" not in xd_url:
+                print(f"❌ [歐美退回語言錯誤] {f} 的 hreflang=\"x-default\" 指向 {xd_url}（必須指向 /en/ 英文版）")
+                errors += 1
+    for en_core in ("en/index.html", "en/service.html"):
+        if os.path.exists(en_core) and '"areaServed"' not in open(en_core, encoding="utf-8").read():
+            print(f"❌ [外銷地理信號缺漏] {en_core} 缺少 JSON-LD areaServed 歐美服務國家宣告")
+            errors += 1
+
     print("------------------------------------------")
     if errors == 0 and warnings == 0:
         print(f"🎉 檢查完成！全站 {len(all_html)} 個頁面 100% 通過極速審計（0 錯誤、0 警告）！")
