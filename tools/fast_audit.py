@@ -2,6 +2,7 @@
 # 整合 Bhanunamikaze/Agentic-SEO-Skill (Deterministic Technical/Link/Cannibalization Audit)
 # 與 aaron-he-zhu/seo-geo-claude-skills (GEO / CORE-EEAT Structure Audit)
 import glob
+import html
 import os
 import re
 import sys
@@ -339,6 +340,46 @@ def audit():
         if os.path.exists(en_core) and '"areaServed"' not in open(en_core, encoding="utf-8").read():
             print(f"❌ [外銷地理信號缺漏] {en_core} 缺少 JSON-LD areaServed 歐美服務國家宣告")
             errors += 1
+
+    # 13. [Rule 14 Guard] 外語版 (EN/JA) 標題長度與 Taiwan/台湾 前置、Description 精簡、OG/Twitter 同步檢查
+    for lang, kw, t_max, kw_pos_max, d_min, d_max, bloat in (
+        ("en", "Taiwan", 70, 45, 110, 165, "Precision Silicone & Rubber Molding"),
+        ("ja", "台湾", 44, 22, 60, 135, "精密シリコーン・ゴム部品成形加工"),
+    ):
+        for f in sorted(glob.glob(f"{lang}/*.html")):
+            if not is_public_page(f) or os.path.basename(f) == "404.html":
+                continue
+            with open(f, "r", encoding="utf-8") as fp:
+                c = fp.read()
+            if 'http-equiv="refresh"' in c:
+                continue
+            tm = re.search(r"<title>(.*?)</title>", c, re.S)
+            t_txt = html.unescape(re.sub(r"\s+", " ", tm.group(1)).strip()) if tm else ""
+            if len(t_txt) > t_max:
+                print(f"❌ [規則十四: 標題過長] {f} ({len(t_txt)} > {t_max}): {t_txt}")
+                errors += 1
+            pos = t_txt.find(kw)
+            if pos == -1 or pos > kw_pos_max:
+                print(f"❌ [規則十四: {kw} 未前置] {f} (pos={pos}): {t_txt}")
+                errors += 1
+            if bloat in t_txt:
+                print(f"❌ [規則十四: 冗長品牌後綴] {f} 仍殘留 '{bloat}'")
+                errors += 1
+            om = re.search(r'<meta[^>]+property=["\']og:title["\'][^>]+content=["\']([^"\']+)["\']', c) or \
+                 re.search(r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+property=["\']og:title["\']', c)
+            o_txt = html.unescape(om.group(1)) if om else ""
+            if kw not in o_txt:
+                print(f"❌ [規則十四: og:title 未同步 {kw}] {f}")
+                errors += 1
+            dm = re.search(r'<meta[^>]+name=["\']description["\'][^>]+content=["\']([^"\']*)["\']', c) or \
+                 re.search(r'<meta[^>]+content=["\']([^"\']*)["\'][^>]+name=["\']description["\']', c)
+            d_txt = html.unescape(dm.group(1).strip()) if dm else ""
+            if not (d_min <= len(d_txt) <= d_max):
+                print(f"❌ [規則十四: description 長度異常] {f} ({len(d_txt)} chars, 需 {d_min}~{d_max})")
+                errors += 1
+            if 'name="twitter:card"' not in c and "name='twitter:card'" not in c:
+                print(f"❌ [規則十四: 缺漏 twitter:card] {f}")
+                errors += 1
 
     print("------------------------------------------")
     if errors == 0 and warnings == 0:
