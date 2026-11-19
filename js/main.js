@@ -1399,7 +1399,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     ['uav_3c', '無人機與 3C 電子']
                 ],
                 catTag: { process: '製程代工', product: '產品實績', material: '材料規格' },
-                count: (n) => `共 ${n} 筆符合項目`,
+                count: (n) => `共 ${n} 筆符合項目（點擊下方項目即可前往頁面）`,
+                goLabel: '前往 ➔',
                 loading: '載入檢索資料中...',
                 emptyTitle: '找不到完全符合的規格或文章',
                 emptyDesc: '歡迎直接傳送 2D/3D 圖檔或需求，由新北新莊工程團隊 1～2 個工作天免費評估（支援少量試產打樣）。',
@@ -1428,7 +1429,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     ['uav_3c', 'UAV Drones & Electronics']
                 ],
                 catTag: { process: 'Process', product: 'Product', material: 'Material' },
-                count: (n) => `${n} matching pages`,
+                count: (n) => `${n} matching pages (click any item below to open)`,
+                goLabel: 'Open →',
                 loading: 'Loading search index...',
                 emptyTitle: 'No exact match found for your specification',
                 emptyDesc: 'Send your 2D/3D CAD drawings for a free engineering review and quotation (Mutual NDA ready).',
@@ -1457,7 +1459,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     ['uav_3c', 'ドローン・電子機器']
                 ],
                 catTag: { process: '成形プロセス', product: '製品事例', material: '材料・規格' },
-                count: (n) => `${n} 件の結果`,
+                count: (n) => `${n} 件の結果（下の項目をクリックして移動）`,
+                goLabel: '開く →',
                 loading: '検索データを読み込み中...',
                 emptyTitle: '該当する仕様・記事が見つかりませんでした',
                 emptyDesc: '2D/3D図面をお送りいただければ、台湾自社工場のエンジニアが無料でお見積り・技術評価いたします。',
@@ -1477,7 +1480,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!document.getElementById('site-search-nav-style')) {
             const st = document.createElement('style');
             st.id = 'site-search-nav-style';
-            st.textContent = '#nav-links{margin-left:auto;margin-right:12px;}#site-search-trigger{display:inline-flex;align-items:center;gap:6px;margin-left:0;margin-right:0;padding:6px 12px;border-radius:999px;border:1px solid rgba(212,168,67,0.45);background:rgba(15,23,42,0.75);color:#F8FAFC;font-size:0.84rem;font-weight:600;cursor:pointer;white-space:nowrap;flex-shrink:0;transition:border-color 0.2s ease,transform 0.2s ease;}#site-search-trigger:hover{border-color:#D4A843;}@media(max-width:968px){#site-search-trigger{margin-left:auto;margin-right:12px;}}';
+            st.textContent = '#nav-links{margin-left:auto;margin-right:12px;}#site-search-trigger{display:inline-flex;align-items:center;gap:6px;margin-left:0;margin-right:0;padding:6px 12px;border-radius:999px;border:1px solid rgba(212,168,67,0.45);background:rgba(15,23,42,0.75);color:#F8FAFC;font-size:0.84rem;font-weight:600;cursor:pointer;white-space:nowrap;flex-shrink:0;transition:border-color 0.2s ease,transform 0.2s ease;}#site-search-trigger:hover{border-color:#D4A843;}.site-search-item{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 14px;margin-bottom:8px;border-radius:9px;border:1px solid rgba(148,163,184,0.2);background:rgba(30,41,59,0.62);text-decoration:none;cursor:pointer;transition:border-color 0.18s ease,background-color 0.18s ease;}.site-search-item:hover{border-color:#D4A843;background:rgba(30,41,59,0.95);}@media(max-width:968px){#site-search-trigger{margin-left:auto;margin-right:12px;}}';
             document.head.appendChild(st);
         }
         ham.parentElement.insertBefore(trigger, ham);
@@ -1526,7 +1529,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
             modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
             modal.querySelector('#site-search-close').addEventListener('click', closeModal);
-            modal.querySelector('#site-search-input').addEventListener('input', renderResults);
+            const inpEl = modal.querySelector('#site-search-input');
+            inpEl.addEventListener('input', renderResults);
+            inpEl.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter') {
+                    const firstLink = modal.querySelector('#site-search-results a.site-search-item');
+                    if (firstLink) {
+                        e.preventDefault();
+                        window.location.href = firstLink.getAttribute('href');
+                    }
+                }
+            });
             modal.querySelector('#site-search-cat').addEventListener('change', renderResults);
             modal.querySelector('#site-search-ind').addEventListener('change', renderResults);
             return modal;
@@ -1577,13 +1590,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
+            const curFile = (window.location.pathname.split('/').pop() || '');
+            const isCurrent = (u) => (u === './' && (curFile === '' || curFile === 'index.html')) || (u === curFile);
+            filtered.sort((a, b) => (isCurrent(a.u) ? 1 : 0) - (isCurrent(b.u) ? 1 : 0));
+
             resEl.innerHTML = filtered.map(item => `
-                <a href="${escapeHtml(item.u)}" style="display:block;padding:11px 12px;margin-bottom:8px;border-radius:9px;border:1px solid rgba(148,163,184,0.16);background:rgba(30,41,59,0.55);text-decoration:none;">
-                    <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
-                        <span style="font-size:0.72rem;font-weight:700;padding:2px 8px;border-radius:999px;background:rgba(212,168,67,0.16);color:#D4A843;">${escapeHtml(ui.catTag[item.c] || item.c)}</span>
-                        <strong style="color:#F8FAFC;font-size:0.93rem;">${escapeHtml(item.t)}</strong>
+                <a class="site-search-item" href="${escapeHtml(item.u)}">
+                    <div style="min-width:0;flex:1;">
+                        <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;flex-wrap:wrap;">
+                            <span style="font-size:0.72rem;font-weight:700;padding:2px 8px;border-radius:999px;background:rgba(212,168,67,0.16);color:#D4A843;flex-shrink:0;">${escapeHtml(ui.catTag[item.c] || item.c)}</span>
+                            <strong style="color:#F8FAFC;font-size:0.93rem;">${escapeHtml(item.t)}</strong>
+                        </div>
+                        <p style="margin:0;color:#94A3B8;font-size:0.82rem;line-height:1.5;">${escapeHtml(item.d)}</p>
                     </div>
-                    <p style="margin:0;color:#94A3B8;font-size:0.82rem;line-height:1.5;">${escapeHtml(item.d)}</p>
+                    <span style="flex-shrink:0;padding:6px 11px;border-radius:6px;background:rgba(212,168,67,0.18);border:1px solid rgba(212,168,67,0.45);color:#FDE68A;font-size:0.8rem;font-weight:700;white-space:nowrap;">${escapeHtml(ui.goLabel)}</span>
                 </a>
             `).join('');
         }
