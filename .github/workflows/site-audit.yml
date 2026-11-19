@@ -33,12 +33,12 @@ jobs:
       - name: Install Playwright & Chromium
         run: |
           pip install playwright
-          playwright install chromium
+          playwright install --with-deps chromium
 
       - name: Start local server & run Playwright smoke test
         run: |
           python -m http.server 8080 &
           SERVER_PID=$!
+          trap "kill $SERVER_PID 2>/dev/null || true" EXIT
           sleep 2
           python tools/ci_smoke_test.py
-          kill $SERVER_PID
