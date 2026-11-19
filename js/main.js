@@ -1371,6 +1371,255 @@ document.addEventListener('DOMContentLoaded', () => {
         lineBtn.style.cssText = 'position:fixed;left:20px;bottom:24px;z-index:991;display:inline-flex;align-items:center;gap:8px;background:#06C755;color:#fff;padding:11px 16px;border-radius:999px;font-size:0.88rem;font-weight:700;text-decoration:none;box-shadow:0 8px 24px rgba(6,199,85,0.38);transition:transform 0.2s ease;';
         document.body.appendChild(lineBtn);
     }
+
+    // Global 3-Language Site Search Modal (Keyword + 2-Layer Dropdown: Category x Industry)
+    (function initSiteSearch() {
+        const path = window.location.pathname || '';
+        const sLang = path.includes('/en/') ? 'en' : path.includes('/ja/') ? 'ja' : 'zh';
+        const ui = {
+            zh: {
+                btnLabel: '搜尋',
+                btnAria: '開啟全站搜尋與分類篩選',
+                title: '全站搜尋與分類篩選',
+                placeholder: '輸入關鍵字（如 LSR、硬度、FDA、包鐵、防水栓、Viton）...',
+                catLabel: '內容類別',
+                cats: [
+                    ['all', '全部類別'],
+                    ['process', '製程與開模代工'],
+                    ['product', '產品與實績項目'],
+                    ['material', '材料規格與異常排查']
+                ],
+                indLabel: '應用產業',
+                inds: [
+                    ['all', '全部應用產業'],
+                    ['auto', '車載與線束防水'],
+                    ['med_food', '醫療與食品接觸'],
+                    ['semi_ai', '半導體與 AI 伺服器'],
+                    ['industrial', '工業機械與防振'],
+                    ['uav_3c', '無人機與 3C 電子']
+                ],
+                catTag: { process: '製程代工', product: '產品實績', material: '材料規格' },
+                count: (n) => `共 ${n} 筆符合項目`,
+                loading: '載入檢索資料中...',
+                emptyTitle: '找不到完全符合的規格或文章',
+                emptyDesc: '歡迎直接傳送 2D/3D 圖檔或需求，由新北新莊工程團隊 1～2 個工作天免費評估（支援少量試產打樣）。',
+                rfqBtn: '✉️ 線上傳圖詢價',
+                lineBtn: '💬 加官方 LINE 傳圖（@682wvagy）'
+            },
+            en: {
+                btnLabel: 'Search',
+                btnAria: 'Open site search and category filter',
+                title: 'Site Search & Category Filter',
+                placeholder: 'Search keywords (LSR, Shore A, FDA, overmolding, Viton, seals)...',
+                catLabel: 'Category',
+                cats: [
+                    ['all', 'All Categories'],
+                    ['process', 'Molding & Processes'],
+                    ['product', 'Custom Products & Cases'],
+                    ['material', 'Materials & Compliance']
+                ],
+                indLabel: 'Industry',
+                inds: [
+                    ['all', 'All Industries'],
+                    ['auto', 'Automotive & Wire Harness'],
+                    ['med_food', 'Medical & Food-Grade'],
+                    ['semi_ai', 'Semiconductor & AI Server'],
+                    ['industrial', 'Industrial Machinery'],
+                    ['uav_3c', 'UAV Drones & Electronics']
+                ],
+                catTag: { process: 'Process', product: 'Product', material: 'Material' },
+                count: (n) => `${n} matching pages`,
+                loading: 'Loading search index...',
+                emptyTitle: 'No exact match found for your specification',
+                emptyDesc: 'Send your 2D/3D CAD drawings for a free engineering review and quotation (Mutual NDA ready).',
+                rfqBtn: '✉️ Request Quote with CAD',
+                lineBtn: ''
+            },
+            ja: {
+                btnLabel: '検索',
+                btnAria: 'サイト内検索・カテゴリ絞り込みを開く',
+                title: 'サイト内検索・カテゴリ絞り込み',
+                placeholder: 'キーワード入力（LSR、硬度、FDA、インサート、Viton、シール）...',
+                catLabel: 'カテゴリ',
+                cats: [
+                    ['all', 'すべてのカテゴリ'],
+                    ['process', '成形プロセス・受託製造'],
+                    ['product', '製品事例・ラインナップ'],
+                    ['material', '材料仕様・規格・対策']
+                ],
+                indLabel: '産業分野',
+                inds: [
+                    ['all', 'すべての産業分野'],
+                    ['auto', '車載・ワイヤーハーネス'],
+                    ['med_food', '医療・食品グレード'],
+                    ['semi_ai', '半導体・AIサーバー'],
+                    ['industrial', '産業機械・防振'],
+                    ['uav_3c', 'ドローン・電子機器']
+                ],
+                catTag: { process: '成形プロセス', product: '製品事例', material: '材料・規格' },
+                count: (n) => `${n} 件の結果`,
+                loading: '検索データを読み込み中...',
+                emptyTitle: '該当する仕様・記事が見つかりませんでした',
+                emptyDesc: '2D/3D図面をお送りいただければ、台湾自社工場のエンジニアが無料でお見積り・技術評価いたします。',
+                rfqBtn: '✉️ 図面でお問い合わせ',
+                lineBtn: ''
+            }
+        }[sLang];
+
+        const ham = document.getElementById('hamburger');
+        if (!ham || !ham.parentElement || document.getElementById('site-search-trigger')) return;
+
+        const trigger = document.createElement('button');
+        trigger.id = 'site-search-trigger';
+        trigger.type = 'button';
+        trigger.setAttribute('aria-label', ui.btnAria);
+        trigger.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg><span>' + ui.btnLabel + '</span>';
+        trigger.style.cssText = 'display:inline-flex;align-items:center;gap:6px;margin-left:auto;margin-right:10px;padding:6px 12px;border-radius:999px;border:1px solid rgba(212,168,67,0.45);background:rgba(15,23,42,0.75);color:#F8FAFC;font-size:0.84rem;font-weight:600;cursor:pointer;white-space:nowrap;flex-shrink:0;transition:border-color 0.2s ease,transform 0.2s ease;';
+        ham.parentElement.insertBefore(trigger, ham);
+
+        let modal = null;
+        let indexCache = null;
+
+        function escapeHtml(str) {
+            return String(str || '').replace(/[&<>"']/g, m => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[m]));
+        }
+
+        function ensureModal() {
+            if (modal) return modal;
+            modal = document.createElement('div');
+            modal.id = 'site-search-modal';
+            modal.setAttribute('role', 'dialog');
+            modal.setAttribute('aria-modal', 'true');
+            modal.setAttribute('aria-label', ui.title);
+            modal.style.cssText = 'display:none;position:fixed;inset:0;z-index:9999;background:rgba(4,9,20,0.78);backdrop-filter:blur(6px);padding:clamp(12px,4vh,48px) 14px;overflow-y:auto;';
+            const catOpts = ui.cats.map(([v, l]) => `<option value="${v}">${escapeHtml(l)}</option>`).join('');
+            const indOpts = ui.inds.map(([v, l]) => `<option value="${v}">${escapeHtml(l)}</option>`).join('');
+            modal.innerHTML = `
+                <div style="max-width:740px;margin:0 auto;background:#0F172A;border:1px solid rgba(212,168,67,0.38);border-radius:14px;box-shadow:0 24px 64px rgba(0,0,0,0.55);overflow:hidden;">
+                    <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border-bottom:1px solid rgba(148,163,184,0.18);">
+                        <strong style="color:#F8FAFC;font-size:1rem;display:inline-flex;align-items:center;gap:8px;">🔍 ${escapeHtml(ui.title)}</strong>
+                        <button type="button" id="site-search-close" aria-label="Close" style="background:transparent;border:none;color:#94A3B8;font-size:1.35rem;line-height:1;cursor:pointer;padding:4px 8px;">✕</button>
+                    </div>
+                    <div style="padding:16px 18px;border-bottom:1px solid rgba(148,163,184,0.14);background:rgba(2,6,23,0.45);">
+                        <input id="site-search-input" type="search" placeholder="${escapeHtml(ui.placeholder)}" autocomplete="off" style="width:100%;padding:11px 14px;border-radius:8px;border:1px solid rgba(148,163,184,0.3);background:#1E293B;color:#F8FAFC;font-size:0.95rem;outline:none;margin-bottom:12px;box-sizing:border-box;"/>
+                        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;">
+                            <label style="display:flex;flex-direction:column;gap:4px;font-size:0.78rem;color:#94A3B8;font-weight:600;">
+                                ${escapeHtml(ui.catLabel)}
+                                <select id="site-search-cat" style="padding:9px 10px;border-radius:8px;border:1px solid rgba(148,163,184,0.28);background:#1E293B;color:#F8FAFC;font-size:0.88rem;cursor:pointer;">${catOpts}</select>
+                            </label>
+                            <label style="display:flex;flex-direction:column;gap:4px;font-size:0.78rem;color:#94A3B8;font-weight:600;">
+                                ${escapeHtml(ui.indLabel)}
+                                <select id="site-search-ind" style="padding:9px 10px;border-radius:8px;border:1px solid rgba(148,163,184,0.28);background:#1E293B;color:#F8FAFC;font-size:0.88rem;cursor:pointer;">${indOpts}</select>
+                            </label>
+                        </div>
+                    </div>
+                    <div id="site-search-meta" style="padding:8px 18px;font-size:0.82rem;color:#94A3B8;border-bottom:1px solid rgba(148,163,184,0.1);"></div>
+                    <div id="site-search-results" style="max-height:52vh;overflow-y:auto;padding:10px 14px 16px;"></div>
+                </div>
+            `;
+            document.body.appendChild(modal);
+
+            modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+            modal.querySelector('#site-search-close').addEventListener('click', closeModal);
+            modal.querySelector('#site-search-input').addEventListener('input', renderResults);
+            modal.querySelector('#site-search-cat').addEventListener('change', renderResults);
+            modal.querySelector('#site-search-ind').addEventListener('change', renderResults);
+            return modal;
+        }
+
+        function renderResults() {
+            if (!modal) return;
+            const resEl = modal.querySelector('#site-search-results');
+            const metaEl = modal.querySelector('#site-search-meta');
+            if (!indexCache) {
+                metaEl.textContent = ui.loading;
+                resEl.innerHTML = '';
+                return;
+            }
+            const q = (modal.querySelector('#site-search-input').value || '').trim().toLowerCase();
+            const cat = modal.querySelector('#site-search-cat').value;
+            const ind = modal.querySelector('#site-search-ind').value;
+            const tokens = q ? q.split(/\s+/).filter(Boolean) : [];
+
+            const filtered = indexCache.filter(item => {
+                if (cat !== 'all' && item.c !== cat) return false;
+                if (ind !== 'all' && !(item.i || []).includes(ind)) return false;
+                if (tokens.length) {
+                    const hay = (item.t + ' ' + item.d + ' ' + item.k).toLowerCase();
+                    return tokens.every(tok => hay.includes(tok));
+                }
+                return true;
+            });
+
+            metaEl.textContent = ui.count(filtered.length);
+            if (!filtered.length) {
+                const rfqHref = document.getElementById('rfq-section') ? '#rfq-section' : (document.getElementById('contact') ? '#contact' : './#contact');
+                const lineHtml = ui.lineBtn ? `<a href="https://line.me/R/ti/p/@682wvagy" target="_blank" rel="noopener noreferrer" style="display:inline-block;padding:9px 14px;border-radius:8px;background:#06C755;color:#fff;font-weight:700;font-size:0.86rem;text-decoration:none;">${escapeHtml(ui.lineBtn)}</a>` : '';
+                resEl.innerHTML = `
+                    <div style="text-align:center;padding:24px 12px;">
+                        <p style="color:#F8FAFC;font-weight:700;margin:0 0 8px;">${escapeHtml(ui.emptyTitle)}</p>
+                        <p style="color:#94A3B8;font-size:0.88rem;margin:0 0 16px;">${escapeHtml(ui.emptyDesc)}</p>
+                        <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;">
+                            ${lineHtml}
+                            <a href="${rfqHref}" id="site-search-empty-rfq" style="display:inline-block;padding:9px 14px;border-radius:8px;background:#D4A843;color:#0A0F1C;font-weight:700;font-size:0.86rem;text-decoration:none;">${escapeHtml(ui.rfqBtn)}</a>
+                        </div>
+                    </div>
+                `;
+                const rfqLink = resEl.querySelector('#site-search-empty-rfq');
+                if (rfqLink && rfqHref.startsWith('#')) {
+                    rfqLink.addEventListener('click', () => closeModal());
+                }
+                return;
+            }
+
+            resEl.innerHTML = filtered.map(item => `
+                <a href="${escapeHtml(item.u)}" style="display:block;padding:11px 12px;margin-bottom:8px;border-radius:9px;border:1px solid rgba(148,163,184,0.16);background:rgba(30,41,59,0.55);text-decoration:none;">
+                    <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
+                        <span style="font-size:0.72rem;font-weight:700;padding:2px 8px;border-radius:999px;background:rgba(212,168,67,0.16);color:#D4A843;">${escapeHtml(ui.catTag[item.c] || item.c)}</span>
+                        <strong style="color:#F8FAFC;font-size:0.93rem;">${escapeHtml(item.t)}</strong>
+                    </div>
+                    <p style="margin:0;color:#94A3B8;font-size:0.82rem;line-height:1.5;">${escapeHtml(item.d)}</p>
+                </a>
+            `).join('');
+        }
+
+        function openModal() {
+            const m = ensureModal();
+            m.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+            const inp = m.querySelector('#site-search-input');
+            setTimeout(() => inp && inp.focus(), 30);
+            if (!indexCache) {
+                renderResults();
+                const idxUrl = (sLang === 'zh' ? 'js/search-index.json' : '../js/search-index.json') + '?v=20261119c';
+                fetch(idxUrl).then(r => r.json()).then(data => {
+                    indexCache = data[sLang] || [];
+                    renderResults();
+                }).catch(() => {
+                    indexCache = [];
+                    renderResults();
+                });
+            } else {
+                renderResults();
+            }
+        }
+
+        function closeModal() {
+            if (!modal) return;
+            modal.style.display = 'none';
+            document.body.style.overflow = '';
+        }
+
+        trigger.addEventListener('click', openModal);
+        document.addEventListener('keydown', (e) => {
+            if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
+                e.preventDefault();
+                openModal();
+            } else if (e.key === 'Escape' && modal && modal.style.display === 'block') {
+                closeModal();
+            }
+        });
+    })();
 });
 
 
