@@ -386,6 +386,8 @@ def audit():
         print(f"🎉 檢查完成！全站 {len(all_html)} 個頁面 100% 通過極速審計（0 錯誤、0 警告）！")
     else:
         print(f"檢測結果：{errors} 個錯誤，{warnings} 個警告。")
+    if errors > 0:
+        sys.exit(1)
 
 
 if __name__ == "__main__":
