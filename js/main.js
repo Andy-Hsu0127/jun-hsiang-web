@@ -1474,7 +1474,12 @@ document.addEventListener('DOMContentLoaded', () => {
         trigger.type = 'button';
         trigger.setAttribute('aria-label', ui.btnAria);
         trigger.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg><span>' + ui.btnLabel + '</span>';
-        trigger.style.cssText = 'display:inline-flex;align-items:center;gap:6px;margin-left:auto;margin-right:10px;padding:6px 12px;border-radius:999px;border:1px solid rgba(212,168,67,0.45);background:rgba(15,23,42,0.75);color:#F8FAFC;font-size:0.84rem;font-weight:600;cursor:pointer;white-space:nowrap;flex-shrink:0;transition:border-color 0.2s ease,transform 0.2s ease;';
+        if (!document.getElementById('site-search-nav-style')) {
+            const st = document.createElement('style');
+            st.id = 'site-search-nav-style';
+            st.textContent = '#nav-links{margin-left:auto;margin-right:12px;}#site-search-trigger{display:inline-flex;align-items:center;gap:6px;margin-left:0;margin-right:0;padding:6px 12px;border-radius:999px;border:1px solid rgba(212,168,67,0.45);background:rgba(15,23,42,0.75);color:#F8FAFC;font-size:0.84rem;font-weight:600;cursor:pointer;white-space:nowrap;flex-shrink:0;transition:border-color 0.2s ease,transform 0.2s ease;}#site-search-trigger:hover{border-color:#D4A843;}@media(max-width:968px){#site-search-trigger{margin-left:auto;margin-right:12px;}}';
+            document.head.appendChild(st);
+        }
         ham.parentElement.insertBefore(trigger, ham);
 
         let modal = null;
