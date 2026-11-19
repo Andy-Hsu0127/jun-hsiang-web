@@ -248,6 +248,9 @@ def audit():
         if "DFM" in c:
             print(f"❌ [禁用詞 DFM] {f} 包含 AGENTS.md 禁用字樣 'DFM'，請改為工程評估／模具結構設計")
             errors += 1
+        if re.search(r'\b\d+(?:\.\d+)?\s*MPa\b', c):
+            print(f"❌ [規則五/八: 未驗證數值 MPa] {f} 包含未經確認之具體 MPa 強度數值，請改為真實製程與驗證描述")
+            errors += 1
         if 'src=\\"' in c or 'href=\\"' in c:
             print(f"❌ [語法損毀] {f} 包含多餘反斜線跳脫引號 (src=\\\" 或 href=\\\")")
             errors += 1
