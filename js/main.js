@@ -1647,4 +1647,89 @@ document.addEventListener('DOMContentLoaded', () => {
     })();
 });
 
+// =========================================================================
+// GA4 Lazy Loader & B2B Conversion Event Tracking (G-WR9QWTTL46)
+// Zero-blocking: queues events immediately in dataLayer, loads gtag.js
+// only on first user interaction or idle after load (preserves PageSpeed).
+// =========================================================================
+(function () {
+    const GA_ID = 'G-WR9QWTTL46';
+    const host = window.location.hostname || '';
+    if (!host || host === 'localhost' || host === '127.0.0.1' || window.location.protocol === 'file:') {
+        return;
+    }
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { window.dataLayer.push(arguments); }
+    if (typeof window.gtag !== 'function') {
+        window.gtag = gtag;
+    }
+
+    let gaLoaded = false;
+    function loadGA4() {
+        if (gaLoaded) return;
+        gaLoaded = true;
+        window.gtag('js', new Date());
+        window.gtag('config', GA_ID, { anonymize_ip: true });
+        const s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+        document.head.appendChild(s);
+    }
+
+    ['pointerdown', 'keydown', 'scroll', 'touchstart'].forEach((evt) => {
+        window.addEventListener(evt, loadGA4, { once: true, passive: true });
+    });
+    window.addEventListener('load', () => {
+        if ('requestIdleCallback' in window) {
+            window.requestIdleCallback(loadGA4, { timeout: 3000 });
+        } else {
+            setTimeout(loadGA4, 3000);
+        }
+    }, { once: true });
+
+    const pagePath = window.location.pathname || '/';
+    const pageLang = pagePath.startsWith('/en/') ? 'en' : (pagePath.startsWith('/ja/') ? 'ja' : 'zh');
+
+    function trackEvent(eventName, params) {
+        loadGA4();
+        window.gtag('event', eventName, Object.assign({
+            page_lang: pageLang,
+            page_path: pagePath
+        }, params || {}));
+    }
+
+    document.addEventListener('click', (e) => {
+        const el = e.target && e.target.closest ? e.target.closest('a, button, [data-copy-email]') : null;
+        if (!el) return;
+
+        if (el.hasAttribute('data-copy-email')) {
+            trackEvent('copy_email', { email_address: el.getAttribute('data-copy-email') || '' });
+            return;
+        }
+
+        const href = (el.getAttribute('href') || '').trim();
+        if (!href) return;
+
+        if (/\.pdf(\?|$)/i.test(href)) {
+            const parts = href.split('?')[0].split('/');
+            trackEvent('pdf_download', { file_name: parts[parts.length - 1] || href });
+        } else if (href.indexOf('line.me') !== -1) {
+            trackEvent('line_click', { link_url: href });
+        } else if (href.toLowerCase().startsWith('tel:')) {
+            trackEvent('phone_click', { phone_number: href.slice(4) });
+        }
+    }, { passive: true });
+
+    document.addEventListener('submit', (e) => {
+        const form = e.target;
+        if (!form || form.tagName !== 'FORM') return;
+        const fid = form.id || form.getAttribute('name') || 'unknown_form';
+        if (fid === 'contact-form' || fid === 'general-contact-form' || fid === 'quick-rfq-form' || (form.action || '').indexOf('formsubmit') !== -1) {
+            trackEvent('rfq_form_submit', { form_id: fid });
+        }
+    }, { passive: true });
+})();
+
+
 
