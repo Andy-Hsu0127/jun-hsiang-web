@@ -1224,7 +1224,7 @@ SLIDES_HTML = [
             <div class="fhpq-item">
               <div class="fhpq-num">03</div>
               <div class="fhpq-title">Profession &mdash; Vertical Integration</div>
-              <div class="fhpq-desc">In-house compounding, LSR injection, vacuum compression, screen printing, laser etching, and secondary post-cure baking.</div>
+              <div class="fhpq-desc">In-house compounding, LSR injection, vacuum compression, screen printing, and secondary post-cure baking (with vetted partners for laser etching &amp; spray coating).</div>
             </div>
             <div class="fhpq-item">
               <div class="fhpq-num">04</div>
@@ -1363,8 +1363,8 @@ SLIDES_HTML = [
                 <div class="prod-title">Conductive Silicone Keypads</div>
                 <ul class="prod-bullets">
                   <li>Conductive carbon pills &amp; gold-contact options</li>
-                  <li>Multi-color screen printing &amp; backlight laser etching</li>
-                  <li>PU, matte &amp; epoxy abrasion-resistant coatings</li>
+                  <li>In-house multi-color silk-screen printing</li>
+                  <li>Coordinated laser etching &amp; PU/matte spray coating via vetted partners</li>
                 </ul>
               </div>
               <div class="prod-app">Applications: Industrial controllers, POS terminals, remotes</div>
@@ -1401,7 +1401,7 @@ SLIDES_HTML = [
                 <div class="prod-title">Custom O-Rings &amp; Oil Seals</div>
                 <ul class="prod-bullets">
                   <li>AS568, JIS B2401 &amp; custom non-standard cross-sections</li>
-                  <li>Wide thermal stability from -50&deg;C to +250&deg;C</li>
+                  <li>Wide thermal stability from -50&deg;C to +250&deg;C (material-dependent)</li>
                   <li>Low compression set for long-term static &amp; dynamic seals</li>
                 </ul>
               </div>
@@ -1419,7 +1419,7 @@ SLIDES_HTML = [
                 <div class="prod-title">Precision Frame Gaskets</div>
                 <ul class="prod-bullets">
                   <li>Complex 3D perimeter profiles &amp; multi-rib waterproof lips</li>
-                  <li>Engineered for IP67 / IP68 outdoor enclosure sealing</li>
+                  <li>Engineered for waterproof &amp; dust-resistant enclosure sealing</li>
                   <li>Available in self-lubricating &amp; EMI-shielded grades</li>
                 </ul>
               </div>
@@ -1542,15 +1542,15 @@ SLIDES_HTML = [
             <div class="qa-card-body">
               <div class="prod-tag">Tactile &amp; Force Testing</div>
               <div class="qa-card-title">AIKOH Load Curve Tester</div>
-              <div class="qa-card-text">Captures complete force-displacement curves (peak force, return force, snap ratio) alongside in-house abrasion and cycle-life testers.</div>
+              <div class="qa-card-text">Captures complete force-displacement curves (peak actuation force, return force, and tactile snap ratio) for keypad switch consistency.</div>
             </div>
           </div>
         </div>
 
         <div class="qa-protocol">
           <div>
-            <div class="kicker">ISO 9001:2015 Workflow</div>
-            <div class="qa-proto-head">5-Stage Inspection Gate</div>
+            <div class="kicker">ISO 9001 Quality Workflow</div>
+            <div class="qa-proto-head">4-Stage Inspection Gate</div>
           </div>
 
           <div class="qa-step-list">
@@ -1578,20 +1578,13 @@ SLIDES_HTML = [
             <div class="qa-step">
               <div class="qa-step-num">04</div>
               <div>
-                <div class="qa-step-title">Functional &amp; Surface Testing</div>
-                <div class="qa-step-desc">Force-stroke curves, surface abrasion, alcohol rub resistance, and post-cure volatile removal.</div>
-              </div>
-            </div>
-            <div class="qa-step">
-              <div class="qa-step-num">05</div>
-              <div>
-                <div class="qa-step-title">Outgoing QA &amp; COC Release</div>
-                <div class="qa-step-desc">Final lot sampling and Certificate of Conformance issued with every export shipment.</div>
+                <div class="qa-step-title">Outgoing Visual &amp; Dimensional QA</div>
+                <div class="qa-step-desc">Final lot sampling and visual screening before packing and export dispatch from Taiwan.</div>
               </div>
             </div>
           </div>
 
-          <div class="qa-iso-note">Current ISO 9001:2015 certificate &amp; SGS material reports available upon RFQ.</div>
+          <div class="qa-iso-note">ISO 9001 quality management system; raw material test reports available upon request.</div>
         </div>
       </div>
 
@@ -1639,7 +1632,7 @@ SLIDES_HTML = [
         <div class="tl-item">
           <div class="tl-num">05</div>
           <div class="tl-title">Direct Global Export</div>
-          <div class="tl-desc">Air or ocean logistics direct from Taiwan to USA, Europe, and Japan with full COC docs.</div>
+          <div class="tl-desc">Air or ocean logistics direct from Taiwan to USA, Europe, and Japan with standard export documentation.</div>
         </div>
       </div>
 
@@ -1874,7 +1867,7 @@ def generate_native_pptx():
     fhpq = [
         ("01", "Friend — Engineering Partnership", "Collaborative DFM feedback on parting lines, draft angles, undercut demolding, and material selection before tooling begins."),
         ("02", "Honesty — Protected Tooling & Specs", "Strict customer tooling ownership protection, NDA confidentiality, and transparent raw material compliance documentation."),
-        ("03", "Profession — Vertical Integration", "In-house compounding, LSR injection, vacuum compression, screen printing, laser etching, and secondary post-cure baking."),
+        ("03", "Profession — Vertical Integration", "In-house compounding, LSR injection, vacuum compression, screen printing, and secondary post-cure baking (laser etching & spray coating via vetted partners)."),
         ("04", "Quality — Zero-Defect Standard", "Do not accept, do not produce, and do not release defective parts. Backed by 2.5D optical and load testing."),
     ]
     for idx, (num, title, desc) in enumerate(fhpq):
@@ -1934,16 +1927,16 @@ def generate_native_pptx():
 
     cards4 = [
         ("prod-keypads.jpg", "HMI & TACTILE INTERFACES", "Conductive Silicone Keypads",
-         ["Conductive carbon pills & gold contacts", "Multi-color printing & laser etching", "PU, matte & epoxy wear coatings"],
+         ["Conductive carbon pills & gold contacts", "In-house multi-color silk-screen printing", "Partner-coordinated laser etching & spray coating"],
          "Apps: Industrial controllers, POS, remotes"),
         ("prod-orings.jpg", "FLUID & PRESSURE SEALING", "Custom O-Rings & Oil Seals",
-         ["AS568, JIS B2401 & custom sizes", "Thermal stability -50°C to +250°C", "Low compression set compounds"],
+         ["AS568, JIS B2401 & custom sizes", "Thermal stability -50°C to +250°C (by material)", "Low compression set compounds"],
          "Apps: Automotive harnesses, valves, pumps"),
         ("prod-medical-kb.jpg", "HEALTHCARE & CLEANROOM", "Medical Washable Keyboards",
          ["Seamless watertight hygienic surface", "Resists hospital disinfectants", "Biocompatible & food-grade silicone"],
          "Apps: Clinical carts, dental, cleanrooms"),
         ("prod-gaskets.jpg", "ENCLOSURE PROTECTION", "Precision Frame Gaskets",
-         ["Complex 3D perimeter rib profiles", "Engineered for IP67 / IP68 sealing", "Self-lubricating & EMI options"],
+         ["Complex 3D perimeter rib profiles", "Waterproof & dust-resistant enclosure sealing", "Self-lubricating & EMI options"],
          "Apps: Outdoor telecom, UAVs, sensors"),
     ]
     for idx, (img_name, tag, title, pts, app) in enumerate(cards4):
@@ -2017,7 +2010,7 @@ def generate_native_pptx():
         ("qc-25d-optical.jpg", "DIMENSIONAL METROLOGY", "HO STAR 2.5D Optical System",
          "Non-contact optical edge inspection prevents mechanical deformation on soft elastomers, verifying critical IDs, ODs, and profiles."),
         ("qc-load-curve.jpg", "TACTILE & FORCE TESTING", "AIKOH Load Curve Tester",
-         "Captures complete force-displacement curves (peak force, return force, snap ratio) alongside in-house abrasion and life testers."),
+         "Captures complete force-displacement curves (peak actuation force, return force, and tactile snap ratio) for keypad switch consistency."),
     ]
     for i, (img_name, tag, title, desc) in enumerate(qas):
         x = 0.65 + i * 3.55
@@ -2029,24 +2022,23 @@ def generate_native_pptx():
         txt(s6, x + 0.22, 5.05, 2.88, 1.4, desc, size=10, color=MUTED)
 
     rect(s6, 7.85, 1.55, 4.83, 5.1, WARM)
-    txt(s6, 8.18, 1.82, 4.2, 0.22, "ISO 9001:2015 WORKFLOW", size=8.5, color=GOLD, bold=True)
-    txt(s6, 8.18, 2.08, 4.2, 0.36, "5-Stage Inspection Gate", size=16, color=DARK, bold=True)
+    txt(s6, 8.18, 1.82, 4.2, 0.22, "ISO 9001 QUALITY WORKFLOW", size=8.5, color=GOLD, bold=True)
+    txt(s6, 8.18, 2.08, 4.2, 0.36, "4-Stage Inspection Gate", size=16, color=DARK, bold=True)
     rect(s6, 8.18, 2.54, 4.18, 0.015, LINE)
 
     gates = [
         ("01", "Incoming Compound Check", "Shore A, batch traceability, RoHS/REACH/FDA lot docs."),
         ("02", "First Article Inspection (FAI)", "Full 2.5D optical dimensional report on T1 samples."),
         ("03", "In-Process Molding Checks", "Scheduled checks on cure state, flash & visual quality."),
-        ("04", "Functional & Surface Testing", "Force curves, abrasion, alcohol rub & post-cure baking."),
-        ("05", "Outgoing QA & COC Release", "Final lot sampling & Certificate of Conformance."),
+        ("04", "Outgoing Visual & Dimensional QA", "Final lot sampling & visual screening prior to export."),
     ]
     for i, (num, title, desc) in enumerate(gates):
-        y = 2.72 + i * 0.68
+        y = 2.8 + i * 0.82
         txt(s6, 8.18, y, 0.4, 0.3, num, size=14, color=GOLD, font="Georgia")
         txt(s6, 8.62, y, 3.75, 0.24, title, size=10.8, color=DARK, bold=True)
         txt(s6, 8.62, y + 0.25, 3.75, 0.34, desc, size=9.2, color=MUTED)
     rect(s6, 8.18, 6.18, 4.18, 0.015, LINE)
-    txt(s6, 8.18, 6.28, 4.2, 0.28, "Current ISO 9001:2015 certificate & SGS reports available upon RFQ.", size=8.8, color=INK, bold=True)
+    txt(s6, 8.18, 6.28, 4.2, 0.28, "ISO 9001 quality management system; material reports on request.", size=8.8, color=INK, bold=True)
 
     # SLIDE 7: DARK ARCHITECTURAL CLOSING
     s7 = prs.slides.add_slide(blank)
