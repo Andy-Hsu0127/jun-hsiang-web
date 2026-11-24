@@ -196,21 +196,10 @@ document.addEventListener('DOMContentLoaded', () => {
     populateFormFields();
 
     document.addEventListener('click', (e) => {
-        const mailLink = e.target.closest('a[href^="mailto:"]');
-        if (mailLink) {
-            trackB2BConversion(mailLink.getAttribute('data-track-action') || 'click_email_cta', mailLink.getAttribute('href').split('?')[0]);
-        }
-
-        const pdfLink = e.target.closest('a[data-track-action="download_pdf"]');
-        if (pdfLink) {
-            trackB2BConversion('download_pdf', pdfLink.getAttribute('href'));
-        }
-
         const copyBtn = e.target.closest('[data-copy-email]');
         if (!copyBtn) return;
         e.preventDefault();
         const emailToCopy = copyBtn.getAttribute('data-copy-email') || 'andy_hsu@jun-hsiang.com.tw';
-        trackB2BConversion('copy_email', emailToCopy);
         const origHtml = copyBtn.innerHTML;
         const copiedLabel = window.location.pathname.includes('/en/')
             ? '✅ Email Copied!'
@@ -237,13 +226,6 @@ document.addEventListener('DOMContentLoaded', () => {
             try { document.execCommand('copy'); } catch (err) {}
             document.body.removeChild(ta);
             showCopied();
-        }
-    });
-
-    document.addEventListener('submit', (e) => {
-        const form = e.target.closest('#contact-form, #general-contact-form');
-        if (form) {
-            trackB2BConversion('submit_rfq_form', form.id);
         }
     });
 
@@ -980,7 +962,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 product: document.getElementById('rfp-process') ? document.getElementById('rfp-process').value : ""
             } : null;
 
-            const handleRFPSuccess = () => {
+            let rfpLeadTracked = false;
+            const handleRFPSuccess = (deliveryMethod) => {
+                if (!rfpLeadTracked) {
+                    rfpLeadTracked = true;
+                    if (typeof window.JH_TrackLeadSuccess === 'function') {
+                        window.JH_TrackLeadSuccess('contact-form', deliveryMethod || 'emailjs');
+                    }
+                }
                 showStatusModal(true, rfpAttachInfo);
                 rfpForm.reset();
                 delete rfpForm.dataset.captchaWarned;
@@ -1064,7 +1053,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 .then(res => res.json())
                 .then(data => {
                     if (data.success === "true" || data.success === true) {
-                        handleRFPSuccess();
+                        handleRFPSuccess('formsubmit');
                     } else {
                         handleRFPError(error);
                     }
@@ -1074,7 +1063,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             sendViaEmailJS(templateParams)
             .then(() => {
-                handleRFPSuccess();
+                handleRFPSuccess('emailjs');
             })
             .catch(error => {
                 console.warn("EmailJS failed, trying FormSubmit fallback...", error);
@@ -1229,6 +1218,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 'g-recaptcha-response': captchaToken
             };
 
+            let genLeadTracked = false;
+            const fireGeneralLeadSuccess = (deliveryMethod) => {
+                if (!genLeadTracked) {
+                    genLeadTracked = true;
+                    if (typeof window.JH_TrackLeadSuccess === 'function') {
+                        window.JH_TrackLeadSuccess('general-contact-form', deliveryMethod || 'emailjs');
+                    }
+                }
+            };
+
             const sendGenFormSubmitFallback = () => {
                 fetch("https://formsubmit.co/ajax/jojo.li888@msa.hinet.net", {
                     method: "POST",
@@ -1253,6 +1252,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 .then(res => res.json())
                 .then(data => {
                     if (data.success === "true" || data.success === true) {
+                        fireGeneralLeadSuccess('formsubmit');
                         showStatusModal(true, genAttachInfo);
                         generalForm.reset();
                         delete generalForm.dataset.captchaWarned;
@@ -1273,6 +1273,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             sendViaEmailJS(templateParams)
             .then(() => {
+                fireGeneralLeadSuccess('emailjs');
                 showStatusModal(true, genAttachInfo);
                 generalForm.reset();
                 delete generalForm.dataset.captchaWarned;
@@ -1666,15 +1667,20 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     let gaLoaded = false;
+    const isDebugMode = /(?:^|[?&])ga_debug=1(?:&|$)/.test(window.location.search || '');
     function loadGA4() {
         if (gaLoaded) return;
         gaLoaded = true;
-        window.gtag('js', new Date());
-        window.gtag('config', GA_ID, { anonymize_ip: true });
-        const s = document.createElement('script');
-        s.async = true;
-        s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
-        document.head.appendChild(s);
+        try {
+            window.gtag('js', new Date());
+            const cfg = { anonymize_ip: true };
+            if (isDebugMode) cfg.debug_mode = true;
+            window.gtag('config', GA_ID, cfg);
+            const s = document.createElement('script');
+            s.async = true;
+            s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+            document.head.appendChild(s);
+        } catch (err) {}
     }
 
     ['pointerdown', 'keydown', 'scroll', 'touchstart'].forEach((evt) => {
@@ -1692,19 +1698,34 @@ document.addEventListener('DOMContentLoaded', () => {
     const pageLang = pagePath.startsWith('/en/') ? 'en' : (pagePath.startsWith('/ja/') ? 'ja' : 'zh');
 
     function trackEvent(eventName, params) {
-        loadGA4();
-        window.gtag('event', eventName, Object.assign({
-            page_lang: pageLang,
-            page_path: pagePath
-        }, params || {}));
+        try {
+            loadGA4();
+            if (typeof window.gtag === 'function') {
+                const payload = Object.assign({
+                    page_lang: pageLang,
+                    page_path: pagePath
+                }, params || {});
+                if (isDebugMode) payload.debug_mode = true;
+                window.gtag('event', eventName, payload);
+            }
+        } catch (err) {}
     }
+
+    // Fired ONLY from verified EmailJS / FormSubmit success callbacks (zero PII)
+    window.JH_TrackLeadSuccess = function (formId, deliveryMethod) {
+        trackEvent('generate_lead', {
+            currency: 'TWD',
+            form_id: formId || 'unknown_form',
+            delivery_method: deliveryMethod || 'emailjs'
+        });
+    };
 
     document.addEventListener('click', (e) => {
         const el = e.target && e.target.closest ? e.target.closest('a, button, [data-copy-email]') : null;
         if (!el) return;
 
         if (el.hasAttribute('data-copy-email')) {
-            trackEvent('copy_email', { email_address: el.getAttribute('data-copy-email') || '' });
+            trackEvent('click_email', { contact_method: 'copy_button' });
             return;
         }
 
@@ -1713,20 +1734,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (/\.pdf(\?|$)/i.test(href)) {
             const parts = href.split('?')[0].split('/');
-            trackEvent('pdf_download', { file_name: parts[parts.length - 1] || href });
+            trackEvent('pdf_download', { file_name: parts[parts.length - 1] || 'document.pdf' });
         } else if (href.indexOf('line.me') !== -1) {
-            trackEvent('line_click', { link_url: href });
+            trackEvent('click_line', { channel: 'line_oa' });
         } else if (href.toLowerCase().startsWith('tel:')) {
-            trackEvent('phone_click', { phone_number: href.slice(4) });
-        }
-    }, { passive: true });
-
-    document.addEventListener('submit', (e) => {
-        const form = e.target;
-        if (!form || form.tagName !== 'FORM') return;
-        const fid = form.id || form.getAttribute('name') || 'unknown_form';
-        if (fid === 'contact-form' || fid === 'general-contact-form' || fid === 'quick-rfq-form' || (form.action || '').indexOf('formsubmit') !== -1) {
-            trackEvent('rfq_form_submit', { form_id: fid });
+            trackEvent('click_phone', { channel: 'tel_link' });
+        } else if (href.toLowerCase().startsWith('mailto:')) {
+            trackEvent('click_email', { contact_method: 'mailto_link' });
         }
     }, { passive: true });
 })();

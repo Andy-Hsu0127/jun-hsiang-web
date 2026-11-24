@@ -199,7 +199,8 @@ shore-hardness-guide, silicone-overmolding, solid-vs-lsr,
 uav-silicone-parts, viton-vs-fvmq, self-bonding-lsr-guide, lsr-liquid-silicone,
 lsr-silicone-supplier-taiwan, lsr-silicone-vs-hcr, self-lubricating-silicone,
 silicone-overmolding-bonding, automotive-wire-harness-seals,
-large-shot-lsr-molding
+large-shot-lsr-molding, silicone-metal-bonding-failure,
+silicone-keypad-laser-printing
 ```
 若主題重複，告知使用者並建議替代角度，不要繼續生成。
 
