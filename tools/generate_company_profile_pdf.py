@@ -185,7 +185,7 @@ HTML_CONTENT = f"""<!DOCTYPE html>
     </tr>
     <tr>
       <td class="k">Material Compliance</td><td class="v">US FDA 21 CFR 177.2600, EU LFGB, REACH, RoHS, ISO 10993 LSR options</td>
-      <td class="k">IP &amp; Export Support</td><td class="v">Mutual NDA prior to CAD review; Certificate of Origin (MIT)</td>
+      <td class="k">IP &amp; Export Support</td><td class="v">Mutual NDA prior to CAD review</td>
     </tr>
   </table>
 
@@ -445,7 +445,7 @@ HTML_CONTENT = f"""<!DOCTYPE html>
     <div class="step">
       <span class="step-num">STEP 06</span>
       <strong>Mass Production &amp; Export</strong>
-      <p>ISO 9001:2015 batch quality verification, clean packaging, and global export with MIT Certificate of Origin.</p>
+      <p>ISO 9001:2015 batch quality verification, clean packaging, and global export.</p>
     </div>
   </div>
 

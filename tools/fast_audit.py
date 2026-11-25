@@ -254,6 +254,9 @@ def audit():
         if re.search(r'±0\.005|±0\.01\s*mm|±0\.01~0\.03mm|99\.7%|380%|20\s*萬次|20万回|200,000 compression|10~40\s*秒|25\s*秒|100%\s*精密無人化', c):
             print(f"❌ [規則五/八: 未驗證承諾數值] {f} 包含未經廠方驗證之具體公差/良率/週期/測試次數承諾，請立即移除")
             errors += 1
+        if re.search(r'Certificate of Origin|原產地證明|原產證明|原産地証明|導熱矽膠|晶片導熱片|W/m·K|Thermal Conductive Silicone|Chip Thermal Pad|熱伝導シート', c, re.I):
+            print(f"❌ [規則八: 禁用未授權宣稱] {f} 包含未授權之原產地證明或高導熱矽膠宣稱，請立即移除")
+            errors += 1
         if 'src=\\"' in c or 'href=\\"' in c:
             print(f"❌ [語法損毀] {f} 包含多餘反斜線跳脫引號 (src=\\\" 或 href=\\\")")
             errors += 1
